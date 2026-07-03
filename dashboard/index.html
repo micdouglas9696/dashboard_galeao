@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard de Gestão SESCINC — Aeroporto Internacional do Rio de Janeiro (Galeão/SBGL). Monitoramento de TAF, TP-EPR, Tempo-Resposta e Avaliações Teóricas.">
+  <title>SESCINC SBGL — Dashboard de Gestão</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+
+  <!-- XLSX parser -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+  <!-- html2canvas + jsPDF for export -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <!-- Dashboard Styles -->
+  <link rel="stylesheet" href="css/styles.css?v=9.0">
+</head>
+<body data-section="overview">
+
+  <!-- ============================================================
+       SIDEBAR
+       ============================================================ -->
+  <aside id="sidebar">
+    <button id="sidebar-toggle" aria-label="Recolher menu">◀</button>
+
+    <!-- Logo / Title -->
+    <div class="sidebar-header">
+      <span class="sidebar-logo">
+        <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--accent-cyan)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 4px var(--accent-cyan));">
+          <rect x="2" y="6" width="14" height="11" rx="2"></rect>
+          <path d="M16 8h4l2 3v6h-6V8z"></path>
+          <circle cx="6.5" cy="18.5" r="2.5"></circle>
+          <circle cx="16.5" cy="18.5" r="2.5"></circle>
+          <path d="M10 6V3h2v3"></path>
+          <path d="M7 9h2"></path>
+        </svg>
+      </span>
+      <span class="sidebar-title">SESCINC SBGL</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+      <div class="nav-item active" data-section="overview">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="9"></rect>
+            <rect x="14" y="3" width="7" height="5"></rect>
+            <rect x="14" y="12" width="7" height="9"></rect>
+            <rect x="3" y="16" width="7" height="5"></rect>
+          </svg>
+        </span>
+        <span class="nav-item-label">Visão Geral</span>
+      </div>
+      <div class="nav-item" data-section="taf">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6.5 6.5h11M6.5 17.5h11M4 6.5v11M20 6.5v11M8.5 3v18M15.5 3v18"></path>
+          </svg>
+        </span>
+        <span class="nav-item-label">TAF</span>
+      </div>
+      <div class="nav-item" data-section="tpepr">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41"></path>
+          </svg>
+        </span>
+        <span class="nav-item-label">TP-EPR</span>
+      </div>
+      <div class="nav-item" data-section="tr">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+        </span>
+        <span class="nav-item-label">Desempenho TR</span>
+      </div>
+      <div class="nav-item" data-section="teorica">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+        </span>
+        <span class="nav-item-label">Avaliação Teórica</span>
+      </div>
+
+      <div class="nav-separator"></div>
+
+      <div class="nav-item" data-section="upload">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path>
+          </svg>
+        </span>
+        <span class="nav-item-label">Upload Planilha</span>
+      </div>
+      <div class="nav-item" data-section="manual">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+            <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          </svg>
+        </span>
+        <span class="nav-item-label">Entrada Manual</span>
+      </div>
+      <div class="nav-separator"></div>
+
+      <div class="nav-item" id="btn-reset-db" style="margin-top: auto; color: var(--accent-red) !important;">
+        <span class="nav-item-icon">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+            <polyline points="3 3 3 8 8 8"></polyline>
+          </svg>
+        </span>
+        <span class="nav-item-label">Resetar Sistema</span>
+      </div>
+    </nav>
+
+    <!-- Footer -->
+    <div class="sidebar-footer">
+      <span>SBGL — Rio Galeão — 2026</span>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content">
+
+    <!-- Header Bar -->
+    <header class="header-bar">
+      <div class="header-title-area">
+        <h1 class="header-title" id="header-section-title">Overview</h1>
+        <div class="header-telemetry">
+          <span class="telemetry-item"><span class="glow-dot green"></span> SISTEMA ONLINE</span>
+          <span class="telemetry-separator">|</span>
+          <span class="telemetry-item">
+            <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:3px;">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+            </svg>
+            SBGL / GALEÃO (CAT 10)
+          </span>
+          <span class="telemetry-separator">|</span>
+          <span class="telemetry-item" id="realtime-clock">03/07/2026 13:45:00</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn-secondary btn-export-pdf" title="Exportar PDF" style="display: flex; align-items: center; gap: 6px;">
+          <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          PDF
+        </button>
+        <button class="btn btn-secondary btn-export-png" title="Exportar PNG" style="display: flex; align-items: center; gap: 6px;">
+          <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+            <polyline points="21 15 16 10 5 21"></polyline>
+          </svg>
+          PNG
+        </button>
+        <button class="btn btn-icon btn-filter-toggle" id="filter-toggle" title="Filtros" style="display: flex; align-items: center; justify-content: center;">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+
+      <!-- ======================================================
+           SECTION: OVERVIEW
+           ====================================================== -->
+      <section id="section-overview" class="dashboard-section active">
+        <!-- KPIs -->
+        <div class="kpi-grid">
+          <div class="kpi-card" id="kpi-ov-taf">
+            <div class="kpi-value-container">
+              <span class="kpi-value">—</span>
+              <span class="kpi-unit">aprovados</span>
+            </div>
+            <div class="kpi-label">Aprovação TAF</div>
+          </div>
+          <div class="kpi-card" id="kpi-ov-tpepr">
+            <div class="kpi-value-container">
+              <span class="kpi-value">—</span>
+              <span class="kpi-unit">≤ 60s (meta)</span>
+            </div>
+            <div class="kpi-label">Excelência TP-EPR</div>
+          </div>
+          <div class="kpi-card" id="kpi-ov-teorica">
+            <div class="kpi-value-container">
+              <span class="kpi-value">—</span>
+              <span class="kpi-unit">/ 100</span>
+            </div>
+            <div class="kpi-label">Média Teórica</div>
+          </div>
+          <div class="kpi-card" id="kpi-ov-tr">
+            <div class="kpi-value-container">
+              <span class="kpi-value">—</span>
+              <span class="kpi-unit">≤ 2:00m (meta)</span>
+            </div>
+            <div class="kpi-label">Meta TR</div>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Desempenho por Equipe</div>
+              <div class="chart-type-selector" data-chart="overviewRadar">
+                <button class="btn-chart-type active" data-type="radar" title="Gráfico de Radar">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 22 8.5 22 19.5 12 22 2 19.5 2 8.5"></polygon>
+                    <line x1="12" y1="2" x2="12" y2="22"></line>
+                    <line x1="12" y1="12" x2="22" y2="8.5"></line>
+                    <line x1="12" y1="12" x2="2" y2="8.5"></line>
+                  </svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar" title="Gráfico de Barras Agrupadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Gráfico de Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Este gráfico compara as equipes operacionais nas quatro principais dimensões avaliadas (Aprovação TAF, Excelência EPR, Tempo Resposta CCI, Média Teórica). Alterne para barras ou linhas para uma comparação direta das porcentagens.</div>
+            <div class="chart-container">
+              <canvas id="overviewRadar"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Comparativo Geral</div>
+              <div class="chart-type-selector" data-chart="overviewEquipe">
+                <button class="btn-chart-type active" data-type="bar" title="Gráfico de Barras Verticais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </button>
+                <button class="btn-chart-type" data-type="horizontalBar" title="Gráfico de Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="14" y2="12"></line>
+                    <line x1="4" y1="18" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Gráfico de Linha / Tendência">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Visão geral comparativa dos percentuais de cada relatório agregados por equipe, útil para diagnosticar discrepâncias funcionais em todo o efetivo.</div>
+            <div class="chart-container">
+              <canvas id="overviewEquipe"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div id="overview-empty" class="empty-state">
+          <div class="empty-state-icon">📊</div>
+          <div class="empty-state-title">Nenhum dado carregado</div>
+          <div class="empty-state-text">Faça upload de planilhas para começar a visualizar os indicadores do SESCINC.</div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           SECTION: TAF
+           ====================================================== -->
+      <section id="section-taf" class="dashboard-section">
+        <!-- KPIs -->
+        <div class="kpi-grid">
+          <div class="kpi-card" id="kpi-taf-total">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">bombeiros</span>
+            </div>
+            <div class="kpi-label">Total Avaliados</div>
+          </div>
+          <div class="kpi-card" id="kpi-taf-sat">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">aptos</span>
+            </div>
+            <div class="kpi-label">Satisfatórios</div>
+          </div>
+          <div class="kpi-card" id="kpi-taf-insat">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">inaptos</span>
+            </div>
+            <div class="kpi-label">Insatisfatórios</div>
+          </div>
+          <div class="kpi-card" id="kpi-taf-pct">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0%</span>
+              <span class="kpi-unit">do efetivo</span>
+            </div>
+            <div class="kpi-label">% Aprovação</div>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Resultado Geral</div>
+              <div class="chart-type-selector" data-chart="tafDonut">
+                <button class="btn-chart-type active" data-type="doughnut" title="Rosca/Donut">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+                </button>
+                <button class="btn-chart-type" data-type="pie" title="Pizza">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar" title="Barras">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Distribuição percentual global de satisfação física (Satisfatório vs. Insatisfatório vs. Não Realizado/Férias) obtida a partir do Teste de Avaliação Física (TAF).</div>
+            <div class="chart-container">
+              <canvas id="tafDonut"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Por Equipe</div>
+              <div class="chart-type-selector" data-chart="tafEquipe">
+                <button class="btn-chart-type active" data-type="bar" title="Barras Empilhadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar-grouped" title="Barras Agrupadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Contagem absoluta de bombeiros aprovados (Satisfatório) e reprovados (Insatisfatório) no TAF por equipe operacional, auxiliando no monitoramento do efetivo disponível.</div>
+            <div class="chart-container">
+              <canvas id="tafEquipe"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Por Função</div>
+              <div class="chart-type-selector" data-chart="tafFuncao">
+                <button class="btn-chart-type active" data-type="horizontalBar" title="Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar" title="Barras Verticais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Taxa percentual de aprovação física agrupada pelas especialidades de bombeiro de aeródromo (ex: motoristas BA-MC, equipes BA2), destacando o preparo físico por atribuição.</div>
+            <div class="chart-container">
+              <canvas id="tafFuncao"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Métricas Físicas por Equipe</div>
+              <div class="chart-type-selector" data-chart="tafRadar">
+                <button class="btn-chart-type active" data-type="radar" title="Radar">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 19.5 12 22 2 19.5 2 8.5"></polygon><line x1="12" y1="2" x2="12" y2="22"></line><line x1="12" y1="12" x2="22" y2="8.5"></line><line x1="12" y1="12" x2="2" y2="8.5"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar" title="Barras">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Média de repetições e tempos alcançados nas quatro modalidades físicas (Flexão, Abdominal, Barra e Corrida) por equipe. Tempos de corrida são normalizados inversamente para escala de progresso.</div>
+            <div class="chart-container">
+              <canvas id="tafRadar"></canvas>
+            </div>
+          </div>
+          <div class="chart-card full-width">
+            <div class="chart-card-title">Distribuição por Idade</div>
+            <div class="chart-card-desc">Análise da distribuição etária do efetivo total versus o índice de aprovação física, identificando faixas de idade críticas que necessitam de intervenção ou treinamento específico.</div>
+            <div class="chart-container">
+              <canvas id="tafIdade"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-wrapper" id="table-taf">
+          <div class="table-header">
+            <span class="table-title">Registros TAF</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Equipe</th>
+                  <th>Função</th>
+                  <th>Idade</th>
+                  <th>Flexão</th>
+                  <th>Abdominal</th>
+                  <th>Barra</th>
+                  <th>Corrida</th>
+                  <th>Resultado</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-taf">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div id="taf-empty" class="empty-state">
+          <div class="empty-state-icon">🏋️</div>
+          <div class="empty-state-title">Sem dados de TAF</div>
+          <div class="empty-state-text">Importe a planilha de TAF ou adicione registros manualmente.</div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           SECTION: TP-EPR
+           ====================================================== -->
+      <section id="section-tpepr" class="dashboard-section">
+        <!-- KPIs -->
+        <div class="kpi-grid">
+          <div class="kpi-card" id="kpi-tpepr-total">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">bombeiros</span>
+            </div>
+            <div class="kpi-label">Total Avaliados</div>
+          </div>
+          <div class="kpi-card" id="kpi-tpepr-exc">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">≤ 60s (excelente)</span>
+            </div>
+            <div class="kpi-label">Excelente</div>
+          </div>
+          <div class="kpi-card" id="kpi-tpepr-bom">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">61s-90s (bom)</span>
+            </div>
+            <div class="kpi-label">Bom</div>
+          </div>
+          <div class="kpi-card" id="kpi-tpepr-ruim">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">> 90s (ruim)</span>
+            </div>
+            <div class="kpi-label">Insatisfatório</div>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid">
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Classificação Geral</div>
+              <div class="chart-type-selector" data-chart="tpeprDonut">
+                <button class="btn-chart-type active" data-type="doughnut" title="Rosca/Donut">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+                </button>
+                <button class="btn-chart-type" data-type="pie" title="Pizza">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar" title="Barras">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Métrica de rapidez para colocação do Equipamento de Proteção Respiratória (EPR). A escala é subdividida em Excelente (≤60 segundos), Bom (61 a 90 segundos) e Ruim (>90 segundos).</div>
+            <div class="chart-container">
+              <canvas id="tpeprDonut"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Por Equipe</div>
+              <div class="chart-type-selector" data-chart="tpeprEquipe">
+                <button class="btn-chart-type active" data-type="bar" title="Barras Empilhadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar-grouped" title="Barras Agrupadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Contagem absoluta de bombeiros aprovados (Satisfatório) e reprovados (Insatisfatório) no TAF por equipe operacional, auxiliando no monitoramento do efetivo disponível.</div>
+            <div class="chart-container">
+              <canvas id="tpeprEquipe"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Tempo Médio por Função</div>
+              <div class="chart-type-selector" data-chart="tpeprFuncao">
+                <button class="btn-chart-type active" data-type="horizontalBar" title="Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar" title="Barras Verticais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Tempo médio em segundos gasto na paramentação de proteção respiratória (EPR) por função, evidenciando quais cargos demandam maior tempo de prontidão.</div>
+            <div class="chart-container">
+              <canvas id="tpeprFuncao"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Distribuição de Tempos</div>
+              <div class="chart-type-selector" data-chart="tpeprHistogram">
+                <button class="btn-chart-type active" data-type="bar" title="Barras">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+                <button class="btn-chart-type" data-type="radar" title="Radar">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 19.5 12 22 2 19.5 2 8.5"></polygon><line x1="12" y1="2" x2="12" y2="22"></line><line x1="12" y1="12" x2="22" y2="8.5"></line><line x1="12" y1="12" x2="2" y2="8.5"></line></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Gráfico de frequência (histograma) mostrando em quais faixas de segundos se concentram os acionamentos de paramentação da equipe, útil para auditar desvios de padrão.</div>
+            <div class="chart-container">
+              <canvas id="tpeprHistogram"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-wrapper" id="table-tpepr">
+          <div class="table-header">
+            <span class="table-title">Registros TP-EPR</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Equipe</th>
+                  <th>Função</th>
+                  <th>Tempo</th>
+                  <th>Resultado</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-tpepr">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div id="tpepr-empty" class="empty-state">
+          <div class="empty-state-icon">⏱️</div>
+          <div class="empty-state-title">Sem dados de TP-EPR</div>
+          <div class="empty-state-text">Importe a planilha de Tempo de Prontidão/EPR ou adicione registros manualmente.</div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           SECTION: DESEMPENHO TR
+           ====================================================== -->
+      <section id="section-tr" class="dashboard-section">
+        <!-- KPIs -->
+        <div class="kpi-grid">
+          <div class="kpi-card" id="kpi-tr-total">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">acionamentos</span>
+            </div>
+            <div class="kpi-label">Total Testes</div>
+          </div>
+          <div class="kpi-card" id="kpi-tr-meta">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">≤ 2:00m (na meta)</span>
+            </div>
+            <div class="kpi-label">Dentro da Meta</div>
+          </div>
+          <div class="kpi-card" id="kpi-tr-avg">
+            <div class="kpi-value-container">
+              <span class="kpi-value">—</span>
+              <span class="kpi-unit">médio 1°CCI</span>
+            </div>
+            <div class="kpi-label">Tempo Médio 1°CCI</div>
+          </div>
+          <div class="kpi-card" id="kpi-tr-pct">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0%</span>
+              <span class="kpi-unit">dentro da meta</span>
+            </div>
+            <div class="kpi-label">% Meta</div>
+          </div>
+        </div>
+
+        <!-- Cabeceira Tabs -->
+        <div class="cabeceira-tabs-container" style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+          <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Filtrar por Cabeceira da Pista (Aeroporto SBGL):</span>
+          <div class="cabeceira-tabs" style="margin-bottom: 0;">
+            <button class="cabeceira-tab active" data-cab="todas">Todas as Pistas</button>
+            <button class="cabeceira-tab" data-cab="28">Cabeceira 28 (Principal)</button>
+            <button class="cabeceira-tab" data-cab="33">Cabeceira 33</button>
+            <button class="cabeceira-tab" data-cab="15">Cabeceira 15</button>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid">
+          <div class="chart-card full-width">
+            <div class="chart-card-title">Evolução Mensal 1° CCI</div>
+            <div class="chart-card-desc">Evolução do tempo de resposta (TR) da primeira viatura (1° CCI) posicionada na cabeceira selecionada de Janeiro a Junho de 2026. A linha tracejada vermelha marca o limite crítico de segurança (02:00 minutos).</div>
+            <div class="chart-container">
+              <canvas id="trTimeline"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Comparativo CCIs</div>
+              <div class="chart-type-selector" data-chart="trCci">
+                <button class="btn-chart-type active" data-type="bar" title="Barras Verticais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="horizontalBar" title="Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Tempo médio de acionamento e chegada em segundos comparando a 1ª, 2ª e 3ª viaturas (CCIs) de forma agrupada por equipes para atestar a fluidez da resposta sequencial.</div>
+            <div class="chart-container">
+              <canvas id="trCci"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Conformidade com Meta</div>
+              <div class="chart-type-selector" data-chart="trHeatmap">
+                <button class="btn-chart-type active" data-type="bar" title="Barras Empilhadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar-grouped" title="Barras Agrupadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Matriz quadricular de conformidade mensal. As cores sinalizam se a média de resposta do 1° CCI atendeu à meta de 2 minutos (Verde) ou excedeu o limite (Vermelho) em cada mês.</div>
+            <div class="chart-container">
+              <canvas id="trHeatmap"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-wrapper" id="table-tr">
+          <div class="table-header">
+            <span class="table-title">Registros de Tempo-Resposta</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cabeceira</th>
+                  <th>Equipe</th>
+                  <th>Mês</th>
+                  <th>CCI</th>
+                  <th>Tempo</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-tr">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div id="tr-empty" class="empty-state">
+          <div class="empty-state-icon">🚒</div>
+          <div class="empty-state-title">Sem dados de Tempo-Resposta</div>
+          <div class="empty-state-text">Importe a planilha de TR ou adicione registros manualmente.</div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           SECTION: AVALIAÇÃO TEÓRICA
+           ====================================================== -->
+      <section id="section-teorica" class="dashboard-section">
+        <!-- KPIs -->
+        <div class="kpi-grid">
+          <div class="kpi-card" id="kpi-teo-total">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">bombeiros</span>
+            </div>
+            <div class="kpi-label">Total Avaliados</div>
+          </div>
+          <div class="kpi-card" id="kpi-teo-avg">
+            <div class="kpi-value-container">
+              <span class="kpi-value">—</span>
+              <span class="kpi-unit">/ 100 (média)</span>
+            </div>
+            <div class="kpi-label">Média</div>
+          </div>
+          <div class="kpi-card" id="kpi-teo-min">
+            <div class="kpi-value-container">
+              <span class="kpi-value">—</span>
+              <span class="kpi-unit">/ 100 (mín)</span>
+            </div>
+            <div class="kpi-label">Menor Nota</div>
+          </div>
+          <div class="kpi-card" id="kpi-teo-max">
+            <div class="kpi-value-container">
+              <span class="kpi-value">—</span>
+              <span class="kpi-unit">/ 100 (máx)</span>
+            </div>
+            <div class="kpi-label">Maior Nota</div>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-grid grid-3">
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Distribuição de Notas</div>
+              <div class="chart-type-selector" data-chart="teoricaHistogram">
+                <button class="btn-chart-type active" data-type="bar" title="Barras">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+                <button class="btn-chart-type" data-type="radar" title="Radar">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 19.5 12 22 2 19.5 2 8.5"></polygon><line x1="12" y1="2" x2="12" y2="22"></line><line x1="12" y1="12" x2="22" y2="8.5"></line><line x1="12" y1="12" x2="2" y2="8.5"></line></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Histograma da pontuação geral da avaliação teórica de conhecimentos técnicos operacionais de PTR-BA de todo o efetivo (escala de 0 a 100).</div>
+            <div class="chart-container">
+              <canvas id="teoricaHistogram"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Média por Função</div>
+              <div class="chart-type-selector" data-chart="teoricaFuncao">
+                <button class="btn-chart-type active" data-type="horizontalBar" title="Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar" title="Barras Verticais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Desempenho teórico médio por especialidades operacionais, evidenciando áreas funcionais que possam requerer reciclagens técnicas adicionais.</div>
+            <div class="chart-container">
+              <canvas id="teoricaFuncao"></canvas>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Média por Equipe</div>
+              <div class="chart-type-selector" data-chart="teoricaEquipe">
+                <button class="btn-chart-type active" data-type="bar" title="Barras Verticais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="horizontalBar" title="Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-card-desc">Desempenho teórico das equipes obtido a partir do cruzamento de nomes com as escalas operacionais do TAF. A linha cinza tracejada representa o limiar de aproveitamento mínimo.</div>
+            <div class="chart-container">
+              <canvas id="teoricaEquipe"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-wrapper" id="table-teorica">
+          <div class="table-header">
+            <span class="table-title">Registros de Avaliação Teórica</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Função</th>
+                  <th>Equipe</th>
+                  <th>Nota</th>
+                  <th>Aeroporto</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-teorica">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div id="teorica-empty" class="empty-state">
+          <div class="empty-state-icon">📝</div>
+          <div class="empty-state-title">Sem dados de Avaliação Teórica</div>
+          <div class="empty-state-text">Importe a planilha de avaliações ou adicione registros manualmente.</div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           SECTION: UPLOAD
+           ====================================================== -->
+      <section id="section-upload" class="dashboard-section">
+        <!-- Drop Zone -->
+        <div class="upload-area" id="upload-area">
+          <div class="upload-icon">📤</div>
+          <div class="upload-text">Arraste a planilha aqui ou clique para selecionar</div>
+          <div class="upload-subtext">Formatos aceitos: .xlsx, .xls</div>
+          <input type="file" id="upload-input" accept=".xlsx,.xls">
+        </div>
+
+        <!-- Type detection label -->
+        <div id="upload-type-label" class="mt-4 text-sm text-muted text-center"></div>
+
+        <!-- Preview -->
+        <div id="upload-preview" class="upload-preview">
+          <div class="upload-preview-info">
+            <span class="upload-type-badge" id="upload-detected-type">—</span>
+            <span class="text-sm text-muted" id="upload-record-count">0 registros detectados</span>
+          </div>
+          <div id="upload-preview-table" class="table-scroll">
+            <!-- Preview table generated by JS -->
+          </div>
+          <div class="upload-actions">
+            <button class="btn btn-success" id="upload-confirm">✅ Confirmar Import</button>
+            <button class="btn btn-secondary" id="upload-cancel">Cancelar</button>
+          </div>
+        </div>
+
+        <!-- Upload History -->
+        <div class="upload-history mt-6">
+          <div class="upload-history-title">Histórico de Uploads</div>
+          <div id="upload-history">
+            <!-- History items populated by JS -->
+            <div class="empty-state" style="padding:40px 20px;">
+              <div class="empty-state-text">Nenhum upload realizado ainda.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================
+           SECTION: MANUAL ENTRY
+           ====================================================== -->
+      <section id="section-manual" class="dashboard-section">
+        <div class="manual-section">
+          <!-- Type selector -->
+          <div class="form-card">
+            <div class="form-group mb-4">
+              <label class="form-label" for="manual-type-select">Tipo de Registro</label>
+              <select id="manual-type-select">
+                <option value="">Selecione o tipo...</option>
+                <option value="taf">TAF</option>
+                <option value="tpepr">TP-EPR</option>
+                <option value="tr">TR — Tempo-Resposta</option>
+                <option value="teorica">Avaliação Teórica</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Dynamic form container -->
+          <div id="manual-form-container">
+
+            <!-- Form: TAF -->
+            <div id="form-taf" class="form-template">
+              <div class="form-card">
+                <div class="form-grid">
+                  <div class="form-group full-width">
+                    <label class="form-label" for="taf-nome">Nome</label>
+                    <input type="text" id="taf-nome" placeholder="Nome completo">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="taf-equipe">Equipe</label>
+                    <select id="taf-equipe">
+                      <option value="">Selecione...</option>
+                      <option value="ALFA">ALFA</option>
+                      <option value="BRAVO">BRAVO</option>
+                      <option value="CHARLIE">CHARLIE</option>
+                      <option value="DELTA">DELTA</option>
+                      <option value="FOLGUISTA">FOLGUISTA</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="taf-funcao">Função</label>
+                    <select id="taf-funcao">
+                      <option value="">Selecione...</option>
+                      <option value="BA">BA</option>
+                      <option value="BA2">BA2</option>
+                      <option value="BA-MC">BA-MC</option>
+                      <option value="BA-LR">BA-LR</option>
+                      <option value="BA-RE">BA-RE</option>
+                      <option value="BA-CE">BA-CE</option>
+                      <option value="BA-MA">BA-MA</option>
+                      <option value="OC">OC</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="taf-idade">Idade</label>
+                    <input type="number" id="taf-idade" placeholder="Ex: 32" min="18" max="70">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="taf-flexao">Flexão</label>
+                    <input type="number" id="taf-flexao" placeholder="Repetições" min="0">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="taf-abdominal">Abdominal</label>
+                    <input type="number" id="taf-abdominal" placeholder="Repetições" min="0">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="taf-barra">Barra</label>
+                    <input type="number" id="taf-barra" placeholder="Repetições" min="0">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="taf-corrida">Corrida</label>
+                    <input type="text" id="taf-corrida" placeholder="mm:ss">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="taf-resultado">Resultado</label>
+                    <select id="taf-resultado">
+                      <option value="">Selecione...</option>
+                      <option value="SATISFATÓRIO">Satisfatório</option>
+                      <option value="INSATISFATÓRIO">Insatisfatório</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form: TP-EPR -->
+            <div id="form-tpepr" class="form-template">
+              <div class="form-card">
+                <div class="form-grid">
+                  <div class="form-group full-width">
+                    <label class="form-label" for="tpepr-nome">Nome</label>
+                    <input type="text" id="tpepr-nome" placeholder="Nome completo">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="tpepr-equipe">Equipe</label>
+                    <select id="tpepr-equipe">
+                      <option value="">Selecione...</option>
+                      <option value="ALFA">ALFA</option>
+                      <option value="BRAVO">BRAVO</option>
+                      <option value="CHARLIE">CHARLIE</option>
+                      <option value="DELTA">DELTA</option>
+                      <option value="FOLGUISTA">FOLGUISTA</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="tpepr-funcao">Função</label>
+                    <select id="tpepr-funcao">
+                      <option value="">Selecione...</option>
+                      <option value="BA">BA</option>
+                      <option value="BA2">BA2</option>
+                      <option value="BA-MC">BA-MC</option>
+                      <option value="BA-LR">BA-LR</option>
+                      <option value="BA-RE">BA-RE</option>
+                      <option value="BA-CE">BA-CE</option>
+                      <option value="BA-MA">BA-MA</option>
+                      <option value="OC">OC</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="tpepr-tempo">Tempo (mm:ss)</label>
+                    <input type="text" id="tpepr-tempo" placeholder="Ex: 01:45">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="tpepr-resultado">Resultado</label>
+                    <select id="tpepr-resultado">
+                      <option value="">Selecione...</option>
+                      <option value="EXCELENTE">Excelente</option>
+                      <option value="BOM">Bom</option>
+                      <option value="RUIM">Ruim</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form: TR -->
+            <div id="form-tr" class="form-template">
+              <div class="form-card">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="tr-cabeceira">Cabeceira</label>
+                    <select id="tr-cabeceira">
+                      <option value="">Selecione...</option>
+                      <option value="28">28</option>
+                      <option value="33">33</option>
+                      <option value="15">15</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="tr-equipe">Equipe</label>
+                    <select id="tr-equipe">
+                      <option value="">Selecione...</option>
+                      <option value="ALFA">ALFA</option>
+                      <option value="BRAVO">BRAVO</option>
+                      <option value="CHARLIE">CHARLIE</option>
+                      <option value="DELTA">DELTA</option>
+                      <option value="FOLGUISTA">FOLGUISTA</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="tr-mes">Mês</label>
+                    <select id="tr-mes">
+                      <option value="">Selecione...</option>
+                      <option value="Janeiro">Janeiro</option>
+                      <option value="Fevereiro">Fevereiro</option>
+                      <option value="Março">Março</option>
+                      <option value="Abril">Abril</option>
+                      <option value="Maio">Maio</option>
+                      <option value="Junho">Junho</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="tr-cci">CCI</label>
+                    <select id="tr-cci">
+                      <option value="">Selecione...</option>
+                      <option value="1°CCI">1°CCI</option>
+                      <option value="2°CCI">2°CCI</option>
+                      <option value="3°CCI">3°CCI</option>
+                      <option value="4°CCI">4°CCI</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="tr-tempo">Tempo (mm:ss)</label>
+                    <input type="text" id="tr-tempo" placeholder="Ex: 02:30">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form: Avaliação Teórica -->
+            <div id="form-teorica" class="form-template">
+              <div class="form-card">
+                <div class="form-grid">
+                  <div class="form-group full-width">
+                    <label class="form-label" for="teorica-nome">Nome</label>
+                    <input type="text" id="teorica-nome" placeholder="Nome completo">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="teorica-funcao">Função</label>
+                    <select id="teorica-funcao">
+                      <option value="">Selecione...</option>
+                      <option value="BA">BA</option>
+                      <option value="BA2">BA2</option>
+                      <option value="BA-MC">BA-MC</option>
+                      <option value="BA-LR">BA-LR</option>
+                      <option value="BA-RE">BA-RE</option>
+                      <option value="BA-CE">BA-CE</option>
+                      <option value="BA-MA">BA-MA</option>
+                      <option value="OC">OC</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="teorica-nota">Nota</label>
+                    <input type="number" id="teorica-nota" placeholder="0 – 100" min="0" max="100" step="0.1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Actions -->
+          <div class="form-actions" id="manual-form-actions" style="display:none;">
+            <button class="btn btn-success" id="manual-save">💾 Salvar Registro</button>
+            <button class="btn btn-secondary" id="manual-cancel">Cancelar</button>
+          </div>
+
+          <!-- Manual records list -->
+          <div class="manual-records" id="manual-records">
+            <div class="manual-records-title">Registros Adicionados Manualmente</div>
+            <!-- Records populated by JS -->
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /.content-wrapper -->
+  </main>
+
+  <!-- ============================================================
+       FILTER PANEL (right sidebar)
+       ============================================================ -->
+  <aside id="filters-panel">
+    <div class="filter-header">
+      <span class="filter-title">Filtros</span>
+      <button class="filter-close" id="filter-close" aria-label="Fechar filtros">✕</button>
+    </div>
+
+    <!-- Name search -->
+    <div class="filter-group">
+      <label class="filter-group-label" for="filter-search">Buscar Nome</label>
+      <input type="search" id="filter-search" placeholder="Digite o nome...">
+    </div>
+
+    <!-- Equipe checkboxes -->
+    <div class="filter-group">
+      <span class="filter-group-label">Equipe</span>
+      <div class="checkbox-group" id="filter-equipe-list">
+        <label class="checkbox-item">
+          <input type="checkbox" value="ALFA" checked> ALFA
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="BRAVO" checked> BRAVO
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="CHARLIE" checked> CHARLIE
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="DELTA" checked> DELTA
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="FOLGUISTA" checked> FOLGUISTA
+        </label>
+      </div>
+    </div>
+
+    <!-- Função checkboxes -->
+    <div class="filter-group">
+      <span class="filter-group-label">Função</span>
+      <div class="checkbox-group" id="filter-funcao-list">
+        <label class="checkbox-item">
+          <input type="checkbox" value="BA" checked> BA
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="BA2" checked> BA2
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="BA-MC" checked> BA-MC
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="BA-LR" checked> BA-LR
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="BA-RE" checked> BA-RE
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="BA-CE" checked> BA-CE
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="BA-MA" checked> BA-MA
+        </label>
+        <label class="checkbox-item">
+          <input type="checkbox" value="OC" checked> OC
+        </label>
+      </div>
+    </div>
+
+    <!-- Resultado checkboxes (context-dependent) -->
+    <div class="filter-group">
+      <span class="filter-group-label">Resultado</span>
+      <div class="checkbox-group" id="filter-resultado-list">
+        <!-- Options populated/swapped by JS based on active section -->
+      </div>
+    </div>
+
+    <!-- TR-only filters -->
+    <div class="filter-group filter-tr-only">
+      <label class="filter-group-label" for="filter-cabeceira">Cabeceira</label>
+      <select id="filter-cabeceira">
+        <option value="">Todas</option>
+        <option value="28">28</option>
+        <option value="33">33</option>
+        <option value="15">15</option>
+      </select>
+    </div>
+
+    <div class="filter-group filter-tr-only">
+      <label class="filter-group-label" for="filter-mes">Mês</label>
+      <select id="filter-mes">
+        <option value="">Todos</option>
+        <option value="Janeiro">Janeiro</option>
+        <option value="Fevereiro">Fevereiro</option>
+        <option value="Março">Março</option>
+        <option value="Abril">Abril</option>
+        <option value="Maio">Maio</option>
+        <option value="Junho">Junho</option>
+      </select>
+    </div>
+
+    <div class="filter-group filter-tr-only">
+      <label class="filter-group-label" for="filter-cci">CCI</label>
+      <select id="filter-cci">
+        <option value="">Todos</option>
+        <option value="1°CCI">1°CCI</option>
+        <option value="2°CCI">2°CCI</option>
+        <option value="3°CCI">3°CCI</option>
+        <option value="4°CCI">4°CCI</option>
+      </select>
+    </div>
+
+    <!-- TAF-only filters -->
+    <div class="filter-group filter-taf-only">
+      <span class="filter-group-label">Faixa de Idade</span>
+      <div class="flex gap-2">
+        <input type="number" id="filter-idade-min" placeholder="Mín" min="18" max="70" style="width:50%;">
+        <input type="number" id="filter-idade-max" placeholder="Máx" min="18" max="70" style="width:50%;">
+      </div>
+    </div>
+
+    <!-- Teórica-only filters -->
+    <div class="filter-group filter-teorica-only">
+      <span class="filter-group-label">Faixa de Nota</span>
+      <div class="flex gap-2">
+        <input type="number" id="filter-nota-min" placeholder="Mín" min="0" max="100" step="0.1" style="width:50%;">
+        <input type="number" id="filter-nota-max" placeholder="Máx" min="0" max="100" step="0.1" style="width:50%;">
+      </div>
+    </div>
+
+    <!-- Filter count & clear -->
+    <div class="filter-count" id="filter-count">0 registros</div>
+    <button class="btn btn-secondary w-full mt-2" id="filter-clear">🗑️ Limpar Filtros</button>
+  </aside>
+
+  <!-- ============================================================
+       TOAST NOTIFICATION
+       ============================================================ -->
+  <div id="toast">
+    <span class="toast-icon"></span>
+    <span class="toast-message"></span>
+  </div>
+
+  <!-- ============================================================
+       JS MODULES
+       ============================================================ -->
+  <script src="js/storage.js?v=9.0"></script>
+  <script src="js/parsers/names.js?v=9.0"></script>
+  <script src="js/parsers/taf.js?v=9.0"></script>
+  <script src="js/parsers/tpepr.js?v=9.0"></script>
+  <script src="js/parsers/tr.js?v=9.0"></script>
+  <script src="js/parsers/teorica.js?v=9.0"></script>
+  <script src="js/filters.js?v=9.0"></script>
+  <script src="js/charts/overview-charts.js?v=9.0"></script>
+  <script src="js/charts/taf-charts.js?v=9.0"></script>
+  <script src="js/charts/tpepr-charts.js?v=9.0"></script>
+  <script src="js/charts/tr-charts.js?v=9.0"></script>
+  <script src="js/charts/teorica-charts.js?v=9.0"></script>
+  <script src="js/export.js?v=9.0"></script>
+  <script src="js/manual-entry.js?v=9.0"></script>
+  <script src="js/seed-data.js?v=9.0"></script>
+  <script src="js/app.js?v=9.0"></script>
+
+</body>
+</html>
