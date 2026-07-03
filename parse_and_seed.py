@@ -395,7 +395,7 @@ def main():
         }
     }
     
-    out_dir = 'dashboard/js'
+    out_dir = 'js'
     os.makedirs(out_dir, exist_ok=True)
     out_file = os.path.join(out_dir, 'seed-data.js')
     
