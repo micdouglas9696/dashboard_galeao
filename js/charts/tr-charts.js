@@ -123,23 +123,26 @@
     const ctx = getCtx('trTimeline');
     if (!ctx) return;
 
-    const ok = records.filter(r => r.status === 'ok' && r.cci === '1°CCI');
+    const ok = records.filter(r => r.status === 'ok');
+    const ccis = ['1°CCI', '2°CCI', '3°CCI', '4°CCI'];
+    const cciColors = { '1°CCI': '#00d2ff', '2°CCI': '#00ff87', '3°CCI': '#ffd32a', '4°CCI': '#b026ff' };
+
     const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
     const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
 
     const isRadar = activeTimelineType === 'radar';
     const isLine = activeTimelineType === 'line';
 
-    const datasets = EQUIPES.filter(e => ok.some(r => r.equipe === e)).map(equipe => {
-      const color = COLORS.equipes[equipe];
+    const datasets = ccis.filter(cci => ok.some(r => r.cci === cci)).map(cci => {
+      const color = cciColors[cci] || '#ccc';
       const data = usedMonthIndices.map(mi => {
-        const group = ok.filter(r => r.equipe === equipe && r.mesIndex === mi);
+        const group = ok.filter(r => r.cci === cci && r.mesIndex === mi);
         if (!group.length) return null;
         return Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length);
       });
 
       const config = {
-        label: equipe,
+        label: cci,
         data
       };
 
@@ -187,7 +190,7 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          title: { display: true, text: 'Evolução Mensal — 1°CCI', font: { size: 16 } },
+          title: { display: true, text: 'Evolução Mensal por CCI', font: { size: 16 } },
           legend: { position: 'top' },
           tooltip: {
             callbacks: {
@@ -221,79 +224,7 @@
     chartInstances.trTimeline = new Chart(ctx, config);
   }
 
-  function renderTimelineAllCCI(records) {
-    destroyChart('trTimelineAllCCI');
-    const ctx = getCtx('trTimelineAllCCI');
-    if (!ctx) return;
 
-    const ok = records.filter(r => r.status === 'ok');
-    const ccis = ['1°CCI', '2°CCI', '3°CCI', '4°CCI'];
-    const cciColors = { '1°CCI': '#00d2ff', '2°CCI': '#00ff87', '3°CCI': '#ffd32a', '4°CCI': '#b026ff' };
-
-    const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
-    const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
-
-    const datasets = ccis.filter(cci => ok.some(r => r.cci === cci)).map(cci => {
-      const color = cciColors[cci];
-      const data = usedMonthIndices.map(mi => {
-        const group = ok.filter(r => r.cci === cci && r.mesIndex === mi);
-        if (!group.length) return null;
-        return Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length);
-      });
-
-      return {
-        label: cci,
-        data,
-        borderColor: color,
-        backgroundColor: color + '33',
-        pointBackgroundColor: color,
-        pointBorderColor: '#fff',
-        pointRadius: 5,
-        pointHoverRadius: 7,
-        tension: 0.3,
-        spanGaps: true,
-        fill: false
-      };
-    });
-
-    // Meta line
-    datasets.push({
-      label: 'Meta (02:00)',
-      data: usedMonthIndices.map(() => META_SECONDS),
-      borderColor: COLORS.red,
-      borderDash: [8, 4],
-      borderWidth: 2,
-      pointRadius: 0,
-      fill: false,
-      tension: 0
-    });
-
-    chartInstances.trTimelineAllCCI = new Chart(ctx, {
-      type: 'line',
-      data: { labels, datasets },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          title: { display: true, text: 'Evolução Mensal — Todos os CCIs', font: { size: 16 } },
-          legend: { position: 'top' },
-          tooltip: {
-            callbacks: {
-              label: ctx => `${ctx.dataset.label}: ${formatTime(ctx.parsed.y || ctx.raw)}`
-            }
-          }
-        },
-        scales: {
-          x: { title: { display: true, text: 'Mês' } },
-          y: {
-            beginAtZero: true,
-            title: { display: true, text: 'Tempo (segundos)' },
-            ticks: { callback: v => formatTime(v) }
-          }
-        }
-      }
-    });
-  }
 
   function renderCciBar(records) {
     destroyChart('trCci');
@@ -553,7 +484,6 @@
 
     renderKPIs(filtered);
     renderTimeline(filtered);
-    renderTimelineAllCCI(filtered);
     renderCciBar(filtered);
     renderHeatmap(filtered);
     renderTable(filtered);
@@ -561,7 +491,6 @@
 
   function destroy() {
     destroyChart('trTimeline');
-    destroyChart('trTimelineAllCCI');
     destroyChart('trCci');
     destroyChart('trHeatmap');
   }

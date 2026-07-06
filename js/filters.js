@@ -250,7 +250,29 @@
     // Select change handlers
     ['filter-cabeceira', 'filter-mes', 'filter-cci'].forEach(id => {
       const el = document.getElementById(id);
-      if (el) el.addEventListener('change', () => apply());
+      if (el) {
+        el.addEventListener('change', (e) => {
+          if (id === 'filter-mes') {
+            const selectedMonth = e.target.value || 'todos';
+            // Sync with TR month tab buttons in the main view
+            const trFilterContainer = document.getElementById('tr-month-filter');
+            if (trFilterContainer) {
+              trFilterContainer.querySelectorAll('.month-tab').forEach(tab => {
+                if (tab.dataset.month === selectedMonth) {
+                  tab.classList.add('active');
+                } else {
+                  tab.classList.remove('active');
+                }
+              });
+            }
+            // Sync with App's internal month filter state
+            if (window.SESCINC.App && window.SESCINC.App.setMonthFilter) {
+              window.SESCINC.App.setMonthFilter('tr', selectedMonth);
+            }
+          }
+          apply();
+        });
+      }
     });
   }
 
@@ -309,7 +331,25 @@
     // Reset selects
     ['filter-cabeceira', 'filter-mes', 'filter-cci'].forEach(id => {
       const el = document.getElementById(id);
-      if (el) el.value = '';
+      if (el) {
+        el.value = '';
+        if (id === 'filter-mes') {
+          // Sync with TR month tabs (reset to "Todos" active)
+          const trFilterContainer = document.getElementById('tr-month-filter');
+          if (trFilterContainer) {
+            trFilterContainer.querySelectorAll('.month-tab').forEach(tab => {
+              if (tab.dataset.month === 'todos') {
+                tab.classList.add('active');
+              } else {
+                tab.classList.remove('active');
+              }
+            });
+          }
+          if (window.SESCINC.App && window.SESCINC.App.setMonthFilter) {
+            window.SESCINC.App.setMonthFilter('tr', 'todos');
+          }
+        }
+      }
     });
 
     // Reset ranges

@@ -57,7 +57,7 @@
 
   let currentSection = 'overview';
   let currentCabeceira = 'all';
-  let currentMonthFilters = { overview: 'todos', taf: 'todos', tpepr: 'todos' };
+  let currentMonthFilters = { overview: 'todos', taf: 'todos', tpepr: 'todos', tr: 'todos', teorica: 'todos' };
   let allData = { taf: [], tpepr: [], tr: [], teorica: [] };
 
   /* ── Storage helpers ── */
@@ -250,8 +250,8 @@
       const Filters = window.SESCINC.Filters;
       let sectionData = data[section] || [];
       sectionData = Filters ? Filters.filterRecords(sectionData, section) : sectionData;
-      // Apply month filter for TAF and TPEPR
-      if ((section === 'taf' || section === 'tpepr') && currentMonthFilters[section] && currentMonthFilters[section] !== 'todos') {
+      // Apply month filter for TAF, TPEPR, TR and Teorica
+      if ((section === 'taf' || section === 'tpepr' || section === 'tr' || section === 'teorica') && currentMonthFilters[section] && currentMonthFilters[section] !== 'todos') {
         sectionData = filterByMonth(sectionData, section);
       }
       filtered = sectionData;
@@ -744,6 +744,19 @@
       }
 
       currentMonthFilters[section] = month;
+
+      // Sync TR month tabs with the sidebar select dropdown
+      if (section === 'tr') {
+        const mesSelect = document.getElementById('filter-mes');
+        if (mesSelect) {
+          mesSelect.value = (month === 'todos') ? '' : month;
+          if (window.SESCINC.Filters && window.SESCINC.Filters.apply) {
+            window.SESCINC.Filters.apply();
+            return;
+          }
+        }
+      }
+
       renderSection(currentSection);
     });
   }
@@ -846,13 +859,18 @@
     console.log('[App] Dashboard ready');
   }
 
+  function setMonthFilter(section, month) {
+    currentMonthFilters[section] = month;
+  }
+
   /* ── Expose public API ── */
 
   window.SESCINC.App = {
     init,
     navigate,
     refresh,
-    loadData
+    loadData,
+    setMonthFilter
   };
 
   // Auto-init when DOM is ready

@@ -660,6 +660,19 @@
            SECTION: DESEMPENHO TR
            ====================================================== -->
       <section id="section-tr" class="dashboard-section">
+        <!-- Month Filter -->
+        <div class="month-filter-container" id="tr-month-filter">
+          <span class="month-filter-label">Período:</span>
+          <div class="month-filter-tabs">
+            <button class="month-tab active" data-month="todos" data-section="tr">Todos</button>
+            <button class="month-tab" data-month="Janeiro" data-section="tr">Jan</button>
+            <button class="month-tab" data-month="Fevereiro" data-section="tr">Fev</button>
+            <button class="month-tab" data-month="Março" data-section="tr">Mar</button>
+            <button class="month-tab" data-month="Abril" data-section="tr">Abr</button>
+            <button class="month-tab" data-month="Maio" data-section="tr">Mai</button>
+            <button class="month-tab" data-month="Junho" data-section="tr">Jun</button>
+          </div>
+        </div>
         <!-- KPIs -->
         <div class="kpi-grid">
           <div class="kpi-card" id="kpi-tr-total">
@@ -706,17 +719,10 @@
         <!-- Charts -->
         <div class="charts-grid">
           <div class="chart-card full-width">
-            <div class="chart-card-title">Evolução Mensal 1° CCI</div>
-            <div class="chart-card-desc">Evolução do tempo de resposta (TR) da primeira viatura (1° CCI) posicionada na cabeceira selecionada de Janeiro a Junho de 2026. A linha tracejada vermelha marca o limite crítico de segurança (02:00 minutos).</div>
+            <div class="chart-card-title">Evolução Mensal por CCI</div>
+            <div class="chart-card-desc">Evolução do tempo de resposta (TR) das viaturas (1°, 2°, 3° e 4° CCI) na cabeceira selecionada de Janeiro a Junho de 2026. A linha tracejada vermelha marca o limite crítico de segurança (02:00 minutos).</div>
             <div class="chart-container">
               <canvas id="trTimeline"></canvas>
-            </div>
-          </div>
-          <div class="chart-card full-width">
-            <div class="chart-card-title">Evolução Mensal — Todos os CCIs</div>
-            <div class="chart-card-desc">Comparativo da evolução mensal do tempo de resposta de todos os CCIs (1°, 2°, 3° e 4° CCI). A linha tracejada vermelha marca o limite de 02:00 minutos.</div>
-            <div class="chart-container">
-              <canvas id="trTimelineAllCCI"></canvas>
             </div>
           </div>
           <div class="chart-card">
@@ -797,6 +803,19 @@
            SECTION: AVALIAÇÃO TEÓRICA
            ====================================================== -->
       <section id="section-teorica" class="dashboard-section">
+        <!-- Month Filter -->
+        <div class="month-filter-container" id="teorica-month-filter">
+          <span class="month-filter-label">Período:</span>
+          <div class="month-filter-tabs">
+            <button class="month-tab active" data-month="todos" data-section="teorica">Todos</button>
+            <button class="month-tab" data-month="Janeiro" data-section="teorica">Jan</button>
+            <button class="month-tab" data-month="Fevereiro" data-section="teorica">Fev</button>
+            <button class="month-tab" data-month="Março" data-section="teorica">Mar</button>
+            <button class="month-tab" data-month="Abril" data-section="teorica">Abr</button>
+            <button class="month-tab" data-month="Maio" data-section="teorica">Mai</button>
+            <button class="month-tab" data-month="Junho" data-section="teorica">Jun</button>
+          </div>
+        </div>
         <!-- KPIs -->
         <div class="kpi-grid">
           <div class="kpi-card" id="kpi-teo-total">
