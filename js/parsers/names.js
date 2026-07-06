@@ -245,5 +245,70 @@ window.SESCINC.Names = {
     }
 
     return records;
+  },
+
+  /**
+   * Extrai e normaliza o nome do mês a partir do nome do arquivo, da aba ou do conteúdo da planilha.
+   * @param {string} fileName — Nome do arquivo
+   * @param {string} sheetName — Nome da aba
+   * @param {Object} [workbook] — Workbook opcional do SheetJS
+   * @returns {string} — Nome do mês normalizado (ex: 'Janeiro', 'Julho')
+   */
+  extractMonth: function (fileName, sheetName, workbook) {
+    var MONTHS_MAP = {
+      'JANEIRO': 'Janeiro', 'FEVEREIRO': 'Fevereiro', 'MARÇO': 'Março', 'MARCO': 'Março',
+      'ABRIL': 'Abril', 'MAIO': 'Maio', 'JUNHO': 'Junho', 'JULHO': 'Julho',
+      'AGOSTO': 'Agosto', 'SETEMBRO': 'Setembro', 'OUTUBRO': 'Outubro',
+      'NOVEMBRO': 'Novembro', 'DEZEMBRO': 'Dezembro'
+    };
+
+    var searchTargets = [];
+
+    // 1. Procurar no nome do arquivo
+    if (fileName) {
+      searchTargets.push(fileName.toUpperCase());
+    }
+
+    // 2. Procurar no nome da aba
+    if (sheetName) {
+      searchTargets.push(sheetName.toUpperCase());
+    }
+
+    // 3. Procurar no conteúdo das primeiras células da planilha
+    if (workbook && sheetName) {
+      try {
+        var sheet = workbook.Sheets[sheetName];
+        if (sheet) {
+          // Lê as primeiras 15 linhas e 4 colunas para procurar referências de meses
+          for (var r = 1; r <= 15; r++) {
+            for (var colCode = 65; colCode <= 68; colCode++) { // A to D
+              var cellRef = String.fromCharCode(colCode) + r;
+              var cell = sheet[cellRef];
+              var val = cell ? String(cell.v || cell.w || '').toUpperCase().trim() : '';
+              if (val) searchTargets.push(val);
+            }
+          }
+        }
+      } catch (e) {
+        console.warn('[SESCINC Names] Erro ao escanear células para detectar mês:', e);
+      }
+    }
+
+    // Varre todos os textos coletados para encontrar o primeiro mês correspondente
+    var monthKeys = Object.keys(MONTHS_MAP);
+    for (var t = 0; t < searchTargets.length; t++) {
+      var text = searchTargets[t];
+      for (var m = 0; m < monthKeys.length; m++) {
+        var key = monthKeys[m];
+        if (text.indexOf(key) >= 0) {
+          return MONTHS_MAP[key];
+        }
+      }
+    }
+
+    // 4. Default: mês atual
+    var date = new Date();
+    var defaultMonths = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    return defaultMonths[date.getMonth()];
   }
 };

@@ -154,7 +154,7 @@ window.SESCINC.Parsers.TAF = {
    * @param {Object} workbook — Workbook SheetJS
    * @returns {Object[]} — Array de registros TAF
    */
-  parse: function (workbook) {
+  parse: function (workbook, fileName) {
     if (!workbook) {
       console.error('[SESCINC TAF] Workbook inválido');
       return [];
@@ -223,7 +223,12 @@ window.SESCINC.Parsers.TAF = {
 
       var resultado = row[8] != null ? String(row[8]).trim() : '';
 
-      var mesNormalized = sheetName.charAt(0).toUpperCase() + sheetName.slice(1).toLowerCase();
+      var mesNormalized = '';
+      if (window.SESCINC && window.SESCINC.Names && window.SESCINC.Names.extractMonth) {
+        mesNormalized = window.SESCINC.Names.extractMonth(fileName, sheetName, workbook);
+      } else {
+        mesNormalized = sheetName.charAt(0).toUpperCase() + sheetName.slice(1).toLowerCase();
+      }
       records.push({
         nome: nome,
         equipe: equipe,

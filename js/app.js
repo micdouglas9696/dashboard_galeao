@@ -534,13 +534,25 @@
         let parsed = null;
         if (window.SESCINC.Parsers) {
           const parserMap = {
-            taf: window.SESCINC.Parsers.parseTAF,
-            tpepr: window.SESCINC.Parsers.parseTPEPR,
-            tr: window.SESCINC.Parsers.parseTR,
-            teorica: window.SESCINC.Parsers.parseTeorica
+            taf: (wb, fName) => {
+              const recs = window.SESCINC.Parsers.TAF ? window.SESCINC.Parsers.TAF.parse(wb, fName) : [];
+              return { records: recs };
+            },
+            tpepr: (wb, fName) => {
+              const recs = window.SESCINC.Parsers.TPEPR ? window.SESCINC.Parsers.TPEPR.parse(wb, fName) : [];
+              return { records: recs };
+            },
+            tr: (wb, fName) => {
+              const recs = window.SESCINC.Parsers.TR ? window.SESCINC.Parsers.TR.parse(wb, fName) : [];
+              return { records: recs };
+            },
+            teorica: (wb, fName) => {
+              const recs = window.SESCINC.Parsers.Teorica ? window.SESCINC.Parsers.Teorica.parse(wb, null, fName) : [];
+              return { records: recs };
+            }
           };
           const parser = parserMap[detectedType];
-          if (parser) parsed = parser(workbook);
+          if (parser) parsed = parser(workbook, file.name);
         }
 
         if (!parsed || !parsed.records || !parsed.records.length) {

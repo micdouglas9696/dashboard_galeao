@@ -103,7 +103,7 @@ window.SESCINC.Parsers.Teorica = {
    * @param {Object} [colaboradorMap] — Mapa de colaboradores para enriquecimento de equipe
    * @returns {Object[]} — Array de registros Teórica
    */
-  parse: function (workbook, colaboradorMap) {
+  parse: function (workbook, colaboradorMap, fileName) {
     if (!workbook) {
       console.error('[SESCINC Teórica] Workbook inválido');
       return [];
@@ -112,6 +112,13 @@ window.SESCINC.Parsers.Teorica = {
     var sheetName = workbook.SheetNames[0];
     var sheet = workbook.Sheets[sheetName];
     var data = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+    var mesNormalized = '';
+    if (window.SESCINC && window.SESCINC.Names && window.SESCINC.Names.extractMonth) {
+      mesNormalized = window.SESCINC.Names.extractMonth(fileName, sheetName, workbook);
+    } else {
+      mesNormalized = sheetName.charAt(0).toUpperCase() + sheetName.slice(1).toLowerCase();
+    }
 
     console.log('[SESCINC Teórica] Analisando aba "' + sheetName + '" — ' + data.length + ' linhas');
 
@@ -183,7 +190,8 @@ window.SESCINC.Parsers.Teorica = {
         aeroporto: aeroporto,
         nota: nota,
         equipe: '',  // Será preenchido pelo enriquecimento
-        questoes: questoes
+        questoes: questoes,
+        mes: mesNormalized
       });
     }
 
