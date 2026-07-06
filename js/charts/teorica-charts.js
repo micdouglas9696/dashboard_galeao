@@ -130,6 +130,17 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const idx = elements[0].index;
+          const bucketLabels = ['75-80', '80-85', '85-90', '90-95', '95-100'];
+          const rangesList = [[75, 80], [80, 85], [85, 90], [90, 95], [95, 100.01]];
+          const [min, max] = rangesList[idx];
+          const names = currentRecords.filter(r => r.nota >= min && r.nota < max).map(r => r.nome).filter(Boolean);
+          if (names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Nota: ' + bucketLabels[idx], names);
+          }
+        },
         plugins: {
           title: { display: true, text: 'Distribuição de Notas', font: { size: 16 } },
           legend: { display: isRadar }

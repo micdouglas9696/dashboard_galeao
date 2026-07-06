@@ -7,6 +7,31 @@
 
   window.SESCINC = window.SESCINC || {};
 
+  /* ── Detail Modal (global function for chart click handlers) ── */
+  window.SESCINC.showDetailModal = function (title, names) {
+    const overlay = document.getElementById('detail-modal');
+    const titleEl = document.getElementById('detail-modal-title');
+    const countEl = document.getElementById('detail-modal-count');
+    const listEl = document.getElementById('detail-modal-list');
+    if (!overlay || !titleEl || !countEl || !listEl) return;
+
+    titleEl.textContent = title;
+    countEl.textContent = names.length + ' bombeiro' + (names.length !== 1 ? 's' : '');
+    listEl.innerHTML = names.sort().map(n => `<li>${n}</li>`).join('');
+    overlay.style.display = 'flex';
+  };
+
+  function setupDetailModal() {
+    const overlay = document.getElementById('detail-modal');
+    const closeBtn = document.getElementById('detail-modal-close');
+    if (!overlay) return;
+    function close() { overlay.style.display = 'none'; }
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) close();
+    });
+  }
+
   /* ── Constants ── */
 
   const STORAGE_KEYS = {
@@ -32,6 +57,7 @@
 
   let currentSection = 'overview';
   let currentCabeceira = 'all';
+  let currentMonthFilters = { overview: 'todos', taf: 'todos', tpepr: 'todos' };
   let allData = { taf: [], tpepr: [], tr: [], teorica: [] };
 
   /* ── Storage helpers ── */
@@ -90,10 +116,19 @@
     }
 
     allData = {
-      taf: (tafData && tafData.records) ? tafData.records : [],
-      tpepr: (tpeprData && tpeprData.records) ? tpeprData.records : [],
+      taf: (tafData && tafData.records) ? tafData.records.map(function(r) {
+        if (!r.mes) r.mes = 'Junho';
+        return r;
+      }) : [],
+      tpepr: (tpeprData && tpeprData.records) ? tpeprData.records.map(function(r) {
+        if (!r.mes) r.mes = 'Junho';
+        return r;
+      }) : [],
       tr: (trData && trData.records) ? trData.records : [],
-      teorica: (teoricaData && teoricaData.records) ? teoricaData.records : []
+      teorica: (teoricaData && teoricaData.records) ? teoricaData.records.map(function(r) {
+        if (!r.mes) r.mes = 'Junho'; // default theoretical evaluations to June as well
+        return r;
+      }) : []
     };
 
     // Build colaborador map if possible
@@ -157,6 +192,9 @@
     console.log('[App] Navigating to:', section);
     currentSection = section;
 
+    // Update body class for styling section-specific filters
+    document.body.setAttribute('data-section', section);
+
     // Hide all sections and remove active class
     document.querySelectorAll('.dashboard-section').forEach(el => {
       el.classList.remove('active');
@@ -196,16 +234,27 @@
     let filtered;
     if (section === 'overview') {
       const Filters = window.SESCINC.Filters;
-      filtered = {
-        taf: Filters ? Filters.filterRecords(data.taf, 'overview') : data.taf,
-        tpepr: Filters ? Filters.filterRecords(data.tpepr, 'overview') : data.tpepr,
-        tr: Filters ? Filters.filterRecords(data.tr, 'overview') : data.tr,
-        teorica: Filters ? Filters.filterRecords(data.teorica, 'overview') : data.teorica
-      };
+      let taf = Filters ? Filters.filterRecords(data.taf, 'overview') : data.taf;
+      let tpepr = Filters ? Filters.filterRecords(data.tpepr, 'overview') : data.tpepr;
+      let tr = Filters ? Filters.filterRecords(data.tr, 'overview') : data.tr;
+      let teorica = Filters ? Filters.filterRecords(data.teorica, 'overview') : data.teorica;
+      // Apply month filter for overview
+      if (currentMonthFilters.overview && currentMonthFilters.overview !== 'todos') {
+        taf = filterByMonth(taf, 'overview');
+        tpepr = filterByMonth(tpepr, 'overview');
+        tr = filterByMonth(tr, 'overview');
+        teorica = filterByMonth(teorica, 'overview');
+      }
+      filtered = { taf, tpepr, tr, teorica };
     } else {
       const Filters = window.SESCINC.Filters;
-      const sectionData = data[section] || [];
-      filtered = Filters ? Filters.filterRecords(sectionData, section) : sectionData;
+      let sectionData = data[section] || [];
+      sectionData = Filters ? Filters.filterRecords(sectionData, section) : sectionData;
+      // Apply month filter for TAF and TPEPR
+      if ((section === 'taf' || section === 'tpepr') && currentMonthFilters[section] && currentMonthFilters[section] !== 'todos') {
+        sectionData = filterByMonth(sectionData, section);
+      }
+      filtered = sectionData;
     }
 
     const Charts = window.SESCINC.Charts || {};
@@ -676,6 +725,69 @@
     });
   }
 
+  /* ── Month filter tabs ── */
+
+  function setupMonthFilters() {
+    document.addEventListener('click', function (e) {
+      const tab = e.target.closest('.month-tab');
+      if (!tab) return;
+
+      const section = tab.dataset.section;
+      const month = tab.dataset.month;
+      if (!section || !month) return;
+
+      // Update active tab within this section's filter
+      const container = tab.closest('.month-filter-container');
+      if (container) {
+        container.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      }
+
+      currentMonthFilters[section] = month;
+      renderSection(currentSection);
+    });
+  }
+
+  function filterByMonth(records, section) {
+    const month = currentMonthFilters[section];
+    if (!month || month === 'todos') return records;
+    // Try filtering by 'mes' field (TR and potentially others)
+    // Also try 'mesIndex' mapping
+    const MONTHS_MAP = {
+      'Janeiro': 0, 'Fevereiro': 1, 'Março': 2, 'Abril': 3,
+      'Maio': 4, 'Junho': 5, 'Julho': 6, 'Agosto': 7,
+      'Setembro': 8, 'Outubro': 9, 'Novembro': 10, 'Dezembro': 11
+    };
+    const targetIndex = MONTHS_MAP[month];
+    return records.filter(r => {
+      if (r.mes && r.mes === month) return true;
+      if (r.mesIndex !== undefined && r.mesIndex === targetIndex) return true;
+      if (r.mes && r.mes.toLowerCase() === month.toLowerCase()) return true;
+      return false;
+    });
+  }
+
+  /* ── Age chart expand / collapse ── */
+
+  function setupAgeExpandCollapse() {
+    const expandBtn = document.getElementById('btn-expand-age');
+    const collapseBtn = document.getElementById('btn-collapse-age');
+    const detailCard = document.getElementById('tafIdadeDetailCard');
+
+    if (expandBtn && detailCard) {
+      expandBtn.addEventListener('click', function () {
+        detailCard.style.display = '';
+        detailCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    if (collapseBtn && detailCard) {
+      collapseBtn.addEventListener('click', function () {
+        detailCard.style.display = 'none';
+      });
+    }
+  }
+
   /* ── Init ── */
 
   function init() {
@@ -707,6 +819,9 @@
     setupUpload();
     setupExportButtons();
     setupCabeceiraTabs();
+    setupMonthFilters();
+    setupDetailModal();
+    setupAgeExpandCollapse();
 
     // Hook up reset database button
     const resetBtn = document.getElementById('btn-reset-db');

@@ -124,7 +124,8 @@
     const flexao = parseInt(($id('manual-taf-flexao') || {}).value) || 0;
     const abdominal = parseInt(($id('manual-taf-abdominal') || {}).value) || 0;
     const barra = parseInt(($id('manual-taf-barra') || {}).value) || 0;
-    const corrida = ($id('manual-taf-corrida') || {}).value || '';
+    const minVal = ($id('manual-taf-corrida-min') || {}).value || '';
+    const segVal = ($id('manual-taf-corrida-seg') || {}).value || '';
     const resultado = ($id('manual-taf-resultado') || {}).value || '';
 
     if (!nome || !equipe || !resultado) {
@@ -132,15 +133,14 @@
       return null;
     }
 
-    // Parse corrida to seconds
+    // Parse corrida to seconds and standard string format
     let corridaSeconds = 0;
-    if (corrida) {
-      const parts = corrida.split(':');
-      if (parts.length === 2) {
-        corridaSeconds = parseInt(parts[0]) * 60 + parseInt(parts[1]);
-      } else {
-        corridaSeconds = parseInt(corrida) || 0;
-      }
+    let corrida = '';
+    if (minVal !== '' || segVal !== '') {
+      const min = parseInt(minVal) || 0;
+      const seg = parseInt(segVal) || 0;
+      corridaSeconds = min * 60 + seg;
+      corrida = `${min}'${String(seg).padStart(2, '0')}"`;
     }
 
     return {

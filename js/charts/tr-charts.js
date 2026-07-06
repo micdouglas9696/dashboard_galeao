@@ -221,6 +221,80 @@
     chartInstances.trTimeline = new Chart(ctx, config);
   }
 
+  function renderTimelineAllCCI(records) {
+    destroyChart('trTimelineAllCCI');
+    const ctx = getCtx('trTimelineAllCCI');
+    if (!ctx) return;
+
+    const ok = records.filter(r => r.status === 'ok');
+    const ccis = ['1°CCI', '2°CCI', '3°CCI', '4°CCI'];
+    const cciColors = { '1°CCI': '#00d2ff', '2°CCI': '#00ff87', '3°CCI': '#ffd32a', '4°CCI': '#b026ff' };
+
+    const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
+    const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
+
+    const datasets = ccis.filter(cci => ok.some(r => r.cci === cci)).map(cci => {
+      const color = cciColors[cci];
+      const data = usedMonthIndices.map(mi => {
+        const group = ok.filter(r => r.cci === cci && r.mesIndex === mi);
+        if (!group.length) return null;
+        return Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length);
+      });
+
+      return {
+        label: cci,
+        data,
+        borderColor: color,
+        backgroundColor: color + '33',
+        pointBackgroundColor: color,
+        pointBorderColor: '#fff',
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        tension: 0.3,
+        spanGaps: true,
+        fill: false
+      };
+    });
+
+    // Meta line
+    datasets.push({
+      label: 'Meta (02:00)',
+      data: usedMonthIndices.map(() => META_SECONDS),
+      borderColor: COLORS.red,
+      borderDash: [8, 4],
+      borderWidth: 2,
+      pointRadius: 0,
+      fill: false,
+      tension: 0
+    });
+
+    chartInstances.trTimelineAllCCI = new Chart(ctx, {
+      type: 'line',
+      data: { labels, datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          title: { display: true, text: 'Evolução Mensal — Todos os CCIs', font: { size: 16 } },
+          legend: { position: 'top' },
+          tooltip: {
+            callbacks: {
+              label: ctx => `${ctx.dataset.label}: ${formatTime(ctx.parsed.y || ctx.raw)}`
+            }
+          }
+        },
+        scales: {
+          x: { title: { display: true, text: 'Mês' } },
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Tempo (segundos)' },
+            ticks: { callback: v => formatTime(v) }
+          }
+        }
+      }
+    });
+  }
+
   function renderCciBar(records) {
     destroyChart('trCci');
     const ctx = getCtx('trCci');
@@ -301,17 +375,24 @@
     const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
     const equipes = EQUIPES.filter(e => ok.some(r => r.equipe === e));
 
-    const withinData = equipes.map(equipe =>
+    const excelData = equipes.map(equipe =>
       usedMonthIndices.map(mi => {
         const group = ok.filter(r => r.equipe === equipe && r.mesIndex === mi);
-        return group.filter(r => r.tempoSeconds <= META_SECONDS).length;
+        return group.filter(r => r.tempoSeconds <= 120).length;
       })
     );
 
-    const aboveData = equipes.map(equipe =>
+    const satisData = equipes.map(equipe =>
       usedMonthIndices.map(mi => {
         const group = ok.filter(r => r.equipe === equipe && r.mesIndex === mi);
-        return group.filter(r => r.tempoSeconds > META_SECONDS).length;
+        return group.filter(r => r.tempoSeconds > 120 && r.tempoSeconds <= 180).length;
+      })
+    );
+
+    const ruimData = equipes.map(equipe =>
+      usedMonthIndices.map(mi => {
+        const group = ok.filter(r => r.equipe === equipe && r.mesIndex === mi);
+        return group.filter(r => r.tempoSeconds > 180).length;
       })
     );
 
@@ -320,47 +401,65 @@
 
     const datasets = [];
     equipes.forEach((equipe, i) => {
-      const withinConfig = {
-        label: `${equipe} — Na Meta`,
-        data: withinData[i],
-        backgroundColor: COLORS.green + 'cc',
-        borderColor: COLORS.green
+      const excelConfig = {
+        label: `${equipe} — Excelente`,
+        data: excelData[i],
+        backgroundColor: '#00ff87cc',
+        borderColor: '#00ff87'
       };
-      
-      const aboveConfig = {
-        label: `${equipe} — Acima da Meta`,
-        data: aboveData[i],
-        backgroundColor: COLORS.red + 'cc',
-        borderColor: COLORS.red
+
+      const satisConfig = {
+        label: `${equipe} — Satisfatório`,
+        data: satisData[i],
+        backgroundColor: '#ffd32acc',
+        borderColor: '#ffd32a'
+      };
+
+      const ruimConfig = {
+        label: `${equipe} — Ruim`,
+        data: ruimData[i],
+        backgroundColor: '#ff0055cc',
+        borderColor: '#ff0055'
       };
 
       if (isLine) {
-        withinConfig.borderWidth = 3;
-        withinConfig.pointRadius = 4;
-        withinConfig.fill = false;
-        withinConfig.tension = 0.2;
-        
-        aboveConfig.borderWidth = 3;
-        aboveConfig.pointRadius = 4;
-        aboveConfig.fill = false;
-        aboveConfig.tension = 0.2;
+        excelConfig.borderWidth = 3;
+        excelConfig.pointRadius = 4;
+        excelConfig.fill = false;
+        excelConfig.tension = 0.2;
+
+        satisConfig.borderWidth = 3;
+        satisConfig.pointRadius = 4;
+        satisConfig.fill = false;
+        satisConfig.tension = 0.2;
+
+        ruimConfig.borderWidth = 3;
+        ruimConfig.pointRadius = 4;
+        ruimConfig.fill = false;
+        ruimConfig.tension = 0.2;
       } else {
-        withinConfig.borderWidth = 1;
-        withinConfig.stack = equipe;
-        withinConfig.borderRadius = 2;
-        
-        aboveConfig.borderWidth = 1;
-        aboveConfig.stack = equipe;
-        aboveConfig.borderRadius = 2;
+        excelConfig.borderWidth = 1;
+        excelConfig.stack = equipe;
+        excelConfig.borderRadius = 2;
+
+        satisConfig.borderWidth = 1;
+        satisConfig.stack = equipe;
+        satisConfig.borderRadius = 2;
+
+        ruimConfig.borderWidth = 1;
+        ruimConfig.stack = equipe;
+        ruimConfig.borderRadius = 2;
       }
 
       if (!isStacked && !isLine) {
-        delete withinConfig.stack;
-        delete aboveConfig.stack;
+        delete excelConfig.stack;
+        delete satisConfig.stack;
+        delete ruimConfig.stack;
       }
 
-      datasets.push(withinConfig);
-      datasets.push(aboveConfig);
+      datasets.push(excelConfig);
+      datasets.push(satisConfig);
+      datasets.push(ruimConfig);
     });
 
     const config = {
@@ -442,6 +541,7 @@
 
     renderKPIs(filtered);
     renderTimeline(filtered);
+    renderTimelineAllCCI(filtered);
     renderCciBar(filtered);
     renderHeatmap(filtered);
     renderTable(filtered);
@@ -449,6 +549,7 @@
 
   function destroy() {
     destroyChart('trTimeline');
+    destroyChart('trTimelineAllCCI');
     destroyChart('trCci');
     destroyChart('trHeatmap');
   }

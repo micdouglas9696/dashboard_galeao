@@ -138,6 +138,8 @@
       } else if (chartKey === 'tafIdade') {
         activeIdadeType = type;
         renderIdadeHistogram(currentRecords);
+      } else if (chartKey === 'tafIdadeSimplified') {
+        renderIdadeSimplified(currentRecords);
       }
     });
   }
@@ -432,6 +434,16 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const idx = elements[0].index;
+          const bucket = AGE_BUCKETS[idx];
+          const okRecs = currentRecords.filter(r => r.status === 'ok');
+          const names = okRecs.filter(r => getAgeBucket(r.idade) === bucket).map(r => r.nome).filter(Boolean);
+          if (names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Faixa Etária: ' + bucket, names);
+          }
+        },
         plugins: {
           title: { display: true, text: 'Distribuição por Faixa Etária', font: { size: 16 } },
           legend: { display: isRadar },
@@ -463,6 +475,72 @@
     }
 
     chartInstances.tafIdade = new Chart(ctx, config);
+  }
+
+  function renderIdadeSimplified(records) {
+    destroyChart('tafIdadeSimplified');
+    const ctx = getCtx('tafIdadeSimplified');
+    if (!ctx) return;
+
+    const ok = records.filter(r => r.status === 'ok');
+
+    const buckets = [
+      { label: '0–40', filter: r => r.idade <= 40 },
+      { label: '41+',  filter: r => r.idade > 40 }
+    ];
+
+    const bucketData = buckets.map(b => {
+      const group = ok.filter(b.filter);
+      const sat = group.filter(r => r.resultado === 'Satisfatório').length;
+      const total = group.length;
+      const ratio = total ? sat / total : 0;
+      return { total, sat, ratio, names: group.map(r => r.nome).filter(Boolean) };
+    });
+
+    const config = {
+      type: 'bar',
+      data: {
+        labels: buckets.map(b => b.label),
+        datasets: [{
+          label: 'Avaliados',
+          data: bucketData.map(b => b.total),
+          backgroundColor: bucketData.map(b => b.ratio >= 0.8 ? COLORS.green : (b.ratio >= 0.5 ? COLORS.amber : COLORS.red)),
+          borderColor: 'rgba(0,0,0,0.1)',
+          borderWidth: 1,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const idx = elements[0].index;
+          const b = bucketData[idx];
+          if (b.names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Faixa Etária: ' + buckets[idx].label, b.names);
+          }
+        },
+        plugins: {
+          title: { display: true, text: 'Idade Simplificada', font: { size: 16 } },
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              afterLabel(ctx) {
+                const b = bucketData[ctx.dataIndex];
+                return `Aprovação: ${Math.round(b.ratio * 100)}%`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: { title: { display: true, text: 'Faixa Etária' } },
+          y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
+        }
+      }
+    };
+
+    chartInstances.tafIdadeSimplified = new Chart(ctx, config);
   }
 
   /* ── Table ── */
@@ -516,6 +594,7 @@
     renderFuncaoBar(records);
     renderRadar(records);
     renderIdadeHistogram(records);
+    renderIdadeSimplified(records);
     renderTable(records);
   }
 
@@ -525,6 +604,7 @@
     destroyChart('tafFuncao');
     destroyChart('tafRadar');
     destroyChart('tafIdade');
+    destroyChart('tafIdadeSimplified');
   }
 
   window.SESCINC.Charts.TAF = { render, destroy };

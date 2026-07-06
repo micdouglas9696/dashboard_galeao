@@ -298,6 +298,17 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const idx = elements[0].index;
+          const bucketLabels = ['30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90+'];
+          const rangesList = [[30, 40], [40, 50], [50, 60], [60, 70], [70, 80], [80, 90], [90, Infinity]];
+          const [min, max] = rangesList[idx];
+          const names = currentRecords.filter(r => r.tempoSeconds >= min && r.tempoSeconds < max).map(r => r.nome).filter(Boolean);
+          if (names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Tempo: ' + bucketLabels[idx] + 's', names);
+          }
+        },
         plugins: {
           title: { display: true, text: 'Distribuição de Tempos', font: { size: 16 } },
           legend: { display: isRadar }

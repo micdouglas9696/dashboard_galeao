@@ -32,15 +32,8 @@
 
     <!-- Logo / Title -->
     <div class="sidebar-header">
-      <span class="sidebar-logo">
-        <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--accent-cyan)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 4px var(--accent-cyan));">
-          <rect x="2" y="6" width="14" height="11" rx="2"></rect>
-          <path d="M16 8h4l2 3v6h-6V8z"></path>
-          <circle cx="6.5" cy="18.5" r="2.5"></circle>
-          <circle cx="16.5" cy="18.5" r="2.5"></circle>
-          <path d="M10 6V3h2v3"></path>
-          <path d="M7 9h2"></path>
-        </svg>
+      <span class="sidebar-logo" style="background: transparent; border: none; box-shadow: none; width: auto; height: auto; border-radius: 6px; padding: 2px;">
+        <img src="logo enseg.png" alt="ENSEG" style="height: 32px; width: auto; display: block;">
       </span>
       <span class="sidebar-title">SESCINC SBGL</span>
     </div>
@@ -186,6 +179,19 @@
            SECTION: OVERVIEW
            ====================================================== -->
       <section id="section-overview" class="dashboard-section active">
+        <!-- Month Filter -->
+        <div class="month-filter-container" id="overview-month-filter">
+          <span class="month-filter-label">Período:</span>
+          <div class="month-filter-tabs">
+            <button class="month-tab active" data-month="todos" data-section="overview">Todos</button>
+            <button class="month-tab" data-month="Janeiro" data-section="overview">Jan</button>
+            <button class="month-tab" data-month="Fevereiro" data-section="overview">Fev</button>
+            <button class="month-tab" data-month="Março" data-section="overview">Mar</button>
+            <button class="month-tab" data-month="Abril" data-section="overview">Abr</button>
+            <button class="month-tab" data-month="Maio" data-section="overview">Mai</button>
+            <button class="month-tab" data-month="Junho" data-section="overview">Jun</button>
+          </div>
+        </div>
         <!-- KPIs -->
         <div class="kpi-grid">
           <div class="kpi-card" id="kpi-ov-taf">
@@ -295,6 +301,19 @@
            SECTION: TAF
            ====================================================== -->
       <section id="section-taf" class="dashboard-section">
+        <!-- Month Filter -->
+        <div class="month-filter-container" id="taf-month-filter">
+          <span class="month-filter-label">Período:</span>
+          <div class="month-filter-tabs">
+            <button class="month-tab active" data-month="todos" data-section="taf">Todos</button>
+            <button class="month-tab" data-month="Janeiro" data-section="taf">Jan</button>
+            <button class="month-tab" data-month="Fevereiro" data-section="taf">Fev</button>
+            <button class="month-tab" data-month="Março" data-section="taf">Mar</button>
+            <button class="month-tab" data-month="Abril" data-section="taf">Abr</button>
+            <button class="month-tab" data-month="Maio" data-section="taf">Mai</button>
+            <button class="month-tab" data-month="Junho" data-section="taf">Jun</button>
+          </div>
+        </div>
         <!-- KPIs -->
         <div class="kpi-grid">
           <div class="kpi-card" id="kpi-taf-total">
@@ -410,8 +429,28 @@
             </div>
           </div>
           <div class="chart-card full-width">
-            <div class="chart-card-title">Distribuição por Idade</div>
-            <div class="chart-card-desc">Análise da distribuição etária do efetivo total versus o índice de aprovação física, identificando faixas de idade críticas que necessitam de intervenção ou treinamento específico.</div>
+            <div class="chart-card-header">
+              <div class="chart-card-title">Distribuição por Idade (Resumo)</div>
+            </div>
+            <div class="chart-card-desc">Visão simplificada da distribuição etária em duas faixas principais. Clique nas barras para ver os nomes dos bombeiros.</div>
+            <div class="chart-container" style="height: 280px;">
+              <canvas id="tafIdadeSimplified"></canvas>
+            </div>
+            <div style="text-align: center; margin-top: 12px;">
+              <button class="btn btn-secondary btn-expand-age" id="btn-expand-age" style="font-size: 0.8rem;">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:4px;"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                Expandir Detalhes
+              </button>
+            </div>
+          </div>
+          <div class="chart-card full-width" id="tafIdadeDetailCard" style="display: none;">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Distribuição por Idade (Detalhado)</div>
+              <button class="btn btn-secondary btn-collapse-age" id="btn-collapse-age" style="font-size: 0.75rem; padding: 4px 12px;">
+                ✕ Recolher
+              </button>
+            </div>
+            <div class="chart-card-desc">Análise detalhada da distribuição etária do efetivo total versus o índice de aprovação física. Clique nas barras para ver os nomes.</div>
             <div class="chart-container">
               <canvas id="tafIdade"></canvas>
             </div>
@@ -457,6 +496,19 @@
            SECTION: TP-EPR
            ====================================================== -->
       <section id="section-tpepr" class="dashboard-section">
+        <!-- Month Filter -->
+        <div class="month-filter-container" id="tpepr-month-filter">
+          <span class="month-filter-label">Período:</span>
+          <div class="month-filter-tabs">
+            <button class="month-tab active" data-month="todos" data-section="tpepr">Todos</button>
+            <button class="month-tab" data-month="Janeiro" data-section="tpepr">Jan</button>
+            <button class="month-tab" data-month="Fevereiro" data-section="tpepr">Fev</button>
+            <button class="month-tab" data-month="Março" data-section="tpepr">Mar</button>
+            <button class="month-tab" data-month="Abril" data-section="tpepr">Abr</button>
+            <button class="month-tab" data-month="Maio" data-section="tpepr">Mai</button>
+            <button class="month-tab" data-month="Junho" data-section="tpepr">Jun</button>
+          </div>
+        </div>
         <!-- KPIs -->
         <div class="kpi-grid">
           <div class="kpi-card" id="kpi-tpepr-total">
@@ -658,6 +710,13 @@
             <div class="chart-card-desc">Evolução do tempo de resposta (TR) da primeira viatura (1° CCI) posicionada na cabeceira selecionada de Janeiro a Junho de 2026. A linha tracejada vermelha marca o limite crítico de segurança (02:00 minutos).</div>
             <div class="chart-container">
               <canvas id="trTimeline"></canvas>
+            </div>
+          </div>
+          <div class="chart-card full-width">
+            <div class="chart-card-title">Evolução Mensal — Todos os CCIs</div>
+            <div class="chart-card-desc">Comparativo da evolução mensal do tempo de resposta de todos os CCIs (1°, 2°, 3° e 4° CCI). A linha tracejada vermelha marca o limite de 02:00 minutos.</div>
+            <div class="chart-container">
+              <canvas id="trTimelineAllCCI"></canvas>
             </div>
           </div>
           <div class="chart-card">
@@ -934,12 +993,12 @@
               <div class="form-card">
                 <div class="form-grid">
                   <div class="form-group full-width">
-                    <label class="form-label" for="taf-nome">Nome</label>
-                    <input type="text" id="taf-nome" placeholder="Nome completo">
+                    <label class="form-label" for="manual-taf-nome">Nome</label>
+                    <input type="text" id="manual-taf-nome" placeholder="Nome completo">
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="taf-equipe">Equipe</label>
-                    <select id="taf-equipe">
+                    <label class="form-label" for="manual-taf-equipe">Equipe</label>
+                    <select id="manual-taf-equipe">
                       <option value="">Selecione...</option>
                       <option value="ALFA">ALFA</option>
                       <option value="BRAVO">BRAVO</option>
@@ -949,8 +1008,8 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="taf-funcao">Função</label>
-                    <select id="taf-funcao">
+                    <label class="form-label" for="manual-taf-funcao">Função</label>
+                    <select id="manual-taf-funcao">
                       <option value="">Selecione...</option>
                       <option value="BA">BA</option>
                       <option value="BA2">BA2</option>
@@ -963,28 +1022,32 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="taf-idade">Idade</label>
-                    <input type="number" id="taf-idade" placeholder="Ex: 32" min="18" max="70">
+                    <label class="form-label" for="manual-taf-idade">Idade</label>
+                    <input type="number" id="manual-taf-idade" placeholder="Ex: 32" min="18" max="70">
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="taf-flexao">Flexão</label>
-                    <input type="number" id="taf-flexao" placeholder="Repetições" min="0">
+                    <label class="form-label" for="manual-taf-flexao">Flexão</label>
+                    <input type="number" id="manual-taf-flexao" placeholder="Repetições" min="0">
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="taf-abdominal">Abdominal</label>
-                    <input type="number" id="taf-abdominal" placeholder="Repetições" min="0">
+                    <label class="form-label" for="manual-taf-abdominal">Abdominal</label>
+                    <input type="number" id="manual-taf-abdominal" placeholder="Repetições" min="0">
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="taf-barra">Barra</label>
-                    <input type="number" id="taf-barra" placeholder="Repetições" min="0">
+                    <label class="form-label" for="manual-taf-barra">Barra</label>
+                    <input type="number" id="manual-taf-barra" placeholder="Repetições" min="0">
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="taf-corrida">Corrida</label>
-                    <input type="text" id="taf-corrida" placeholder="mm:ss">
+                    <label class="form-label">Corrida (Tempo)</label>
+                    <div class="time-input-group" style="display: flex; gap: 8px; align-items: center;">
+                      <input type="number" id="manual-taf-corrida-min" placeholder="Min" min="0" max="59" style="width: calc(50% - 4px);">
+                      <span class="time-separator" style="color: var(--text-secondary); font-weight: bold;">:</span>
+                      <input type="number" id="manual-taf-corrida-seg" placeholder="Seg" min="0" max="59" style="width: calc(50% - 4px);">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="taf-resultado">Resultado</label>
-                    <select id="taf-resultado">
+                    <label class="form-label" for="manual-taf-resultado">Resultado</label>
+                    <select id="manual-taf-resultado">
                       <option value="">Selecione...</option>
                       <option value="SATISFATÓRIO">Satisfatório</option>
                       <option value="INSATISFATÓRIO">Insatisfatório</option>
@@ -999,12 +1062,12 @@
               <div class="form-card">
                 <div class="form-grid">
                   <div class="form-group full-width">
-                    <label class="form-label" for="tpepr-nome">Nome</label>
-                    <input type="text" id="tpepr-nome" placeholder="Nome completo">
+                    <label class="form-label" for="manual-tpepr-nome">Nome</label>
+                    <input type="text" id="manual-tpepr-nome" placeholder="Nome completo">
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="tpepr-equipe">Equipe</label>
-                    <select id="tpepr-equipe">
+                    <label class="form-label" for="manual-tpepr-equipe">Equipe</label>
+                    <select id="manual-tpepr-equipe">
                       <option value="">Selecione...</option>
                       <option value="ALFA">ALFA</option>
                       <option value="BRAVO">BRAVO</option>
@@ -1014,8 +1077,8 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="tpepr-funcao">Função</label>
-                    <select id="tpepr-funcao">
+                    <label class="form-label" for="manual-tpepr-funcao">Função</label>
+                    <select id="manual-tpepr-funcao">
                       <option value="">Selecione...</option>
                       <option value="BA">BA</option>
                       <option value="BA2">BA2</option>
@@ -1028,12 +1091,12 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="tpepr-tempo">Tempo (mm:ss)</label>
-                    <input type="text" id="tpepr-tempo" placeholder="Ex: 01:45">
+                    <label class="form-label" for="manual-tpepr-tempo">Tempo (mm:ss)</label>
+                    <input type="text" id="manual-tpepr-tempo" placeholder="Ex: 01:45">
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="tpepr-resultado">Resultado</label>
-                    <select id="tpepr-resultado">
+                    <label class="form-label" for="manual-tpepr-resultado">Resultado</label>
+                    <select id="manual-tpepr-resultado">
                       <option value="">Selecione...</option>
                       <option value="EXCELENTE">Excelente</option>
                       <option value="BOM">Bom</option>
@@ -1049,8 +1112,8 @@
               <div class="form-card">
                 <div class="form-grid">
                   <div class="form-group">
-                    <label class="form-label" for="tr-cabeceira">Cabeceira</label>
-                    <select id="tr-cabeceira">
+                    <label class="form-label" for="manual-tr-cabeceira">Cabeceira</label>
+                    <select id="manual-tr-cabeceira">
                       <option value="">Selecione...</option>
                       <option value="28">28</option>
                       <option value="33">33</option>
@@ -1058,8 +1121,8 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="tr-equipe">Equipe</label>
-                    <select id="tr-equipe">
+                    <label class="form-label" for="manual-tr-equipe">Equipe</label>
+                    <select id="manual-tr-equipe">
                       <option value="">Selecione...</option>
                       <option value="ALFA">ALFA</option>
                       <option value="BRAVO">BRAVO</option>
@@ -1069,8 +1132,8 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="tr-mes">Mês</label>
-                    <select id="tr-mes">
+                    <label class="form-label" for="manual-tr-mes">Mês</label>
+                    <select id="manual-tr-mes">
                       <option value="">Selecione...</option>
                       <option value="Janeiro">Janeiro</option>
                       <option value="Fevereiro">Fevereiro</option>
@@ -1081,8 +1144,8 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="tr-cci">CCI</label>
-                    <select id="tr-cci">
+                    <label class="form-label" for="manual-tr-cci">CCI</label>
+                    <select id="manual-tr-cci">
                       <option value="">Selecione...</option>
                       <option value="1°CCI">1°CCI</option>
                       <option value="2°CCI">2°CCI</option>
@@ -1091,8 +1154,8 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="tr-tempo">Tempo (mm:ss)</label>
-                    <input type="text" id="tr-tempo" placeholder="Ex: 02:30">
+                    <label class="form-label" for="manual-tr-tempo">Tempo (mm:ss)</label>
+                    <input type="text" id="manual-tr-tempo" placeholder="Ex: 02:30">
                   </div>
                 </div>
               </div>
@@ -1103,12 +1166,23 @@
               <div class="form-card">
                 <div class="form-grid">
                   <div class="form-group full-width">
-                    <label class="form-label" for="teorica-nome">Nome</label>
-                    <input type="text" id="teorica-nome" placeholder="Nome completo">
+                    <label class="form-label" for="manual-teorica-nome">Nome</label>
+                    <input type="text" id="manual-teorica-nome" placeholder="Nome completo">
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="teorica-funcao">Função</label>
-                    <select id="teorica-funcao">
+                    <label class="form-label" for="manual-teorica-equipe">Equipe</label>
+                    <select id="manual-teorica-equipe">
+                      <option value="">Selecione...</option>
+                      <option value="ALFA">ALFA</option>
+                      <option value="BRAVO">BRAVO</option>
+                      <option value="CHARLIE">CHARLIE</option>
+                      <option value="DELTA">DELTA</option>
+                      <option value="FOLGUISTA">FOLGUISTA</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="manual-teorica-funcao">Função</label>
+                    <select id="manual-teorica-funcao">
                       <option value="">Selecione...</option>
                       <option value="BA">BA</option>
                       <option value="BA2">BA2</option>
@@ -1121,8 +1195,8 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="teorica-nota">Nota</label>
-                    <input type="number" id="teorica-nota" placeholder="0 – 100" min="0" max="100" step="0.1">
+                    <label class="form-label" for="manual-teorica-nota">Nota</label>
+                    <input type="number" id="manual-teorica-nota" placeholder="0 – 100" min="0" max="100" step="0.1">
                   </div>
                 </div>
               </div>
@@ -1156,13 +1230,13 @@
     </div>
 
     <!-- Name search -->
-    <div class="filter-group">
+    <div class="filter-group" id="filter-group-search">
       <label class="filter-group-label" for="filter-search">Buscar Nome</label>
       <input type="search" id="filter-search" placeholder="Digite o nome...">
     </div>
 
     <!-- Equipe checkboxes -->
-    <div class="filter-group">
+    <div class="filter-group" id="filter-group-equipe">
       <span class="filter-group-label">Equipe</span>
       <div class="checkbox-group" id="filter-equipe-list">
         <label class="checkbox-item">
@@ -1184,7 +1258,7 @@
     </div>
 
     <!-- Função checkboxes -->
-    <div class="filter-group">
+    <div class="filter-group" id="filter-group-funcao">
       <span class="filter-group-label">Função</span>
       <div class="checkbox-group" id="filter-funcao-list">
         <label class="checkbox-item">
@@ -1215,7 +1289,7 @@
     </div>
 
     <!-- Resultado checkboxes (context-dependent) -->
-    <div class="filter-group">
+    <div class="filter-group" id="filter-group-resultado">
       <span class="filter-group-label">Resultado</span>
       <div class="checkbox-group" id="filter-resultado-list">
         <!-- Options populated/swapped by JS based on active section -->
@@ -1223,7 +1297,7 @@
     </div>
 
     <!-- TR-only filters -->
-    <div class="filter-group filter-tr-only">
+    <div class="filter-group filter-tr-only" id="filter-group-cabeceira">
       <label class="filter-group-label" for="filter-cabeceira">Cabeceira</label>
       <select id="filter-cabeceira">
         <option value="">Todas</option>
@@ -1233,7 +1307,7 @@
       </select>
     </div>
 
-    <div class="filter-group filter-tr-only">
+    <div class="filter-group filter-tr-only" id="filter-group-mes">
       <label class="filter-group-label" for="filter-mes">Mês</label>
       <select id="filter-mes">
         <option value="">Todos</option>
@@ -1246,7 +1320,7 @@
       </select>
     </div>
 
-    <div class="filter-group filter-tr-only">
+    <div class="filter-group filter-tr-only" id="filter-group-cci">
       <label class="filter-group-label" for="filter-cci">CCI</label>
       <select id="filter-cci">
         <option value="">Todos</option>
@@ -1258,7 +1332,7 @@
     </div>
 
     <!-- TAF-only filters -->
-    <div class="filter-group filter-taf-only">
+    <div class="filter-group filter-taf-only" id="filter-group-idade">
       <span class="filter-group-label">Faixa de Idade</span>
       <div class="flex gap-2">
         <input type="number" id="filter-idade-min" placeholder="Mín" min="18" max="70" style="width:50%;">
@@ -1267,7 +1341,7 @@
     </div>
 
     <!-- Teórica-only filters -->
-    <div class="filter-group filter-teorica-only">
+    <div class="filter-group filter-teorica-only" id="filter-group-nota">
       <span class="filter-group-label">Faixa de Nota</span>
       <div class="flex gap-2">
         <input type="number" id="filter-nota-min" placeholder="Mín" min="0" max="100" step="0.1" style="width:50%;">
@@ -1286,6 +1360,24 @@
   <div id="toast">
     <span class="toast-icon"></span>
     <span class="toast-message"></span>
+  </div>
+
+  <!-- ============================================================
+       DETAIL MODAL (shows names when clicking chart bars)
+       ============================================================ -->
+  <div id="detail-modal" class="detail-modal-overlay" style="display:none;">
+    <div class="detail-modal">
+      <div class="detail-modal-header">
+        <h3 class="detail-modal-title" id="detail-modal-title">Detalhes</h3>
+        <button class="detail-modal-close" id="detail-modal-close" aria-label="Fechar">✕</button>
+      </div>
+      <div class="detail-modal-body">
+        <div class="detail-modal-count" id="detail-modal-count">0 bombeiros</div>
+        <ul class="detail-modal-list" id="detail-modal-list">
+          <!-- Names populated by JS -->
+        </ul>
+      </div>
+    </div>
   </div>
 
   <!-- ============================================================

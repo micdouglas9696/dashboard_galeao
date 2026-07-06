@@ -223,6 +223,7 @@ window.SESCINC.Parsers.TAF = {
 
       var resultado = row[8] != null ? String(row[8]).trim() : '';
 
+      var mesNormalized = sheetName.charAt(0).toUpperCase() + sheetName.slice(1).toLowerCase();
       records.push({
         nome: nome,
         equipe: equipe,
@@ -234,7 +235,8 @@ window.SESCINC.Parsers.TAF = {
         corrida: corrida,
         corridaSeconds: corridaSeconds,
         resultado: resultado,
-        status: status
+        status: status,
+        mes: mesNormalized
       });
     }
 
