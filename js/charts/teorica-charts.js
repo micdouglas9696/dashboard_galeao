@@ -292,6 +292,19 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const activeElement = elements[0];
+          const dataIndex = activeElement.index;
+
+          const team = equipes[dataIndex];
+          const teamRecs = currentRecords.filter(r => r.equipe === team);
+          const names = teamRecs.map(r => r.nome + ' (Nota: ' + r.nota.toFixed(1) + ')').filter(Boolean);
+
+          if (names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Equipe ' + team + ' — Avaliação Teórica', names);
+          }
+        },
         plugins: {
           title: { display: true, text: 'Nota Média por Equipe', font: { size: 16 } },
           legend: { display: isLine }
@@ -352,9 +365,21 @@
     setupTypeSelectors();
 
     const emptyEl = document.getElementById('teorica-empty');
-    if (emptyEl) emptyEl.style.display = records.length ? 'none' : 'flex';
+    const chartsGrid = document.querySelector('#section-teorica .charts-grid');
+    const tableWrapper = document.getElementById('table-teorica');
 
-    if (!records.length) return;
+    if (emptyEl) emptyEl.style.display = records.length ? 'none' : 'flex';
+    if (chartsGrid) chartsGrid.style.display = records.length ? '' : 'none';
+    if (tableWrapper) tableWrapper.style.display = records.length ? '' : 'none';
+
+    if (!records.length) {
+      setText('kpi-teo-total', '0');
+      setText('kpi-teo-avg', '—');
+      setText('kpi-teo-min', '—');
+      setText('kpi-teo-max', '—');
+      destroy();
+      return;
+    }
 
     renderKPIs(records);
     renderHistogram(records);

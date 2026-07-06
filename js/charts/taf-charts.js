@@ -228,6 +228,23 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const activeElement = elements[0];
+          const dataIndex = activeElement.index;
+          const datasetIndex = activeElement.datasetIndex;
+
+          const team = equipes[dataIndex];
+          const resultType = datasetIndex === 0 ? 'Satisfatório' : 'Insatisfatório';
+
+          const okRecs = currentRecords.filter(r => r.status === 'ok');
+          const names = okRecs.filter(r => r.equipe === team && r.resultado === resultType)
+                              .map(r => r.nome).filter(Boolean);
+
+          if (names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Equipe ' + team + ' — ' + resultType, names);
+          }
+        },
         scales: {
           x: { title: { display: true, text: 'Equipe' } },
           y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
@@ -372,6 +389,29 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const activeElement = elements[0];
+          const datasetIndex = activeElement.datasetIndex;
+          const dataIndex = activeElement.index;
+
+          const team = datasets[datasetIndex].label;
+          const exercise = labels[dataIndex];
+
+          const okRecs = currentRecords.filter(r => r.status === 'ok' && r.equipe === team);
+          const names = okRecs.map(r => {
+            let val = '';
+            if (exercise.indexOf('Flexão') >= 0) val = r.flexao != null ? r.flexao : '—';
+            else if (exercise.indexOf('Abdominal') >= 0) val = r.abdominal != null ? r.abdominal : '—';
+            else if (exercise.indexOf('Barra') >= 0) val = r.barra != null ? r.barra : '—';
+            else if (exercise.indexOf('Corrida') >= 0) val = r.corrida || '—';
+            return `${r.nome} (${exercise}: ${val})`;
+          }).filter(Boolean);
+
+          if (names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Equipe ' + team + ' — ' + exercise, names);
+          }
+        },
         plugins: {
           title: { display: true, text: 'Média por Modalidade (Normalizado)', font: { size: 16 } },
           legend: { position: 'top' }
@@ -584,9 +624,21 @@
     setupTypeSelectors();
 
     const emptyEl = document.getElementById('taf-empty');
-    if (emptyEl) emptyEl.style.display = records.length ? 'none' : 'flex';
+    const chartsGrid = document.querySelector('#section-taf .charts-grid');
+    const tableWrapper = document.getElementById('table-taf');
 
-    if (!records.length) return;
+    if (emptyEl) emptyEl.style.display = records.length ? 'none' : 'flex';
+    if (chartsGrid) chartsGrid.style.display = records.length ? '' : 'none';
+    if (tableWrapper) tableWrapper.style.display = records.length ? '' : 'none';
+
+    if (!records.length) {
+      setText('kpi-taf-total', '0');
+      setText('kpi-taf-sat', '0');
+      setText('kpi-taf-insat', '0');
+      setText('kpi-taf-pct', '0%');
+      destroy();
+      return;
+    }
 
     renderKPIs(records);
     renderDonut(records);

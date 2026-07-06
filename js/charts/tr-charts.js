@@ -535,9 +535,21 @@
     const filtered = filterByCabeceira(records, cabeceira);
 
     const emptyEl = document.getElementById('tr-empty');
-    if (emptyEl) emptyEl.style.display = filtered.length ? 'none' : 'flex';
+    const chartsGrid = document.querySelector('#section-tr .charts-grid');
+    const tableWrapper = document.getElementById('table-tr');
 
-    if (!filtered.length) return;
+    if (emptyEl) emptyEl.style.display = filtered.length ? 'none' : 'flex';
+    if (chartsGrid) chartsGrid.style.display = filtered.length ? '' : 'none';
+    if (tableWrapper) tableWrapper.style.display = filtered.length ? '' : 'none';
+
+    if (!filtered.length) {
+      setText('kpi-tr-total', '0');
+      setText('kpi-tr-meta', '0');
+      setText('kpi-tr-avg', '—');
+      setText('kpi-tr-pct', '0%');
+      destroy();
+      return;
+    }
 
     renderKPIs(filtered);
     renderTimeline(filtered);

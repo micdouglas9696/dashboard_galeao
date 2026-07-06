@@ -181,6 +181,24 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const activeElement = elements[0];
+          const datasetIndex = activeElement.datasetIndex;
+          const team = datasets[datasetIndex].label;
+
+          const NamesMap = {};
+          if (currentData.taf) {
+            currentData.taf.filter(r => r.equipe === team && r.status === 'ok').forEach(r => { NamesMap[r.nome] = true; });
+          }
+          if (currentData.tpepr) {
+            currentData.tpepr.filter(r => r.equipe === team).forEach(r => { NamesMap[r.nome] = true; });
+          }
+          const names = Object.keys(NamesMap).sort();
+          if (names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Efetivo da Equipe ' + team, names);
+          }
+        },
         plugins: {
           title: { display: true, text: 'Desempenho Geral por Equipe', font: { size: 16 } },
           legend: { position: 'top' }
@@ -248,6 +266,24 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const activeElement = elements[0];
+          const dataIndex = activeElement.index;
+          const team = EQUIPES[dataIndex];
+
+          const NamesMap = {};
+          if (currentData.taf) {
+            currentData.taf.filter(r => r.equipe === team && r.status === 'ok').forEach(r => { NamesMap[r.nome] = true; });
+          }
+          if (currentData.tpepr) {
+            currentData.tpepr.filter(r => r.equipe === team).forEach(r => { NamesMap[r.nome] = true; });
+          }
+          const names = Object.keys(NamesMap).sort();
+          if (names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Efetivo da Equipe ' + team, names);
+          }
+        },
         plugins: {
           title: { display: true, text: 'Comparativo por Equipe', font: { size: 16 } },
           legend: { position: 'top' }

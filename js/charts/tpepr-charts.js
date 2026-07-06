@@ -179,6 +179,22 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function(evt, elements) {
+          if (!elements.length) return;
+          const activeElement = elements[0];
+          const dataIndex = activeElement.index;
+          const datasetIndex = activeElement.datasetIndex;
+
+          const team = equipes[dataIndex];
+          const resultType = RESULTADO_ORDER[datasetIndex];
+
+          const names = currentRecords.filter(r => r.equipe === team && r.resultado === resultType)
+                                      .map(r => r.nome).filter(Boolean);
+
+          if (names.length && window.SESCINC.showDetailModal) {
+            window.SESCINC.showDetailModal('Equipe ' + team + ' — ' + resultType, names);
+          }
+        },
         scales: {
           x: { title: { display: true, text: 'Equipe' } },
           y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
@@ -368,9 +384,21 @@
     setupTypeSelectors();
 
     const emptyEl = document.getElementById('tpepr-empty');
-    if (emptyEl) emptyEl.style.display = records.length ? 'none' : 'flex';
+    const chartsGrid = document.querySelector('#section-tpepr .charts-grid');
+    const tableWrapper = document.getElementById('table-tpepr');
 
-    if (!records.length) return;
+    if (emptyEl) emptyEl.style.display = records.length ? 'none' : 'flex';
+    if (chartsGrid) chartsGrid.style.display = records.length ? '' : 'none';
+    if (tableWrapper) tableWrapper.style.display = records.length ? '' : 'none';
+
+    if (!records.length) {
+      setText('kpi-tpepr-total', '0');
+      setText('kpi-tpepr-exc', '0');
+      setText('kpi-tpepr-bom', '0');
+      setText('kpi-tpepr-ruim', '0');
+      destroy();
+      return;
+    }
 
     renderKPIs(records);
     renderDonut(records);
