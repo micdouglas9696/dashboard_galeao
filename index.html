@@ -553,7 +553,7 @@
           <div class="kpi-card" id="kpi-tpepr-ruim">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
-              <span class="kpi-unit">> 90s (ruim)</span>
+              <span class="kpi-unit">> 90s (insatisfatório)</span>
             </div>
             <div class="kpi-label">Insatisfatório</div>
           </div>
@@ -576,7 +576,7 @@
                 </button>
               </div>
             </div>
-            <div class="chart-card-desc">Métrica de rapidez para colocação do Equipamento de Proteção Respiratória (EPR). A escala é subdividida em Excelente (≤60 segundos), Bom (61 a 90 segundos) e Ruim (>90 segundos).</div>
+            <div class="chart-card-desc">Métrica de rapidez para colocação do Equipamento de Proteção Respiratória (EPR). A escala é subdividida em Excelente (≤60 segundos), Bom (61 a 90 segundos) e Insatisfatório (>90 segundos).</div>
             <div class="chart-container">
               <canvas id="tpeprDonut"></canvas>
             </div>
@@ -769,24 +769,13 @@
               <canvas id="trCci"></canvas>
             </div>
           </div>
-          <div class="chart-card">
+          <div class="chart-card full-width">
             <div class="chart-card-header">
               <div class="chart-card-title">Conformidade com Meta</div>
-              <div class="chart-type-selector" data-chart="trHeatmap">
-                <button class="btn-chart-type active" data-type="bar" title="Barras Empilhadas">
-                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                </button>
-                <button class="btn-chart-type" data-type="bar-grouped" title="Barras Agrupadas">
-                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                </button>
-                <button class="btn-chart-type" data-type="line" title="Linhas">
-                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                </button>
-              </div>
             </div>
-            <div class="chart-card-desc">Matriz quadricular de conformidade mensal. As cores sinalizam se a média de resposta do 1° CCI atendeu à meta de 2 minutos (Verde) ou excedeu o limite (Vermelho) em cada mês.</div>
-            <div class="chart-container">
-              <canvas id="trHeatmap"></canvas>
+            <div class="chart-card-desc">Matriz quadricular de conformidade mensal. As cores sinalizam se o tempo médio de resposta de cada CCI atendeu à meta de 2 minutos (Verde) ou excedeu o limite (Insatisfatório — Vermelho) em cada mês.</div>
+            <div class="compliance-matrix-wrapper" id="trHeatmapGrid">
+              <!-- Dynamically populated by JS -->
             </div>
           </div>
         </div>
@@ -1149,7 +1138,7 @@
                       <option value="">Selecione...</option>
                       <option value="EXCELENTE">Excelente</option>
                       <option value="BOM">Bom</option>
-                      <option value="RUIM">Ruim</option>
+                      <option value="INSATISFATÓRIO">Insatisfatório</option>
                     </select>
                   </div>
                 </div>

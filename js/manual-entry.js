@@ -175,8 +175,8 @@
       tempoFormatted = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
     }
 
-    // Determine resultado based on time (aligned with spreadsheet: Excelente <= 60s, Bom <= 90s, Ruim > 90s)
-    let resultado = 'Ruim';
+    // Determine resultado based on time (aligned with spreadsheet: Excelente <= 60s, Bom <= 90s, Insatisfatório > 90s)
+    let resultado = 'Insatisfatório';
     if (tempoSeconds <= 60) resultado = 'Excelente';
     else if (tempoSeconds <= 90) resultado = 'Bom';
 

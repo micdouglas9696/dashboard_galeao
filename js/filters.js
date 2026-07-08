@@ -22,7 +22,7 @@
 
   const RESULTADOS_BY_SECTION = {
     taf: ['Satisfatório', 'Insatisfatório'],
-    tpepr: ['Excelente', 'Bom', 'Ruim']
+    tpepr: ['Excelente', 'Bom', 'Insatisfatório']
   };
 
   let currentSection = 'overview';

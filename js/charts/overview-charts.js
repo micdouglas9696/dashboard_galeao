@@ -14,7 +14,7 @@
     pink: '#ff007f', indigo: '#6366f1', teal: '#14b8a6',
     equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#ff0055', 'FOLGUISTA': '#b026ff' },
     resultadosTAF: { 'Satisfatório': '#00ff87', 'Insatisfatório': '#ff0055' },
-    resultadosTPEPR: { 'Excelente': '#00ff87', 'Bom': '#ffd32a', 'Ruim': '#ff0055' }
+    resultadosTPEPR: { 'Excelente': '#00ff87', 'Bom': '#ffd32a', 'Insatisfatório': '#ff0055' }
   };
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];

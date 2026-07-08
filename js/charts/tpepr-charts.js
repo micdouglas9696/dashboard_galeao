@@ -13,11 +13,11 @@
     amber: '#ffd32a', red: '#ff0055', purple: '#b026ff',
     pink: '#ff007f', indigo: '#6366f1', teal: '#14b8a6',
     equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#ff0055', 'FOLGUISTA': '#b026ff' },
-    resultadosTPEPR: { 'Excelente': '#00ff87', 'Bom': '#ffd32a', 'Ruim': '#ff0055' }
+    resultadosTPEPR: { 'Excelente': '#00ff87', 'Bom': '#ffd32a', 'Insatisfatório': '#ff0055' }
   };
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
-  const RESULTADO_ORDER = ['Excelente', 'Bom', 'Ruim'];
+  const RESULTADO_ORDER = ['Excelente', 'Bom', 'Insatisfatório'];
   const chartInstances = {};
 
   function destroyChart(key) {
@@ -49,7 +49,7 @@
   function renderKPIs(records) {
     const exc = records.filter(r => r.resultado === 'Excelente').length;
     const bom = records.filter(r => r.resultado === 'Bom').length;
-    const ruim = records.filter(r => r.resultado === 'Ruim').length;
+    const ruim = records.filter(r => r.resultado === 'Insatisfatório' || r.resultado === 'Ruim').length;
 
     setText('kpi-tpepr-total', records.length);
     setText('kpi-tpepr-exc', exc);

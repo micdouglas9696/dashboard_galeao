@@ -122,6 +122,7 @@
       }) : [],
       tpepr: (tpeprData && tpeprData.records) ? tpeprData.records.map(function(r) {
         if (!r.mes) r.mes = 'Junho';
+        if (r.resultado === 'Ruim' || r.resultado === 'RUIM') r.resultado = 'Insatisfatório';
         return r;
       }) : [],
       tr: (trData && trData.records) ? trData.records : [],
@@ -882,7 +883,8 @@
     navigate,
     refresh,
     loadData,
-    setMonthFilter
+    setMonthFilter,
+    getRawData: function() { return allData; }
   };
 
   // Auto-init when DOM is ready

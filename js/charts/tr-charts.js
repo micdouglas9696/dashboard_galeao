@@ -128,53 +128,102 @@
     const cciColors = { '1°CCI': '#00d2ff', '2°CCI': '#00ff87', '3°CCI': '#ffd32a', '4°CCI': '#b026ff' };
 
     const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
-    const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
+    const isSingleMonth = usedMonthIndices.length === 1;
 
     const isRadar = activeTimelineType === 'radar';
     const isLine = activeTimelineType === 'line';
 
-    const datasets = ccis.filter(cci => ok.some(r => r.cci === cci)).map(cci => {
-      const color = cciColors[cci] || '#ccc';
-      const data = usedMonthIndices.map(mi => {
-        const group = ok.filter(r => r.cci === cci && r.mesIndex === mi);
-        if (!group.length) return null;
-        return Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length);
+    let labels, datasets;
+
+    if (isSingleMonth) {
+      // Show Teams on X-axis, CCIs as datasets
+      labels = EQUIPES.filter(e => ok.some(r => r.equipe === e));
+      if (!labels.length) labels = EQUIPES;
+
+      datasets = ccis.map(cci => {
+        const color = cciColors[cci] || '#ccc';
+        const data = labels.map(equipe => {
+          const group = ok.filter(r => r.cci === cci && r.equipe === equipe);
+          if (!group.length) return null;
+          return Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length);
+        });
+
+        const config = {
+          label: cci,
+          data
+        };
+
+        if (isRadar) {
+          config.backgroundColor = color + '33';
+          config.borderColor = color;
+          config.borderWidth = 2;
+          config.pointBackgroundColor = color;
+          config.pointRadius = 4;
+        } else if (isLine) {
+          config.borderColor = color;
+          config.backgroundColor = color + '33';
+          config.pointBackgroundColor = color;
+          config.pointBorderColor = '#fff';
+          config.pointRadius = 5;
+          config.pointHoverRadius = 7;
+          config.tension = 0.3;
+          config.spanGaps = true;
+          config.fill = false;
+        } else {
+          config.backgroundColor = color;
+          config.borderColor = color;
+          config.borderWidth = 1;
+          config.borderRadius = 4;
+        }
+        return config;
       });
+    } else {
+      // Normal timeline: Months on X-axis, CCIs as datasets
+      labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
+      datasets = ccis.filter(cci => ok.some(r => r.cci === cci)).map(cci => {
+        const color = cciColors[cci] || '#ccc';
+        const data = usedMonthIndices.map(mi => {
+          const group = ok.filter(r => r.cci === cci && r.mesIndex === mi);
+          if (!group.length) return null;
+          return Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length);
+        });
 
-      const config = {
-        label: cci,
-        data
-      };
+        const config = {
+          label: cci,
+          data
+        };
 
-      if (isRadar) {
-        config.backgroundColor = color + '33';
-        config.borderColor = color;
-        config.borderWidth = 2;
-        config.pointBackgroundColor = color;
-        config.pointRadius = 4;
-      } else if (isLine) {
-        config.borderColor = color;
-        config.backgroundColor = color + '33';
-        config.pointBackgroundColor = color;
-        config.pointBorderColor = '#fff';
-        config.pointRadius = 5;
-        config.pointHoverRadius = 7;
-        config.tension = 0.3;
-        config.spanGaps = true;
-        config.fill = false;
-      } else {
-        config.backgroundColor = color;
-        config.borderColor = color;
-        config.borderWidth = 1;
-        config.borderRadius = 4;
-      }
-      return config;
-    });
+        if (isRadar) {
+          config.backgroundColor = color + '33';
+          config.borderColor = color;
+          config.borderWidth = 2;
+          config.pointBackgroundColor = color;
+          config.pointRadius = 4;
+        } else if (isLine) {
+          config.borderColor = color;
+          config.backgroundColor = color + '33';
+          config.pointBackgroundColor = color;
+          config.pointBorderColor = '#fff';
+          config.pointRadius = 5;
+          config.pointHoverRadius = 7;
+          config.tension = 0.3;
+          config.spanGaps = true;
+          config.fill = false;
+        } else {
+          config.backgroundColor = color;
+          config.borderColor = color;
+          config.borderWidth = 1;
+          config.borderRadius = 4;
+        }
+        return config;
+      });
+    }
 
     // Meta line
+    const metaData = isSingleMonth ? labels.map(() => META_SECONDS) : usedMonthIndices.map(() => META_SECONDS);
     datasets.push({
       label: 'Meta (02:00)',
-      data: usedMonthIndices.map(() => META_SECONDS),
+      data: metaData,
       borderColor: COLORS.red,
       borderDash: [8, 4],
       borderWidth: 2,
@@ -183,6 +232,10 @@
       tension: 0
     });
 
+    const chartTitle = isSingleMonth 
+      ? `Tempo de Resposta por CCI e Equipe — ${MONTHS[usedMonthIndices[0]]}`
+      : 'Evolução Mensal por CCI';
+
     const config = {
       type: isRadar ? 'radar' : (isLine ? 'line' : 'bar'),
       data: { labels, datasets },
@@ -190,7 +243,7 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          title: { display: true, text: 'Evolução Mensal por CCI', font: { size: 16 } },
+          title: { display: true, text: chartTitle, font: { size: 16 } },
           legend: { position: 'top' },
           tooltip: {
             callbacks: {
@@ -212,7 +265,7 @@
       };
     } else {
       config.options.scales = {
-        x: { title: { display: true, text: 'Mês' } },
+        x: { title: { display: true, text: isSingleMonth ? 'Equipe' : 'Mês' } },
         y: {
           beginAtZero: true,
           title: { display: true, text: 'Tempo (segundos)' },
@@ -297,125 +350,72 @@
   }
 
   function renderHeatmap(records) {
-    destroyChart('trHeatmap');
-    const ctx = getCtx('trHeatmap');
-    if (!ctx) return;
+    const gridContainer = document.getElementById('trHeatmapGrid');
+    if (!gridContainer) return;
 
-    const ok = records.filter(r => r.status === 'ok' && r.cci === '1°CCI');
-    const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
-    const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
-    const equipes = EQUIPES.filter(e => ok.some(r => r.equipe === e));
+    gridContainer.innerHTML = '';
 
-    const excelData = equipes.map(equipe =>
-      usedMonthIndices.map(mi => {
-        const group = ok.filter(r => r.equipe === equipe && r.mesIndex === mi);
-        return group.filter(r => r.tempoSeconds <= 120).length;
-      })
-    );
+    const allTr = (window.SESCINC.App && window.SESCINC.App.getRawData)
+      ? window.SESCINC.App.getRawData().tr || []
+      : currentRecords;
 
-    const satisData = equipes.map(equipe =>
-      usedMonthIndices.map(mi => {
-        const group = ok.filter(r => r.equipe === equipe && r.mesIndex === mi);
-        return group.filter(r => r.tempoSeconds > 120 && r.tempoSeconds <= 180).length;
-      })
-    );
+    const filters = (window.SESCINC.Filters && window.SESCINC.Filters.getActiveFilters)
+      ? window.SESCINC.Filters.getActiveFilters()
+      : { equipes: [], cabeceira: 'all' };
 
-    const ruimData = equipes.map(equipe =>
-      usedMonthIndices.map(mi => {
-        const group = ok.filter(r => r.equipe === equipe && r.mesIndex === mi);
-        return group.filter(r => r.tempoSeconds > 180).length;
-      })
-    );
-
-    const isStacked = activeHeatmapType === 'bar';
-    const isLine = activeHeatmapType === 'line';
-
-    const datasets = [];
-    equipes.forEach((equipe, i) => {
-      const excelConfig = {
-        label: `${equipe} — Excelente`,
-        data: excelData[i],
-        backgroundColor: '#00ff87cc',
-        borderColor: '#00ff87'
-      };
-
-      const satisConfig = {
-        label: `${equipe} — Satisfatório`,
-        data: satisData[i],
-        backgroundColor: '#ffd32acc',
-        borderColor: '#ffd32a'
-      };
-
-      const ruimConfig = {
-        label: `${equipe} — Ruim`,
-        data: ruimData[i],
-        backgroundColor: '#ff0055cc',
-        borderColor: '#ff0055'
-      };
-
-      if (isLine) {
-        excelConfig.borderWidth = 3;
-        excelConfig.pointRadius = 4;
-        excelConfig.fill = false;
-        excelConfig.tension = 0.2;
-
-        satisConfig.borderWidth = 3;
-        satisConfig.pointRadius = 4;
-        satisConfig.fill = false;
-        satisConfig.tension = 0.2;
-
-        ruimConfig.borderWidth = 3;
-        ruimConfig.pointRadius = 4;
-        ruimConfig.fill = false;
-        ruimConfig.tension = 0.2;
-      } else {
-        excelConfig.borderWidth = 1;
-        excelConfig.stack = equipe;
-        excelConfig.borderRadius = 2;
-
-        satisConfig.borderWidth = 1;
-        satisConfig.stack = equipe;
-        satisConfig.borderRadius = 2;
-
-        ruimConfig.borderWidth = 1;
-        ruimConfig.stack = equipe;
-        ruimConfig.borderRadius = 2;
-      }
-
-      if (!isStacked && !isLine) {
-        delete excelConfig.stack;
-        delete satisConfig.stack;
-        delete ruimConfig.stack;
-      }
-
-      datasets.push(excelConfig);
-      datasets.push(satisConfig);
-      datasets.push(ruimConfig);
+    const matrixRecords = allTr.filter(r => {
+      if (r.status !== 'ok') return false;
+      if (filters.equipes && filters.equipes.length && !filters.equipes.includes(r.equipe)) return false;
+      if (filters.cabeceira && filters.cabeceira !== 'all' && r.cabeceira !== filters.cabeceira) return false;
+      return true;
     });
 
-    const config = {
-      type: isLine ? 'line' : 'bar',
-      data: { labels, datasets },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          x: { title: { display: true, text: 'Mês' } },
-          y: { beginAtZero: true, title: { display: true, text: 'Registros' } }
-        },
-        plugins: {
-          title: { display: true, text: 'Conformidade por Mês e Equipe', font: { size: 16 } },
-          legend: { position: 'top' }
+    const monthsToRender = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'];
+    const ccisToRender = ['1°CCI', '2°CCI', '3°CCI', '4°CCI'];
+
+    let tableHtml = '<div class="compliance-matrix-wrapper">';
+    tableHtml += '<table class="compliance-matrix-table">';
+    
+    // Header
+    tableHtml += '<thead><tr><th>CCI</th>';
+    monthsToRender.forEach(m => {
+      const shortMonth = m.substring(0, 3);
+      tableHtml += `<th>${shortMonth}</th>`;
+    });
+    tableHtml += '</tr></thead>';
+
+    // Body
+    tableHtml += '<tbody>';
+    ccisToRender.forEach(cci => {
+      tableHtml += `<tr><td class="matrix-row-label">${cci}</td>`;
+      monthsToRender.forEach((m, mi) => {
+        const group = matrixRecords.filter(r => r.cci === cci && r.mesIndex === mi);
+        if (!group.length) {
+          tableHtml += `<td>
+            <div class="compliance-cell cell-na">
+              <span class="compliance-cell-time">—</span>
+              <span class="compliance-cell-badge">Sem Dados</span>
+            </div>
+          </td>`;
+        } else {
+          const avgSeconds = Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length);
+          const isCompliant = avgSeconds <= META_SECONDS;
+          const cellClass = isCompliant ? 'cell-ok' : 'cell-ruim';
+          const badgeText = isCompliant ? 'Meta ✓' : 'Insatisfatório ⚠';
+          
+          tableHtml += `<td>
+            <div class="compliance-cell ${cellClass}" title="Total de ${group.length} testes no mês de ${m}">
+              <span class="compliance-cell-time">${formatTime(avgSeconds)}</span>
+              <span class="compliance-cell-badge">${badgeText}</span>
+            </div>
+          </td>`;
         }
-      }
-    };
+      });
+      tableHtml += '</tr>';
+    });
+    tableHtml += '</tbody></table></div>';
 
-    if (isStacked && !isLine) {
-      config.options.scales.x.stacked = true;
-      config.options.scales.y.stacked = true;
-    }
-
-    chartInstances.trHeatmap = new Chart(ctx, config);
+    gridContainer.innerHTML = tableHtml;
   }
 
   /* ── Table ── */
@@ -430,8 +430,8 @@
     filtered.forEach(r => {
       const tr = document.createElement('tr');
       const isNr = r.status === 'nr';
-      const isWithin = r.status === 'ok' && r.cci === '1°CCI' && r.tempoSeconds <= META_SECONDS;
-      const isAbove = r.status === 'ok' && r.cci === '1°CCI' && r.tempoSeconds > META_SECONDS;
+      const isWithin = r.status === 'ok' && r.tempoSeconds <= META_SECONDS;
+      const isAbove = r.status === 'ok' && r.tempoSeconds > META_SECONDS;
 
       let tempoBadge = r.tempoFormatted || '—';
       if (isWithin) tempoBadge = `<span class="badge badge-green">${r.tempoFormatted}</span>`;
@@ -492,7 +492,8 @@
   function destroy() {
     destroyChart('trTimeline');
     destroyChart('trCci');
-    destroyChart('trHeatmap');
+    const grid = document.getElementById('trHeatmapGrid');
+    if (grid) grid.innerHTML = '';
   }
 
   window.SESCINC.Charts.TR = { render, destroy };
