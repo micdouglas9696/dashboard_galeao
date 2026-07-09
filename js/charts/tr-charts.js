@@ -22,17 +22,17 @@
   const chartInstances = {};
   // Local filters for Timeline chart
   let timelineLocalCab = 'all';
-  let timelineLocalEquipe = 'todas';
+  let timelineLocalEquipes = ['todas'];
   let timelineLocalCci = 'todos';
 
   // Local filters for CCI Comparativo chart
   let cciLocalCab = 'all';
-  let cciLocalEquipe = 'todas';
+  let cciLocalEquipes = ['todas'];
   let cciLocalCci = 'todos';
 
   // Local filters for Heatmap chart
   let heatmapLocalCab = 'all';
-  let heatmapLocalEquipe = 'todas';
+  let heatmapLocalEquipes = ['todas'];
   let heatmapLocalCci = 'todos';
 
   function getMetaForRecord(r) {
@@ -159,55 +159,81 @@
     if (localFiltersAttached) return;
     localFiltersAttached = true;
 
-    function registerLocalSwitcher(containerSelector, onActive) {
+    function registerLocalSwitcher(containerSelector, isMulti, onActive) {
       document.querySelectorAll(containerSelector + ' .local-tab').forEach(tab => {
         tab.addEventListener('click', () => {
-          document.querySelectorAll(containerSelector + ' .local-tab').forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
           const val = tab.getAttribute('data-val');
-          onActive(val);
+          
+          if (!isMulti) {
+            document.querySelectorAll(containerSelector + ' .local-tab').forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            onActive(val);
+          } else {
+            const allTab = document.querySelector(containerSelector + ' .local-tab[data-val="todas"]');
+            if (val === 'todas') {
+              document.querySelectorAll(containerSelector + ' .local-tab').forEach(t => t.classList.remove('active'));
+              allTab.classList.add('active');
+              onActive(['todas']);
+            } else {
+              allTab.classList.remove('active');
+              tab.classList.toggle('active');
+              
+              const activeVals = [];
+              document.querySelectorAll(containerSelector + ' .local-tab.active').forEach(t => {
+                const v = t.getAttribute('data-val');
+                if (v !== 'todas') activeVals.push(v);
+              });
+              
+              if (activeVals.length === 0) {
+                allTab.classList.add('active');
+                onActive(['todas']);
+              } else {
+                onActive(activeVals);
+              }
+            }
+          }
         });
       });
     }
 
     // 1. Timeline Chart
-    registerLocalSwitcher('.timeline-cab-tabs', val => {
+    registerLocalSwitcher('.timeline-cab-tabs', false, val => {
       timelineLocalCab = val;
       renderTimeline(currentRecords);
     });
-    registerLocalSwitcher('.timeline-equipe-tabs', val => {
-      timelineLocalEquipe = val;
+    registerLocalSwitcher('.timeline-equipe-tabs', true, val => {
+      timelineLocalEquipes = val;
       renderTimeline(currentRecords);
     });
-    registerLocalSwitcher('.timeline-cci-tabs', val => {
+    registerLocalSwitcher('.timeline-cci-tabs', false, val => {
       timelineLocalCci = val;
       renderTimeline(currentRecords);
     });
 
     // 2. CCI Comparativo Chart
-    registerLocalSwitcher('.cci-cab-tabs', val => {
+    registerLocalSwitcher('.cci-cab-tabs', false, val => {
       cciLocalCab = val;
       renderCciBar(currentRecords);
     });
-    registerLocalSwitcher('.cci-equipe-tabs', val => {
-      cciLocalEquipe = val;
+    registerLocalSwitcher('.cci-equipe-tabs', true, val => {
+      cciLocalEquipes = val;
       renderCciBar(currentRecords);
     });
-    registerLocalSwitcher('.cci-cci-tabs', val => {
+    registerLocalSwitcher('.cci-cci-tabs', false, val => {
       cciLocalCci = val;
       renderCciBar(currentRecords);
     });
 
     // 3. Heatmap Chart
-    registerLocalSwitcher('.heatmap-cab-tabs', val => {
+    registerLocalSwitcher('.heatmap-cab-tabs', false, val => {
       heatmapLocalCab = val;
       renderHeatmap(currentRecords);
     });
-    registerLocalSwitcher('.heatmap-equipe-tabs', val => {
-      heatmapLocalEquipe = val;
+    registerLocalSwitcher('.heatmap-equipe-tabs', true, val => {
+      heatmapLocalEquipes = val;
       renderHeatmap(currentRecords);
     });
-    registerLocalSwitcher('.heatmap-cci-tabs', val => {
+    registerLocalSwitcher('.heatmap-cci-tabs', false, val => {
       heatmapLocalCci = val;
       renderHeatmap(currentRecords);
     });
@@ -226,8 +252,8 @@
     if (timelineLocalCab !== 'all') {
       ok = ok.filter(r => r.cabeceira === timelineLocalCab);
     }
-    if (timelineLocalEquipe !== 'todas') {
-      ok = ok.filter(r => r.equipe === timelineLocalEquipe);
+    if (!timelineLocalEquipes.includes('todas')) {
+      ok = ok.filter(r => timelineLocalEquipes.includes(r.equipe));
     }
 
     const ccis = timelineLocalCci === 'todos' ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : [timelineLocalCci];
@@ -362,34 +388,60 @@
     const isHorizontal = activeCciType === 'horizontalBar';
     const isLine = activeCciType === 'line';
 
-    const selectedEquipes = cciLocalEquipe === 'todas' ? EQUIPES : [cciLocalEquipe];
+    const datasets = [];
 
-    const datasets = selectedEquipes.map(equipe => {
-      const color = COLORS.equipes[equipe];
+    if (cciLocalEquipes.includes('todas')) {
       const config = {
-        label: equipe,
+        label: 'Média Geral (Todas as Equipes)',
         data: ccis.map(cci => {
-          const group = ok.filter(r => r.equipe === equipe && r.cci === cci);
+          const group = ok.filter(r => r.cci === cci);
           return group.length ? Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length) : 0;
         })
       };
 
       if (isLine) {
-        config.borderColor = color;
-        config.backgroundColor = color + '22';
+        config.borderColor = '#3b82f6';
+        config.backgroundColor = 'rgba(59, 130, 246, 0.15)';
         config.borderWidth = 3;
-        config.pointBackgroundColor = color;
+        config.pointBackgroundColor = '#3b82f6';
         config.pointRadius = 4;
         config.fill = false;
         config.tension = 0.2;
       } else {
-        config.backgroundColor = color;
-        config.borderColor = color;
+        config.backgroundColor = 'rgba(59, 130, 246, 0.75)';
+        config.borderColor = '#3b82f6';
         config.borderWidth = 1;
         config.borderRadius = 4;
       }
-      return config;
-    });
+      datasets.push(config);
+    } else {
+      cciLocalEquipes.forEach(equipe => {
+        const color = COLORS.equipes[equipe] || '#ccc';
+        const config = {
+          label: `Equipe ${equipe}`,
+          data: ccis.map(cci => {
+            const group = ok.filter(r => r.equipe === equipe && r.cci === cci);
+            return group.length ? Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length) : 0;
+          })
+        };
+
+        if (isLine) {
+          config.borderColor = color;
+          config.backgroundColor = color + '22';
+          config.borderWidth = 3;
+          config.pointBackgroundColor = color;
+          config.pointRadius = 4;
+          config.fill = false;
+          config.tension = 0.2;
+        } else {
+          config.backgroundColor = color;
+          config.borderColor = color;
+          config.borderWidth = 1;
+          config.borderRadius = 4;
+        }
+        datasets.push(config);
+      });
+    }
 
     const config = {
       type: isLine ? 'line' : 'bar',
@@ -437,8 +489,8 @@
     if (heatmapLocalCci !== 'todos') {
       ok = ok.filter(r => r.cci === heatmapLocalCci);
     }
-    if (heatmapLocalEquipe !== 'todas') {
-      ok = ok.filter(r => r.equipe === heatmapLocalEquipe);
+    if (!heatmapLocalEquipes.includes('todas')) {
+      ok = ok.filter(r => heatmapLocalEquipes.includes(r.equipe));
     }
 
     const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
@@ -680,15 +732,15 @@
 
     // Reset local filters state
     timelineLocalCab = 'all';
-    timelineLocalEquipe = 'todas';
+    timelineLocalEquipes = ['todas'];
     timelineLocalCci = 'todos';
 
     cciLocalCab = 'all';
-    cciLocalEquipe = 'todas';
+    cciLocalEquipes = ['todas'];
     cciLocalCci = 'todos';
 
     heatmapLocalCab = 'all';
-    heatmapLocalEquipe = 'todas';
+    heatmapLocalEquipes = ['todas'];
     heatmapLocalCci = 'todos';
 
     // Reset tab active classes for all local switcher groups
