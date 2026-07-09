@@ -1940,12 +1940,43 @@ body::after {
   border-color: var(--accent-blue) !important;
 }
 
-/* Local Chart Filters styles */
-.heatmap-cci-tab,
-.heatmap-equipe-tab {
-  padding: 4px 12px;
+/* Local Chart Filters Grid & Items */
+.local-chart-filters {
+  display: flex;
+  gap: 16px;
+  margin: 12px 0;
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: var(--radius-sm);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.local-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.local-filter-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.local-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.local-tab {
+  padding: 4px 10px;
   border-radius: 12px;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 500;
   border: 1px solid var(--border-light);
   background: rgba(255, 255, 255, 0.02);
@@ -1954,16 +1985,14 @@ body::after {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.heatmap-cci-tab:hover,
-.heatmap-equipe-tab:hover {
+.local-tab:hover {
   background: rgba(59, 130, 246, 0.1);
   color: var(--text-primary);
   border-color: var(--accent-blue);
   transform: translateY(-1px);
 }
 
-.heatmap-cci-tab.active,
-.heatmap-equipe-tab.active {
+.local-tab.active {
   background: rgba(59, 130, 246, 0.2);
   color: var(--accent-blue);
   border-color: var(--accent-blue);

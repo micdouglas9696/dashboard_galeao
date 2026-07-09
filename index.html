@@ -729,35 +729,48 @@
           </div>
         </div>
 
-        <!-- Cabeceira Tabs -->
-        <div class="cabeceira-tabs-container" style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
-          <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Filtrar por Cabeceira da Pista (Aeroporto SBGL):</span>
-          <div class="cabeceira-tabs" style="margin-bottom: 0;">
-            <button class="cabeceira-tab active" data-cab="todas">Todas as Pistas</button>
-            <button class="cabeceira-tab" data-cab="28">Cabeceira 28 (Principal)</button>
-            <button class="cabeceira-tab" data-cab="33">Cabeceira 33</button>
-            <button class="cabeceira-tab" data-cab="15">Cabeceira 15</button>
-          </div>
-        </div>
 
-        <!-- Equipe Tabs -->
-        <div class="tr-equipe-tabs-container" style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
-          <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Filtrar por Equipe Operacional:</span>
-          <div class="tr-equipe-tabs" style="margin-bottom: 0;">
-            <button class="tr-equipe-tab active" data-equipe="todas">Todas as Equipes</button>
-            <button class="tr-equipe-tab" data-equipe="ALFA">Equipe ALFA</button>
-            <button class="tr-equipe-tab" data-equipe="BRAVO">Equipe BRAVO</button>
-            <button class="tr-equipe-tab" data-equipe="CHARLIE">Equipe CHARLIE</button>
-            <button class="tr-equipe-tab" data-equipe="DELTA">Equipe DELTA</button>
-            <button class="tr-equipe-tab" data-equipe="FOLGUISTA">Equipe FOLGUISTA</button>
-          </div>
-        </div>
 
         <!-- Charts -->
         <div class="charts-grid">
           <div class="chart-card full-width">
             <div class="chart-card-title">Evolução Mensal por CCI</div>
             <div class="chart-card-desc">Evolução do tempo de resposta (TR) das viaturas (1°, 2°, 3° e 4° CCI) na cabeceira selecionada de Janeiro a Junho de 2026. A linha tracejada vermelha marca o limite crítico de segurança de acordo com a viatura selecionada.</div>
+            
+            <!-- Local Chart Filters for Timeline -->
+            <div class="local-chart-filters">
+              <div class="local-filter-group">
+                <span class="local-filter-label">Cabeceira:</span>
+                <div class="local-tabs timeline-cab-tabs">
+                  <button class="local-tab active" data-val="all">Todas</button>
+                  <button class="local-tab" data-val="28">28</button>
+                  <button class="local-tab" data-val="33">33</button>
+                  <button class="local-tab" data-val="15">15</button>
+                </div>
+              </div>
+              <div class="local-filter-group">
+                <span class="local-filter-label">Equipe:</span>
+                <div class="local-tabs timeline-equipe-tabs">
+                  <button class="local-tab active" data-val="todas">Todas</button>
+                  <button class="local-tab" data-val="ALFA">Alfa</button>
+                  <button class="local-tab" data-val="BRAVO">Bravo</button>
+                  <button class="local-tab" data-val="CHARLIE">Charlie</button>
+                  <button class="local-tab" data-val="DELTA">Delta</button>
+                  <button class="local-tab" data-val="FOLGUISTA">Folguista</button>
+                </div>
+              </div>
+              <div class="local-filter-group">
+                <span class="local-filter-label">CCI:</span>
+                <div class="local-tabs timeline-cci-tabs">
+                  <button class="local-tab active" data-val="todos">Todos</button>
+                  <button class="local-tab" data-val="1°CCI">1°CCI</button>
+                  <button class="local-tab" data-val="2°CCI">2°CCI</button>
+                  <button class="local-tab" data-val="3°CCI">3°CCI</button>
+                  <button class="local-tab" data-val="4°CCI">4°CCI</button>
+                </div>
+              </div>
+            </div>
+
             <div class="chart-container">
               <canvas id="trTimeline"></canvas>
             </div>
@@ -778,6 +791,41 @@
               </div>
             </div>
             <div class="chart-card-desc">Tempo médio de acionamento e chegada em segundos comparando a 1ª, 2ª e 3ª viaturas (CCIs) de forma agrupada por equipes para atestar a fluidez da resposta sequencial.</div>
+            
+            <!-- Local Chart Filters for CCI Comparativo -->
+            <div class="local-chart-filters">
+              <div class="local-filter-group">
+                <span class="local-filter-label">Cabeceira:</span>
+                <div class="local-tabs cci-cab-tabs">
+                  <button class="local-tab active" data-val="all">Todas</button>
+                  <button class="local-tab" data-val="28">28</button>
+                  <button class="local-tab" data-val="33">33</button>
+                  <button class="local-tab" data-val="15">15</button>
+                </div>
+              </div>
+              <div class="local-filter-group">
+                <span class="local-filter-label">Equipe:</span>
+                <div class="local-tabs cci-equipe-tabs">
+                  <button class="local-tab active" data-val="todas">Todas</button>
+                  <button class="local-tab" data-val="ALFA">Alfa</button>
+                  <button class="local-tab" data-val="BRAVO">Bravo</button>
+                  <button class="local-tab" data-val="CHARLIE">Charlie</button>
+                  <button class="local-tab" data-val="DELTA">Delta</button>
+                  <button class="local-tab" data-val="FOLGUISTA">Folguista</button>
+                </div>
+              </div>
+              <div class="local-filter-group">
+                <span class="local-filter-label">CCI:</span>
+                <div class="local-tabs cci-cci-tabs">
+                  <button class="local-tab active" data-val="todos">Todos</button>
+                  <button class="local-tab" data-val="1°CCI">1°CCI</button>
+                  <button class="local-tab" data-val="2°CCI">2°CCI</button>
+                  <button class="local-tab" data-val="3°CCI">3°CCI</button>
+                  <button class="local-tab" data-val="4°CCI">4°CCI</button>
+                </div>
+              </div>
+            </div>
+
             <div class="chart-container">
               <canvas id="trCci"></canvas>
             </div>
@@ -799,27 +847,36 @@
             </div>
             <div class="chart-card-desc">Matriz quadricular de conformidade mensal. As cores sinalizam se a média de resposta de cada CCI atendeu à meta de 2 minutos (Verde), ficou em estado de alerta até 3 minutos (Amarelo) ou excedeu o limite (Vermelho) em cada mês.</div>
             
-            <!-- Local Chart Filters for CCI and Equipe -->
-            <div class="local-chart-filters" style="display: flex; gap: 24px; margin: 14px 0; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); flex-wrap: wrap;">
-              <div class="local-filter-group" style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.72rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Filtrar CCI:</span>
-                <div class="heatmap-cci-tabs" style="display: flex; gap: 4px;">
-                  <button class="heatmap-cci-tab active" data-cci="todos">Todos</button>
-                  <button class="heatmap-cci-tab" data-cci="1°CCI">1°CCI</button>
-                  <button class="heatmap-cci-tab" data-cci="2°CCI">2°CCI</button>
-                  <button class="heatmap-cci-tab" data-cci="3°CCI">3°CCI</button>
-                  <button class="heatmap-cci-tab" data-cci="4°CCI">4°CCI</button>
+            <!-- Local Chart Filters for Heatmap -->
+            <div class="local-chart-filters">
+              <div class="local-filter-group">
+                <span class="local-filter-label">Cabeceira:</span>
+                <div class="local-tabs heatmap-cab-tabs">
+                  <button class="local-tab active" data-val="all">Todas</button>
+                  <button class="local-tab" data-val="28">28</button>
+                  <button class="local-tab" data-val="33">33</button>
+                  <button class="local-tab" data-val="15">15</button>
                 </div>
               </div>
-              <div class="local-filter-group" style="display: flex; align-items: center; gap: 8px;">
-                <span style="font-size: 0.72rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Filtrar Equipe:</span>
-                <div class="heatmap-equipe-tabs" style="display: flex; gap: 4px;">
-                  <button class="heatmap-equipe-tab active" data-equipe="todas">Todas</button>
-                  <button class="heatmap-equipe-tab" data-equipe="ALFA">Alfa</button>
-                  <button class="heatmap-equipe-tab" data-equipe="BRAVO">Bravo</button>
-                  <button class="heatmap-equipe-tab" data-equipe="CHARLIE">Charlie</button>
-                  <button class="heatmap-equipe-tab" data-equipe="DELTA">Delta</button>
-                  <button class="heatmap-equipe-tab" data-equipe="FOLGUISTA">Folguista</button>
+              <div class="local-filter-group">
+                <span class="local-filter-label">Equipe:</span>
+                <div class="local-tabs heatmap-equipe-tabs">
+                  <button class="local-tab active" data-val="todas">Todas</button>
+                  <button class="local-tab" data-val="ALFA">Alfa</button>
+                  <button class="local-tab" data-val="BRAVO">Bravo</button>
+                  <button class="local-tab" data-val="CHARLIE">Charlie</button>
+                  <button class="local-tab" data-val="DELTA">Delta</button>
+                  <button class="local-tab" data-val="FOLGUISTA">Folguista</button>
+                </div>
+              </div>
+              <div class="local-filter-group">
+                <span class="local-filter-label">CCI:</span>
+                <div class="local-tabs heatmap-cci-tabs">
+                  <button class="local-tab active" data-val="todos">Todos</button>
+                  <button class="local-tab" data-val="1°CCI">1°CCI</button>
+                  <button class="local-tab" data-val="2°CCI">2°CCI</button>
+                  <button class="local-tab" data-val="3°CCI">3°CCI</button>
+                  <button class="local-tab" data-val="4°CCI">4°CCI</button>
                 </div>
               </div>
             </div>

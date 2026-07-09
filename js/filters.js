@@ -14,7 +14,7 @@
     overview:  ['equipe'],
     taf:       ['equipe', 'funcao', 'resultado', 'idade', 'search'],
     tpepr:     ['equipe', 'funcao', 'resultado', 'search'],
-    tr:        ['equipe', 'cabeceira', 'mes', 'cci'],
+    tr:        ['mes'],
     teorica:   ['equipe', 'funcao', 'nota', 'search'],
     upload:    [],
     manual:    []
