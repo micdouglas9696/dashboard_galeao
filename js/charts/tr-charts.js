@@ -597,6 +597,22 @@
       ok = ok.filter(r => heatmapLocalEquipes.includes(r.equipe));
     }
 
+    // Update description text dynamically
+    const descEl = document.getElementById('tr-heatmap-desc');
+    if (descEl) {
+      if (heatmapLocalCci === 'todos') {
+        descEl.innerHTML = `Matriz quadricular de conformidade mensal. As cores sinalizam se o tempo atendeu à meta de cada CCI: <strong>1° CCI</strong> atendeu a 2 min (Verde) ou alerta até 3 min (Amarelo); <strong>2° CCI</strong> atendeu a 3 min (Verde) ou alerta até 4 min (Amarelo); <strong>3° e 4° CCIs</strong> atenderam a 4 min (Verde) ou alerta até 5 min (Amarelo). Passou disso é Insatisfatório (Vermelho).`;
+      } else if (heatmapLocalCci === '1°CCI') {
+        descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>1° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>2 minutos (Verde)</strong>, ficou em estado de alerta até <strong>3 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+      } else if (heatmapLocalCci === '2°CCI') {
+        descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>2° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>3 minutos (Verde)</strong>, ficou em estado de alerta até <strong>4 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+      } else if (heatmapLocalCci === '3°CCI') {
+        descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>3° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>4 minutos (Verde)</strong>, ficou em estado de alerta até <strong>5 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+      } else if (heatmapLocalCci === '4°CCI') {
+        descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>4° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>4 minutos (Verde)</strong>, ficou em estado de alerta até <strong>5 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+      }
+    }
+
     const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
     const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
 
@@ -702,35 +718,59 @@
                 const satisIdx = chart.data.datasets.findIndex(ds => ds.label.includes('Satisfatório'));
                 const ruimIdx = chart.data.datasets.findIndex(ds => ds.label.includes('Insatisfatório'));
 
+                let excelLabel = 'Excelente (≤ 2min)';
+                let satisLabel = 'Satisfatório (2-3min)';
+                let ruimLabel = 'Insatisfatório (> 3min)';
+
+                if (heatmapLocalCci === 'todos') {
+                  excelLabel = 'Excelente (Metas)';
+                  satisLabel = 'Satisfatório (Alerta)';
+                  ruimLabel = 'Insatisfatório (Crítico)';
+                } else if (heatmapLocalCci === '2°CCI') {
+                  excelLabel = 'Excelente (≤ 3min)';
+                  satisLabel = 'Satisfatório (3-4min)';
+                  ruimLabel = 'Insatisfatório (> 4min)';
+                } else if (heatmapLocalCci === '3°CCI' || heatmapLocalCci === '4°CCI') {
+                  excelLabel = 'Excelente (≤ 4min)';
+                  satisLabel = 'Satisfatório (4-5min)';
+                  ruimLabel = 'Insatisfatório (> 5min)';
+                }
+
                 const labels = [];
                 if (excelIdx !== -1) {
                   labels.push({
-                    text: 'Excelente (≤ 2min)',
+                    text: excelLabel,
                     fillStyle: '#00ff87cc',
                     strokeStyle: '#00ff87',
                     lineWidth: 1,
                     hidden: !chart.isDatasetVisible(excelIdx),
-                    index: excelIdx
+                    index: excelIdx,
+                    fontColor: '#c9d1d9',
+                    color: '#c9d1d9'
                   });
                 }
                 if (satisIdx !== -1) {
                   labels.push({
-                    text: 'Satisfatório (2-3min)',
+                    text: satisLabel,
                     fillStyle: '#ffd32acc',
                     strokeStyle: '#ffd32a',
                     lineWidth: 1,
                     hidden: !chart.isDatasetVisible(satisIdx),
-                    index: satisIdx
+                    index: satisIdx,
+                    fontColor: '#c9d1d9',
+                    color: '#c9d1d9'
                   });
                 }
                 if (ruimIdx !== -1) {
                   labels.push({
-                    text: 'Insatisfatório (> 3min)',
+                    text: ruimLabel,
                     fillStyle: '#ff0055cc',
                     strokeStyle: '#ff0055',
                     lineWidth: 1,
                     hidden: !chart.isDatasetVisible(ruimIdx),
-                    index: ruimIdx
+                    index: ruimIdx,
+                    fontColor: '#c9d1d9',
+                    color: '#c9d1d9'
                   });
                 }
                 return labels;
