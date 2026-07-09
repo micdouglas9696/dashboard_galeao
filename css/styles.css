@@ -1490,22 +1490,66 @@ body {
 
 .header-telemetry {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  font-size: 0.7rem;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.telemetry-badge-online {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: #10b981;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.62rem;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+.telemetry-badge-online:hover {
+  background: rgba(16, 185, 129, 0.15);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.1);
+}
+
+.telemetry-badge-airport {
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  padding: 3px 8px;
+  border-radius: 12px;
+  color: #3b82f6;
+  font-weight: 600;
+  font-size: 0.62rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+.telemetry-badge-airport:hover {
+  background: rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
+}
+
+.telemetry-badge-clock {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 10px;
+  border-radius: 12px;
+  color: var(--text-secondary);
   font-family: monospace;
-  color: var(--text-muted);
-  margin-top: 4px;
-}
-
-.telemetry-item {
-  display: flex;
+  font-weight: 500;
+  font-size: 0.62rem;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
+  transition: all 0.2s ease;
 }
-
-.telemetry-separator {
-  color: rgba(255, 255, 255, 0.1);
+.telemetry-badge-clock:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
 }
 
 .glow-dot {
