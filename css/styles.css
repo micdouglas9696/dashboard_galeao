@@ -161,15 +161,21 @@ a:hover {
 .sidebar-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0, 240, 255, 0.08);
-  border: 1px solid rgba(0, 240, 255, 0.2);
-  box-shadow: 0 0 12px rgba(0, 240, 255, 0.15);
+  justify-content: flex-start;
+  width: 140px;
+  height: 36px;
+  border-radius: 6px;
   flex-shrink: 0;
-  transition: var(--transition);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+#sidebar.collapsed .sidebar-header {
+  padding: 20px 0;
+  justify-content: center;
+}
+#sidebar.collapsed .sidebar-logo {
+  width: 32px;
+  justify-content: center;
 }
 .sidebar-title {
   font-size: 1.05rem;
@@ -272,9 +278,22 @@ a:hover {
   opacity: 1;
   transition: opacity 0.25s ease;
 }
+#sidebar.collapsed .sidebar-nav {
+  padding: 12px 4px;
+}
+#sidebar.collapsed .nav-item {
+  justify-content: center;
+  padding: 10px 0;
+  gap: 0;
+}
+#sidebar.collapsed .nav-item-icon {
+  margin: 0;
+  width: auto;
+}
 #sidebar.collapsed .nav-item-label {
   opacity: 0;
   pointer-events: none;
+  display: none;
 }
 
 .nav-separator {
