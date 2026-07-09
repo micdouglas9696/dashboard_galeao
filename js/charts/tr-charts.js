@@ -23,17 +23,17 @@
   // Local filters for Timeline chart
   let timelineLocalCab = 'all';
   let timelineLocalEquipes = ['todas'];
-  let timelineLocalCci = 'todos';
+  let timelineLocalCcis = ['todos'];
 
   // Local filters for CCI Comparativo chart
   let cciLocalCab = 'all';
   let cciLocalEquipes = ['todas'];
-  let cciLocalCci = 'todos';
+  let cciLocalCcis = ['todos'];
 
   // Local filters for Heatmap chart
   let heatmapLocalCab = 'all';
   let heatmapLocalEquipes = ['todas'];
-  let heatmapLocalCci = 'todos';
+  let heatmapLocalCcis = ['todos'];
 
   function getMetaForRecord(r) {
     if (r.cci === '2°CCI') return 180;
@@ -155,6 +155,20 @@
     }
   };
 
+  function showTrDetailModal(title, records) {
+    const formattedList = records.map(r => {
+      const status = classifyRecordTR(r);
+      const emoji = status === 'Excelente' ? '🟢' : (status === 'Satisfatório' ? '🟡' : '🔴');
+      const formattedTime = formatTime(r.tempoSeconds);
+      const dateStr = r.data || 'Data N/A';
+      return `${emoji} ${dateStr} — ${r.cci} — Equipe ${r.equipe} — Cab. ${r.cabeceira} — TR: ${formattedTime} (${status})`;
+    });
+    
+    if (window.SESCINC && window.SESCINC.showDetailModal) {
+      window.SESCINC.showDetailModal(title, formattedList);
+    }
+  }
+
   function filterByCabeceira(records, cabeceira) {
     if (!cabeceira || cabeceira === 'all') return records;
     return records.filter(r => r.cabeceira === cabeceira);
@@ -233,11 +247,13 @@
             tab.classList.add('active');
             onActive(val);
           } else {
-            const allTab = document.querySelector(containerSelector + ' .local-tab[data-val="todas"]');
-            if (val === 'todas') {
+            const allTab = document.querySelector(containerSelector + ' .local-tab[data-val="todas"]') ||
+                           document.querySelector(containerSelector + ' .local-tab[data-val="todos"]');
+            const isAllVal = val === 'todas' || val === 'todos';
+            if (isAllVal) {
               document.querySelectorAll(containerSelector + ' .local-tab').forEach(t => t.classList.remove('active'));
               allTab.classList.add('active');
-              onActive(['todas']);
+              onActive([val]);
             } else {
               allTab.classList.remove('active');
               tab.classList.toggle('active');
@@ -245,12 +261,12 @@
               const activeVals = [];
               document.querySelectorAll(containerSelector + ' .local-tab.active').forEach(t => {
                 const v = t.getAttribute('data-val');
-                if (v !== 'todas') activeVals.push(v);
+                if (v !== 'todas' && v !== 'todos') activeVals.push(v);
               });
               
               if (activeVals.length === 0) {
                 allTab.classList.add('active');
-                onActive(['todas']);
+                onActive([allTab.getAttribute('data-val')]);
               } else {
                 onActive(activeVals);
               }
@@ -269,8 +285,8 @@
       timelineLocalEquipes = val;
       renderTimeline(currentRecords);
     });
-    registerLocalSwitcher('.timeline-cci-tabs', false, val => {
-      timelineLocalCci = val;
+    registerLocalSwitcher('.timeline-cci-tabs', true, val => {
+      timelineLocalCcis = val;
       renderTimeline(currentRecords);
     });
 
@@ -283,8 +299,8 @@
       cciLocalEquipes = val;
       renderCciBar(currentRecords);
     });
-    registerLocalSwitcher('.cci-cci-tabs', false, val => {
-      cciLocalCci = val;
+    registerLocalSwitcher('.cci-cci-tabs', true, val => {
+      cciLocalCcis = val;
       renderCciBar(currentRecords);
     });
 
@@ -297,8 +313,8 @@
       heatmapLocalEquipes = val;
       renderHeatmap(currentRecords);
     });
-    registerLocalSwitcher('.heatmap-cci-tabs', false, val => {
-      heatmapLocalCci = val;
+    registerLocalSwitcher('.heatmap-cci-tabs', true, val => {
+      heatmapLocalCcis = val;
       renderHeatmap(currentRecords);
     });
   }
@@ -320,7 +336,7 @@
       ok = ok.filter(r => timelineLocalEquipes.includes(r.equipe));
     }
 
-    const ccis = timelineLocalCci === 'todos' ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : [timelineLocalCci];
+    const ccis = timelineLocalCcis.includes('todos') ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : timelineLocalCcis;
     const cciColors = { '1°CCI': '#00d2ff', '2°CCI': '#00ff87', '3°CCI': '#ffd32a', '4°CCI': '#b026ff' };
 
     const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
@@ -368,16 +384,18 @@
     });
 
     // Meta line based on active CCI local filter
-    const activeCci = timelineLocalCci;
     let currentMetaLimit = 120;
     let metaLabel = 'Meta (02:00)';
-    if (activeCci === '2°CCI') {
-      currentMetaLimit = 180;
-      metaLabel = 'Meta (03:00)';
-    } else if (activeCci === '3°CCI' || activeCci === '4°CCI') {
-      currentMetaLimit = 240;
-      metaLabel = 'Meta (04:00)';
-    } else if (activeCci === 'todos') {
+    if (timelineLocalCcis.length === 1) {
+      const activeCci = timelineLocalCcis[0];
+      if (activeCci === '2°CCI') {
+        currentMetaLimit = 180;
+        metaLabel = 'Meta (03:00)';
+      } else if (activeCci === '3°CCI' || activeCci === '4°CCI') {
+        currentMetaLimit = 240;
+        metaLabel = 'Meta (04:00)';
+      }
+    } else {
       metaLabel = 'Meta 1°CCI (02:00)';
     }
 
@@ -398,6 +416,30 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: {
+            top: 15
+          }
+        },
+        onClick: (event, elements, chart) => {
+          if (!elements.length) return;
+          const element = elements[0];
+          const datasetIndex = element.datasetIndex;
+          const index = element.index;
+          
+          const xLabel = chart.data.labels[index];
+          const dsLabel = chart.data.datasets[datasetIndex].label;
+          
+          if (dsLabel.includes('Meta')) return;
+
+          const clickedMonthIndex = MONTHS.indexOf(xLabel);
+          const clickedCci = dsLabel;
+
+          const matched = ok.filter(r => r.mesIndex === clickedMonthIndex && r.cci === clickedCci);
+          if (matched.length) {
+            showTrDetailModal(`Detalhamento dos Dados: ${clickedCci} — ${xLabel}`, matched);
+          }
+        },
         animation: {
           duration: 1200,
           easing: 'easeOutQuart'
@@ -461,7 +503,7 @@
       ok = ok.filter(r => r.cabeceira === cciLocalCab);
     }
 
-    const ccis = cciLocalCci === 'todos' ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : [cciLocalCci];
+    const ccis = cciLocalCcis.includes('todos') ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : cciLocalCcis;
 
     const isHorizontal = activeCciType === 'horizontalBar';
     const isLine = activeCciType === 'line';
@@ -527,6 +569,29 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: {
+            top: 15
+          }
+        },
+        onClick: (event, elements, chart) => {
+          if (!elements.length) return;
+          const element = elements[0];
+          const datasetIndex = element.datasetIndex;
+          const index = element.index;
+          
+          const xLabel = chart.data.labels[index];
+          const dsLabel = chart.data.datasets[datasetIndex].label;
+          
+          const clickedCci = xLabel;
+          const clickedTeam = dsLabel.includes('Média Geral') ? null : dsLabel.replace('Equipe ', '');
+
+          const matched = ok.filter(r => r.cci === clickedCci && (!clickedTeam || r.equipe === clickedTeam));
+          if (matched.length) {
+            const title = clickedTeam ? `Detalhamento: CCI ${clickedCci} — Equipe ${clickedTeam}` : `Detalhamento: CCI ${clickedCci} — Média Geral`;
+            showTrDetailModal(title, matched);
+          }
+        },
         animation: {
           duration: 1200,
           easing: 'easeOutQuart'
@@ -590,8 +655,8 @@
     if (heatmapLocalCab !== 'all') {
       ok = ok.filter(r => r.cabeceira === heatmapLocalCab);
     }
-    if (heatmapLocalCci !== 'todos') {
-      ok = ok.filter(r => r.cci === heatmapLocalCci);
+    if (!heatmapLocalCcis.includes('todos')) {
+      ok = ok.filter(r => heatmapLocalCcis.includes(r.cci));
     }
     if (!heatmapLocalEquipes.includes('todas')) {
       ok = ok.filter(r => heatmapLocalEquipes.includes(r.equipe));
@@ -600,23 +665,26 @@
     // Update description text dynamically
     const descEl = document.getElementById('tr-heatmap-desc');
     if (descEl) {
-      if (heatmapLocalCci === 'todos') {
+      if (heatmapLocalCcis.includes('todos') || heatmapLocalCcis.length > 1) {
         descEl.innerHTML = `Matriz quadricular de conformidade mensal. As cores sinalizam se o tempo atendeu à meta de cada CCI: <strong>1° CCI</strong> atendeu a 2 min (Verde) ou alerta até 3 min (Amarelo); <strong>2° CCI</strong> atendeu a 3 min (Verde) ou alerta até 4 min (Amarelo); <strong>3° e 4° CCIs</strong> atenderam a 4 min (Verde) ou alerta até 5 min (Amarelo). Passou disso é Insatisfatório (Vermelho).`;
-      } else if (heatmapLocalCci === '1°CCI') {
-        descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>1° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>2 minutos (Verde)</strong>, ficou em estado de alerta até <strong>3 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
-      } else if (heatmapLocalCci === '2°CCI') {
-        descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>2° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>3 minutos (Verde)</strong>, ficou em estado de alerta até <strong>4 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
-      } else if (heatmapLocalCci === '3°CCI') {
-        descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>3° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>4 minutos (Verde)</strong>, ficou em estado de alerta até <strong>5 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
-      } else if (heatmapLocalCci === '4°CCI') {
-        descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>4° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>4 minutos (Verde)</strong>, ficou em estado de alerta até <strong>5 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+      } else {
+        const cciVal = heatmapLocalCcis[0];
+        if (cciVal === '1°CCI') {
+          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>1° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>2 minutos (Verde)</strong>, ficou em estado de alerta até <strong>3 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+        } else if (cciVal === '2°CCI') {
+          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>2° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>3 minutos (Verde)</strong>, ficou em estado de alerta até <strong>4 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+        } else if (cciVal === '3°CCI') {
+          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>3° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>4 minutos (Verde)</strong>, ficou em estado de alerta até <strong>5 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+        } else if (cciVal === '4°CCI') {
+          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>4° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>4 minutos (Verde)</strong>, ficou em estado de alerta até <strong>5 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+        }
       }
     }
 
     const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
     const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
 
-    const ccis = heatmapLocalCci === 'todos' ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : [heatmapLocalCci];
+    const ccis = heatmapLocalCcis.includes('todos') ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : heatmapLocalCcis;
 
     const isStacked = activeHeatmapType === 'bar';
     const isLine = activeHeatmapType === 'line';
@@ -686,6 +754,31 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        layout: {
+          padding: {
+            top: 15
+          }
+        },
+        onClick: (event, elements, chart) => {
+          if (!elements.length) return;
+          const element = elements[0];
+          const datasetIndex = element.datasetIndex;
+          const index = element.index;
+          
+          const xLabel = chart.data.labels[index];
+          const dsLabel = chart.data.datasets[datasetIndex].label;
+          
+          const parts = dsLabel.split(' — ');
+          const clickedCci = parts[0];
+          const clickedStatus = parts[1];
+
+          const clickedMonthIndex = MONTHS.indexOf(xLabel);
+
+          const matched = ok.filter(r => r.mesIndex === clickedMonthIndex && r.cci === clickedCci && classifyRecordTR(r) === clickedStatus);
+          if (matched.length) {
+            showTrDetailModal(`Detalhamento: ${clickedCci} (${clickedStatus}) — ${xLabel}`, matched);
+          }
+        },
         animation: {
           duration: 1200,
           easing: 'easeOutQuart'
@@ -722,18 +815,21 @@
                 let satisLabel = 'Satisfatório (2-3min)';
                 let ruimLabel = 'Insatisfatório (> 3min)';
 
-                if (heatmapLocalCci === 'todos') {
+                if (heatmapLocalCcis.includes('todos') || heatmapLocalCcis.length > 1) {
                   excelLabel = 'Excelente (Metas)';
                   satisLabel = 'Satisfatório (Alerta)';
                   ruimLabel = 'Insatisfatório (Crítico)';
-                } else if (heatmapLocalCci === '2°CCI') {
-                  excelLabel = 'Excelente (≤ 3min)';
-                  satisLabel = 'Satisfatório (3-4min)';
-                  ruimLabel = 'Insatisfatório (> 4min)';
-                } else if (heatmapLocalCci === '3°CCI' || heatmapLocalCci === '4°CCI') {
-                  excelLabel = 'Excelente (≤ 4min)';
-                  satisLabel = 'Satisfatório (4-5min)';
-                  ruimLabel = 'Insatisfatório (> 5min)';
+                } else {
+                  const cciVal = heatmapLocalCcis[0];
+                  if (cciVal === '2°CCI') {
+                    excelLabel = 'Excelente (≤ 3min)';
+                    satisLabel = 'Satisfatório (3-4min)';
+                    ruimLabel = 'Insatisfatório (> 4min)';
+                  } else if (cciVal === '3°CCI' || cciVal === '4°CCI') {
+                    excelLabel = 'Excelente (≤ 4min)';
+                    satisLabel = 'Satisfatório (4-5min)';
+                    ruimLabel = 'Insatisfatório (> 5min)';
+                  }
                 }
 
                 const labels = [];
@@ -887,15 +983,15 @@
     // Reset local filters state
     timelineLocalCab = 'all';
     timelineLocalEquipes = ['todas'];
-    timelineLocalCci = 'todos';
+    timelineLocalCcis = ['todos'];
 
     cciLocalCab = 'all';
     cciLocalEquipes = ['todas'];
-    cciLocalCci = 'todos';
+    cciLocalCcis = ['todos'];
 
     heatmapLocalCab = 'all';
     heatmapLocalEquipes = ['todas'];
-    heatmapLocalCci = 'todos';
+    heatmapLocalCcis = ['todos'];
 
     // Reset tab active classes for all local switcher groups
     const switcherSelectors = [
