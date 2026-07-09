@@ -32,7 +32,7 @@
   --sidebar-width: 260px;
   --sidebar-collapsed: 60px;
   --filter-width: 300px;
-  --header-height: 64px;
+  --header-height: 88px;
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
@@ -1492,7 +1492,9 @@ body {
   align-items: center;
   border-bottom: 1px solid rgba(6, 182, 212, 0.15) !important;
   background: rgba(8, 8, 24, 0.8) !important;
-  padding: 0 28px !important;
+  padding: 14px 28px !important;
+  height: auto !important;
+  min-height: var(--header-height);
 }
 
 .header-title-area {
