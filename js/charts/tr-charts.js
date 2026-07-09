@@ -91,6 +91,70 @@
     return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
   }
 
+  const trTimeDatalabelsPlugin = {
+    id: 'trTimeDatalabels',
+    afterDatasetsDraw(chart) {
+      const { ctx } = chart;
+      ctx.save();
+      ctx.font = 'bold 9px Inter, sans-serif';
+      ctx.fillStyle = '#e2e8f0';
+      
+      chart.data.datasets.forEach((dataset, i) => {
+        if (dataset.label && dataset.label.includes('Meta')) return;
+
+        const meta = chart.getDatasetMeta(i);
+        if (!meta.visible) return;
+
+        meta.data.forEach((element, index) => {
+          const val = dataset.data[index];
+          if (val === null || val === undefined || val === 0) return;
+
+          const formattedVal = formatTime(val);
+          const { x, y } = element.tooltipPosition();
+
+          if (chart.options.indexAxis === 'y') {
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(formattedVal, x + 6, y);
+          } else {
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'bottom';
+            ctx.fillText(formattedVal, x, y - 6);
+          }
+        });
+      });
+      ctx.restore();
+    }
+  };
+
+  const trCountDatalabelsPlugin = {
+    id: 'trCountDatalabels',
+    afterDatasetsDraw(chart) {
+      const { ctx } = chart;
+      ctx.save();
+      ctx.font = 'bold 9px Inter, sans-serif';
+      ctx.fillStyle = '#e2e8f0';
+      
+      chart.data.datasets.forEach((dataset, i) => {
+        const meta = chart.getDatasetMeta(i);
+        if (!meta.visible) return;
+
+        meta.data.forEach((element, index) => {
+          const val = dataset.data[index];
+          if (val === null || val === undefined || val === 0) return;
+
+          const formattedVal = `${val}`;
+          const { x, y } = element.tooltipPosition();
+
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'bottom';
+          ctx.fillText(formattedVal, x, y - 6);
+        });
+      });
+      ctx.restore();
+    }
+  };
+
   function filterByCabeceira(records, cabeceira) {
     if (!cabeceira || cabeceira === 'all') return records;
     return records.filter(r => r.cabeceira === cabeceira);
@@ -262,8 +326,8 @@
     const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
     const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
 
-    const isRadar = activeTimelineType === 'radar';
-    const isLine = activeTimelineType === 'line';
+    const isRadar = activeTimelineType === 'radar' && labels.length > 2;
+    const isLine = activeTimelineType === 'line' && labels.length > 1;
 
     const datasets = ccis.filter(cci => ok.some(r => r.cci === cci)).map(cci => {
       const color = cciColors[cci] || '#ccc';
@@ -350,7 +414,8 @@
             }
           }
         }
-      }
+      },
+      plugins: [trTimeDatalabelsPlugin]
     };
 
     if (isRadar) {
@@ -476,7 +541,8 @@
             callbacks: { label: ctx => `${ctx.dataset.label}: ${formatTime(ctx.parsed.y || ctx.raw)}` }
           }
         }
-      }
+      },
+      plugins: [trTimeDatalabelsPlugin]
     };
 
     if (isHorizontal) {
@@ -694,7 +760,8 @@
             }
           }
         }
-      }
+      },
+      plugins: [trCountDatalabelsPlugin]
     };
 
     chartInstances.trHeatmap = new Chart(ctx, config);
