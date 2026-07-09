@@ -186,6 +186,7 @@ a:hover {
 #sidebar.collapsed .sidebar-title {
   opacity: 0;
   pointer-events: none;
+  display: none;
 }
 
 /* --- Toggle --- */
@@ -298,6 +299,7 @@ a:hover {
 }
 #sidebar.collapsed .sidebar-footer span {
   opacity: 0;
+  display: none;
 }
 
 /* ============================================================
