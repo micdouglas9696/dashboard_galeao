@@ -96,9 +96,9 @@
     afterDatasetsDraw(chart) {
       const { ctx } = chart;
       ctx.save();
-      ctx.font = 'bold 9px Inter, sans-serif';
-      ctx.fillStyle = '#e2e8f0';
       
+      const activeElements = chart.getActiveElements() || [];
+
       chart.data.datasets.forEach((dataset, i) => {
         if (dataset.label && dataset.label.includes('Meta')) return;
 
@@ -108,6 +108,11 @@
         meta.data.forEach((element, index) => {
           const val = dataset.data[index];
           if (val === null || val === undefined || val === 0) return;
+
+          const isHovered = activeElements.some(active => active.datasetIndex === i && active.index === index);
+          
+          ctx.font = isHovered ? 'bold 9.5px Inter, sans-serif' : '500 8.5px Inter, sans-serif';
+          ctx.fillStyle = isHovered ? '#ffffff' : 'rgba(255, 255, 255, 0.35)';
 
           const formattedVal = formatTime(val);
           const { x, y } = element.tooltipPosition();
@@ -132,9 +137,9 @@
     afterDatasetsDraw(chart) {
       const { ctx } = chart;
       ctx.save();
-      ctx.font = 'bold 9px Inter, sans-serif';
-      ctx.fillStyle = '#e2e8f0';
       
+      const activeElements = chart.getActiveElements() || [];
+
       chart.data.datasets.forEach((dataset, i) => {
         const meta = chart.getDatasetMeta(i);
         if (!meta.visible) return;
@@ -143,7 +148,12 @@
           const val = dataset.data[index];
           if (val === null || val === undefined || val === 0) return;
 
-          const formattedVal = `${val}`;
+          const isHovered = activeElements.some(active => active.datasetIndex === i && active.index === index);
+
+          ctx.font = isHovered ? 'bold 9.5px Inter, sans-serif' : '500 8.5px Inter, sans-serif';
+          ctx.fillStyle = isHovered ? '#ffffff' : 'rgba(255, 255, 255, 0.35)';
+
+          const formattedVal = `${val} reg.`;
           const { x, y } = element.tooltipPosition();
 
           ctx.textAlign = 'center';
@@ -160,7 +170,7 @@
       const status = classifyRecordTR(r);
       const emoji = status === 'Excelente' ? '🟢' : (status === 'Satisfatório' ? '🟡' : '🔴');
       const formattedTime = formatTime(r.tempoSeconds);
-      const dateStr = r.data || 'Data N/A';
+      const dateStr = r.data || MONTHS[r.mesIndex] || 'Data N/A';
       return `${emoji} ${dateStr} — ${r.cci} — Equipe ${r.equipe} — Cab. ${r.cabeceira} — TR: ${formattedTime} (${status})`;
     });
     
@@ -792,7 +802,7 @@
           },
           y: { 
             beginAtZero: true, 
-            title: { display: true, text: 'Registros', color: '#8b949e' },
+            title: { display: true, text: 'Quantidade de Registros', color: '#8b949e' },
             ticks: { color: '#8b949e' },
             grid: { color: 'rgba(255,255,255,0.05)' },
             stacked: isStacked
