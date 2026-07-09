@@ -177,6 +177,12 @@ a:hover {
   width: 32px;
   justify-content: center;
 }
+#sidebar.collapsed .logo-full {
+  display: none !important;
+}
+#sidebar.collapsed .logo-collapsed {
+  display: block !important;
+}
 .sidebar-title {
   font-size: 1.05rem;
   font-weight: 700;
