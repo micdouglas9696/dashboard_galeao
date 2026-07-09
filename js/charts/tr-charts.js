@@ -334,9 +334,16 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: {
+          duration: 1200,
+          easing: 'easeOutQuart'
+        },
         plugins: {
-          title: { display: true, text: 'Evolução Mensal por CCI', font: { size: 16 } },
-          legend: { position: 'top' },
+          title: { display: true, text: 'Evolução Mensal por CCI', font: { size: 16 }, color: '#c9d1d9' },
+          legend: { 
+            position: 'top',
+            labels: { color: '#c9d1d9' }
+          },
           tooltip: {
             callbacks: {
               label: ctx => `${ctx.dataset.label}: ${formatTime(ctx.parsed.y || ctx.raw)}`
@@ -350,18 +357,24 @@
       config.options.scales = {
         r: {
           beginAtZero: true,
-          ticks: { callback: v => formatTime(v), stepSize: 30, backdropColor: 'transparent' },
+          ticks: { callback: v => formatTime(v), stepSize: 30, color: '#8b949e', backdropColor: 'transparent' },
           grid: { color: 'rgba(255,255,255,0.08)' },
-          angleLines: { color: 'rgba(255,255,255,0.08)' }
+          angleLines: { color: 'rgba(255,255,255,0.08)' },
+          pointLabels: { color: '#8b949e' }
         }
       };
     } else {
       config.options.scales = {
-        x: { title: { display: true, text: 'Mês' } },
+        x: { 
+          title: { display: true, text: 'Mês', color: '#8b949e' },
+          ticks: { color: '#8b949e' },
+          grid: { color: 'rgba(255,255,255,0.05)' }
+        },
         y: {
           beginAtZero: true,
-          title: { display: true, text: 'Tempo (segundos)' },
-          ticks: { callback: v => formatTime(v) }
+          title: { display: true, text: 'Tempo (segundos)', color: '#8b949e' },
+          ticks: { callback: v => formatTime(v), color: '#8b949e' },
+          grid: { color: 'rgba(255,255,255,0.05)' }
         }
       };
     }
@@ -449,9 +462,16 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: {
+          duration: 1200,
+          easing: 'easeOutQuart'
+        },
         plugins: {
-          title: { display: true, text: 'Tempo Médio por CCI e Equipe', font: { size: 16 } },
-          legend: { position: 'top' },
+          title: { display: true, text: 'Tempo Médio por CCI e Equipe', font: { size: 16 }, color: '#c9d1d9' },
+          legend: { 
+            position: 'top',
+            labels: { color: '#c9d1d9' }
+          },
           tooltip: {
             callbacks: { label: ctx => `${ctx.dataset.label}: ${formatTime(ctx.parsed.y || ctx.raw)}` }
           }
@@ -462,13 +482,31 @@
     if (isHorizontal) {
       config.options.indexAxis = 'y';
       config.options.scales = {
-        x: { beginAtZero: true, title: { display: true, text: 'Tempo Médio (segundos)' }, ticks: { callback: v => formatTime(v) } },
-        y: { title: { display: true, text: 'CCI' } }
+        x: { 
+          beginAtZero: true, 
+          title: { display: true, text: 'Tempo Médio (segundos)', color: '#8b949e' }, 
+          ticks: { callback: v => formatTime(v), color: '#8b949e' },
+          grid: { color: 'rgba(255,255,255,0.05)' }
+        },
+        y: { 
+          title: { display: true, text: 'CCI', color: '#8b949e' },
+          ticks: { color: '#8b949e' },
+          grid: { color: 'rgba(255,255,255,0.05)' }
+        }
       };
     } else {
       config.options.scales = {
-        x: { title: { display: true, text: 'CCI' } },
-        y: { beginAtZero: true, title: { display: true, text: 'Tempo Médio (segundos)' }, ticks: { callback: v => formatTime(v) } }
+        x: { 
+          title: { display: true, text: 'CCI', color: '#8b949e' },
+          ticks: { color: '#8b949e' },
+          grid: { color: 'rgba(255,255,255,0.05)' }
+        },
+        y: { 
+          beginAtZero: true, 
+          title: { display: true, text: 'Tempo Médio (segundos)', color: '#8b949e' }, 
+          ticks: { callback: v => formatTime(v), color: '#8b949e' },
+          grid: { color: 'rgba(255,255,255,0.05)' }
+        }
       };
     }
 
@@ -566,22 +604,31 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        animation: {
+          duration: 1200,
+          easing: 'easeOutQuart'
+        },
         scales: {
           x: { 
-            title: { display: true, text: 'Mês' },
+            title: { display: true, text: 'Mês', color: '#8b949e' },
+            ticks: { color: '#8b949e' },
+            grid: { color: 'rgba(255,255,255,0.05)' },
             stacked: isStacked
           },
           y: { 
             beginAtZero: true, 
-            title: { display: true, text: 'Registros' },
+            title: { display: true, text: 'Registros', color: '#8b949e' },
+            ticks: { color: '#8b949e' },
+            grid: { color: 'rgba(255,255,255,0.05)' },
             stacked: isStacked
           }
         },
         plugins: {
-          title: { display: true, text: 'Conformidade por Mês e CCI', font: { size: 16 } },
+          title: { display: true, text: 'Conformidade por Mês e CCI', font: { size: 16 }, color: '#c9d1d9' },
           legend: {
             position: 'top',
             labels: {
+              color: '#c9d1d9',
               generateLabels: function(chart) {
                 if (!chart.data || !chart.data.datasets.length) return [];
                 
