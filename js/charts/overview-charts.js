@@ -70,11 +70,17 @@
     return Math.round((sum / records.length) * 10) / 10;
   }
 
+  function getMetaForRecord(r) {
+    if (r.cci === '2°CCI') return 180;
+    if (r.cci === '3°CCI' || r.cci === '4°CCI') return 240;
+    return 120; // 1°CCI / default
+  }
+
   function calcTRMeta(records) {
     if (!records || !records.length) return 0;
-    const okRecords = records.filter(r => r.status === 'ok' && r.cci === '1°CCI');
+    const okRecords = records.filter(r => r.status === 'ok');
     if (!okRecords.length) return 0;
-    const withinMeta = okRecords.filter(r => r.tempoSeconds <= 120).length;
+    const withinMeta = okRecords.filter(r => r.tempoSeconds <= getMetaForRecord(r)).length;
     return Math.round((withinMeta / okRecords.length) * 100);
   }
 
@@ -84,12 +90,12 @@
     const tafRecs = (allData.taf || []).filter(r => r.equipe === equipe && r.status === 'ok');
     const tpeprRecs = (allData.tpepr || []).filter(r => r.equipe === equipe);
     const teoRecs = (allData.teorica || []).filter(r => r.equipe === equipe);
-    const trRecs = (allData.tr || []).filter(r => r.equipe === equipe && r.status === 'ok' && r.cci === '1°CCI');
+    const trRecs = (allData.tr || []).filter(r => r.equipe === equipe && r.status === 'ok');
 
     const tafPct = tafRecs.length ? Math.round((tafRecs.filter(r => r.resultado === 'Satisfatório').length / tafRecs.length) * 100) : 0;
     const tpeprPct = tpeprRecs.length ? Math.round((tpeprRecs.filter(r => r.resultado === 'Excelente').length / tpeprRecs.length) * 100) : 0;
     const teoPct = teoRecs.length ? Math.round((teoRecs.reduce((s, r) => s + (r.nota || 0), 0) / teoRecs.length)) : 0;
-    const trPct = trRecs.length ? Math.round((trRecs.filter(r => r.tempoSeconds <= 120).length / trRecs.length) * 100) : 0;
+    const trPct = trRecs.length ? Math.round((trRecs.filter(r => r.tempoSeconds <= getMetaForRecord(r)).length / trRecs.length) * 100) : 0;
 
     return { tafPct, tpeprPct, teoPct, trPct };
   }

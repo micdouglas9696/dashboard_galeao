@@ -1260,7 +1260,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 0,
         "tempoFormatted": "FERIAS",
-        "resultado": "Ruim"
+        "resultado": "Insatisfatório"
       },
       {
         "nome": "ELIOMAR AGOSTINHO DA SILVA",

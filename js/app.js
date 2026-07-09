@@ -57,7 +57,7 @@
 
   let currentSection = 'overview';
   let currentCabeceira = 'all';
-  let currentMonthFilters = { overview: 'todos', taf: 'todos', tpepr: 'todos', tr: 'todos', teorica: 'todos' };
+  let currentMonthFilters = { overview: ['todos'], taf: ['todos'], tpepr: ['todos'], tr: ['todos'], teorica: ['todos'] };
   let allData = { taf: [], tpepr: [], tr: [], teorica: [] };
 
   /* ── Storage helpers ── */
@@ -122,7 +122,6 @@
       }) : [],
       tpepr: (tpeprData && tpeprData.records) ? tpeprData.records.map(function(r) {
         if (!r.mes) r.mes = 'Junho';
-        if (r.resultado === 'Ruim' || r.resultado === 'RUIM') r.resultado = 'Insatisfatório';
         return r;
       }) : [],
       tr: (trData && trData.records) ? trData.records : [],
@@ -240,7 +239,7 @@
       let tr = Filters ? Filters.filterRecords(data.tr, 'overview') : data.tr;
       let teorica = Filters ? Filters.filterRecords(data.teorica, 'overview') : data.teorica;
       // Apply month filter for overview
-      if (currentMonthFilters.overview && currentMonthFilters.overview !== 'todos') {
+      if (currentMonthFilters.overview && !currentMonthFilters.overview.includes('todos')) {
         taf = filterByMonth(taf, 'overview');
         tpepr = filterByMonth(tpepr, 'overview');
         tr = filterByMonth(tr, 'overview');
@@ -252,7 +251,7 @@
       let sectionData = data[section] || [];
       sectionData = Filters ? Filters.filterRecords(sectionData, section) : sectionData;
       // Apply month filter for TAF, TPEPR, TR and Teorica
-      if ((section === 'taf' || section === 'tpepr' || section === 'tr' || section === 'teorica') && currentMonthFilters[section] && currentMonthFilters[section] !== 'todos') {
+      if ((section === 'taf' || section === 'tpepr' || section === 'tr' || section === 'teorica') && currentMonthFilters[section] && !currentMonthFilters[section].includes('todos')) {
         sectionData = filterByMonth(sectionData, section);
       }
       filtered = sectionData;
@@ -738,6 +737,59 @@
     });
   }
 
+  /* ── TR Equipe tabs ── */
+
+  function setupTrEquipeTabs() {
+    document.querySelectorAll('.tr-equipe-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tr-equipe-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const equipe = tab.dataset.equipe || 'todas';
+
+        // Sincronizar com os checkboxes do painel de filtros lateral
+        const container = document.getElementById('filter-equipe-list');
+        if (container) {
+          const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+          checkboxes.forEach(cb => {
+            if (equipe === 'todas') {
+              cb.checked = true;
+            } else {
+              cb.checked = (cb.value === equipe);
+            }
+          });
+        }
+
+        // Executar a aplicação de filtros
+        if (window.SESCINC.Filters && window.SESCINC.Filters.apply) {
+          window.SESCINC.Filters.apply();
+        }
+      });
+    });
+  }
+
+  function syncTrEquipeTabs(selectedEquipes) {
+    const tabs = document.querySelectorAll('.tr-equipe-tab');
+    if (!tabs.length) return;
+
+    tabs.forEach(tab => {
+      const eq = tab.dataset.equipe;
+      if (eq === 'todas') {
+        const allChecked = selectedEquipes.length === 5; // ALFA, BRAVO, CHARLIE, DELTA, FOLGUISTA
+        if (allChecked) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      } else {
+        if (selectedEquipes.length === 1 && selectedEquipes[0] === eq) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      }
+    });
+  }
+
   /* ── Month filter tabs ── */
 
   function setupMonthFilters() {
@@ -746,23 +798,68 @@
       if (!tab) return;
 
       const section = tab.dataset.section;
-      const month = tab.dataset.month;
+      const month = tab.dataset.month; // e.g. 'Janeiro' or 'todos'
       if (!section || !month) return;
 
-      // Update active tab within this section's filter
       const container = tab.closest('.month-filter-container');
-      if (container) {
-        container.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
+      if (!container) return;
+
+      // Ensure currentMonthFilters[section] is initialized as array
+      if (!Array.isArray(currentMonthFilters[section])) {
+        currentMonthFilters[section] = [currentMonthFilters[section] || 'todos'];
       }
 
-      currentMonthFilters[section] = month;
+      let selected = currentMonthFilters[section];
 
-      // Sync TR month tabs with the sidebar select dropdown
+      if (month === 'todos') {
+        // Toggle on "Todos", toggle off everything else
+        container.querySelectorAll('.month-tab').forEach(t => {
+          if (t.dataset.month === 'todos') t.classList.add('active');
+          else t.classList.remove('active');
+        });
+        currentMonthFilters[section] = ['todos'];
+      } else {
+        // Toggle the clicked month
+        if (selected.includes('todos')) {
+          // If "Todos" was active, remove it and add this month
+          selected = [month];
+          const todosTab = container.querySelector('.month-tab[data-month="todos"]');
+          if (todosTab) todosTab.classList.remove('active');
+          tab.classList.add('active');
+        } else {
+          // Toggle month in array
+          const idx = selected.indexOf(month);
+          if (idx >= 0) {
+            selected.splice(idx, 1);
+            tab.classList.remove('active');
+          } else {
+            selected.push(month);
+            tab.classList.add('active');
+          }
+        }
+
+        // If no months are active, fallback to "Todos"
+        if (selected.length === 0) {
+          selected = ['todos'];
+          const todosTab = container.querySelector('.month-tab[data-month="todos"]');
+          if (todosTab) todosTab.classList.add('active');
+        }
+        currentMonthFilters[section] = selected;
+      }
+
+      // Sync TR month tabs with the sidebar checkbox group
       if (section === 'tr') {
-        const mesSelect = document.getElementById('filter-mes');
-        if (mesSelect) {
-          mesSelect.value = (month === 'todos') ? '' : month;
+        const checkboxContainer = document.getElementById('filter-mes-list');
+        if (checkboxContainer) {
+          const checkboxes = checkboxContainer.querySelectorAll('input[type="checkbox"]');
+          checkboxes.forEach(cb => {
+            if (currentMonthFilters.tr.includes('todos')) {
+              cb.checked = true;
+            } else {
+              cb.checked = currentMonthFilters.tr.includes(cb.value);
+            }
+          });
+
           if (window.SESCINC.Filters && window.SESCINC.Filters.apply) {
             window.SESCINC.Filters.apply();
             return;
@@ -774,21 +871,46 @@
     });
   }
 
+  function syncTrMonthTabs(selectedMonths) {
+    const trFilterContainer = document.getElementById('tr-month-filter');
+    if (!trFilterContainer) return;
+
+    const MONTHS_LIST = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+    const allChecked = selectedMonths.length === 0 || selectedMonths.length === MONTHS_LIST.length;
+
+    trFilterContainer.querySelectorAll('.month-tab').forEach(tab => {
+      const m = tab.dataset.month;
+      if (m === 'todos') {
+        if (allChecked) tab.classList.add('active');
+        else tab.classList.remove('active');
+      } else {
+        if (!allChecked && selectedMonths.includes(m)) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      }
+    });
+
+    currentMonthFilters.tr = allChecked ? ['todos'] : selectedMonths;
+  }
+
   function filterByMonth(records, section) {
-    const month = currentMonthFilters[section];
-    if (!month || month === 'todos') return records;
-    // Try filtering by 'mes' field (TR and potentially others)
-    // Also try 'mesIndex' mapping
+    const months = currentMonthFilters[section];
+    if (!months || !months.length || months.includes('todos')) return records;
+
     const MONTHS_MAP = {
       'Janeiro': 0, 'Fevereiro': 1, 'Março': 2, 'Abril': 3,
       'Maio': 4, 'Junho': 5, 'Julho': 6, 'Agosto': 7,
       'Setembro': 8, 'Outubro': 9, 'Novembro': 10, 'Dezembro': 11
     };
-    const targetIndex = MONTHS_MAP[month];
+    
+    const targetIndices = months.map(m => MONTHS_MAP[m]).filter(idx => idx !== undefined);
+
     return records.filter(r => {
-      if (r.mes && r.mes === month) return true;
-      if (r.mesIndex !== undefined && r.mesIndex === targetIndex) return true;
-      if (r.mes && r.mes.toLowerCase() === month.toLowerCase()) return true;
+      if (r.mes && months.includes(r.mes)) return true;
+      if (r.mesIndex !== undefined && targetIndices.includes(r.mesIndex)) return true;
+      if (r.mes && months.map(m => m.toLowerCase()).includes(r.mes.toLowerCase())) return true;
       return false;
     });
   }
@@ -845,6 +967,7 @@
     setupUpload();
     setupExportButtons();
     setupCabeceiraTabs();
+    setupTrEquipeTabs();
     setupMonthFilters();
     setupDetailModal();
     setupAgeExpandCollapse();
@@ -884,7 +1007,8 @@
     refresh,
     loadData,
     setMonthFilter,
-    getRawData: function() { return allData; }
+    syncTrEquipeTabs,
+    syncTrMonthTabs
   };
 
   // Auto-init when DOM is ready

@@ -178,9 +178,6 @@ window.SESCINC.Parsers.TPEPR = {
 
       // Resultado (da planilha)
       var resultado = row[5] != null ? String(row[5]).trim() : '';
-      if (resultado.toUpperCase() === 'RUIM') {
-        resultado = 'Insatisfatório';
-      }
 
       // Se resultado vazio, classifica automaticamente
       if (!resultado && tempoSeconds !== null) {

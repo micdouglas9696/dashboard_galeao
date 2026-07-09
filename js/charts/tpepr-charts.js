@@ -49,7 +49,7 @@
   function renderKPIs(records) {
     const exc = records.filter(r => r.resultado === 'Excelente').length;
     const bom = records.filter(r => r.resultado === 'Bom').length;
-    const ruim = records.filter(r => r.resultado === 'Insatisfatório' || r.resultado === 'Ruim').length;
+    const ruim = records.filter(r => r.resultado === 'Insatisfatório').length;
 
     setText('kpi-tpepr-total', records.length);
     setText('kpi-tpepr-exc', exc);

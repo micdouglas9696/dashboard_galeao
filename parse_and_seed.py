@@ -178,7 +178,7 @@ def parse_tpepr():
             elif tempo_seconds <= 90:
                 resultado = 'Bom'
             else:
-                resultado = 'Ruim'
+                resultado = 'Insatisfatório'
                 
         records.append({
             'nome': str(nome).strip(),

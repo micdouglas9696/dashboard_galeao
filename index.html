@@ -740,16 +740,29 @@
           </div>
         </div>
 
+        <!-- Equipe Tabs -->
+        <div class="tr-equipe-tabs-container" style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+          <span style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Filtrar por Equipe Operacional:</span>
+          <div class="tr-equipe-tabs" style="margin-bottom: 0;">
+            <button class="tr-equipe-tab active" data-equipe="todas">Todas as Equipes</button>
+            <button class="tr-equipe-tab" data-equipe="ALFA">Equipe ALFA</button>
+            <button class="tr-equipe-tab" data-equipe="BRAVO">Equipe BRAVO</button>
+            <button class="tr-equipe-tab" data-equipe="CHARLIE">Equipe CHARLIE</button>
+            <button class="tr-equipe-tab" data-equipe="DELTA">Equipe DELTA</button>
+            <button class="tr-equipe-tab" data-equipe="FOLGUISTA">Equipe FOLGUISTA</button>
+          </div>
+        </div>
+
         <!-- Charts -->
         <div class="charts-grid">
           <div class="chart-card full-width">
             <div class="chart-card-title">Evolução Mensal por CCI</div>
-            <div class="chart-card-desc">Evolução do tempo de resposta (TR) das viaturas (1°, 2°, 3° e 4° CCI) na cabeceira selecionada de Janeiro a Junho de 2026. A linha tracejada vermelha marca o limite crítico de segurança (02:00 minutos).</div>
+            <div class="chart-card-desc">Evolução do tempo de resposta (TR) das viaturas (1°, 2°, 3° e 4° CCI) na cabeceira selecionada de Janeiro a Junho de 2026. A linha tracejada vermelha marca o limite crítico de segurança de acordo com a viatura selecionada.</div>
             <div class="chart-container">
               <canvas id="trTimeline"></canvas>
             </div>
           </div>
-          <div class="chart-card">
+          <div class="chart-card full-width">
             <div class="chart-card-header">
               <div class="chart-card-title">Comparativo CCIs</div>
               <div class="chart-type-selector" data-chart="trCci">
@@ -772,10 +785,47 @@
           <div class="chart-card full-width">
             <div class="chart-card-header">
               <div class="chart-card-title">Conformidade com Meta</div>
+              <div class="chart-type-selector" data-chart="trHeatmap">
+                <button class="btn-chart-type active" data-type="bar" title="Barras Empilhadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar-grouped" title="Barras Agrupadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
             </div>
-            <div class="chart-card-desc">Matriz quadricular de conformidade mensal. As cores sinalizam se o tempo médio de resposta de cada CCI atendeu à meta de 2 minutos (Verde) ou excedeu o limite (Insatisfatório — Vermelho) em cada mês.</div>
-            <div class="compliance-matrix-wrapper" id="trHeatmapGrid">
-              <!-- Dynamically populated by JS -->
+            <div class="chart-card-desc">Matriz quadricular de conformidade mensal. As cores sinalizam se a média de resposta de cada CCI atendeu à meta de 2 minutos (Verde), ficou em estado de alerta até 3 minutos (Amarelo) ou excedeu o limite (Vermelho) em cada mês.</div>
+            
+            <!-- Local Chart Filters for CCI and Equipe -->
+            <div class="local-chart-filters" style="display: flex; gap: 24px; margin: 14px 0; padding: 12px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); flex-wrap: wrap;">
+              <div class="local-filter-group" style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 0.72rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Filtrar CCI:</span>
+                <div class="heatmap-cci-tabs" style="display: flex; gap: 4px;">
+                  <button class="heatmap-cci-tab active" data-cci="todos">Todos</button>
+                  <button class="heatmap-cci-tab" data-cci="1°CCI">1°CCI</button>
+                  <button class="heatmap-cci-tab" data-cci="2°CCI">2°CCI</button>
+                  <button class="heatmap-cci-tab" data-cci="3°CCI">3°CCI</button>
+                  <button class="heatmap-cci-tab" data-cci="4°CCI">4°CCI</button>
+                </div>
+              </div>
+              <div class="local-filter-group" style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 0.72rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Filtrar Equipe:</span>
+                <div class="heatmap-equipe-tabs" style="display: flex; gap: 4px;">
+                  <button class="heatmap-equipe-tab active" data-equipe="todas">Todas</button>
+                  <button class="heatmap-equipe-tab" data-equipe="ALFA">Alfa</button>
+                  <button class="heatmap-equipe-tab" data-equipe="BRAVO">Bravo</button>
+                  <button class="heatmap-equipe-tab" data-equipe="CHARLIE">Charlie</button>
+                  <button class="heatmap-equipe-tab" data-equipe="DELTA">Delta</button>
+                  <button class="heatmap-equipe-tab" data-equipe="FOLGUISTA">Folguista</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-container">
+              <canvas id="trHeatmap"></canvas>
             </div>
           </div>
         </div>
@@ -1138,7 +1188,7 @@
                       <option value="">Selecione...</option>
                       <option value="EXCELENTE">Excelente</option>
                       <option value="BOM">Bom</option>
-                      <option value="INSATISFATÓRIO">Insatisfatório</option>
+                      <option value="RUIM">Insatisfatório</option>
                     </select>
                   </div>
                 </div>
@@ -1346,22 +1396,10 @@
     </div>
 
     <div class="filter-group filter-tr-only" id="filter-group-mes">
-      <label class="filter-group-label" for="filter-mes">Mês</label>
-      <select id="filter-mes">
-        <option value="">Todos</option>
-        <option value="Janeiro">Janeiro</option>
-        <option value="Fevereiro">Fevereiro</option>
-        <option value="Março">Março</option>
-        <option value="Abril">Abril</option>
-        <option value="Maio">Maio</option>
-        <option value="Junho">Junho</option>
-        <option value="Julho">Julho</option>
-        <option value="Agosto">Agosto</option>
-        <option value="Setembro">Setembro</option>
-        <option value="Outubro">Outubro</option>
-        <option value="Novembro">Novembro</option>
-        <option value="Dezembro">Dezembro</option>
-      </select>
+      <span class="filter-group-label">Mês</span>
+      <div class="checkbox-group" id="filter-mes-list">
+        <!-- Populated dynamically via JS -->
+      </div>
     </div>
 
     <div class="filter-group filter-tr-only" id="filter-group-cci">

@@ -55,6 +55,8 @@
 
   /* ── Populate dynamic controls ── */
 
+  const MONTHS = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
   function populateEquipeCheckboxes() {
     const container = document.getElementById('filter-equipe-list');
     if (!container) return;
@@ -63,6 +65,18 @@
       const label = document.createElement('label');
       label.className = 'filter-checkbox';
       label.innerHTML = `<input type="checkbox" value="${eq}" checked> ${eq}`;
+      container.appendChild(label);
+    });
+  }
+
+  function populateMonthCheckboxes() {
+    const container = document.getElementById('filter-mes-list');
+    if (!container) return;
+    container.innerHTML = '';
+    MONTHS.forEach(m => {
+      const label = document.createElement('label');
+      label.className = 'filter-checkbox';
+      label.innerHTML = `<input type="checkbox" value="${m}" checked> ${m}`;
       container.appendChild(label);
     });
   }
@@ -118,7 +132,6 @@
   function getActiveFilters() {
     const searchEl = document.getElementById('filter-search');
     const cabeceiraEl = document.getElementById('filter-cabeceira');
-    const mesEl = document.getElementById('filter-mes');
     const cciEl = document.getElementById('filter-cci');
     const idadeMinEl = document.getElementById('filter-idade-min');
     const idadeMaxEl = document.getElementById('filter-idade-max');
@@ -129,9 +142,9 @@
       equipes: getCheckedValues('filter-equipe-list'),
       funcoes: getCheckedValues('filter-funcao-list'),
       resultados: getCheckedValues('filter-resultado-list'),
+      meses: getCheckedValues('filter-mes-list'),
       search: searchEl ? searchEl.value.trim().toLowerCase() : '',
       cabeceira: cabeceiraEl ? cabeceiraEl.value : 'all',
-      mes: mesEl ? mesEl.value : 'all',
       cci: cciEl ? cciEl.value : 'all',
       idadeMin: idadeMinEl && idadeMinEl.value ? parseInt(idadeMinEl.value) : null,
       idadeMax: idadeMaxEl && idadeMaxEl.value ? parseInt(idadeMaxEl.value) : null,
@@ -172,7 +185,7 @@
       // TR-specific filters
       if (section === 'tr') {
         if (f.cabeceira && f.cabeceira !== 'all' && r.cabeceira && r.cabeceira !== f.cabeceira) return false;
-        if (f.mes && f.mes !== 'all' && r.mes && r.mes !== f.mes) return false;
+        if (f.meses && f.meses.length && r.mes && !f.meses.includes(r.mes)) return false;
         if (f.cci && f.cci !== 'all' && r.cci && r.cci !== f.cci) return false;
       }
 
@@ -199,6 +212,7 @@
 
     // Populate initial checkboxes
     populateEquipeCheckboxes();
+    populateMonthCheckboxes();
     populateFuncaoCheckboxes();
 
     // Toggle filter panel
@@ -248,28 +262,10 @@
     }
 
     // Select change handlers
-    ['filter-cabeceira', 'filter-mes', 'filter-cci'].forEach(id => {
+    ['filter-cabeceira', 'filter-cci'].forEach(id => {
       const el = document.getElementById(id);
       if (el) {
         el.addEventListener('change', (e) => {
-          if (id === 'filter-mes') {
-            const selectedMonth = e.target.value || 'todos';
-            // Sync with TR month tab buttons in the main view
-            const trFilterContainer = document.getElementById('tr-month-filter');
-            if (trFilterContainer) {
-              trFilterContainer.querySelectorAll('.month-tab').forEach(tab => {
-                if (tab.dataset.month === selectedMonth) {
-                  tab.classList.add('active');
-                } else {
-                  tab.classList.remove('active');
-                }
-              });
-            }
-            // Sync with App's internal month filter state
-            if (window.SESCINC.App && window.SESCINC.App.setMonthFilter) {
-              window.SESCINC.App.setMonthFilter('tr', selectedMonth);
-            }
-          }
           apply();
         });
       }
@@ -310,6 +306,16 @@
     console.log('[Filters] Applying filters for section:', currentSection);
     updateFilterCount();
 
+    const activeFilters = getActiveFilters();
+
+    if (window.SESCINC.App && window.SESCINC.App.syncTrEquipeTabs) {
+      window.SESCINC.App.syncTrEquipeTabs(activeFilters.equipes || []);
+    }
+
+    if (window.SESCINC.App && window.SESCINC.App.syncTrMonthTabs) {
+      window.SESCINC.App.syncTrMonthTabs(activeFilters.meses || []);
+    }
+
     if (window.SESCINC.App && window.SESCINC.App.refresh) {
       window.SESCINC.App.refresh();
     }
@@ -329,28 +335,28 @@
     if (search) search.value = '';
 
     // Reset selects
-    ['filter-cabeceira', 'filter-mes', 'filter-cci'].forEach(id => {
+    ['filter-cabeceira', 'filter-cci'].forEach(id => {
       const el = document.getElementById(id);
       if (el) {
         el.value = '';
-        if (id === 'filter-mes') {
-          // Sync with TR month tabs (reset to "Todos" active)
-          const trFilterContainer = document.getElementById('tr-month-filter');
-          if (trFilterContainer) {
-            trFilterContainer.querySelectorAll('.month-tab').forEach(tab => {
-              if (tab.dataset.month === 'todos') {
-                tab.classList.add('active');
-              } else {
-                tab.classList.remove('active');
-              }
-            });
-          }
-          if (window.SESCINC.App && window.SESCINC.App.setMonthFilter) {
-            window.SESCINC.App.setMonthFilter('tr', 'todos');
-          }
-        }
       }
     });
+
+    // Sync with TR month tabs (reset to "Todos" active)
+    const trFilterContainer = document.getElementById('tr-month-filter');
+    if (trFilterContainer) {
+      trFilterContainer.querySelectorAll('.month-tab').forEach(tab => {
+        if (tab.dataset.month === 'todos') {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+    }
+
+    if (window.SESCINC.App && window.SESCINC.App.setMonthFilter) {
+      window.SESCINC.App.setMonthFilter('tr', ['todos']);
+    }
 
     // Reset ranges
     ['filter-idade-min', 'filter-idade-max', 'filter-nota-min', 'filter-nota-max'].forEach(id => {
@@ -368,9 +374,10 @@
     // Count active filters (non-default states)
     const allEquipesChecked = f.equipes.length === EQUIPES.length;
     if (!allEquipesChecked && f.equipes.length > 0) count++;
+    const allMonthsChecked = f.meses.length === MONTHS.length;
+    if (!allMonthsChecked && f.meses.length > 0) count++;
     if (f.search) count++;
     if (f.cabeceira !== 'all') count++;
-    if (f.mes !== 'all') count++;
     if (f.cci !== 'all') count++;
     if (f.idadeMin != null) count++;
     if (f.idadeMax != null) count++;
