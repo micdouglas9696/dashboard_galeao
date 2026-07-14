@@ -364,6 +364,7 @@
 
       tr.innerHTML = `
         <td>${r.nome || '—'}</td>
+        <td>${r.mes || '—'}</td>
         <td>${r.equipe || '—'}</td>
         <td>${r.funcao || '—'}</td>
         <td>${r.tempoFormatted || '—'}</td>

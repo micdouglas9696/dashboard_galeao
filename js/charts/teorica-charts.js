@@ -345,6 +345,7 @@
 
       tr.innerHTML = `
         <td>${r.nome || '—'}</td>
+        <td>${r.mes || '—'}</td>
         <td>${r.funcao || '—'}</td>
         <td>${r.equipe || '—'}</td>
         <td class="${notaClass}" style="font-weight:600">${r.nota != null ? r.nota.toFixed(1) : '—'}</td>
