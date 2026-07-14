@@ -93,22 +93,28 @@
   /* ── Data loading ── */
 
   function loadData() {
-    console.log('[App] Loading data from storage');
+    // Check storage version to force re-seed after major data update
+    const dbVersion = localStorage.getItem('sescinc_db_version');
+    if (dbVersion !== '2') {
+      console.log('[App] Local storage outdated. Forcing re-seed to version 2.');
+      localStorage.clear();
+      localStorage.setItem('sescinc_db_version', '2');
+    }
 
     let tafData = loadStorage(STORAGE_KEYS.TAF);
     let tpeprData = loadStorage(STORAGE_KEYS.TPEPR);
     let trData = loadStorage(STORAGE_KEYS.TR);
     let teoricaData = loadStorage(STORAGE_KEYS.TEORICA);
 
-    // If storage is empty but SeedData is available, populate it
-    const isTafEmpty = !tafData || !tafData.records || !tafData.records.length;
-    const isTpeprEmpty = !tpeprData || !tpeprData.records || !tpeprData.records.length;
-    const isTrEmpty = !trData || !trData.records || !trData.records.length;
-    const isTeoricaEmpty = !teoricaData || !teoricaData.records || !teoricaData.records.length;
+    // Ensure they have 'records' array
+    const isTafEmpty = !tafData || !tafData.records || tafData.records.length === 0;
+    const isTpeprEmpty = !tpeprData || !tpeprData.records || tpeprData.records.length === 0;
+    const isTrEmpty = !trData || !trData.records || trData.records.length === 0;
+    const isTeoricaEmpty = !teoricaData || !teoricaData.records || teoricaData.records.length === 0;
 
-    if ((isTafEmpty || isTpeprEmpty || isTrEmpty || isTeoricaEmpty) && window.SESCINC.SeedData) {
+    if (isTafEmpty || isTpeprEmpty || isTrEmpty || isTeoricaEmpty) {
       console.log('[App] Seeding missing datasets from initial data');
-      const seed = window.SESCINC.SeedData;
+      const seed = window.SESCINC.SeedData || {};
       if (isTafEmpty && seed.taf) { saveStorage(STORAGE_KEYS.TAF, seed.taf); tafData = seed.taf; }
       if (isTpeprEmpty && seed.tpepr) { saveStorage(STORAGE_KEYS.TPEPR, seed.tpepr); tpeprData = seed.tpepr; }
       if (isTrEmpty && seed.tr) { saveStorage(STORAGE_KEYS.TR, seed.tr); trData = seed.tr; }
