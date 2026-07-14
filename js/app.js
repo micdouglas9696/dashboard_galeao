@@ -903,7 +903,7 @@
 
   function filterByMonth(records, section) {
     const months = currentMonthFilters[section];
-    if (!months || !months.length || months.includes('todos')) return records;
+    const isTodos = !months || !months.length || months.includes('todos');
 
     const MONTHS_MAP = {
       'Janeiro': 0, 'Fevereiro': 1, 'Março': 2, 'Abril': 3,
@@ -911,14 +911,44 @@
       'Setembro': 8, 'Outubro': 9, 'Novembro': 10, 'Dezembro': 11
     };
     
-    const targetIndices = months.map(m => MONTHS_MAP[m]).filter(idx => idx !== undefined);
+    let filtered = records;
 
-    return records.filter(r => {
-      if (r.mes && months.includes(r.mes)) return true;
-      if (r.mesIndex !== undefined && targetIndices.includes(r.mesIndex)) return true;
-      if (r.mes && months.map(m => m.toLowerCase()).includes(r.mes.toLowerCase())) return true;
-      return false;
-    });
+    if (!isTodos) {
+      const targetIndices = months.map(m => MONTHS_MAP[m]).filter(idx => idx !== undefined);
+      filtered = records.filter(r => {
+        if (r.mes && months.includes(r.mes)) return true;
+        if (r.mesIndex !== undefined && targetIndices.includes(r.mesIndex)) return true;
+        if (r.mes && months.map(m => m.toLowerCase()).includes(r.mes.toLowerCase())) return true;
+        return false;
+      });
+    }
+
+    // Deduplicate records that have a 'nome' property (individuals)
+    // We only want to count each person once (their most recent record in the selection)
+    if (filtered.length > 0 && filtered[0].nome !== undefined) {
+      const latestByName = {};
+      
+      filtered.forEach(r => {
+        const name = (r.nome || '').trim().toUpperCase();
+        if (!name) return;
+        
+        const rMonthStr = r.mes || 'Janeiro';
+        const rMonthIdx = MONTHS_MAP[rMonthStr] !== undefined ? MONTHS_MAP[rMonthStr] : -1;
+        
+        if (!latestByName[name]) {
+          latestByName[name] = { record: r, monthIdx: rMonthIdx };
+        } else {
+          // Keep the one with the highest month index
+          if (rMonthIdx > latestByName[name].monthIdx) {
+            latestByName[name] = { record: r, monthIdx: rMonthIdx };
+          }
+        }
+      });
+      
+      return Object.values(latestByName).map(item => item.record);
+    }
+
+    return filtered;
   }
 
   /* ── Age chart expand / collapse ── */
