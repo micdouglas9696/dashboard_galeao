@@ -39,26 +39,29 @@
     TPEPR: 'sescinc_tpepr',
     TR: 'sescinc_tr',
     TEORICA: 'sescinc_teorica',
+    ACTUATION: 'sescinc_actuation',
     taf: 'sescinc_taf',
     tpepr: 'sescinc_tpepr',
     tr: 'sescinc_tr',
-    teorica: 'sescinc_teorica'
+    teorica: 'sescinc_teorica',
+    actuation: 'sescinc_actuation'
   };
 
   const SECTION_TITLES = {
     overview: 'Visão Geral',
-    taf: 'TAF — Teste de Aptidão Física',
-    tpepr: 'TP-EPR — Teste Prático EPR',
-    tr: 'TR — Tempo de Resposta',
+    taf: 'TAF',
+    tpepr: 'TP-EPR',
+    tr: 'Desempenho TR',
     teorica: 'Avaliação Teórica',
-    upload: 'Upload de Dados',
+    actuation: 'Atuação SESCINC',
+    upload: 'Upload de Planilha',
     manual: 'Entrada Manual'
   };
 
   let currentSection = 'overview';
   let currentCabeceira = 'all';
-  let currentMonthFilters = { overview: ['todos'], taf: ['todos'], tpepr: ['todos'], tr: ['todos'], teorica: ['todos'] };
-  let allData = { taf: [], tpepr: [], tr: [], teorica: [] };
+  let currentMonthFilters = { overview: ['todos'], taf: ['todos'], tpepr: ['todos'], tr: ['todos'], teorica: ['todos'], actuation: ['todos'] };
+  let allData = { taf: [], tpepr: [], tr: [], teorica: [], actuation: [] };
 
   /* ── Storage helpers ── */
 
@@ -93,32 +96,35 @@
   /* ── Data loading ── */
 
   function loadData() {
-    // Check storage version to force re-seed after major data update
+    // Check storage version to force re-seed after major data update (v3)
     const dbVersion = localStorage.getItem('sescinc_db_version');
-    if (dbVersion !== '2') {
-      console.log('[App] Local storage outdated. Forcing re-seed to version 2.');
+    if (dbVersion !== '3') {
+      console.log('[App] Local storage outdated. Forcing re-seed to version 3.');
       localStorage.clear();
-      localStorage.setItem('sescinc_db_version', '2');
+      localStorage.setItem('sescinc_db_version', '3');
     }
 
     let tafData = loadStorage(STORAGE_KEYS.TAF);
     let tpeprData = loadStorage(STORAGE_KEYS.TPEPR);
     let trData = loadStorage(STORAGE_KEYS.TR);
     let teoricaData = loadStorage(STORAGE_KEYS.TEORICA);
+    let actuationData = loadStorage(STORAGE_KEYS.ACTUATION);
 
     // Ensure they have 'records' array
     const isTafEmpty = !tafData || !tafData.records || tafData.records.length === 0;
     const isTpeprEmpty = !tpeprData || !tpeprData.records || tpeprData.records.length === 0;
     const isTrEmpty = !trData || !trData.records || trData.records.length === 0;
     const isTeoricaEmpty = !teoricaData || !teoricaData.records || teoricaData.records.length === 0;
+    const isActuationEmpty = !actuationData || !actuationData.records || actuationData.records.length === 0;
 
-    if (isTafEmpty || isTpeprEmpty || isTrEmpty || isTeoricaEmpty) {
+    if (isTafEmpty || isTpeprEmpty || isTrEmpty || isTeoricaEmpty || isActuationEmpty) {
       console.log('[App] Seeding missing datasets from initial data');
       const seed = window.SESCINC.SeedData || {};
       if (isTafEmpty && seed.taf) { saveStorage(STORAGE_KEYS.TAF, seed.taf); tafData = seed.taf; }
       if (isTpeprEmpty && seed.tpepr) { saveStorage(STORAGE_KEYS.TPEPR, seed.tpepr); tpeprData = seed.tpepr; }
       if (isTrEmpty && seed.tr) { saveStorage(STORAGE_KEYS.TR, seed.tr); trData = seed.tr; }
       if (isTeoricaEmpty && seed.teorica) { saveStorage(STORAGE_KEYS.TEORICA, seed.teorica); teoricaData = seed.teorica; }
+      if (isActuationEmpty && seed.actuation) { saveStorage(STORAGE_KEYS.ACTUATION, seed.actuation); actuationData = seed.actuation; }
     }
 
     allData = {
@@ -132,10 +138,13 @@
       }) : [],
       tr: (trData && trData.records) ? trData.records : [],
       teorica: (teoricaData && teoricaData.records) ? teoricaData.records.map(function(r) {
-        if (!r.mes) r.mes = 'Junho'; // default theoretical evaluations to June as well
+        if (!r.mes) r.mes = 'Junho';
         return r;
-      }) : []
+      }) : [],
+      actuation: (actuationData && actuationData.records) ? actuationData.records : []
     };
+
+    window.SESCINC.AppData = allData;
 
     // Build colaborador map if possible
     buildColaboradorMap();
@@ -305,6 +314,12 @@
           Charts.Teorica.render(filtered);
         }
         animateKPIs();
+        break;
+
+      case 'actuation':
+        if (window.SESCINC.ActuationCharts) {
+          window.SESCINC.ActuationCharts.render(data.actuation);
+        }
         break;
 
       default:
@@ -972,12 +987,59 @@
     }
   }
 
+  /* ── Theme Switcher (#DFEEEE Light Mode / Dark Mode) ── */
+
+  function initTheme() {
+    const savedTheme = localStorage.getItem('sescinc_theme') || 'light';
+    applyTheme(savedTheme);
+
+    const toggleBtn = document.getElementById('theme-toggle-btn');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function () {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const next = current === 'light' ? 'dark' : 'light';
+        applyTheme(next);
+      });
+    }
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('sescinc_theme', theme);
+
+    if (typeof Chart !== 'undefined') {
+      const isDark = theme !== 'light';
+      Chart.defaults.color = isDark ? '#9ca3af' : '#475569';
+      Chart.defaults.borderColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)';
+    }
+
+    const toggleBtn = document.getElementById('theme-toggle-btn');
+    if (toggleBtn) {
+      const icon = toggleBtn.querySelector('.theme-icon');
+      const label = toggleBtn.querySelector('.theme-label');
+      if (theme === 'light') {
+        if (icon) icon.textContent = '🌙';
+        if (label) label.textContent = 'Modo Escuro';
+      } else {
+        if (icon) icon.textContent = '☀️';
+        if (label) label.textContent = 'Modo Claro';
+      }
+    }
+
+    if (typeof renderSection === 'function' && currentSection) {
+      renderSection(currentSection);
+    }
+  }
+
   /* ── Init ── */
 
   function init() {
     console.log('[App] ═══════════════════════════════════════');
     console.log('[App] SESCINC SBGL Dashboard — Initializing');
     console.log('[App] ═══════════════════════════════════════');
+
+    // Initialize Theme Switcher
+    initTheme();
 
     // Set Chart.js defaults
     if (typeof Chart !== 'undefined') {

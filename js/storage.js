@@ -10,7 +10,8 @@ const STORAGE_KEYS = {
   tpepr: 'sescinc_tpepr',
   tr: 'sescinc_tr',
   teorica: 'sescinc_teorica',
-  colaboradores: 'sescinc_colaboradores'
+  colaboradores: 'sescinc_colaboradores',
+  actuation: 'sescinc_actuation'
 };
 
 window.SESCINC.STORAGE_KEYS = STORAGE_KEYS;

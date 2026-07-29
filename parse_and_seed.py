@@ -539,6 +539,140 @@ BASE_DIR = '/Users/m.dbranding/Desktop/OSeas'
 PLANILHAS_DIR = os.path.join(BASE_DIR, 'js', 'planilhas')
 
 
+def parse_actuation():
+    """Parse ATUAÇÃO SESCINC 1 SEMESTRE 2026  03-07 - Copia.xlsx."""
+    filepath = os.path.join(BASE_DIR, 'ATUAÇÃO SESCINC 1 SEMESTRE 2026  03-07 - Copia.xlsx')
+    if not os.path.exists(filepath):
+        print(f"Warning: File {filepath} not found.")
+        return []
+    
+    wb = openpyxl.load_workbook(filepath, data_only=True)
+    if '1° SEMESTRE 2026' not in wb.sheetnames:
+        print("Warning: Sheet '1° SEMESTRE 2026' not found.")
+        return []
+        
+    ws = wb['1° SEMESTRE 2026']
+    meses_map = {1: 'Janeiro', 2: 'Fevereiro', 3: 'Março', 4: 'Abril', 5: 'Maio', 6: 'Junho'}
+    records = []
+    
+    for r in range(6, ws.max_row + 1):
+        val_date = ws.cell(row=r, column=1).value
+        val_tipo = ws.cell(row=r, column=2).value
+        val_equipe = ws.cell(row=r, column=3).value
+        val_desc = ws.cell(row=r, column=4).value
+        val_acoes = ws.cell(row=r, column=5).value
+        
+        if not (val_date or val_tipo or val_desc or val_acoes):
+            continue
+
+        date_str = str(val_date)[:10] if val_date else ''
+        mes_str = ''
+        if hasattr(val_date, 'month'):
+            mes_str = meses_map.get(val_date.month, 'Janeiro')
+        elif isinstance(val_date, str):
+            m = re.search(r'-(\d{2})-', val_date)
+            if m:
+                mes_str = meses_map.get(int(m.group(1)), 'Janeiro')
+
+        tipo_raw = str(val_tipo).strip() if val_tipo else 'OUTROS'
+        equipe = str(val_equipe).strip() if val_equipe else 'N/I'
+        desc = str(val_desc).strip() if val_desc else ''
+        acoes = str(val_acoes).strip() if val_acoes else ''
+        full_txt = f'{desc} {acoes}'.upper()
+
+        # Standardize types
+        if any(k in tipo_raw.upper() for k in ['DERRAMAMENTO DE COMBUSTÍVEL', 'DERRAMAMENTO DE COMBUSTIVEL']):
+            tipo_std = 'Derramamento de Combustível'
+        elif any(k in tipo_raw.upper() for k in ['DERRAMAMENTO DE ÓLEO', 'DERRAMAMENTO DE OLEO', 'DERRAMAMENTO DE FLUÍDO', 'DERRAMAMENTO DE FLUIDO']):
+            tipo_std = 'Derramamento de Óleo / Fluído'
+        elif 'PRODUTO QUÍMICO' in tipo_raw.upper() or 'PRODUTO QUIMICO' in tipo_raw.upper():
+            tipo_std = 'Derramamento de Prod. Químico'
+        elif any(k in tipo_raw.upper() for k in ['INCÊNDIO EM VEGETAÇÃO', 'INCENDIO EM VEGETACAO', 'FOGO EM VEGETAÇÃO', 'FOGO EM VEGETACAO']):
+            tipo_std = 'Incêndio em Vegetação'
+        elif 'INSTALAÇÃO' in tipo_raw.upper() or 'INSTALACAO' in tipo_raw.upper():
+            tipo_std = 'Incêndio em Instalação'
+        elif 'EQUIPAMENTO' in tipo_raw.upper():
+            tipo_std = 'Incêndio / Pane em Equipamento'
+        elif any(k in tipo_raw.upper() for k in ['CAPTURA DE ANIMAL', 'CAPTURA DE FAUNA']):
+            tipo_std = 'Captura de Fauna / Animal'
+        elif 'EMERGÊNCIA AERONÁUTICA' in tipo_raw.upper() or 'EMERGENCIA AERONAUTICA' in tipo_raw.upper():
+            tipo_std = 'Emergência Aeronáutica'
+        elif 'CONDIÇÃO DE SOCORRO' in tipo_raw.upper() or 'CONDICAO DE SOCORRO' in tipo_raw.upper():
+            tipo_std = 'Condição de Socorro'
+        elif 'CONDIÇÃO DE URGÊNCIA' in tipo_raw.upper() or 'CONDICAO DE URGENCIA' in tipo_raw.upper():
+            tipo_std = 'Condição de Urgência'
+        elif 'GIRO DE MOTOR' in tipo_raw.upper():
+            tipo_std = 'Giro de Motor (Prevenção)'
+        elif any(k in tipo_raw.upper() for k in ['BATISMO', 'PRESIDENCIAL']):
+            tipo_std = 'Apoio / Batismo / Presidencial'
+        elif 'SIMULADO' in tipo_raw.upper():
+            tipo_std = 'Simulado de Emergência'
+        elif any(k in tipo_raw.upper() for k in ['BALOEIRO', 'PIPA', 'BALÃO', 'BALAO']):
+            tipo_std = 'Risco Baloeiro / Pipa'
+        elif 'MÉDICA' in tipo_raw.upper() or 'MEDICA' in tipo_raw.upper():
+            tipo_std = 'Emergência Médica'
+        else:
+            tipo_std = 'Outros Acionamentos'
+
+        # Check external vs internal
+        ext_keywords = ['FORA DO SÍTIO', 'FORA DO SITIO', 'OUTRO LADO DO MURO', 'LADO TERRA', 'CBMERJ', 'FORA DO AEROPORTO', 'EXTERNO']
+        is_ext = any(kw in full_txt for kw in ext_keywords)
+        if any(k in tipo_raw.upper() for k in ['RISCO BALOEIRO', 'RECOLHIMENTO DE PIPA']):
+            if any(k in full_txt for k in ['LADO TERRA', 'FORA', 'VIZINHANÇA']):
+                is_ext = True
+
+        quadrante = None
+        m_q = re.search(r'QUADRANTE\s*([A-Z0-9\-]+)', full_txt)
+        if m_q:
+            quadrante = m_q.group(1).upper()
+
+        location = 'Pátio de Aeronaves'
+        if 'CABECEIRA 28' in full_txt or ('28' in full_txt and 'CABECEIRA' in full_txt):
+            location = 'Cabeceira 28'
+        elif 'CABECEIRA 15' in full_txt or ('15' in full_txt and 'CABECEIRA' in full_txt):
+            location = 'Cabeceira 15'
+        elif 'CABECEIRA 10' in full_txt or ('10' in full_txt and 'CABECEIRA' in full_txt):
+            location = 'Cabeceira 10'
+        elif 'PÁTIO MILITAR' in full_txt or 'PATIO MILITAR' in full_txt:
+            location = 'Pátio Militar'
+        elif 'HANGAR' in full_txt:
+            location = 'Hangar United / Manutenção'
+        elif 'PÍER SUL' in full_txt or 'PIER SUL' in full_txt:
+            location = 'Píer Sul'
+        elif 'SUBESTAÇÃO' in full_txt or 'SUBESTACAO' in full_txt:
+            location = 'Subestação Lado Terra'
+        elif 'TECA' in full_txt:
+            location = 'Área de Carga TECA'
+        else:
+            m_pos = re.search(r'POSIÇÃO\s*(\d+)', full_txt)
+            if m_pos:
+                location = f'Posição {m_pos.group(1)}'
+            elif quadrante:
+                location = f'Quadrante {quadrante}'
+
+        vehicles = []
+        for v in ['CCI 01', 'CCI 02', 'CCI 03', 'CCI 05', 'CCI 07', 'CRS', 'CACE', 'BRASA UNO', 'BRASA DOS', 'FAÍSCA LÍDER']:
+            if v in full_txt:
+                vehicles.append(v)
+
+        records.append({
+            'id': f'ACT-{r}',
+            'data': date_str,
+            'mes': mes_str or 'Janeiro',
+            'tipo_raw': tipo_raw,
+            'tipo': tipo_std,
+            'equipe': equipe,
+            'descricao': desc,
+            'acoes': acoes,
+            'is_external': is_ext,
+            'localizacao': location,
+            'quadrante': quadrante,
+            'viaturas': vehicles
+        })
+
+    return records
+
+
 def main():
     all_taf_records = []
     all_tpepr_records = []
@@ -627,7 +761,10 @@ def main():
     # ── 8. Parse Teórica ──
     print('\n=== Parsing Teórica ===')
     teorica_records = parse_teorica(colaborador_map)
-    print(f'    -> {len(teorica_records)} Teórica records')
+    # ── 8b. Parse Atuação SESCINC ──
+    print('\n=== Parsing Atuação SESCINC ===')
+    actuation_records = parse_actuation()
+    print(f'    -> {len(actuation_records)} Atuação SESCINC records')
     
     # ── 9. Summary by month ──
     print('\n=== SUMMARY ===')
@@ -645,6 +782,7 @@ def main():
     
     print(f'TR records: {len(tr_records)}')
     print(f'Teórica records: {len(teorica_records)}')
+    print(f'Atuação records: {len(actuation_records)}')
     print(f'Total TAF: {len(all_taf_records)}')
     print(f'Total TPEPR: {len(all_tpepr_records)}')
     
@@ -664,6 +802,10 @@ def main():
         },
         'teorica': {
             'records': teorica_records,
+            'uploadedAt': datetime.datetime.utcnow().isoformat() + 'Z'
+        },
+        'actuation': {
+            'records': actuation_records,
             'uploadedAt': datetime.datetime.utcnow().isoformat() + 'Z'
         }
     }
