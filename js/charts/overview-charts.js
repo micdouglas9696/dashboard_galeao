@@ -142,15 +142,39 @@
     });
   }
 
+  function getThemeColors() {
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    return {
+      isDark,
+      textColor: isDark ? '#f8fafc' : '#000000',
+      gridColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.12)',
+      equipes: {
+        'ALFA': isDark ? '#38bdf8' : '#0284c7',
+        'BRAVO': isDark ? '#6ee7b7' : '#34d399', // Verde pastel
+        'CHARLIE': isDark ? '#fbbf24' : '#d97706',
+        'DELTA': isDark ? '#ef4444' : '#c62828',
+        'FOLGUISTA': isDark ? '#c084fc' : '#7c3aed'
+      },
+      // 4 Indicadores com cores bem distintas: Azul, Verde Pastel, Amarelo, Vermelho
+      metricColors: [
+        isDark ? '#38bdf8' : '#0284c7', // TAF Aprovação - Azul
+        isDark ? '#6ee7b7' : '#34d399', // TP-EPR Excelência - Verde Pastel
+        isDark ? '#fbbf24' : '#d97706', // Teórica Média - Amarelo
+        isDark ? '#ef4444' : '#c62828'  // TR Meta - Vermelho
+      ]
+    };
+  }
+
   function renderRadar(allData) {
     destroyChart('overviewRadar');
     const ctx = getCtx('overviewRadar');
     if (!ctx) return;
 
+    const themeColors = getThemeColors();
     const labels = ['TAF (%)', 'TP-EPR (%)', 'Teórica (%)', 'TR Meta (%)'];
     const datasets = EQUIPES.map(equipe => {
       const m = calcEquipeMetrics(allData, equipe);
-      const color = COLORS.equipes[equipe];
+      const color = themeColors.equipes[equipe];
       
       const config = {
         label: equipe,
@@ -206,8 +230,8 @@
           }
         },
         plugins: {
-          title: { display: true, text: 'Desempenho Geral por Equipe', font: { size: 16 } },
-          legend: { position: 'top' }
+          title: { display: true, text: 'Desempenho Geral por Equipe', font: { size: 16, weight: 'bold' }, color: themeColors.textColor },
+          legend: { position: 'top', labels: { color: themeColors.textColor } }
         }
       }
     };
@@ -217,16 +241,16 @@
         r: {
           beginAtZero: true,
           max: 100,
-          ticks: { stepSize: 20, backdropColor: 'transparent' },
-          grid: { color: 'rgba(255,255,255,0.08)' },
-          angleLines: { color: 'rgba(255,255,255,0.08)' },
-          pointLabels: { font: { size: 12 } }
+          ticks: { stepSize: 20, color: themeColors.textColor, backdropColor: 'transparent' },
+          grid: { color: themeColors.gridColor },
+          angleLines: { color: themeColors.gridColor },
+          pointLabels: { font: { size: 12 }, color: themeColors.textColor }
         }
       };
     } else {
       config.options.scales = {
-        y: { beginAtZero: true, max: 100, title: { display: true, text: 'Percentual / Nota' } },
-        x: { title: { display: true, text: 'Métricas' } }
+        y: { beginAtZero: true, max: 100, title: { display: true, text: 'Percentual / Nota', color: themeColors.textColor }, ticks: { color: themeColors.textColor }, grid: { color: themeColors.gridColor } },
+        x: { title: { display: true, text: 'Métricas', color: themeColors.textColor }, ticks: { color: themeColors.textColor }, grid: { color: themeColors.gridColor } }
       };
     }
 
@@ -238,9 +262,10 @@
     const ctx = getCtx('overviewEquipe');
     if (!ctx) return;
 
+    const themeColors = getThemeColors();
     const metrics = EQUIPES.map(e => calcEquipeMetrics(allData, e));
     const metricLabels = ['TAF Aprovação (%)', 'TPEPR Excelência (%)', 'Teórica Média', 'TR Meta (%)'];
-    const metricColors = [COLORS.blue, COLORS.cyan, COLORS.amber, COLORS.green];
+    const metricColors = themeColors.metricColors;
 
     const datasets = metricLabels.map((label, i) => {
       const config = {
@@ -291,8 +316,8 @@
           }
         },
         plugins: {
-          title: { display: true, text: 'Comparativo por Equipe', font: { size: 16 } },
-          legend: { position: 'top' }
+          title: { display: true, text: 'Comparativo por Equipe', font: { size: 16, weight: 'bold' }, color: themeColors.textColor },
+          legend: { position: 'top', labels: { color: themeColors.textColor } }
         }
       }
     };
@@ -300,13 +325,13 @@
     if (isHorizontal) {
       config.options.indexAxis = 'y';
       config.options.scales = {
-        x: { beginAtZero: true, max: 100, title: { display: true, text: 'Percentual / Nota' } },
-        y: { title: { display: true, text: 'Equipe' } }
+        x: { beginAtZero: true, max: 100, title: { display: true, text: 'Percentual / Nota', color: themeColors.textColor }, ticks: { color: themeColors.textColor }, grid: { color: themeColors.gridColor } },
+        y: { title: { display: true, text: 'Equipe', color: themeColors.textColor }, ticks: { color: themeColors.textColor }, grid: { color: themeColors.gridColor } }
       };
     } else {
       config.options.scales = {
-        y: { beginAtZero: true, max: 100, title: { display: true, text: 'Percentual / Nota' } },
-        x: { title: { display: true, text: 'Equipe' } }
+        y: { beginAtZero: true, max: 100, title: { display: true, text: 'Percentual / Nota', color: themeColors.textColor }, ticks: { color: themeColors.textColor }, grid: { color: themeColors.gridColor } },
+        x: { title: { display: true, text: 'Equipe', color: themeColors.textColor }, ticks: { color: themeColors.textColor }, grid: { color: themeColors.gridColor } }
       };
     }
 

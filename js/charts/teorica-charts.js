@@ -8,12 +8,25 @@
   window.SESCINC = window.SESCINC || {};
   window.SESCINC.Charts = window.SESCINC.Charts || {};
 
-  const COLORS = {
-    blue: '#00d2ff', cyan: '#00f0ff', green: '#00ff87',
-    amber: '#ffd32a', red: '#ff0055', purple: '#b026ff',
-    pink: '#ff007f', indigo: '#6366f1', teal: '#14b8a6',
-    equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#ff0055', 'FOLGUISTA': '#b026ff' }
-  };
+  function getThemeColors() {
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    return {
+      isDark,
+      textColor: isDark ? '#f8fafc' : '#000000',
+      gridColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.12)',
+      green: isDark ? '#6ee7b7' : '#34d399', // Pastel green
+      amber: isDark ? '#fbbf24' : '#d97706',
+      red: isDark ? '#ef4444' : '#c62828',
+      blue: isDark ? '#38bdf8' : '#0284c7',
+      equipes: {
+        'ALFA': isDark ? '#38bdf8' : '#0284c7',
+        'BRAVO': isDark ? '#6ee7b7' : '#34d399',
+        'CHARLIE': isDark ? '#fbbf24' : '#d97706',
+        'DELTA': isDark ? '#ef4444' : '#c62828',
+        'FOLGUISTA': isDark ? '#c084fc' : '#7c3aed'
+      }
+    };
+  }
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
   const chartInstances = {};
@@ -101,6 +114,7 @@
     const ctx = getCtx('teoricaHistogram');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const buckets = ['75-80', '80-85', '85-90', '90-95', '95-100'];
     const ranges = [[75, 80], [80, 85], [85, 90], [90, 95], [95, 100.01]];
 
@@ -108,7 +122,7 @@
       records.filter(r => r.nota >= min && r.nota < max).length
     );
 
-    const gradientColors = [COLORS.red, COLORS.amber, COLORS.amber, COLORS.green, COLORS.green];
+    const gradientColors = [tc.red, tc.amber, tc.amber, tc.green, tc.green];
     const isRadar = activeHistogramType === 'radar';
     const isLine = activeHistogramType === 'line';
 
@@ -120,7 +134,7 @@
           label: 'Quantidade',
           data: counts,
           backgroundColor: isRadar ? 'rgba(6, 182, 212, 0.2)' : gradientColors.map(c => c + 'cc'),
-          borderColor: isRadar || isLine ? COLORS.cyan : gradientColors,
+          borderColor: isRadar || isLine ? tc.blue : gradientColors,
           borderWidth: isLine ? 3 : 1,
           borderRadius: isLine || isRadar ? 0 : 4,
           fill: isRadar ? true : false,
@@ -142,8 +156,8 @@
           }
         },
         plugins: {
-          title: { display: true, text: 'Distribuição de Notas', font: { size: 16 } },
-          legend: { display: isRadar }
+          title: { display: true, text: 'Distribuição de Notas', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { display: isRadar, labels: { color: tc.textColor } }
         }
       }
     };
@@ -152,14 +166,16 @@
       config.options.scales = {
         r: {
           beginAtZero: true,
-          ticks: { stepSize: 5, backdropColor: 'transparent' },
-          grid: { color: 'rgba(255,255,255,0.08)' }
+          ticks: { stepSize: 5, color: tc.textColor, backdropColor: 'transparent' },
+          grid: { color: tc.gridColor },
+          angleLines: { color: tc.gridColor },
+          pointLabels: { color: tc.textColor }
         }
       };
     } else {
       config.options.scales = {
-        x: { title: { display: true, text: 'Faixa de Nota' } },
-        y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
+        x: { title: { display: true, text: 'Faixa de Nota', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { beginAtZero: true, title: { display: true, text: 'Quantidade', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     }
 
@@ -171,6 +187,7 @@
     const ctx = getCtx('teoricaFuncao');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const funcoes = [...new Set(records.map(r => r.funcao))].filter(Boolean).sort();
 
     const data = funcoes.map(f => {
@@ -188,8 +205,8 @@
         datasets: [{
           label: 'Nota Média',
           data,
-          backgroundColor: data.map(v => v >= 90 ? COLORS.green : (v >= 80 ? COLORS.amber : COLORS.red)),
-          borderColor: isLine ? COLORS.blue : 'rgba(0,0,0,0.1)',
+          backgroundColor: data.map(v => v >= 90 ? tc.green : (v >= 80 ? tc.amber : tc.red)),
+          borderColor: isLine ? tc.blue : 'rgba(0,0,0,0.1)',
           borderWidth: isLine ? 3 : 1,
           borderRadius: isLine ? 0 : 4,
           fill: false,
@@ -200,8 +217,8 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          title: { display: true, text: 'Nota Média por Função', font: { size: 16 } },
-          legend: { display: isLine }
+          title: { display: true, text: 'Nota Média por Função', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { display: isLine, labels: { color: tc.textColor } }
         }
       }
     };
@@ -209,13 +226,13 @@
     if (isHorizontal) {
       config.options.indexAxis = 'y';
       config.options.scales = {
-        x: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média' } },
-        y: { title: { display: true, text: 'Função' } }
+        x: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { title: { display: true, text: 'Função', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     } else {
       config.options.scales = {
-        y: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média' } },
-        x: { title: { display: true, text: 'Função' } }
+        y: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        x: { title: { display: true, text: 'Função', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     }
 
@@ -227,6 +244,7 @@
     const ctx = getCtx('teoricaEquipe');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const equipes = EQUIPES.filter(e => records.some(r => r.equipe === e));
 
     const data = equipes.map(e => {
@@ -244,7 +262,7 @@
         ctx.save();
         ctx.beginPath();
         ctx.setLineDash([6, 4]);
-        ctx.strokeStyle = COLORS.red;
+        ctx.strokeStyle = tc.red;
         ctx.lineWidth = 2;
 
         if (isHorizontal) {
@@ -254,7 +272,7 @@
           ctx.moveTo(xPixel, top);
           ctx.lineTo(xPixel, bottom);
           ctx.stroke();
-          ctx.fillStyle = COLORS.red;
+          ctx.fillStyle = tc.red;
           ctx.font = '11px Inter';
           ctx.textAlign = 'left';
           ctx.fillText('Mínimo: 70', xPixel + 5, bottom - 10);
@@ -265,7 +283,7 @@
           ctx.moveTo(left, yPixel);
           ctx.lineTo(right, yPixel);
           ctx.stroke();
-          ctx.fillStyle = COLORS.red;
+          ctx.fillStyle = tc.red;
           ctx.font = '11px Inter';
           ctx.textAlign = 'right';
           ctx.fillText('Mínimo: 70', right - 5, yPixel - 6);
@@ -281,8 +299,8 @@
         datasets: [{
           label: 'Nota Média',
           data,
-          backgroundColor: equipes.map(e => COLORS.equipes[e] || COLORS.blue),
-          borderColor: isLine ? COLORS.blue : 'rgba(0,0,0,0.1)',
+          backgroundColor: equipes.map(e => tc.equipes[e] || tc.blue),
+          borderColor: isLine ? tc.blue : 'rgba(0,0,0,0.1)',
           borderWidth: isLine ? 3 : 1,
           borderRadius: isLine ? 0 : 4,
           fill: false,
@@ -306,8 +324,8 @@
           }
         },
         plugins: {
-          title: { display: true, text: 'Nota Média por Equipe', font: { size: 16 } },
-          legend: { display: isLine }
+          title: { display: true, text: 'Nota Média por Equipe', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { display: isLine, labels: { color: tc.textColor } }
         }
       },
       plugins: [minLinePlugin]
@@ -316,13 +334,13 @@
     if (isHorizontal) {
       config.options.indexAxis = 'y';
       config.options.scales = {
-        x: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média' } },
-        y: { title: { display: true, text: 'Equipe' } }
+        x: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { title: { display: true, text: 'Equipe', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     } else {
       config.options.scales = {
-        x: { title: { display: true, text: 'Equipe' } },
-        y: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média' } }
+        x: { title: { display: true, text: 'Equipe', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     }
 

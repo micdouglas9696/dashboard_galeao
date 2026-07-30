@@ -223,6 +223,7 @@
         if (panel) {
           isOpen = !isOpen;
           panel.classList.toggle('open', isOpen);
+          document.body.classList.toggle('filters-open', isOpen);
         }
       });
     });
@@ -235,6 +236,7 @@
         if (panel) {
           isOpen = false;
           panel.classList.remove('open');
+          document.body.classList.remove('filters-open');
         }
       });
     }

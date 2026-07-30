@@ -91,10 +91,28 @@
     return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
   }
 
+  function getThemeColors() {
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    return {
+      isDark,
+      textColor: isDark ? '#f8fafc' : '#000000',
+      subTextColor: isDark ? '#cbd5e1' : '#1e293b',
+      gridColor: isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.12)',
+      equipes: {
+        'ALFA': isDark ? '#38bdf8' : '#0284c7',
+        'BRAVO': isDark ? '#6ee7b7' : '#34d399',
+        'CHARLIE': isDark ? '#fbbf24' : '#d97706',
+        'DELTA': isDark ? '#ef4444' : '#c62828',
+        'FOLGUISTA': isDark ? '#c084fc' : '#7c3aed'
+      }
+    };
+  }
+
   const trTimeDatalabelsPlugin = {
     id: 'trTimeDatalabels',
     afterDatasetsDraw(chart) {
       const { ctx } = chart;
+      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
       ctx.save();
       
       const activeElements = chart.getActiveElements() || [];
@@ -111,8 +129,10 @@
 
           const isHovered = activeElements.some(active => active.datasetIndex === i && active.index === index);
           
-          ctx.font = isHovered ? 'bold 9.5px Inter, sans-serif' : '500 8.5px Inter, sans-serif';
-          ctx.fillStyle = isHovered ? '#ffffff' : 'rgba(255, 255, 255, 0.35)';
+          ctx.font = isHovered ? 'bold 9.5px Inter, sans-serif' : '600 8.5px Inter, sans-serif';
+          ctx.fillStyle = isDark
+            ? (isHovered ? '#ffffff' : 'rgba(255, 255, 255, 0.75)')
+            : (isHovered ? '#000000' : 'rgba(15, 23, 42, 0.85)');
 
           const formattedVal = formatTime(val);
           const { x, y } = element.tooltipPosition();
@@ -136,6 +156,7 @@
     id: 'trCountDatalabels',
     afterDatasetsDraw(chart) {
       const { ctx } = chart;
+      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
       ctx.save();
       
       const activeElements = chart.getActiveElements() || [];
@@ -150,8 +171,10 @@
 
           const isHovered = activeElements.some(active => active.datasetIndex === i && active.index === index);
 
-          ctx.font = isHovered ? 'bold 9.5px Inter, sans-serif' : '500 8.5px Inter, sans-serif';
-          ctx.fillStyle = isHovered ? '#ffffff' : 'rgba(255, 255, 255, 0.35)';
+          ctx.font = isHovered ? 'bold 9.5px Inter, sans-serif' : '600 8.5px Inter, sans-serif';
+          ctx.fillStyle = isDark
+            ? (isHovered ? '#ffffff' : 'rgba(255, 255, 255, 0.75)')
+            : (isHovered ? '#000000' : 'rgba(15, 23, 42, 0.85)');
 
           const formattedVal = `${val} reg.`;
           const { x, y } = element.tooltipPosition();
@@ -455,10 +478,10 @@
           easing: 'easeOutQuart'
         },
         plugins: {
-          title: { display: true, text: 'Evolução Mensal por CCI', font: { size: 16 }, color: '#c9d1d9' },
+          title: { display: true, text: 'Evolução Mensal por CCI', font: { size: 16, weight: 'bold' }, color: getThemeColors().textColor },
           legend: { 
             position: 'top',
-            labels: { color: '#c9d1d9' }
+            labels: { color: getThemeColors().textColor }
           },
           tooltip: {
             callbacks: {
@@ -470,28 +493,29 @@
       plugins: [trTimeDatalabelsPlugin]
     };
 
+    const themeColors = getThemeColors();
     if (isRadar) {
       config.options.scales = {
         r: {
           beginAtZero: true,
-          ticks: { callback: v => formatTime(v), stepSize: 30, color: '#8b949e', backdropColor: 'transparent' },
-          grid: { color: 'rgba(255,255,255,0.08)' },
-          angleLines: { color: 'rgba(255,255,255,0.08)' },
-          pointLabels: { color: '#8b949e' }
+          ticks: { callback: v => formatTime(v), stepSize: 30, color: themeColors.textColor, backdropColor: 'transparent' },
+          grid: { color: themeColors.gridColor },
+          angleLines: { color: themeColors.gridColor },
+          pointLabels: { color: themeColors.textColor }
         }
       };
     } else {
       config.options.scales = {
         x: { 
-          title: { display: true, text: 'Mês', color: '#8b949e' },
-          ticks: { color: '#8b949e' },
-          grid: { color: 'rgba(255,255,255,0.05)' }
+          title: { display: true, text: 'Mês', color: themeColors.textColor },
+          ticks: { color: themeColors.textColor },
+          grid: { color: themeColors.gridColor }
         },
         y: {
           beginAtZero: true,
-          title: { display: true, text: 'Tempo (segundos)', color: '#8b949e' },
-          ticks: { callback: v => formatTime(v), color: '#8b949e' },
-          grid: { color: 'rgba(255,255,255,0.05)' }
+          title: { display: true, text: 'Tempo (segundos)', color: themeColors.textColor },
+          ticks: { callback: v => formatTime(v), color: themeColors.textColor },
+          grid: { color: themeColors.gridColor }
         }
       };
     }
@@ -607,10 +631,10 @@
           easing: 'easeOutQuart'
         },
         plugins: {
-          title: { display: true, text: 'Tempo Médio por CCI e Equipe', font: { size: 16 }, color: '#c9d1d9' },
+          title: { display: true, text: 'Tempo Médio por CCI e Equipe', font: { size: 16, weight: 'bold' }, color: getThemeColors().textColor },
           legend: { 
             position: 'top',
-            labels: { color: '#c9d1d9' }
+            labels: { color: getThemeColors().textColor }
           },
           tooltip: {
             callbacks: { label: ctx => `${ctx.dataset.label}: ${formatTime(ctx.parsed.y || ctx.raw)}` }
@@ -620,33 +644,34 @@
       plugins: [trTimeDatalabelsPlugin]
     };
 
+    const themeColors = getThemeColors();
     if (isHorizontal) {
       config.options.indexAxis = 'y';
       config.options.scales = {
         x: { 
           beginAtZero: true, 
-          title: { display: true, text: 'Tempo Médio (segundos)', color: '#8b949e' }, 
-          ticks: { callback: v => formatTime(v), color: '#8b949e' },
-          grid: { color: 'rgba(255,255,255,0.05)' }
+          title: { display: true, text: 'Tempo Médio (segundos)', color: themeColors.textColor }, 
+          ticks: { callback: v => formatTime(v), color: themeColors.textColor },
+          grid: { color: themeColors.gridColor }
         },
         y: { 
-          title: { display: true, text: 'CCI', color: '#8b949e' },
-          ticks: { color: '#8b949e' },
-          grid: { color: 'rgba(255,255,255,0.05)' }
+          title: { display: true, text: 'CCI', color: themeColors.textColor },
+          ticks: { color: themeColors.textColor },
+          grid: { color: themeColors.gridColor }
         }
       };
     } else {
       config.options.scales = {
         x: { 
-          title: { display: true, text: 'CCI', color: '#8b949e' },
-          ticks: { color: '#8b949e' },
-          grid: { color: 'rgba(255,255,255,0.05)' }
+          title: { display: true, text: 'CCI', color: themeColors.textColor },
+          ticks: { color: themeColors.textColor },
+          grid: { color: themeColors.gridColor }
         },
         y: { 
           beginAtZero: true, 
-          title: { display: true, text: 'Tempo Médio (segundos)', color: '#8b949e' }, 
-          ticks: { callback: v => formatTime(v), color: '#8b949e' },
-          grid: { color: 'rgba(255,255,255,0.05)' }
+          title: { display: true, text: 'Tempo Médio (segundos)', color: themeColors.textColor }, 
+          ticks: { callback: v => formatTime(v), color: themeColors.textColor },
+          grid: { color: themeColors.gridColor }
         }
       };
     }
@@ -795,27 +820,28 @@
         },
         scales: {
           x: { 
-            title: { display: true, text: 'Mês', color: '#8b949e' },
-            ticks: { color: '#8b949e' },
-            grid: { color: 'rgba(255,255,255,0.05)' },
+            title: { display: true, text: 'Mês', color: getThemeColors().textColor },
+            ticks: { color: getThemeColors().textColor },
+            grid: { color: getThemeColors().gridColor },
             stacked: isStacked
           },
           y: { 
             beginAtZero: true, 
-            title: { display: true, text: 'Quantidade de Registros', color: '#8b949e' },
-            ticks: { color: '#8b949e' },
-            grid: { color: 'rgba(255,255,255,0.05)' },
+            title: { display: true, text: 'Quantidade de Registros', color: getThemeColors().textColor },
+            ticks: { color: getThemeColors().textColor },
+            grid: { color: getThemeColors().gridColor },
             stacked: isStacked
           }
         },
         plugins: {
-          title: { display: true, text: 'Conformidade por Mês e CCI', font: { size: 16 }, color: '#c9d1d9' },
+          title: { display: true, text: 'Conformidade por Mês e CCI', font: { size: 16, weight: 'bold' }, color: getThemeColors().textColor },
           legend: {
             position: 'top',
             labels: {
-              color: '#c9d1d9',
+              color: getThemeColors().textColor,
               generateLabels: function(chart) {
                 if (!chart.data || !chart.data.datasets.length) return [];
+                const tc = getThemeColors();
                 
                 const excelIdx = chart.data.datasets.findIndex(ds => ds.label.includes('Excelente'));
                 const satisIdx = chart.data.datasets.findIndex(ds => ds.label.includes('Satisfatório'));
@@ -846,37 +872,37 @@
                 if (excelIdx !== -1) {
                   labels.push({
                     text: excelLabel,
-                    fillStyle: '#00ff87cc',
-                    strokeStyle: '#00ff87',
+                    fillStyle: tc.isDark ? '#00ff87cc' : '#34d399cc',
+                    strokeStyle: tc.isDark ? '#00ff87' : '#34d399',
                     lineWidth: 1,
                     hidden: !chart.isDatasetVisible(excelIdx),
                     index: excelIdx,
-                    fontColor: '#c9d1d9',
-                    color: '#c9d1d9'
+                    fontColor: tc.textColor,
+                    color: tc.textColor
                   });
                 }
                 if (satisIdx !== -1) {
                   labels.push({
                     text: satisLabel,
-                    fillStyle: '#ffd32acc',
-                    strokeStyle: '#ffd32a',
+                    fillStyle: tc.isDark ? '#ffd32acc' : '#fbbf2acc',
+                    strokeStyle: tc.isDark ? '#ffd32a' : '#fbbf2a',
                     lineWidth: 1,
                     hidden: !chart.isDatasetVisible(satisIdx),
                     index: satisIdx,
-                    fontColor: '#c9d1d9',
-                    color: '#c9d1d9'
+                    fontColor: tc.textColor,
+                    color: tc.textColor
                   });
                 }
                 if (ruimIdx !== -1) {
                   labels.push({
                     text: ruimLabel,
-                    fillStyle: '#ff0055cc',
-                    strokeStyle: '#ff0055',
+                    fillStyle: tc.isDark ? '#ff0055cc' : '#ef4444cc',
+                    strokeStyle: tc.isDark ? '#ff0055' : '#ef4444',
                     lineWidth: 1,
                     hidden: !chart.isDatasetVisible(ruimIdx),
                     index: ruimIdx,
-                    fontColor: '#c9d1d9',
-                    color: '#c9d1d9'
+                    fontColor: tc.textColor,
+                    color: tc.textColor
                   });
                 }
                 return labels;

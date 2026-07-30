@@ -9,11 +9,11 @@
   window.SESCINC.Charts = window.SESCINC.Charts || {};
 
   const COLORS = {
-    blue: '#00d2ff', cyan: '#00f0ff', green: '#00ff87',
-    amber: '#ffd32a', red: '#ff0055', purple: '#b026ff',
-    pink: '#ff007f', indigo: '#6366f1', teal: '#14b8a6',
-    equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#ff0055', 'FOLGUISTA': '#b026ff' },
-    resultadosTAF: { 'Satisfatório': '#00ff87', 'Insatisfatório': '#ff0055' }
+    blue: '#38bdf8', cyan: '#22d3ee', green: '#34d399',
+    amber: '#fbbf24', red: '#ef4444', purple: '#c084fc',
+    pink: '#f472b6', indigo: '#818cf8', teal: '#2dd4bf',
+    equipes: { 'ALFA': '#38bdf8', 'BRAVO': '#34d399', 'CHARLIE': '#fbbf24', 'DELTA': '#ef4444', 'FOLGUISTA': '#c084fc' },
+    resultadosTAF: { 'Satisfatório': '#34d399', 'Insatisfatório': '#ef4444' }
   };
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
@@ -66,14 +66,15 @@
       const meta = plugins && plugins.centerText;
       if (!meta || meta.text === undefined || meta.text === null || isNaN(meta.text)) return;
       
+      const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
       ctx.save();
       ctx.font = `bold ${Math.min(width, height) * 0.15}px Inter`;
-      ctx.fillStyle = '#e2e8f0';
+      ctx.fillStyle = isDark ? '#f8fafc' : '#000000';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(String(meta.text), left + width / 2, top + height / 2 - 10);
-      ctx.font = `${Math.min(width, height) * 0.08}px Inter`;
-      ctx.fillStyle = '#94a3b8';
+      ctx.font = `600 ${Math.min(width, height) * 0.08}px Inter`;
+      ctx.fillStyle = isDark ? '#cbd5e1' : '#1e293b';
       ctx.fillText(String(meta.subText || ''), left + width / 2, top + height / 2 + 15);
       ctx.restore();
     }
@@ -102,8 +103,30 @@
   let activeFuncaoType = 'horizontalBar';
   let activeRadarType = 'radar';
   let activeIdadeType = 'bar';
+  let activeIdadeSimplifiedType = 'bar';
   let currentRecords = [];
   let listenersAttached = false;
+
+  function getThemeColors() {
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    return {
+      isDark,
+      textColor: isDark ? '#f8fafc' : '#000000',
+      gridColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.12)',
+      green: isDark ? '#6ee7b7' : '#34d399', // Verde Pastel
+      amber: isDark ? '#fbbf24' : '#d97706',
+      red: isDark ? '#ef4444' : '#c62828',
+      blue: isDark ? '#38bdf8' : '#0284c7',
+      cyan: isDark ? '#22d3ee' : '#0891b2',
+      equipes: {
+        'ALFA': isDark ? '#38bdf8' : '#0284c7',
+        'BRAVO': isDark ? '#6ee7b7' : '#34d399',
+        'CHARLIE': isDark ? '#fbbf24' : '#d97706',
+        'DELTA': isDark ? '#ef4444' : '#c62828',
+        'FOLGUISTA': isDark ? '#c084fc' : '#7c3aed'
+      }
+    };
+  }
 
   function setupTypeSelectors() {
     if (listenersAttached) return;
@@ -139,6 +162,7 @@
         activeIdadeType = type;
         renderIdadeHistogram(currentRecords);
       } else if (chartKey === 'tafIdadeSimplified') {
+        activeIdadeSimplifiedType = type;
         renderIdadeSimplified(currentRecords);
       }
     });
@@ -151,6 +175,7 @@
     const ctx = getCtx('tafDonut');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const ok = records.filter(r => r.status === 'ok');
     const sat = ok.filter(r => r.resultado === 'Satisfatório').length;
     const insat = ok.filter(r => r.resultado === 'Insatisfatório').length;
@@ -164,7 +189,7 @@
         labels: ['Satisfatório', 'Insatisfatório'],
         datasets: [{
           data: [sat, insat],
-          backgroundColor: [COLORS.green, COLORS.red],
+          backgroundColor: [tc.green, tc.red],
           borderColor: 'rgba(0,0,0,0.3)',
           borderWidth: 2
         }]
@@ -173,15 +198,16 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          title: { display: true, text: 'Resultado TAF', font: { size: 16 } },
-          legend: { position: isBar ? 'top' : 'bottom' }
+          title: { display: true, text: 'Resultado TAF', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { position: isBar ? 'top' : 'bottom', labels: { color: tc.textColor } }
         }
       }
     };
 
     if (isBar) {
       config.options.scales = {
-        y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
+        y: { beginAtZero: true, title: { display: true, text: 'Quantidade', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        x: { ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     } else {
       config.options.cutout = '65%';
@@ -196,6 +222,7 @@
     const ctx = getCtx('tafEquipe');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const ok = records.filter(r => r.status === 'ok');
     const equipes = EQUIPES.filter(e => ok.some(r => r.equipe === e));
 
@@ -206,8 +233,8 @@
     const isLine = activeEquipeType === 'line';
 
     const datasets = [
-      { label: 'Satisfatório', data: satData, backgroundColor: COLORS.green, borderColor: COLORS.green },
-      { label: 'Insatisfatório', data: insatData, backgroundColor: COLORS.red, borderColor: COLORS.red }
+      { label: 'Satisfatório', data: satData, backgroundColor: tc.green, borderColor: tc.green },
+      { label: 'Insatisfatório', data: insatData, backgroundColor: tc.red, borderColor: tc.red }
     ];
 
     datasets.forEach(d => {
@@ -246,12 +273,12 @@
           }
         },
         scales: {
-          x: { title: { display: true, text: 'Equipe' } },
-          y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
+          x: { title: { display: true, text: 'Equipe', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+          y: { beginAtZero: true, title: { display: true, text: 'Quantidade', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
         },
         plugins: {
-          title: { display: true, text: 'Resultado por Equipe', font: { size: 16 } },
-          legend: { position: 'top' }
+          title: { display: true, text: 'Resultado por Equipe', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { position: 'top', labels: { color: tc.textColor } }
         }
       }
     };
@@ -269,6 +296,7 @@
     const ctx = getCtx('tafFuncao');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const ok = records.filter(r => r.status === 'ok');
     const funcoes = [...new Set(ok.map(r => r.funcao))].filter(Boolean).sort();
 
@@ -288,8 +316,8 @@
         datasets: [{
           label: '% Aprovação',
           data,
-          backgroundColor: data.map(v => v >= 80 ? COLORS.green : (v >= 50 ? COLORS.amber : COLORS.red)),
-          borderColor: isLine ? COLORS.blue : 'rgba(0,0,0,0.1)',
+          backgroundColor: data.map(v => v >= 80 ? tc.green : (v >= 50 ? tc.amber : tc.red)),
+          borderColor: isLine ? tc.blue : 'rgba(0,0,0,0.1)',
           borderWidth: isLine ? 3 : 1,
           borderRadius: isLine ? 0 : 4,
           fill: false,
@@ -300,8 +328,8 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          title: { display: true, text: 'Aprovação por Função', font: { size: 16 } },
-          legend: { display: isLine }
+          title: { display: true, text: 'Aprovação por Função', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { display: isLine, labels: { color: tc.textColor } }
         }
       }
     };
@@ -309,13 +337,13 @@
     if (isHorizontal) {
       config.options.indexAxis = 'y';
       config.options.scales = {
-        x: { beginAtZero: true, max: 100, title: { display: true, text: '% Aprovação' } },
-        y: { title: { display: true, text: 'Função' } }
+        x: { beginAtZero: true, max: 100, title: { display: true, text: '% Aprovação', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { title: { display: true, text: 'Função', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     } else {
       config.options.scales = {
-        y: { beginAtZero: true, max: 100, title: { display: true, text: '% Aprovação' } },
-        x: { title: { display: true, text: 'Função' } }
+        y: { beginAtZero: true, max: 100, title: { display: true, text: '% Aprovação', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        x: { title: { display: true, text: 'Função', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     }
 
@@ -522,6 +550,7 @@
     const ctx = getCtx('tafIdadeSimplified');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const ok = records.filter(r => r.status === 'ok');
 
     const buckets = [
@@ -537,17 +566,23 @@
       return { total, sat, ratio, names: group.map(r => r.nome).filter(Boolean) };
     });
 
+    const isHorizontal = activeIdadeSimplifiedType === 'horizontalBar';
+    const isLine = activeIdadeSimplifiedType === 'line';
+    const chartType = isLine ? 'line' : 'bar';
+
     const config = {
-      type: 'bar',
+      type: chartType,
       data: {
         labels: buckets.map(b => b.label),
         datasets: [{
           label: 'Avaliados',
           data: bucketData.map(b => b.total),
-          backgroundColor: bucketData.map(b => b.ratio >= 0.8 ? COLORS.green : (b.ratio >= 0.5 ? COLORS.amber : COLORS.red)),
-          borderColor: 'rgba(0,0,0,0.1)',
-          borderWidth: 1,
-          borderRadius: 4
+          backgroundColor: isLine ? (tc.isDark ? '#38bdf8' : '#0284c7') : bucketData.map(b => b.ratio >= 0.8 ? tc.green : (b.ratio >= 0.5 ? tc.amber : tc.red)),
+          borderColor: isLine ? (tc.isDark ? '#38bdf8' : '#0284c7') : 'rgba(0,0,0,0.1)',
+          borderWidth: isLine ? 3 : 1,
+          borderRadius: isLine ? 0 : 4,
+          fill: false,
+          tension: 0.2
         }]
       },
       options: {
@@ -562,8 +597,8 @@
           }
         },
         plugins: {
-          title: { display: true, text: 'Idade Simplificada', font: { size: 16 } },
-          legend: { display: false },
+          title: { display: true, text: 'Idade Simplificada', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { display: isLine, labels: { color: tc.textColor } },
           tooltip: {
             callbacks: {
               afterLabel(ctx) {
@@ -572,13 +607,22 @@
               }
             }
           }
-        },
-        scales: {
-          x: { title: { display: true, text: 'Faixa Etária' } },
-          y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
         }
       }
     };
+
+    if (isHorizontal) {
+      config.options.indexAxis = 'y';
+      config.options.scales = {
+        x: { beginAtZero: true, title: { display: true, text: 'Quantidade', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { title: { display: true, text: 'Faixa Etária', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
+      };
+    } else {
+      config.options.scales = {
+        x: { title: { display: true, text: 'Faixa Etária', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { beginAtZero: true, title: { display: true, text: 'Quantidade', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
+      };
+    }
 
     chartInstances.tafIdadeSimplified = new Chart(ctx, config);
   }

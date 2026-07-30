@@ -20,7 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
   <!-- Dashboard Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=9.0">
+  <link rel="stylesheet" href="css/styles.css?v=12.0">
 </head>
 <body data-section="overview">
 
@@ -446,6 +446,17 @@
           <div class="chart-card full-width">
             <div class="chart-card-header">
               <div class="chart-card-title">Distribuição por Idade (Resumo)</div>
+              <div class="chart-type-selector" data-chart="tafIdadeSimplified">
+                <button class="btn-chart-type active" data-type="bar" title="Barras Verticais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="horizontalBar" title="Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
             </div>
             <div class="chart-card-desc">Visão simplificada da distribuição etária em duas faixas principais. Clique nas barras para ver os nomes dos bombeiros.</div>
             <div class="chart-container" style="height: 280px;">
@@ -1459,32 +1470,84 @@
         <div class="charts-grid mb-6">
           <!-- Chart 1: Types of Occurrence -->
           <div class="chart-card">
-            <div class="chart-card-title">Ocorrências por Tipo</div>
-            <div style="position: relative; height: 280px;">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Ocorrências por Tipo</div>
+              <div class="chart-type-selector" data-chart="actuationTypes">
+                <button class="btn-chart-type active" data-type="doughnut" title="Rosca/Donut">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+                </button>
+                <button class="btn-chart-type" data-type="pie" title="Pizza">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar" title="Barras">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-container" style="height: 280px; margin-top: 12px;">
               <canvas id="chart-actuation-types"></canvas>
             </div>
           </div>
 
           <!-- Chart 2: Monthly Distribution -->
           <div class="chart-card">
-            <div class="chart-card-title">Distribuição Mensal (Jan - Jun)</div>
-            <div style="position: relative; height: 280px;">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Distribuição Mensal (Jan - Jun)</div>
+              <div class="chart-type-selector" data-chart="actuationMonthly">
+                <button class="btn-chart-type active" data-type="bar" title="Barras Agrupadas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="horizontalBar" title="Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-container" style="height: 280px; margin-top: 12px;">
               <canvas id="chart-actuation-monthly"></canvas>
             </div>
           </div>
 
           <!-- Chart 3: Team Breakdown -->
           <div class="chart-card">
-            <div class="chart-card-title">Acionamentos por Equipe</div>
-            <div style="position: relative; height: 260px;">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Acionamentos por Equipe</div>
+              <div class="chart-type-selector" data-chart="actuationTeams">
+                <button class="btn-chart-type active" data-type="bar" title="Barras Verticais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="horizontalBar" title="Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-container" style="height: 280px; margin-top: 12px;">
               <canvas id="chart-actuation-teams"></canvas>
             </div>
           </div>
 
           <!-- Chart 4: Vehicles and Equipment -->
           <div class="chart-card">
-            <div class="chart-card-title">Viaturas e Recursos Empregados</div>
-            <div style="position: relative; height: 260px;">
+            <div class="chart-card-header">
+              <div class="chart-card-title">Viaturas e Recursos Empregados</div>
+              <div class="chart-type-selector" data-chart="actuationVehicles">
+                <button class="btn-chart-type active" data-type="horizontalBar" title="Barras Horizontais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="14" y2="12"></line><line x1="4" y1="18" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="bar" title="Barras Verticais">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button class="btn-chart-type" data-type="line" title="Linhas">
+                  <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                </button>
+              </div>
+            </div>
+            <div class="chart-container" style="height: 280px; margin-top: 12px;">
               <canvas id="chart-actuation-vehicles"></canvas>
             </div>
           </div>
@@ -1696,23 +1759,23 @@
   <!-- ============================================================
        JS MODULES
        ============================================================ -->
-  <script src="js/storage.js?v=9.0"></script>
-  <script src="js/parsers/names.js?v=9.0"></script>
-  <script src="js/parsers/taf.js?v=9.0"></script>
-  <script src="js/parsers/tpepr.js?v=9.0"></script>
-  <script src="js/parsers/tr.js?v=9.0"></script>
-  <script src="js/parsers/teorica.js?v=9.0"></script>
-  <script src="js/filters.js?v=9.0"></script>
-  <script src="js/charts/overview-charts.js?v=9.0"></script>
-  <script src="js/charts/taf-charts.js?v=9.0"></script>
-  <script src="js/charts/tpepr-charts.js?v=9.0"></script>
-  <script src="js/charts/tr-charts.js?v=9.0"></script>
-  <script src="js/charts/teorica-charts.js?v=9.0"></script>
-  <script src="js/charts/actuation-charts.js?v=9.0"></script>
-  <script src="js/export.js?v=9.0"></script>
-  <script src="js/manual-entry.js?v=9.0"></script>
-  <script src="js/seed-data.js?v=9.0"></script>
-  <script src="js/app.js?v=9.0"></script>
+  <script src="js/storage.js?v=12.0"></script>
+  <script src="js/parsers/names.js?v=12.0"></script>
+  <script src="js/parsers/taf.js?v=12.0"></script>
+  <script src="js/parsers/tpepr.js?v=12.0"></script>
+  <script src="js/parsers/tr.js?v=12.0"></script>
+  <script src="js/parsers/teorica.js?v=12.0"></script>
+  <script src="js/filters.js?v=12.0"></script>
+  <script src="js/charts/overview-charts.js?v=12.0"></script>
+  <script src="js/charts/taf-charts.js?v=12.0"></script>
+  <script src="js/charts/tpepr-charts.js?v=12.0"></script>
+  <script src="js/charts/tr-charts.js?v=12.0"></script>
+  <script src="js/charts/teorica-charts.js?v=12.0"></script>
+  <script src="js/charts/actuation-charts.js?v=12.0"></script>
+  <script src="js/export.js?v=12.0"></script>
+  <script src="js/manual-entry.js?v=12.0"></script>
+  <script src="js/seed-data.js?v=12.0"></script>
+  <script src="js/app.js?v=12.0"></script>
 
 </body>
 </html>

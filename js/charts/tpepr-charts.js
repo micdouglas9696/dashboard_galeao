@@ -8,13 +8,23 @@
   window.SESCINC = window.SESCINC || {};
   window.SESCINC.Charts = window.SESCINC.Charts || {};
 
-  const COLORS = {
-    blue: '#00d2ff', cyan: '#00f0ff', green: '#00ff87',
-    amber: '#ffd32a', red: '#ff0055', purple: '#b026ff',
-    pink: '#ff007f', indigo: '#6366f1', teal: '#14b8a6',
-    equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#ff0055', 'FOLGUISTA': '#b026ff' },
-    resultadosTPEPR: { 'Excelente': '#00ff87', 'Bom': '#ffd32a', 'Insatisfatório': '#ff0055' }
-  };
+  function getThemeColors() {
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    return {
+      isDark,
+      textColor: isDark ? '#f8fafc' : '#000000',
+      gridColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.12)',
+      green: isDark ? '#6ee7b7' : '#34d399', // Pastel green
+      amber: isDark ? '#fbbf24' : '#d97706',
+      red: isDark ? '#ef4444' : '#c62828',
+      blue: isDark ? '#38bdf8' : '#0284c7',
+      resultadosTPEPR: {
+        'Excelente': isDark ? '#6ee7b7' : '#34d399',
+        'Bom': isDark ? '#fbbf24' : '#d97706',
+        'Insatisfatório': isDark ? '#ef4444' : '#c62828'
+      }
+    };
+  }
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
   const RESULTADO_ORDER = ['Excelente', 'Bom', 'Insatisfatório'];
@@ -105,6 +115,7 @@
     const ctx = getCtx('tpeprDonut');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const counts = RESULTADO_ORDER.map(r => records.filter(rec => rec.resultado === r).length);
     const isBar = activeDonutType === 'bar';
     const chartType = isBar ? 'bar' : activeDonutType;
@@ -115,7 +126,7 @@
         labels: RESULTADO_ORDER,
         datasets: [{
           data: counts,
-          backgroundColor: RESULTADO_ORDER.map(r => COLORS.resultadosTPEPR[r]),
+          backgroundColor: RESULTADO_ORDER.map(r => tc.resultadosTPEPR[r]),
           borderColor: 'rgba(0,0,0,0.3)',
           borderWidth: 2
         }]
@@ -124,15 +135,16 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          title: { display: true, text: 'Resultado TP-EPR', font: { size: 16 } },
-          legend: { position: isBar ? 'top' : 'bottom' }
+          title: { display: true, text: 'Resultado TP-EPR', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { position: isBar ? 'top' : 'bottom', labels: { color: tc.textColor } }
         }
       }
     };
 
     if (isBar) {
       config.options.scales = {
-        y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
+        y: { beginAtZero: true, title: { display: true, text: 'Quantidade', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        x: { ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     } else {
       config.options.cutout = '65%';
@@ -147,6 +159,7 @@
     const ctx = getCtx('tpeprEquipe');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const equipes = EQUIPES.filter(e => records.some(r => r.equipe === e));
 
     const isStacked = activeEquipeType === 'bar';
@@ -156,8 +169,8 @@
       const config = {
         label: resultado,
         data: equipes.map(e => records.filter(r => r.equipe === e && r.resultado === resultado).length),
-        backgroundColor: COLORS.resultadosTPEPR[resultado],
-        borderColor: COLORS.resultadosTPEPR[resultado]
+        backgroundColor: tc.resultadosTPEPR[resultado],
+        borderColor: tc.resultadosTPEPR[resultado]
       };
 
       if (isLine) {
@@ -196,12 +209,12 @@
           }
         },
         scales: {
-          x: { title: { display: true, text: 'Equipe' } },
-          y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
+          x: { title: { display: true, text: 'Equipe', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+          y: { beginAtZero: true, title: { display: true, text: 'Quantidade', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
         },
         plugins: {
-          title: { display: true, text: 'Resultado por Equipe', font: { size: 16 } },
-          legend: { position: 'top' }
+          title: { display: true, text: 'Resultado por Equipe', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { position: 'top', labels: { color: tc.textColor } }
         }
       }
     };
@@ -219,6 +232,7 @@
     const ctx = getCtx('tpeprFuncao');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const funcoes = [...new Set(records.map(r => r.funcao))].filter(Boolean).sort();
 
     const data = funcoes.map(f => {
@@ -239,11 +253,11 @@
           data,
           backgroundColor: data.map(v => {
             const ratio = v / maxVal;
-            if (ratio <= 0.5) return COLORS.green;
-            if (ratio <= 0.75) return COLORS.amber;
-            return COLORS.red;
+            if (ratio <= 0.5) return tc.green;
+            if (ratio <= 0.75) return tc.amber;
+            return tc.red;
           }),
-          borderColor: isLine ? COLORS.blue : 'rgba(0,0,0,0.1)',
+          borderColor: isLine ? tc.blue : 'rgba(0,0,0,0.1)',
           borderWidth: isLine ? 3 : 1,
           borderRadius: isLine ? 0 : 4,
           fill: false,
@@ -254,8 +268,8 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          title: { display: true, text: 'Tempo Médio por Função', font: { size: 16 } },
-          legend: { display: isLine }
+          title: { display: true, text: 'Tempo Médio por Função', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { display: isLine, labels: { color: tc.textColor } }
         }
       }
     };
@@ -263,13 +277,13 @@
     if (isHorizontal) {
       config.options.indexAxis = 'y';
       config.options.scales = {
-        x: { beginAtZero: true, title: { display: true, text: 'Tempo Médio (segundos)' } },
-        y: { title: { display: true, text: 'Função' } }
+        x: { beginAtZero: true, title: { display: true, text: 'Tempo Médio (segundos)', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { title: { display: true, text: 'Função', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     } else {
       config.options.scales = {
-        y: { beginAtZero: true, title: { display: true, text: 'Tempo Médio (segundos)' } },
-        x: { title: { display: true, text: 'Função' } }
+        y: { beginAtZero: true, title: { display: true, text: 'Tempo Médio (segundos)', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        x: { title: { display: true, text: 'Função', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     }
 
@@ -281,6 +295,7 @@
     const ctx = getCtx('tpeprHistogram');
     if (!ctx) return;
 
+    const tc = getThemeColors();
     const buckets = ['30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90+'];
     const ranges = [[30, 40], [40, 50], [50, 60], [60, 70], [70, 80], [80, 90], [90, Infinity]];
 
@@ -300,11 +315,11 @@
           data: counts,
           backgroundColor: isRadar ? 'rgba(6, 182, 212, 0.2)' : counts.map((_, i) => {
             const ratio = i / (ranges.length - 1);
-            if (ratio <= 0.3) return COLORS.green;
-            if (ratio <= 0.6) return COLORS.amber;
-            return COLORS.red;
+            if (ratio <= 0.3) return tc.green;
+            if (ratio <= 0.6) return tc.amber;
+            return tc.red;
           }),
-          borderColor: isRadar || isLine ? COLORS.cyan : 'rgba(0,0,0,0.1)',
+          borderColor: isRadar || isLine ? tc.blue : 'rgba(0,0,0,0.1)',
           borderWidth: isLine ? 3 : 1,
           borderRadius: isLine || isRadar ? 0 : 4,
           fill: isRadar ? true : false,
@@ -326,8 +341,8 @@
           }
         },
         plugins: {
-          title: { display: true, text: 'Distribuição de Tempos', font: { size: 16 } },
-          legend: { display: isRadar }
+          title: { display: true, text: 'Distribuição de Tempos', font: { size: 16, weight: 'bold' }, color: tc.textColor },
+          legend: { display: isRadar, labels: { color: tc.textColor } }
         }
       }
     };
@@ -336,14 +351,16 @@
       config.options.scales = {
         r: {
           beginAtZero: true,
-          ticks: { stepSize: 5, backdropColor: 'transparent' },
-          grid: { color: 'rgba(255,255,255,0.08)' }
+          ticks: { stepSize: 5, color: tc.textColor, backdropColor: 'transparent' },
+          grid: { color: tc.gridColor },
+          angleLines: { color: tc.gridColor },
+          pointLabels: { color: tc.textColor }
         }
       };
     } else {
       config.options.scales = {
-        x: { title: { display: true, text: 'Tempo (segundos)' } },
-        y: { beginAtZero: true, title: { display: true, text: 'Quantidade' } }
+        x: { title: { display: true, text: 'Tempo (segundos)', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { beginAtZero: true, title: { display: true, text: 'Quantidade', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     }
 

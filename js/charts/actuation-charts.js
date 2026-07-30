@@ -333,15 +333,69 @@ window.SESCINC.ActuationCharts = (function () {
     overlay.style.display = 'flex';
   }
 
+  let activeTypesType = 'doughnut';
+  let activeMonthlyType = 'bar';
+  let activeTeamsType = 'bar';
+  let activeVehiclesType = 'horizontalBar';
+  let currentActuationData = null;
+  let actuationListenersAttached = false;
+
+  function setupTypeSelectors() {
+    if (actuationListenersAttached) return;
+    actuationListenersAttached = true;
+
+    document.addEventListener('click', function (e) {
+      const btn = e.target.closest('.btn-chart-type');
+      if (!btn) return;
+
+      const selector = btn.closest('.chart-type-selector');
+      if (!selector) return;
+
+      const chartKey = selector.getAttribute('data-chart');
+      const type = btn.getAttribute('data-type');
+      if (!chartKey || !chartKey.startsWith('actuation')) return;
+
+      selector.querySelectorAll('.btn-chart-type').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (chartKey === 'actuationTypes') {
+        activeTypesType = type;
+      } else if (chartKey === 'actuationMonthly') {
+        activeMonthlyType = type;
+      } else if (chartKey === 'actuationTeams') {
+        activeTeamsType = type;
+      } else if (chartKey === 'actuationVehicles') {
+        activeVehiclesType = type;
+      }
+
+      const rawData = window.SESCINC && window.SESCINC.AppData ? window.SESCINC.AppData.actuation : null;
+      if (rawData) {
+        const filtered = filterDataCombined(rawData);
+        renderCharts(filtered);
+      }
+    });
+  }
+
   /**
-   * Renderiza os 4 gráficos analíticos de Atuação
+   * Renderiza os 4 gráficos analíticos de Atuação com suporte a 3 tipos de visualização por gráfico
    */
   function renderCharts(data) {
-    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-    const textColor = isDark ? '#f9fafb' : '#0f172a';
-    const gridColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)';
+    setupTypeSelectors();
+    currentActuationData = data;
 
-    // Chart 1: Tipos de Ocorrência
+    const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
+    const textColor = isDark ? '#f8fafc' : '#000000';
+    const gridColor = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.12)';
+
+    // Colors matching overall app palette
+    const teamColors = {
+      'ALFA': isDark ? '#38bdf8' : '#0284c7',
+      'BRAVO': isDark ? '#6ee7b7' : '#34d399', // Pastel green
+      'CHARLIE': isDark ? '#fbbf24' : '#d97706',
+      'DELTA': isDark ? '#ef4444' : '#c62828'
+    };
+
+    // Chart 1: Ocorrências por Tipo
     const ctxTypes = document.getElementById('chart-actuation-types');
     if (ctxTypes) {
       if (chartTypesInstance) chartTypesInstance.destroy();
@@ -351,35 +405,55 @@ window.SESCINC.ActuationCharts = (function () {
       const labels = Object.keys(typeCounts);
       const values = Object.values(typeCounts);
 
-      chartTypesInstance = new Chart(ctxTypes, {
-        type: 'doughnut',
+      const typeColors = [
+        '#ef4444', '#0284c7', '#34d399', '#d97706', '#7c3aed',
+        '#e11d48', '#0891b2', '#10b981', '#f59e0b', '#8b5cf6'
+      ];
+
+      const chartType = activeTypesType === 'doughnut' ? 'doughnut' : (activeTypesType === 'pie' ? 'pie' : 'bar');
+
+      const config = {
+        type: chartType,
         data: {
           labels: labels,
           datasets: [{
+            label: 'Acionamentos',
             data: values,
-            backgroundColor: [
-              '#c62828', '#0284c7', '#059669', '#d97706', '#7c3aed',
-              '#e11d48', '#0891b2', '#16a34a', '#ca8a04', '#9333ea'
-            ],
+            backgroundColor: typeColors.slice(0, labels.length),
             borderWidth: 2,
-            borderColor: isDark ? '#1a1a2e' : '#ffffff'
+            borderColor: isDark ? '#1e293b' : '#ffffff',
+            borderRadius: chartType === 'bar' ? 6 : 0
           }]
         },
         options: {
           responsive: true,
           maintainAspectRatio: false,
           plugins: {
-            legend: { position: 'right', labels: { color: textColor, font: { family: 'Inter', size: 11 } } },
+            title: { display: true, text: 'Tipos de Ocorrência', font: { size: 15, weight: 'bold' }, color: textColor },
+            legend: {
+              display: chartType !== 'bar',
+              position: 'bottom',
+              labels: { color: textColor, font: { family: 'Inter', size: 11 }, padding: 12 }
+            },
             tooltip: {
               callbacks: {
                 label: function (ctx) {
-                  return ' ' + ctx.label + ': ' + ctx.raw + ' acionamentos';
+                  return ' ' + ctx.label + ': ' + (ctx.raw || ctx.parsed.y) + ' acionamentos';
                 }
               }
             }
           }
         }
-      });
+      };
+
+      if (chartType === 'bar') {
+        config.options.scales = {
+          x: { ticks: { color: textColor, font: { size: 10 } }, grid: { color: gridColor } },
+          y: { ticks: { color: textColor, stepSize: 1 }, grid: { color: gridColor }, beginAtZero: true }
+        };
+      }
+
+      chartTypesInstance = new Chart(ctxTypes, config);
     }
 
     // Chart 2: Distribuição Mensal (Jan-Jun)
@@ -398,37 +472,60 @@ window.SESCINC.ActuationCharts = (function () {
         }
       });
 
-      chartMonthlyInstance = new Chart(ctxMonthly, {
-        type: 'bar',
-        data: {
-          labels: meses,
-          datasets: [
-            {
-              label: 'Sítio Aeroportuário (Interno)',
-              data: internalCounts,
-              backgroundColor: '#0284c7',
-              borderRadius: 6
-            },
-            {
-              label: 'Fora do Sítio (Externo)',
-              data: externalCounts,
-              backgroundColor: '#c62828',
-              borderRadius: 6
-            }
-          ]
+      const isHorizontal = activeMonthlyType === 'horizontalBar';
+      const isLine = activeMonthlyType === 'line';
+      const chartType = isLine ? 'line' : 'bar';
+
+      const datasets = [
+        {
+          label: 'Sítio Aeroportuário (Interno)',
+          data: internalCounts,
+          backgroundColor: isDark ? '#38bdf8' : '#0284c7',
+          borderColor: isDark ? '#38bdf8' : '#0284c7',
+          borderWidth: isLine ? 3 : 1,
+          borderRadius: isLine ? 0 : 6,
+          fill: false,
+          tension: 0.3
         },
+        {
+          label: 'Fora do Sítio (Externo)',
+          data: externalCounts,
+          backgroundColor: isDark ? '#ef4444' : '#c62828',
+          borderColor: isDark ? '#ef4444' : '#c62828',
+          borderWidth: isLine ? 3 : 1,
+          borderRadius: isLine ? 0 : 6,
+          fill: false,
+          tension: 0.3
+        }
+      ];
+
+      const config = {
+        type: chartType,
+        data: { labels: meses, datasets },
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          scales: {
-            x: { ticks: { color: textColor }, grid: { color: gridColor } },
-            y: { ticks: { color: textColor, stepSize: 1 }, grid: { color: gridColor }, beginAtZero: true }
-          },
           plugins: {
-            legend: { labels: { color: textColor } }
+            title: { display: true, text: 'Distribuição Mensal por Âmbito', font: { size: 15, weight: 'bold' }, color: textColor },
+            legend: { position: 'top', labels: { color: textColor, font: { family: 'Inter', size: 11 } } }
           }
         }
-      });
+      };
+
+      if (isHorizontal) {
+        config.options.indexAxis = 'y';
+        config.options.scales = {
+          x: { ticks: { color: textColor, stepSize: 1 }, grid: { color: gridColor }, beginAtZero: true },
+          y: { ticks: { color: textColor }, grid: { color: gridColor } }
+        };
+      } else {
+        config.options.scales = {
+          x: { ticks: { color: textColor }, grid: { color: gridColor } },
+          y: { ticks: { color: textColor, stepSize: 1 }, grid: { color: gridColor }, beginAtZero: true }
+        };
+      }
+
+      chartMonthlyInstance = new Chart(ctxMonthly, config);
     }
 
     // Chart 3: Atuação por Equipe
@@ -442,29 +539,49 @@ window.SESCINC.ActuationCharts = (function () {
         if (idx !== -1) counts[idx]++;
       });
 
-      chartTeamsInstance = new Chart(ctxTeams, {
-        type: 'bar',
+      const isHorizontal = activeTeamsType === 'horizontalBar';
+      const isLine = activeTeamsType === 'line';
+      const chartType = isLine ? 'line' : 'bar';
+
+      const config = {
+        type: chartType,
         data: {
           labels: teams.map(t => 'Equipe ' + t),
           datasets: [{
             label: 'Ocorrências Atendidas',
             data: counts,
-            backgroundColor: ['#c62828', '#0284c7', '#059669', '#d97706'],
-            borderRadius: 8
+            backgroundColor: teams.map(t => teamColors[t] || '#0284c7'),
+            borderColor: isLine ? (isDark ? '#38bdf8' : '#0284c7') : teams.map(t => teamColors[t] || '#0284c7'),
+            borderWidth: isLine ? 3 : 1,
+            borderRadius: isLine ? 0 : 8,
+            fill: false,
+            tension: 0.3
           }]
         },
         options: {
           responsive: true,
           maintainAspectRatio: false,
-          scales: {
-            x: { ticks: { color: textColor }, grid: { color: gridColor } },
-            y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
-          },
           plugins: {
-            legend: { display: false }
+            title: { display: true, text: 'Acionamentos por Equipe', font: { size: 15, weight: 'bold' }, color: textColor },
+            legend: { display: isLine, labels: { color: textColor } }
           }
         }
-      });
+      };
+
+      if (isHorizontal) {
+        config.options.indexAxis = 'y';
+        config.options.scales = {
+          x: { ticks: { color: textColor, stepSize: 1 }, grid: { color: gridColor }, beginAtZero: true },
+          y: { ticks: { color: textColor }, grid: { color: gridColor } }
+        };
+      } else {
+        config.options.scales = {
+          x: { ticks: { color: textColor }, grid: { color: gridColor } },
+          y: { ticks: { color: textColor, stepSize: 1 }, grid: { color: gridColor }, beginAtZero: true }
+        };
+      }
+
+      chartTeamsInstance = new Chart(ctxTeams, config);
     }
 
     // Chart 4: Viaturas / Equipamentos Utilizados
@@ -483,30 +600,49 @@ window.SESCINC.ActuationCharts = (function () {
       const labels = Object.keys(vehicleCounts).sort((a, b) => vehicleCounts[b] - vehicleCounts[a]);
       const values = labels.map(l => vehicleCounts[l]);
 
-      chartVehiclesInstance = new Chart(ctxVehicles, {
-        type: 'bar',
+      const isVertical = activeVehiclesType === 'bar';
+      const isLine = activeVehiclesType === 'line';
+      const chartType = isLine ? 'line' : 'bar';
+
+      const config = {
+        type: chartType,
         data: {
           labels: labels,
           datasets: [{
             label: 'Acionamentos por Viatura',
             data: values,
-            backgroundColor: '#0891b2',
-            borderRadius: 6
+            backgroundColor: isDark ? '#22d3ee' : '#0891b2',
+            borderColor: isDark ? '#22d3ee' : '#0891b2',
+            borderWidth: isLine ? 3 : 1,
+            borderRadius: isLine ? 0 : 6,
+            fill: false,
+            tension: 0.3
           }]
         },
         options: {
-          indexAxis: 'y',
           responsive: true,
           maintainAspectRatio: false,
-          scales: {
-            x: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true },
-            y: { ticks: { color: textColor }, grid: { color: gridColor } }
-          },
           plugins: {
-            legend: { display: false }
+            title: { display: true, text: 'Viaturas e Recursos Empregados', font: { size: 15, weight: 'bold' }, color: textColor },
+            legend: { display: isLine, labels: { color: textColor } }
           }
         }
-      });
+      };
+
+      if (!isVertical && !isLine) {
+        config.options.indexAxis = 'y';
+        config.options.scales = {
+          x: { ticks: { color: textColor, stepSize: 1 }, grid: { color: gridColor }, beginAtZero: true },
+          y: { ticks: { color: textColor, font: { size: 11 } }, grid: { color: gridColor } }
+        };
+      } else {
+        config.options.scales = {
+          x: { ticks: { color: textColor, font: { size: 10 } }, grid: { color: gridColor } },
+          y: { ticks: { color: textColor, stepSize: 1 }, grid: { color: gridColor }, beginAtZero: true }
+        };
+      }
+
+      chartVehiclesInstance = new Chart(ctxVehicles, config);
     }
   }
 
