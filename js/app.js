@@ -96,12 +96,12 @@
   /* ── Data loading ── */
 
   function loadData() {
-    // Check storage version to force re-seed after major data update (v3)
+    // Check storage version to force re-seed after major data update (v6 - Fully Unified Datasets)
     const dbVersion = localStorage.getItem('sescinc_db_version');
-    if (dbVersion !== '3') {
-      console.log('[App] Local storage outdated. Forcing re-seed to version 3.');
+    if (dbVersion !== '6') {
+      console.log('[App] Local storage outdated. Forcing re-seed to version 6 (Fully Unified Datasets).');
       localStorage.clear();
-      localStorage.setItem('sescinc_db_version', '3');
+      localStorage.setItem('sescinc_db_version', '6');
     }
 
     let tafData = loadStorage(STORAGE_KEYS.TAF);

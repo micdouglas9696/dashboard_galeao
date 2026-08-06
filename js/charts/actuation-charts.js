@@ -17,34 +17,31 @@ window.SESCINC.ActuationCharts = (function () {
   let currentMonthFilter = 'todos';
   let currentScopeFilter = 'all'; // 'all', 'internal', 'external'
 
-  // Coordenadas geográficas mapeadas sobre a maquete 3D do Aeroporto de Galeão (rio_galeao_3d.jpg)
+  // Coordenadas geográficas otimizadas para visibilidade total em telas de 14 polegadas (com recuo de bordas)
   const HOTSPOTS = [
-    { id: 'h-pista-1028', name: 'Pista 10/28 (Pista Principal)', top: 30, left: 50, isExternal: false, keywords: ['10/28', '28', 'Pista 10'] },
-    { id: 'h-pista-1533', name: 'Pista 15/33 (Pista Secundária)', top: 62, left: 74, isExternal: false, keywords: ['15/33', '15', 'Pista 15'] },
-    { id: 'h-tps2', name: 'Terminal 2 (TPS 2)', top: 48, left: 48, isExternal: false, keywords: ['TPS 2', 'TPS2', 'Terminal 2'] },
-    { id: 'h-pier-sul', name: 'Píer Sul (Fingers / Internacional)', top: 36, left: 65, isExternal: false, keywords: ['Píer Sul', 'PIER SUL', 'Píer'] },
-    { id: 'h-patio-principal', name: 'Pátio Principal (Posições 05 - 80)', top: 45, left: 56, isExternal: false, keywords: ['Posição', 'Pátio', '59', '25', '32', '29', '77', '80'] },
-    { id: 'h-hangar-united', name: 'Hangares de Manutenção (TAP M&E / P16-P18)', top: 56, left: 24, isExternal: false, keywords: ['Hangar', 'UNITED', 'P16', 'P17', 'P18', 'TAP'] },
-    { id: 'h-patio-militar', name: 'Pátio Militar (Base Aérea / FAB)', top: 42, left: 34, isExternal: false, keywords: ['Militar', 'FAB', 'C-105', 'Base Aérea'] },
-    { id: 'h-teca', name: 'Terminal de Cargas (TECA) & Via V-58', top: 32, left: 28, isExternal: false, keywords: ['TECA', 'V-58', 'Via de Serviço', 'Cargas'] },
-    { id: 'h-subestacao', name: 'Subestação Lado Terra (Infraestrutura)', top: 72, left: 42, isExternal: true, keywords: ['Subestação', 'SUBESTAÇÃO', 'Subestacao', 'Lado Terra'] },
-    { id: 'h-fora-muro', name: 'Entorno / Fora do Muro (Vegetação/CBMERJ)', top: 16, left: 20, isExternal: true, keywords: ['Fora do sítio', 'Outro lado do muro', 'CBMERJ', 'Vegetação'] },
-    { id: 'h-baloeiro-ext', name: 'Zona de Risco Baloeiro (Entorno Baía)', top: 82, left: 78, isExternal: true, keywords: ['Balão', 'Baloeiro', 'Pipa', 'Baía'] }
+    { id: 'h-cab-28', name: 'Cabeceira 28 (CAB 28)', top: 10.0, left: 86.0, align: 'pin-align-left-down', keywords: ['CABECEIRA 28', 'CAB 28', '28'] },
+    { id: 'h-cab-10', name: 'Cabeceira 10 (CAB 10)', top: 25.0, left: 22.0, align: 'pin-align-right', keywords: ['CABECEIRA 10', 'CAB 10', '10'] },
+    { id: 'h-cab-15', name: 'Cabeceira 15 (CAB 15)', top: 44.0, left: 12.0, align: 'pin-align-right', keywords: ['CABECEIRA 15', 'CAB 15', '15'] },
+    { id: 'h-cab-33', name: 'Cabeceira 33 (CAB 33)', top: 85.0, left: 60.0, align: 'pin-align-top', keywords: ['CABECEIRA 33', 'CAB 33', '33'] },
+    { id: 'h-patio-lider', name: 'Pátio Líder', top: 27.0, left: 69.0, align: 'pin-align-center', keywords: ['LÍDER', 'LIDER', 'HANGAR LÍDER'] },
+    { id: 'h-patio-united', name: 'Pátio United / Hangar TAP', top: 26.0, left: 80.0, align: 'pin-align-left', keywords: ['UNITED', 'TAP', 'HANGAR UNITED', 'HANGAR'] },
+    { id: 'h-patio-1', name: 'Pátio 1 (TPS 1)', top: 50.0, left: 28.0, align: 'pin-align-center', keywords: ['PÁTIO 1', 'PATIO 1', 'TPS 1', 'TPS1', 'TERMINAL 1'] },
+    { id: 'h-patio-2', name: 'Pátio 2 (TPS 2 / Principal)', top: 57.0, left: 37.0, align: 'pin-align-center', keywords: ['PÁTIO 2', 'PATIO 2', 'TPS 2', 'TPS2', 'TERMINAL 2', 'POSIÇÃO', 'PÁTIO DE AERONAVES', 'PÁTIO'] },
+    { id: 'h-patio-3', name: 'Pátio 3 (Píer Sul)', top: 65.0, left: 49.0, align: 'pin-align-center', keywords: ['PÁTIO 3', 'PATIO 3', 'PÍER SUL', 'PIER SUL', 'PÍER', 'FINGERS'] },
+    { id: 'h-patio-militar', name: 'Pátio Militar (FAB / Base Aérea)', top: 78.0, left: 53.0, align: 'pin-align-center', keywords: ['MILITAR', 'FAB', 'C-105', 'BASE AÉREA', 'BASE AEREA'] },
+    { id: 'h-teca-imp', name: 'TECA Importação', top: 82.0, left: 39.0, align: 'pin-align-right', keywords: ['IMPORTAÇÃO', 'IMPORTACAO', 'TECA IMPORTAÇÃO', 'TECA', 'SUBESTAÇÃO', 'SUBESTACAO', 'V-58', 'CARGAS'] },
+    { id: 'h-teca-exp', name: 'TECA Exportação', top: 86.0, left: 45.0, align: 'pin-align-center', keywords: ['EXPORTAÇÃO', 'EXPORTACAO', 'TECA EXPORTAÇÃO'] },
+    { id: 'h-patio-5', name: 'Pátio 5', top: 90.0, left: 52.0, align: 'pin-align-top', keywords: ['PÁTIO 5', 'PATIO 5'] }
   ];
 
   /**
-   * Aplica os filtros combinados de mês e âmbito
+   * Aplica o filtro de mês
    */
   function filterDataCombined(data) {
     if (!data) return [];
     let result = data;
     if (currentMonthFilter && currentMonthFilter !== 'todos') {
       result = result.filter(d => d.mes === currentMonthFilter);
-    }
-    if (currentScopeFilter === 'internal') {
-      result = result.filter(d => !d.is_external);
-    } else if (currentScopeFilter === 'external') {
-      result = result.filter(d => d.is_external);
     }
     return result;
   }
@@ -62,24 +59,12 @@ window.SESCINC.ActuationCharts = (function () {
   }
 
   /**
-   * Define o filtro de âmbito (todos, interno, externo)
-   */
-  function setScopeFilter(scope, data, btnEl) {
-    currentScopeFilter = scope;
-    if (btnEl && btnEl.parentElement) {
-      btnEl.parentElement.querySelectorAll('.scope-toggle-btn').forEach(b => b.classList.remove('active'));
-      btnEl.classList.add('active');
-    }
-    if (data) render(data);
-  }
-
-  /**
    * Renderiza todo o módulo de Atuação SESCINC
    */
   function render(data) {
     if (!data || !Array.isArray(data)) return;
 
-    // Filtrar dados combinando Mês e Âmbito
+    // Filtrar dados por mês
     const filteredData = filterDataCombined(data);
 
     // 1. Atualizar KPIs
@@ -100,23 +85,38 @@ window.SESCINC.ActuationCharts = (function () {
    */
   function updateKPIs(data) {
     const totalEl = document.getElementById('actkpi-total');
-    const internalEl = document.getElementById('actkpi-internal');
-    const externalEl = document.getElementById('actkpi-external');
+    const topLocEl = document.getElementById('actkpi-top-location');
+    const topLocCountEl = document.getElementById('actkpi-top-location-count');
     const topTypeEl = document.getElementById('actkpi-top-type');
+    const topTypeCountEl = document.getElementById('actkpi-top-type-count');
     const topTeamEl = document.getElementById('actkpi-top-team');
+    const topTeamCountEl = document.getElementById('actkpi-top-team-count');
 
     const total = data.length;
-    const internal = data.filter(d => !d.is_external).length;
-    const external = data.filter(d => d.is_external).length;
 
-    // Tipo mais comum
+    // Tipo, Equipe e Local mais comuns
     const typeCounts = {};
     const teamCounts = {};
+    const hotspotCounts = {};
+
+    HOTSPOTS.forEach(h => { hotspotCounts[h.id] = 0; });
+
     data.forEach(d => {
       typeCounts[d.tipo] = (typeCounts[d.tipo] || 0) + 1;
       if (d.equipe && d.equipe !== 'N/I') {
         teamCounts[d.equipe] = (teamCounts[d.equipe] || 0) + 1;
       }
+      const fullText = (d.descricao + ' ' + d.acoes + ' ' + d.localizacao).toUpperCase();
+      let matched = false;
+      for (let i = 0; i < HOTSPOTS.length; i++) {
+        const h = HOTSPOTS[i];
+        if (h.keywords.some(kw => fullText.includes(kw.toUpperCase()))) {
+          hotspotCounts[h.id]++;
+          matched = true;
+          break;
+        }
+      }
+      if (!matched) hotspotCounts['h-patio-2']++;
     });
 
     let topType = 'Nenhum';
@@ -137,39 +137,25 @@ window.SESCINC.ActuationCharts = (function () {
       }
     });
 
-    if (totalEl) totalEl.textContent = total;
-    if (internalEl) internalEl.textContent = internal;
-    if (externalEl) externalEl.textContent = external;
-    if (topTypeEl) topTypeEl.textContent = topType + ' (' + maxTypeCount + ')';
-    if (topTeamEl) topTeamEl.textContent = 'Equipe ' + topTeam + ' (' + maxTeamCount + ')';
-  }
-
-  /**
-   * Filtra registros pelo escopo selecionado
-   */
-  function filterDataByScope(data, scope) {
-    if (scope === 'internal') return data.filter(d => !d.is_external);
-    if (scope === 'external') return data.filter(d => d.is_external);
-    return data;
-  }
-
-  /**
-   * Define o filtro de escopo (all, internal, external)
-   */
-  function setScopeFilter(scope, data) {
-    currentScopeFilter = scope;
-
-    // Atualizar botões UI
-    const btns = document.querySelectorAll('.scope-toggle-btn');
-    btns.forEach(b => {
-      if (b.getAttribute('data-scope') === scope) {
-        b.classList.add('active');
-      } else {
-        b.classList.remove('active');
+    let topLoc = 'Nenhum';
+    let maxLocCount = 0;
+    HOTSPOTS.forEach(h => {
+      if (hotspotCounts[h.id] > maxLocCount) {
+        maxLocCount = hotspotCounts[h.id];
+        topLoc = h.name.split('(')[0].trim();
       }
     });
 
-    render(data);
+    if (totalEl) totalEl.textContent = total;
+
+    if (topLocEl) topLocEl.textContent = topLoc;
+    if (topLocCountEl) topLocCountEl.textContent = maxLocCount + ' acionamento' + (maxLocCount !== 1 ? 's' : '');
+
+    if (topTypeEl) topTypeEl.textContent = topType;
+    if (topTypeCountEl) topTypeCountEl.textContent = maxTypeCount + ' acionamento' + (maxTypeCount !== 1 ? 's' : '');
+
+    if (topTeamEl) topTeamEl.textContent = topTeam.startsWith('Equipe') ? topTeam : 'Equipe ' + topTeam;
+    if (topTeamCountEl) topTeamCountEl.textContent = maxTeamCount + ' acionamento' + (maxTeamCount !== 1 ? 's' : '');
   }
 
   /**
@@ -199,18 +185,18 @@ window.SESCINC.ActuationCharts = (function () {
       const fullText = (d.descricao + ' ' + d.acoes + ' ' + d.localizacao).toUpperCase();
       let matched = false;
 
-      HOTSPOTS.forEach(h => {
+      for (let i = 0; i < HOTSPOTS.length; i++) {
+        const h = HOTSPOTS[i];
         if (h.keywords.some(kw => fullText.includes(kw.toUpperCase()))) {
           hotspotCounts[h.id]++;
           matched = true;
+          break;
         }
-      });
+      }
 
-      // Se for externo e não deu match direto, atribui ao hotspot externo padrão
-      if (!matched && d.is_external) {
-        hotspotCounts['h-fora-muro']++;
-      } else if (!matched) {
-        hotspotCounts['h-patio-principal']++;
+      // Realloca ocorrências sem match específico no Pátio Principal
+      if (!matched) {
+        hotspotCounts['h-patio-2']++;
       }
     });
 
@@ -220,18 +206,12 @@ window.SESCINC.ActuationCharts = (function () {
       if (count > 0) {
         const x = (h.left / 100) * width;
         const y = (h.top / 100) * height;
-        const radius = Math.min(80, 25 + count * 6);
+        const radius = Math.min(85, 28 + count * 5);
 
         const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
-        if (h.isExternal) {
-          gradient.addColorStop(0, 'rgba(239, 68, 68, 0.65)'); // Red glow for external
-          gradient.addColorStop(0.5, 'rgba(239, 68, 68, 0.25)');
-          gradient.addColorStop(1, 'rgba(239, 68, 68, 0)');
-        } else {
-          gradient.addColorStop(0, 'rgba(2, 132, 199, 0.65)'); // Cyan/Blue glow for internal
-          gradient.addColorStop(0.5, 'rgba(2, 132, 199, 0.25)');
-          gradient.addColorStop(1, 'rgba(2, 132, 199, 0)');
-        }
+        gradient.addColorStop(0, 'rgba(2, 132, 199, 0.70)');
+        gradient.addColorStop(0.5, 'rgba(2, 132, 199, 0.25)');
+        gradient.addColorStop(1, 'rgba(2, 132, 199, 0)');
 
         ctx.fillStyle = gradient;
         ctx.beginPath();
@@ -247,12 +227,9 @@ window.SESCINC.ActuationCharts = (function () {
 
     HOTSPOTS.forEach(h => {
       const count = hotspotCounts[h.id];
-      // Se estamos filtrando por interno/externo, só mostrar os relevantes ou com contagem > 0
-      if (currentScopeFilter === 'internal' && h.isExternal) return;
-      if (currentScopeFilter === 'external' && !h.isExternal) return;
 
       const pin = document.createElement('div');
-      pin.className = 'airport-pin' + (h.isExternal ? ' pin-external' : ' pin-internal') + (count > 0 ? ' active' : ' empty');
+      pin.className = 'airport-pin ' + (h.align || 'pin-align-center') + (count > 0 ? ' active' : ' empty');
       pin.style.top = h.top + '%';
       pin.style.left = h.left + '%';
       pin.setAttribute('title', h.name + ': ' + count + ' acionamentos');
@@ -276,8 +253,7 @@ window.SESCINC.ActuationCharts = (function () {
     if (section && section.classList.contains('active')) {
       const data = window.SESCINC && window.SESCINC.AppData ? window.SESCINC.AppData.actuation : null;
       if (data) {
-        const filtered = filterDataByScope(data, currentScopeFilter);
-        renderHeatmapAndPins(filtered);
+        renderHeatmapAndPins(data);
       }
     }
   });
@@ -303,10 +279,6 @@ window.SESCINC.ActuationCharts = (function () {
     } else {
       let html = '<div class="actuation-modal-list">';
       matchedRecords.forEach(r => {
-        const extBadge = r.is_external
-          ? '<span class="badge badge-danger">Externo</span>'
-          : '<span class="badge badge-info">Interno</span>';
-        
         const viaturasHtml = r.viaturas && r.viaturas.length > 0
           ? r.viaturas.map(v => `<span class="badge badge-secondary">${v}</span>`).join(' ')
           : '<span class="text-muted">Nenhuma informada</span>';
@@ -316,7 +288,6 @@ window.SESCINC.ActuationCharts = (function () {
             <div class="actuation-item-header">
               <span class="actuation-item-date">${r.data} (${r.mes})</span>
               <span class="actuation-item-tipo">${r.tipo}</span>
-              ${extBadge}
               <span class="badge badge-primary">Equipe ${r.equipe}</span>
             </div>
             <div class="actuation-item-location"><strong>Local:</strong> ${r.localizacao} ${r.quadrante ? '(Quadrante ' + r.quadrante + ')' : ''}</div>
@@ -456,19 +427,17 @@ window.SESCINC.ActuationCharts = (function () {
       chartTypesInstance = new Chart(ctxTypes, config);
     }
 
-    // Chart 2: Distribuição Mensal (Jan-Jun)
+    // Chart 2: Distribuição Mensal (Jan-Jul)
     const ctxMonthly = document.getElementById('chart-actuation-monthly');
     if (ctxMonthly) {
       if (chartMonthlyInstance) chartMonthlyInstance.destroy();
-      const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'];
-      const internalCounts = [0, 0, 0, 0, 0, 0];
-      const externalCounts = [0, 0, 0, 0, 0, 0];
+      const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'];
+      const monthlyCounts = meses.map(() => 0);
 
       data.forEach(d => {
         const idx = meses.indexOf(d.mes);
         if (idx !== -1) {
-          if (d.is_external) externalCounts[idx]++;
-          else internalCounts[idx]++;
+          monthlyCounts[idx]++;
         }
       });
 
@@ -478,23 +447,13 @@ window.SESCINC.ActuationCharts = (function () {
 
       const datasets = [
         {
-          label: 'Sítio Aeroportuário (Interno)',
-          data: internalCounts,
+          label: 'Total de Acionamentos',
+          data: monthlyCounts,
           backgroundColor: isDark ? '#38bdf8' : '#0284c7',
           borderColor: isDark ? '#38bdf8' : '#0284c7',
           borderWidth: isLine ? 3 : 1,
           borderRadius: isLine ? 0 : 6,
-          fill: false,
-          tension: 0.3
-        },
-        {
-          label: 'Fora do Sítio (Externo)',
-          data: externalCounts,
-          backgroundColor: isDark ? '#ef4444' : '#c62828',
-          borderColor: isDark ? '#ef4444' : '#c62828',
-          borderWidth: isLine ? 3 : 1,
-          borderRadius: isLine ? 0 : 6,
-          fill: false,
+          fill: isLine,
           tension: 0.3
         }
       ];
@@ -506,7 +465,7 @@ window.SESCINC.ActuationCharts = (function () {
           responsive: true,
           maintainAspectRatio: false,
           plugins: {
-            title: { display: true, text: 'Distribuição Mensal por Âmbito', font: { size: 15, weight: 'bold' }, color: textColor },
+            title: { display: true, text: 'Distribuição Mensal de Acionamentos', font: { size: 15, weight: 'bold' }, color: textColor },
             legend: { position: 'top', labels: { color: textColor, font: { family: 'Inter', size: 11 } } }
           }
         }
@@ -656,15 +615,11 @@ window.SESCINC.ActuationCharts = (function () {
 
     function buildTable(list) {
       if (!list || list.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7" class="text-center text-muted py-4">Nenhum acionamento encontrado.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted py-4">Nenhum acionamento encontrado.</td></tr>';
         return;
       }
 
       tbody.innerHTML = list.map(r => {
-        const scopeBadge = r.is_external
-          ? '<span class="badge badge-danger">Externo</span>'
-          : '<span class="badge badge-info">Interno</span>';
-        
         const viaturasText = r.viaturas && r.viaturas.length > 0 ? r.viaturas.join(', ') : '—';
 
         return `
@@ -672,7 +627,6 @@ window.SESCINC.ActuationCharts = (function () {
             <td><strong>${r.data}</strong><br><small class="text-muted">${r.mes}</small></td>
             <td><strong>${r.tipo}</strong></td>
             <td>${r.localizacao} ${r.quadrante ? '<br><small class="text-muted">Quad. ' + r.quadrante + '</small>' : ''}</td>
-            <td>${scopeBadge}</td>
             <td><span class="badge badge-secondary">Equipe ${r.equipe}</span></td>
             <td><small>${viaturasText}</small></td>
             <td>
@@ -725,9 +679,6 @@ window.SESCINC.ActuationCharts = (function () {
     if (!overlay || !titleEl || !bodyEl) return;
 
     titleEl.textContent = 'Relatório de Acionamento SESCINC #' + item.id;
-    const scopeBadge = item.is_external
-      ? '<span class="badge badge-danger">Sítio Externo / Lado Terra 🌐</span>'
-      : '<span class="badge badge-info">Sítio Aeroportuário Interno ✈️</span>';
 
     const viaturasHtml = item.viaturas && item.viaturas.length > 0
       ? item.viaturas.map(v => `<span class="badge badge-secondary">${v}</span>`).join(' ')
@@ -740,7 +691,6 @@ window.SESCINC.ActuationCharts = (function () {
             <h4 class="text-lg font-bold" style="color: var(--accent-red);">${item.tipo}</h4>
             <div class="text-sm text-muted">Data: ${item.data} | Mês: ${item.mes}</div>
           </div>
-          <div>${scopeBadge}</div>
         </div>
 
         <div class="grid grid-cols-2 gap-4 mb-4" style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
@@ -772,6 +722,10 @@ window.SESCINC.ActuationCharts = (function () {
     `;
 
     overlay.style.display = 'flex';
+  }
+
+  function setScopeFilter(scope, data, btnEl) {
+    // No-op for backward compatibility
   }
 
   return {

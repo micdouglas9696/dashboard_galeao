@@ -520,7 +520,7 @@ def parse_teorica(colaborador_map):
                 
         records.append({
             'id': int(row[0]),
-            'nome': nome_original,
+                'nome': nome_original,
             'funcao': funcao,
             'funcaoOriginal': funcao_orig,
             'aeroporto': 'SBGL',
@@ -539,28 +539,26 @@ BASE_DIR = '/Users/m.dbranding/Desktop/OSeas'
 PLANILHAS_DIR = os.path.join(BASE_DIR, 'js', 'planilhas')
 
 
-def parse_actuation():
-    """Parse ATUAÇÃO SESCINC 1 SEMESTRE 2026  03-07 - Copia.xlsx."""
-    filepath = os.path.join(BASE_DIR, 'ATUAÇÃO SESCINC 1 SEMESTRE 2026  03-07 - Copia.xlsx')
+def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
     if not os.path.exists(filepath):
         print(f"Warning: File {filepath} not found.")
         return []
     
     wb = openpyxl.load_workbook(filepath, data_only=True)
-    if '1° SEMESTRE 2026' not in wb.sheetnames:
-        print("Warning: Sheet '1° SEMESTRE 2026' not found.")
+    if sheet_name not in wb.sheetnames:
+        print(f"Warning: Sheet '{sheet_name}' not found.")
         return []
         
-    ws = wb['1° SEMESTRE 2026']
-    meses_map = {1: 'Janeiro', 2: 'Fevereiro', 3: 'Março', 4: 'Abril', 5: 'Maio', 6: 'Junho'}
+    ws = wb[sheet_name]
+    meses_map = {1: 'Janeiro', 2: 'Fevereiro', 3: 'Março', 4: 'Abril', 5: 'Maio', 6: 'Junho', 7: 'Julho', 8: 'Agosto', 9: 'Setembro', 10: 'Outubro', 11: 'Novembro', 12: 'Dezembro'}
     records = []
     
     for r in range(6, ws.max_row + 1):
         val_date = ws.cell(row=r, column=1).value
-        val_tipo = ws.cell(row=r, column=2).value
-        val_equipe = ws.cell(row=r, column=3).value
-        val_desc = ws.cell(row=r, column=4).value
-        val_acoes = ws.cell(row=r, column=5).value
+        val_tipo = ws.cell(row=r, column=3 if is_second_sem else 2).value
+        val_equipe = ws.cell(row=r, column=4 if is_second_sem else 3).value
+        val_desc = ws.cell(row=r, column=5 if is_second_sem else 4).value
+        val_acoes = ws.cell(row=r, column=6 if is_second_sem else 5).value
         
         if not (val_date or val_tipo or val_desc or val_acoes):
             continue
@@ -568,11 +566,11 @@ def parse_actuation():
         date_str = str(val_date)[:10] if val_date else ''
         mes_str = ''
         if hasattr(val_date, 'month'):
-            mes_str = meses_map.get(val_date.month, 'Janeiro')
+            mes_str = meses_map.get(val_date.month, 'Julho' if is_second_sem else 'Janeiro')
         elif isinstance(val_date, str):
             m = re.search(r'-(\d{2})-', val_date)
             if m:
-                mes_str = meses_map.get(int(m.group(1)), 'Janeiro')
+                mes_str = meses_map.get(int(m.group(1)), 'Julho' if is_second_sem else 'Janeiro')
 
         tipo_raw = str(val_tipo).strip() if val_tipo else 'OUTROS'
         equipe = str(val_equipe).strip() if val_equipe else 'N/I'
@@ -585,7 +583,7 @@ def parse_actuation():
             tipo_std = 'Derramamento de Combustível'
         elif any(k in tipo_raw.upper() for k in ['DERRAMAMENTO DE ÓLEO', 'DERRAMAMENTO DE OLEO', 'DERRAMAMENTO DE FLUÍDO', 'DERRAMAMENTO DE FLUIDO']):
             tipo_std = 'Derramamento de Óleo / Fluído'
-        elif 'PRODUTO QUÍMICO' in tipo_raw.upper() or 'PRODUTO QUIMICO' in tipo_raw.upper():
+        elif 'PRODUTO QUÍMICO' in tipo_raw.upper() or 'PRODUTO QUIMICO' in tipo_raw.upper() or 'MATERIAL PERIGOSO' in tipo_raw.upper():
             tipo_std = 'Derramamento de Prod. Químico'
         elif any(k in tipo_raw.upper() for k in ['INCÊNDIO EM VEGETAÇÃO', 'INCENDIO EM VEGETACAO', 'FOGO EM VEGETAÇÃO', 'FOGO EM VEGETACAO']):
             tipo_std = 'Incêndio em Vegetação'
@@ -599,7 +597,7 @@ def parse_actuation():
             tipo_std = 'Emergência Aeronáutica'
         elif 'CONDIÇÃO DE SOCORRO' in tipo_raw.upper() or 'CONDICAO DE SOCORRO' in tipo_raw.upper():
             tipo_std = 'Condição de Socorro'
-        elif 'CONDIÇÃO DE URGÊNCIA' in tipo_raw.upper() or 'CONDICAO DE URGENCIA' in tipo_raw.upper():
+        elif 'CONDIÇÃO DE URGÊNCIA' in tipo_raw.upper() or 'CONDICAO DE URGENCIA' in tipo_raw.upper() or 'DEINTERDIÇÃO DE PISTA' in tipo_raw.upper():
             tipo_std = 'Condição de Urgência'
         elif 'GIRO DE MOTOR' in tipo_raw.upper():
             tipo_std = 'Giro de Motor (Prevenção)'
@@ -614,13 +612,6 @@ def parse_actuation():
         else:
             tipo_std = 'Outros Acionamentos'
 
-        # Check external vs internal
-        ext_keywords = ['FORA DO SÍTIO', 'FORA DO SITIO', 'OUTRO LADO DO MURO', 'LADO TERRA', 'CBMERJ', 'FORA DO AEROPORTO', 'EXTERNO']
-        is_ext = any(kw in full_txt for kw in ext_keywords)
-        if any(k in tipo_raw.upper() for k in ['RISCO BALOEIRO', 'RECOLHIMENTO DE PIPA']):
-            if any(k in full_txt for k in ['LADO TERRA', 'FORA', 'VIZINHANÇA']):
-                is_ext = True
-
         quadrante = None
         m_q = re.search(r'QUADRANTE\s*([A-Z0-9\-]+)', full_txt)
         if m_q:
@@ -633,16 +624,16 @@ def parse_actuation():
             location = 'Cabeceira 15'
         elif 'CABECEIRA 10' in full_txt or ('10' in full_txt and 'CABECEIRA' in full_txt):
             location = 'Cabeceira 10'
+        elif 'CABECEIRA 33' in full_txt or ('33' in full_txt and 'CABECEIRA' in full_txt):
+            location = 'Cabeceira 33'
         elif 'PÁTIO MILITAR' in full_txt or 'PATIO MILITAR' in full_txt:
             location = 'Pátio Militar'
         elif 'HANGAR' in full_txt:
             location = 'Hangar United / Manutenção'
         elif 'PÍER SUL' in full_txt or 'PIER SUL' in full_txt:
             location = 'Píer Sul'
-        elif 'SUBESTAÇÃO' in full_txt or 'SUBESTACAO' in full_txt:
-            location = 'Subestação Lado Terra'
         elif 'TECA' in full_txt:
-            location = 'Área de Carga TECA'
+            location = 'Área de Cargas TECA'
         else:
             m_pos = re.search(r'POSIÇÃO\s*(\d+)', full_txt)
             if m_pos:
@@ -655,22 +646,34 @@ def parse_actuation():
             if v in full_txt:
                 vehicles.append(v)
 
+        prefix = 'ACT-2S' if is_second_sem else 'ACT'
         records.append({
-            'id': f'ACT-{r}',
+            'id': f'{prefix}-{r}',
             'data': date_str,
-            'mes': mes_str or 'Janeiro',
+            'mes': mes_str or ('Julho' if is_second_sem else 'Janeiro'),
             'tipo_raw': tipo_raw,
             'tipo': tipo_std,
             'equipe': equipe,
             'descricao': desc,
             'acoes': acoes,
-            'is_external': is_ext,
             'localizacao': location,
             'quadrante': quadrante,
             'viaturas': vehicles
         })
 
+    wb.close()
     return records
+
+
+def parse_actuation():
+    """Parse both 1st semester and 2nd semester actuation spreadsheets."""
+    f1 = os.path.join(BASE_DIR, 'ATUAÇÃO SESCINC 1 SEMESTRE 2026  03-07 - Copia.xlsx')
+    f2 = os.path.join(BASE_DIR, 'julho dados', 'ATUAÇÃO SESCINC 2° SEMESTRE 2026.xlsx')
+    
+    recs1 = parse_actuation_file(f1, '1° SEMESTRE 2026', is_second_sem=False)
+    recs2 = parse_actuation_file(f2, '2° SEMESTRE 2026', is_second_sem=True)
+    
+    return recs1 + recs2
 
 
 def main():
@@ -695,6 +698,14 @@ def main():
         records = parse_taf_file(junho_taf, 'Junho')
         all_taf_records.extend(records)
         print(f'    -> {len(records)} records for Junho')
+
+    # ── 2b. Parse TAF file from julho dados (Julho) ──
+    print('\n=== Parsing TAF Julho (julho dados) ===')
+    julho_taf = os.path.join(BASE_DIR, 'julho dados', 'AFERIÇÃO - TAF JULHO 2026.xlsx')
+    if os.path.exists(julho_taf):
+        records = parse_taf_file(julho_taf, 'Julho')
+        all_taf_records.extend(records)
+        print(f'    -> {len(records)} records for Julho')
     
     # ── 3. Parse TP-EPR files from planilhas folder (Janeiro-Maio) ──
     print('\n=== Parsing TP-EPR files (planilhas folder) ===')
@@ -714,6 +725,14 @@ def main():
         records = parse_tpepr_file(junho_tpepr, 'Junho')
         all_tpepr_records.extend(records)
         print(f'    -> {len(records)} records for Junho')
+
+    # ── 4b. Parse TP-EPR file from julho dados (Julho) ──
+    print('\n=== Parsing TP-EPR Julho (julho dados) ===')
+    julho_tpepr = os.path.join(BASE_DIR, 'julho dados', 'AFERIÇÃO TP-EPR JULHO 2026.xlsx')
+    if os.path.exists(julho_tpepr):
+        records = parse_tpepr_file(julho_tpepr, 'Julho')
+        all_tpepr_records.extend(records)
+        print(f'    -> {len(records)} records for Julho')
     
     # ── 5. Deduplication check ──
     print('\n=== Deduplication Check ===')

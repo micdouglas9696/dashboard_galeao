@@ -1397,48 +1397,41 @@
               <button class="month-tab" data-month="Abril" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Abril', window.SESCINC.AppData.actuation, this)">Abr</button>
               <button class="month-tab" data-month="Maio" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Maio', window.SESCINC.AppData.actuation, this)">Mai</button>
               <button class="month-tab" data-month="Junho" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Junho', window.SESCINC.AppData.actuation, this)">Jun</button>
+              <button class="month-tab" data-month="Julho" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Julho', window.SESCINC.AppData.actuation, this)">Jul</button>
             </div>
           </div>
 
-          <!-- Scope Filter Row -->
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--border); padding-top: 8px;">
-            <span class="month-filter-label" style="min-width: 65px;">Âmbito:</span>
-            <div class="month-filter-tabs" id="actuation-scope-tabs">
-              <button class="month-tab active scope-toggle-btn" data-scope="all" onclick="window.SESCINC.ActuationCharts.setScopeFilter('all', window.SESCINC.AppData.actuation, this)">Todas as Ocorrências</button>
-              <button class="month-tab scope-toggle-btn" data-scope="internal" onclick="window.SESCINC.ActuationCharts.setScopeFilter('internal', window.SESCINC.AppData.actuation, this)">Sítio Aeroportuário (Interno)</button>
-              <button class="month-tab scope-toggle-btn" data-scope="external" onclick="window.SESCINC.ActuationCharts.setScopeFilter('external', window.SESCINC.AppData.actuation, this)">Fora do Sítio (Externo)</button>
-            </div>
-          </div>
         </div>
 
         <!-- KPI Grid -->
         <div class="kpi-grid mb-6">
           <div class="kpi-card">
             <div class="kpi-value-container">
-              <span class="kpi-value" id="actkpi-total">65</span>
+              <span class="kpi-value" id="actkpi-total">84</span>
               <span class="kpi-unit">acionamentos</span>
             </div>
             <div class="kpi-label">Total de Ocorrências</div>
           </div>
           <div class="kpi-card">
-            <div class="kpi-value-container">
-              <span class="kpi-value" id="actkpi-internal">57</span>
-              <span class="kpi-unit">internos</span>
+            <div class="kpi-value-container" style="display:flex; flex-direction:column; align-items:flex-start; gap:2px;">
+              <span class="kpi-value" id="actkpi-top-location" style="font-size: 1.15rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;">Cabeceira 10</span>
+              <span class="kpi-unit" id="actkpi-top-location-count" style="color: var(--accent-blue); font-weight: 600; font-size: 0.85rem;">24 acionamentos</span>
             </div>
-            <div class="kpi-label">Sítio Aeroportuário</div>
+            <div class="kpi-label">Setor Mais Afetado</div>
           </div>
           <div class="kpi-card">
-            <div class="kpi-value-container">
-              <span class="kpi-value" id="actkpi-external">8</span>
-              <span class="kpi-unit">externos</span>
+            <div class="kpi-value-container" style="display:flex; flex-direction:column; align-items:flex-start; gap:2px;">
+              <span class="kpi-value" id="actkpi-top-type" style="font-size: 1.05rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;">Derramamento de Óleo</span>
+              <span class="kpi-unit" id="actkpi-top-type-count" style="color: var(--accent-blue); font-weight: 600; font-size: 0.85rem;">32 acionamentos</span>
             </div>
-            <div class="kpi-label">Fora do Sítio (Entorno)</div>
+            <div class="kpi-label">Tipo Mais Frequente</div>
           </div>
           <div class="kpi-card">
-            <div class="kpi-value-container">
-              <span class="kpi-value" id="actkpi-top-type" style="font-size: 1.05rem;">Derramamento de Óleo</span>
+            <div class="kpi-value-container" style="display:flex; flex-direction:column; align-items:flex-start; gap:2px;">
+              <span class="kpi-value" id="actkpi-top-team" style="font-size: 1.15rem; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%;">Equipe ALFA</span>
+              <span class="kpi-unit" id="actkpi-top-team-count" style="color: var(--accent-blue); font-weight: 600; font-size: 0.85rem;">30 acionamentos</span>
             </div>
-            <div class="kpi-label">Maior Frequência</div>
+            <div class="kpi-label">Equipe Mais Atuante</div>
           </div>
         </div>
 
@@ -1446,19 +1439,18 @@
         <div class="chart-card full-width mb-6" style="padding: 20px;">
           <div class="flex justify-between items-center mb-3">
             <div>
-              <div class="chart-card-title" style="margin-bottom: 2px;">Mapa 3D de Calor do Aeroporto (SBGL)</div>
-              <span class="text-xs text-muted">Clique nos marcadores de cada setor para consultar o relatório das ocorrências.</span>
+              <div class="chart-card-title" style="margin-bottom: 2px;">Mapa de Calor de Ocorrências do Aeroporto (SBGL)</div>
+              <span class="text-xs text-muted">Clique nos marcadores de cada setor para consultar o relatório detalhado das ocorrências.</span>
             </div>
             <div class="map-legend flex items-center gap-4 text-xs font-semibold">
-              <span class="flex items-center gap-1"><span class="legend-dot internal"></span> Sítio Interno</span>
-              <span class="flex items-center gap-1"><span class="legend-dot external"></span> Entorno Externo</span>
+              <span class="flex items-center gap-1"><span class="legend-dot internal"></span> Indicadores de Calor Aeroportuários</span>
             </div>
           </div>
 
           <!-- Airport Map Wrapper -->
           <div class="airport-3d-wrapper" id="airport-3d-container">
             <!-- 3D Airport Background Render Image -->
-            <img src="rio_galeao_3d.jpg" alt="Maquete 3D Aeroporto Galeão SBGL" class="airport-3d-image">
+            <img src="foto do mapa de calor final.jpg" alt="Mapa Oficial Aeroporto Galeão SBGL" class="airport-3d-image">
             <!-- Canvas Overlay for Heatmap Glows -->
             <canvas id="airport-heatmap-canvas" class="airport-heatmap-canvas"></canvas>
             <!-- Hotspot Pins Container -->
@@ -1569,7 +1561,6 @@
                   <th>Data</th>
                   <th>Tipo de Ocorrência</th>
                   <th>Localização / Setor</th>
-                  <th>Âmbito</th>
                   <th>Equipe</th>
                   <th>Viaturas</th>
                   <th>Ações</th>
