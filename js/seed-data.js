@@ -1,7 +1,7 @@
 /**
  * SESCINC SBGL Dashboard — Seed Data
  * Automatically generated from Excel spreadsheets
- * Generated at: 2026-08-06T19:27:37.564931
+ * Generated at: 2026-08-11T11:52:47.494794
  */
 
 window.SESCINC = window.SESCINC || {};
@@ -7583,7 +7583,7 @@ window.SESCINC.SeedData = {
         "mes": "Julho"
       }
     ],
-    "uploadedAt": "2026-08-06T22:27:37.563325Z"
+    "uploadedAt": "2026-08-11T14:52:47.492975Z"
   },
   "tpepr": {
     "records": [
@@ -12475,7 +12475,7 @@ window.SESCINC.SeedData = {
         "mes": "Julho"
       }
     ],
-    "uploadedAt": "2026-08-06T22:27:37.563344Z"
+    "uploadedAt": "2026-08-11T14:52:47.493047Z"
   },
   "tr": {
     "records": [
@@ -13160,7 +13160,7 @@ window.SESCINC.SeedData = {
         "status": "ok"
       }
     ],
-    "uploadedAt": "2026-08-06T22:27:37.563353Z"
+    "uploadedAt": "2026-08-11T14:52:47.493064Z"
   },
   "teorica": {
     "records": [
@@ -25606,7 +25606,7 @@ window.SESCINC.SeedData = {
         ]
       }
     ],
-    "uploadedAt": "2026-08-06T22:27:37.563360Z"
+    "uploadedAt": "2026-08-11T14:52:47.493072Z"
   },
   "actuation": {
     "records": [
@@ -25722,7 +25722,7 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "INCÊNDIO EM INSTALAÇÕES (SUBESTAÇÃO LADO TERRA)",
         "acoes": "Informo que às 18:01 a SCI foi acionada pelo COE, pois durante uma ronda da BRASA UNO foi identificado grande quantidade de fumaça na subestação do lado terra. A equipe do CCI 05 chegou ao local às 18:14 iniciando o combate ao foco de incêndio. Às 18:18 o BA-CE solicitou o apoio da equipe do CRS para um arrombamento na subestação para continuidade do combate ao incêndio. Às 18:21 o CRS chegou ao local efetuando o arombamento e às 18:52 o incêndio foi totalmente debelado. TÉRMINO DA OPERAÇÃO ÀS 18:52.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
           "CCI 05",
@@ -25767,7 +25767,7 @@ window.SESCINC.SeedData = {
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC PARA VERIFICAÇÃO DE FUMAÇA",
         "acoes": "Comunico que às 10h48, o PACI 02 recebeu via ramal 4472, acionamento do COE, referente a visualização de uma fumaça nas proximidades do PACI 02. De imediato, a equipe realizou contato via rádio transceptor com o BA-CE Thales Silva, solicitando autorização para deslocamento ao local com o CCI 05 para averiguação, e de imediato obteve tal autorização.\nÀs 10h50, o CCI 05 informa chegada ao local, sendo a posição no mapa de grade F 05, e inicia a avaliação, constatando que a fumaça se encontrava distante da cerca patrimonial, não sendo possível identificar visualmente a origem.\nÀs 10h52, diante da impossibilidade de identificação da origem da fumaça, foi solicitado pelo BA-CE ao COE, o apoio do CBMERJ.\nÀs 10h53, o CCI 05 informa encerramento da ocorrência.\nÀs 10h55, o CCI 05 informa chegada à base.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
           "CCI 05"
@@ -25832,6 +25832,7 @@ window.SESCINC.SeedData = {
         "viaturas": [
           "CCI 01",
           "CCI 02",
+          "CCI 04",
           "CRS",
           "CACE"
         ]
@@ -25880,6 +25881,7 @@ window.SESCINC.SeedData = {
         "viaturas": [
           "CCI 01",
           "CCI 02",
+          "CCI 04",
           "CCI 05",
           "CCI 07",
           "CRS",
@@ -25919,6 +25921,7 @@ window.SESCINC.SeedData = {
         "quadrante": null,
         "viaturas": [
           "CCI 02",
+          "CCI 04",
           "CCI 05",
           "CCI 07",
           "CRS",
@@ -25934,7 +25937,7 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "ACIONAMENTO PELA SUPERVISÃO DE EMERGÊNCIA",
         "acoes": "Informo que a equipe do SESCINC foi acionada pela supervião de emergência (NILSON) para a realização do batismo de encerramento de um piloto da airlines. Início às 23:00. Término às 23:18",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": []
       },
@@ -25982,6 +25985,7 @@ window.SESCINC.SeedData = {
         "quadrante": null,
         "viaturas": [
           "CCI 02",
+          "CCI 04",
           "CCI 05",
           "CCI 07",
           "CRS",
@@ -26012,7 +26016,7 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "CONDIÇÃO DE SOCORRO",
         "acoes": "Foi informado pela TWR às 06:48 após o brado de emergência na condição de socorro declinado. Porém depois de questionada pelo BA-CE, a TWR informou PAM PAM PAM (CONDIÇÃO DE URGÊNCIA). Às 06:53, a aeronave realizou pouso sem qualquer anormalidade. Posteriormente, foi informado que se tratava de uma emergência médica à bordo. Término da ocorrência 07:09.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": []
       },
@@ -26048,6 +26052,7 @@ window.SESCINC.SeedData = {
         "viaturas": [
           "CCI 01",
           "CCI 02",
+          "CCI 04",
           "CRS",
           "CACE"
         ]
@@ -26078,7 +26083,7 @@ window.SESCINC.SeedData = {
         "equipe": "CHARLIE",
         "descricao": "PREVENÇÃO DE GIRO DE MOTOR",
         "acoes": "O COE informou um vazamento de óleo hidráulico na Posição 65, no Pier Sul, sendo solicitado \npelo Supervisor de Emergência Arantes a averiguação pelo BA-CE Ramon. Às 11h48, foi \nidentificado vazamento de pequena proporção (aproximadamente 6m²) na Posição",
-        "localizacao": "Píer Sul",
+        "localizacao": "Pátio 3",
         "quadrante": null,
         "viaturas": []
       },
@@ -26149,7 +26154,7 @@ window.SESCINC.SeedData = {
         "equipe": "BRAVO",
         "descricao": "VAZAMENTO DE ÓLEO HIDRÁULICO NA POSIÇÃO 65",
         "acoes": "O COE informou um vazamento de óleo hidráulico na Posição 65, no Pier Sul, sendo solicitado \npelo Supervisor de Emergência Arantes a averiguação pelo BA-CE Ramon. Às 11h48, foi \nidentificado vazamento de pequena proporção (aproximadamente 6m²) na Posição 65. Às \n11h49, a Supervisão de Emergência solicitou averiguação imediata quanto aos riscos \nenvolvidos. Às 11h52, a viatura CCI 01 foi deslocada para o local, chegando às 11h54, ocasião \nem que a equipe constatou tratar-se de vazamento de óleo hidráulico proveniente de um \nLOADER (RUCKER), prefixo LM-01275, da empresa Orbital, que já realizava os \nprocedimentos de mitigação no momento da chegada. \nÀs 12h12, o óleo hidráulico foi totalmente mitigado pela empresa responsável. Às 12h17, a \nmanutenção da empresa Orbital informou a inexistência de risco de novo vazamento no \nequipamento, sendo encerrada a operação por parte do SESCINC às 12h18.",
-        "localizacao": "Píer Sul",
+        "localizacao": "Pátio 3",
         "quadrante": null,
         "viaturas": [
           "CCI 01"
@@ -26180,7 +26185,7 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "CONDIÇÃO DE URGÊNCIA",
         "acoes": "Às 19:10 a equipe do SESCINC foi acionada via rádio transceptor informando emergência aeronáutica envolvendo um HAWKER 400XP -BE40 com pane no trem de pouso. Fazendo de imediato o posicionamento para intervenção às 19:18 a aeronave realizou o pouso sem anormalidade. O CCI realizou o acompanhamento até ser descaracterizado a emergência. Encerrado a operação às 19:20.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": []
       },
@@ -26208,7 +26213,7 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "SIMULADO DE EMERGÊNCIA",
         "acoes": "Às 17:39 a equipe do SESCINC foi acionada pelo COE para um simulado de resposta a emergência. Deslocando os recursos para as devidas posições realizando com êxito o simulado, terminando às 17:43.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": []
       },
@@ -26221,7 +26226,7 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "PREVENÇÃO DE GIRO DE MOTOR",
         "acoes": "Às 10:00 a equipe do SESCINC foi acionada via ramal pelos militares, para prevenção do giro de motor às 10:30. O CCI 01 fez o acompanhamento até às 11:20 sem anormalidades, encerrando assim o acompanhamento.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
           "CCI 01"
@@ -26251,7 +26256,7 @@ window.SESCINC.SeedData = {
         "equipe": "BRAVO",
         "descricao": "O COE ACIONOU A EQUIPE SESCINC DEVIDO A UM VAZAMENTO, INICIALMENTE DE COMBUSTÍVEL NA POSIÇÃO 80.",
         "acoes": "Às 10h36, o COE acionou a equipe do SESCINC devido a vazamento inicialmente identificado \ncomo combustível na Posição 80 PIER SUL. Às 10h40, a equipagem do CCI 01, acompanhada \npelo BA-LR Rafael, chegou ao local, ocasião em que foi constatado tratar-se de óleo hidráulico \ne não de combustível. \nNão foi possível identificar o equipamento de origem do vazamento. Havia uma aeronave \nmodelo A-330 da operadora ITA nas proximidades, sem risco para a mesma. A área afetada \npelo vazamento foi de aproximadamente 1m², sendo realizado o isolamento do local até a \nchegada da equipe de manutenção da Orbital, que iniciou a mitigação às 10h51 e concluiu o \nserviço às 10h55. \nA equipe do SESCINC deixou o local às 10h55, retornando à base com chegada às 10h58.",
-        "localizacao": "Píer Sul",
+        "localizacao": "Pátio 3",
         "quadrante": null,
         "viaturas": [
           "CCI 01"
@@ -26268,7 +26273,9 @@ window.SESCINC.SeedData = {
         "acoes": "Às 19h49, o COE acionou a equipe do SESCINC devido a vazamento de óleo hidráulico do \nequipamento LOADER na Posição 05, no pátio do TECA. O CCI 04, juntamente com o BA-LR \nRafael, deslocou-se ao local, chegando às 19h53. No local, foram constatadas duas poças de \nóleo hidráulico de aproximadamente 1m² cada. Às 19h59, os colaboradores de manutenção \nAnderson Nascimento (Matrícula 88.591-26) e Jarbas (Matrícula 99.111-22), da empresa \nSWISSPORT, realizaram a mitigação do óleo hidráulico. Às 20h04, o equipamento LOADER \nfoi retirado do local pela mesma equipe. A operação foi encerrada pelo SESCINC às 20h24.",
         "localizacao": "Área de Cargas TECA",
         "quadrante": null,
-        "viaturas": []
+        "viaturas": [
+          "CCI 04"
+        ]
       },
       {
         "id": "ACT-49",
@@ -26294,9 +26301,10 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "PRINCÍPIO DE INCÊNDIO ÁREA GRAMADA",
         "acoes": "Informo que às 23:56 o COE solicitou a equipe do SESCINC que atendesse um princípio de incêndio na área gramada devido a queda de um balão na remota 104. De imediato foi deslocado o CCI 04, juntamente com o BA-CE na viatura CACE, chegando ao local fazendo o combate de forma rápida, encerrando a ocorrência às 00:18.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
+          "CCI 04",
           "CACE"
         ]
       },
@@ -26312,6 +26320,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 23",
         "quadrante": "Y43",
         "viaturas": [
+          "CCI 04",
           "CRS"
         ]
       },
@@ -26357,7 +26366,7 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "PRINCÍPIO DE INCÊNDIO ÁREA GRAMADA",
         "acoes": "Informo que às 15:33 a SCI foi acionada pelo COE via rádio transceptor para um princípio de incêndio na ROMEU devido a soltura de fogos do manejo de fauna para afujantamento dos passáros. Tendo deslocado de imediato o CCI 358 chegando ao local com brevidade e debelando o fogo de imediato encerrando a operação às 15:44.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": []
       },
@@ -26448,7 +26457,7 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "QUEDA DE BALÃO EM CHAMAS",
         "acoes": "Às 09:20 a equipe do PACI DOIS informou ao Faísca Líder/COE sobre o avistamento de uma balão sobrevoando a PPD 10x28. De imediato houve o deslocamento do CCI 358 para o local onde foi realido o abatimento do balão. O Faísca Líder fez o recolhimento do restante do balão encerrando a operação às 09:25.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
           "FAÍSCA LÍDER"
@@ -26480,7 +26489,7 @@ window.SESCINC.SeedData = {
         "equipe": "CHARLIE",
         "descricao": "ACIONAMENTO DO SESCINC PARA DERRAMAMENTO DE COMBUSTÍVEL",
         "acoes": "Comunico que por volta das 13:09h, a equipe SESCINC foi acionada pelo COE, para derramamento de combustível na posição de pátio 39.\nDe imediato o BA-CE Wendel Soares, solicitou o deslocamento do CCI 02 até o local.\nÀs 13:14h, CCI 02 chega ao local e comunica que o derramamento é proveniente de um caminhão abastecedor, já está controlado e que os funcionários da empresa BR já estão realizando a mitigação.\nÀs 13:21h, o BA-CE chega ao local e inicia a avaliação e coleta de informações, sendo um caminhão abastecedor da empresa BR, matrícula CTA 1518, e que o produto possui numeração ONU 1863 (QAV), sendo a quantidade de duas poças de aproximadamente 1m², no quadrante BB41, tendo como responsável pela mitigação, o colaborador da empresa BR o sr. Carlos, matrícula 84586-25.\nÀs 13:31h, após nova avalição realizada pelo BA-CE e contatada a mitigação e limpeza do local, foi comunicado ao COE que o local estava seguro e não apresentava mais risco. Foi também comunicado o término da ocorrência e retorno das viaturas a base.\nÀs 13:45h, todas as viaturas já estavam em suas bases.",
-        "localizacao": "Quadrante BB41",
+        "localizacao": "Pátio 3",
         "quadrante": "BB41",
         "viaturas": [
           "CCI 02"
@@ -26495,7 +26504,7 @@ window.SESCINC.SeedData = {
         "equipe": "DELTA",
         "descricao": "ACIONAMENTO DO SESCINC PARA DERRAMAMENTO DE COMBUSTÍVEL",
         "acoes": "Às 09:53 o COE acionou o SESCINC, informando um vazamento de combustível na posição 81 - Pier Sul, a viatura CRS foi deslocada de imediato para averiguação juntamente com sua equipe. Ao chegar no local foi identificado que se tratava de óleo hidráulico de um mini abastecedor. Feita a mitigação, utilizando 11 mantas da SCI. Informado ao COE o término da ocorrência às 10:03.",
-        "localizacao": "Píer Sul",
+        "localizacao": "Pátio 3",
         "quadrante": null,
         "viaturas": [
           "CRS"
@@ -26525,7 +26534,7 @@ window.SESCINC.SeedData = {
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC EM VIRTUDE DE FOGO DE VEGETAÇÃO",
         "acoes": "Comunico que às 11h11 o PACI 01 copiou modulação via rádio referente à presença de focos de incêndio nas proximidades da pista 10x28. De imediato, o OC João Victor informou ao BA-CE Thales Silva, que por sua vez, solicitou deslocamento imediato do PACI 02 para averiguação de possível foco de incêndio.\nÀs 11h15, a viatura CCI 07 chegou ao local e constatou que o foco de incêndio se encontrava no lado terra, próximo à grade. O BA-CE foi consultado quanto à autorização para realização do resfriamento da área e, após autorizado, o CCI 07 iniciou o combate ao foco de incêndio.\nÀs 11h17, o BA-CE solicitou ao COE contato com o CBMERJ para apoio no combate aos demais focos de incêndio existentes no lado terra, devido à distância e impossibilidade de alcance pelo canhão da viatura.\nÀs 11h19, o CCI 07 informou que o foco de incêndio próximo à grade havia sido debelado. Questionado pelo BA-CE quanto ao consumo de água utilizado na ação, informou a utilização aproximada de 2.000 (dois mil) litros de água.\nÀs 11h21, o CCI 07 informou deslocamento para abastecimento no PACI desativado.\nÀs 11h24, o COE solicitou o retorno da viatura ao local do incêndio para realização de novo resfriamento, devido à presença de pequenos focos de fumaça.\nÀs 11h26, o COE solicitou a localização do foco de incêndio conforme mapa de grade, sendo informado pelo CCI 07 que a ocorrência principal encontrava-se na posição H24. Foi informado também a existência de outros dois focos, localizados nas posições H30 e H31, fora do alcance do canhão da viatura.\nÀs 11h29, o CCI 07 informou chegada ao PACI 02, encerrando o atendimento da ocorrência.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
           "CCI 07"
@@ -26558,7 +26567,7 @@ window.SESCINC.SeedData = {
         "equipe": "BRAVO",
         "descricao": "A EQUIPE SESCINC FOI ACIONADA VIA RÁDIO TRANSCEPTOR PELO PACI UNO DEVIDO A UM BALÃO EM QUEDA",
         "acoes": "Às 08h38, o Paci Uno visualizou um balão em queda livre na altura do Píer Sul. De imediato, a informação técnica foi transmitida via rádio transceptor para o Faísca Líder e para o Centro de Operações de Emergência (COE), visando mitigar riscos potenciais ao sítio aeroportuário.\nÀs 08h40, o artefato atingiu o solo entre os fingers 28 e 29, na área do pavimento técnico e próximo à cobertura do Terminal de Passageiros 2 (TPS 2). Diante do ocorrido, o Faísca Líder determinou o deslocamento da viatura CCI 03 e da viatura CACE para prestar o devido apoio logístico na área de movimento. Simultaneamente, o Brasa Uno foi acionado para fornecer suporte operacional estratégico a partir do terraço técnico.\nÀs 08h47, a equipe do Brasa Uno posicionou-se no terraço técnico, obtendo ampla visibilidade e domínio visual do balão. Após avaliação minuciosa do cenário, foi constatado que não havia focos de fogo ativos e tampouco risco iminente de incêndio nas estruturas ou aeronaves circundantes, ressalto que o balão não foi recolhido pela equipe SESCINC.\nÀs 08h49, com a garantia do cenário seguro e após o cumprimento de todos os procedimentos padrões de segurança contra incêndio, o Faísca Líder deu a operação por encerrada, liberando as equipes e assegurando que não houvesse maiores impactos ou atrasos nas operações de solo do aeroporto.",
-        "localizacao": "Píer Sul",
+        "localizacao": "Pátio 3",
         "quadrante": null,
         "viaturas": [
           "CCI 03",
@@ -26623,7 +26632,7 @@ window.SESCINC.SeedData = {
         "equipe": "ALFA",
         "descricao": "EMERGÊNCIA NÃO DECLARADA.",
         "acoes": "RELATÓRIO DE OCORRÊNCIA\nData: 01/07/1997_x000B_Tipo de emergência: pane no trem de pouso _x000B_Horário de Início: 07:07\nHorário de Término: 07:25_x000B_Local: cabeceira 10.\n\n\nÁS 07:07- COE aciona supervisor de emergência via rádio transceptor no canal resposta em emergência informando que a aeronave E110 da FORÇA AÉREA BRASILEIRA vai pousar na cabeceira 10 em 5 minutos com pane no trem de pouso mas não declarou emergência,\nÁS 07:08- Supervisor de emergência solicitou para equipe sescinc manter em prontidão.\nÁS 07:15- BA-CE solicita informação de tempo fora da aeronave para o COE,o mesmo informa que a aeronave está na curta final,\nÁS 07:25- Aeronave pousou sem nenhum anormalidade.",
-        "localizacao": "Cabeceira 15",
+        "localizacao": "Cabeceira 10",
         "quadrante": null,
         "viaturas": []
       },
@@ -26636,9 +26645,10 @@ window.SESCINC.SeedData = {
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC EM VIRTUDE DE VAZAMENTO DE GÁS.",
         "acoes": "RELATÓRIO DE OCORRÊNCIA – VAZAMENTO DE GÁS (GLP)\n\nData: 01/07/2026\n\nÀs 12h36, fomos acionados via rádio transceptor pelo COE para atendimento de uma ocorrência de vazamento de gás na via de serviço, localizada entre os viadutos V4 e V5.\n\nMapa de Grade: O/49.\n\nAo chegar ao local, foi constatado que o vazamento era proveniente de um botijão de Gás Liquefeito de Petróleo (GLP), que estava sendo transportado pela equipe da RADAR, utilizando a viatura de prefixo RBR0051, conduzida por Maite Alves, matrícula 8350925.\n\nForam deslocados para o atendimento os recursos CCI 04, CACE e CRS, que chegaram ao local às 12h39.\n\nInicialmente, foi realizado o isolamento da área e armada linha de mangueira para prevenção, garantindo a segurança da operação. Em seguida, foi efetuada uma avaliação técnica para viabilizar o fechamento da válvula do botijão.\n\nÀs 12h46, o Faísca Líder informou que o vazamento havia sido contido com sucesso.\n\nÀs 12h51, foi informado que o botijão havia sido retirado da área de risco, permanecendo isolado em local seguro, sendo a viatura RBR0051 da RADAR liberada.\n\nÀs 12h56, o botijão foi transportado com segurança até o local de destino, com acompanhamento do Faísca Líder durante todo o deslocamento.\n\nAo chegar ao destino, o Faísca Líder informou que a equipe da RADAR realizaria a transferência do botijão para a viatura de prefixo RBR0052, devidamente equipada com grades de proteção, para posterior transporte até o setor da empresa.\n\nA operação foi encerrada às 13h15, sem intercorrências e sem riscos à integridade das pessoas, do patrimônio ou ao meio ambiente.",
-        "localizacao": "Pátio de Aeronaves",
+        "localizacao": "Pátio 1",
         "quadrante": null,
         "viaturas": [
+          "CCI 04",
           "CRS",
           "CACE",
           "FAÍSCA LÍDER"
@@ -26653,7 +26663,7 @@ window.SESCINC.SeedData = {
         "equipe": "CHARLIE",
         "descricao": "ACIONAMENTO DO SESCINC PARA INCÊNDIO EM VEGETAÇÃO",
         "acoes": "Comunico que por volta das 16:24h, o SESCINC foi acionado pelo COE, via rádio transceptor, para verificação de\nincêndio em vegetação no quadrante I25.\nPor volta das 16:25h, após a confirmção do local em MGI, o BA-CE Wendel Soares solicitou o deslocamento do CCI\n05 até o local ara realizar avaliação.\nPor volta das 16:26h, o BA-CE comunica início de deslocamento até o local, com a viatura CACE.\nPor volta das 16:29h, CCI 05 chega ao local informado e comunica que foi identificado um pequeno foco de incêndio\ndo lado de fora da área protegida, quadrante G26, com dificuldade de aproximação na área gramada, devido a área\nde vegetação ser pantanosa, haveno risco de atolar o CCI, porém o foco de incêndio não apresentava risco de\nacessar o lado ar.\nPor volta das 16:38h, ao identificar uma rota segura para poder realizar o deslocamento com o CCI , foi possível\numa aproximação da cercanias da área protegida e início do combate ao foco deincêndio.\nPor volta das 16:47h, CCI 05 comunica término de combate ao princípio de incêndio, não sendo extinto\ncompletamente, porém sendo reduzido de forma considerável, sendo utilizado aproximadamente 5.700L de água.\nPor volta das 16:47h, CCI 05 comunica retorno a base.\nPor volta das 16:55h, CCI 05 comunica chegada em base e abastecimento do reservatório de água.",
-        "localizacao": "Quadrante I25",
+        "localizacao": "Sistema 10-28",
         "quadrante": "I25",
         "viaturas": [
           "CCI 05",
@@ -26669,7 +26679,7 @@ window.SESCINC.SeedData = {
         "equipe": "CHARLIE",
         "descricao": "ACIONAMENTO SESCINC EM VIRTUDE DE DERRAMAMENTO DE COMBUSTÍVEL.",
         "acoes": "Comunico que por volta das 08:14h, a equipe SESCINC foi acionada pelo COE, para derramamento de óleo na posição de pátio 28.\nDe imediato o BA-CE Ricardo Marinho, solicitou o deslocamento do CCI 03 até o local, seguindo acompanhado da viatura CACE.\nÀs 08:17h, o BA-CE comunica chegada do CCI 03 e viatura CACE ao local e o início da avaliação.\nÀs 08:20h, após a avalição realizada pelo BA-CE, foi identificado a posição exata onde ocorreu o derramamento, se tratando do quadrante Z43, em uma área de aproximadamente 2m², em contato com o técnico de manutenção José Maria, da empresa Gol , que informou se tratar de QAV, proveniente da aeronave da empresa GOL, matrícula PR-GXE, que no desacoplar da mangueira de abastecimento, uma pequena quantidade de combústivel foi derramada.\nAntes da chegada da equipe SESCINC foram utilizadas mantas absorventes da própria empresa para realizar a mitigação do combustível derramado.\nÀs 08:22 h, o BA-CE comunica ao COE que ja nao havia riscos de incêndio e que a mitigação total ja havia sido feita pelo pessoal da empresa aérea GOL.\n\nNesse mesmo momento, o BA-CE comunica que o local está seguro, não apresentando mais risco e termino da ocorrência.\nÀs 08:30h, o BA-CE comunica a chegada do CCI03 e da viatura CACCE a SCI.",
-        "localizacao": "Quadrante Z43",
+        "localizacao": "Pátio 2",
         "quadrante": "Z43",
         "viaturas": [
           "CCI 03",
@@ -26689,6 +26699,7 @@ window.SESCINC.SeedData = {
         "quadrante": null,
         "viaturas": [
           "CCI 03",
+          "CCI 04",
           "CRS",
           "CACE"
         ]
@@ -26706,6 +26717,7 @@ window.SESCINC.SeedData = {
         "quadrante": null,
         "viaturas": [
           "CCI 02",
+          "CCI 04",
           "CCI 05",
           "CRS",
           "CACE"
@@ -26720,7 +26732,7 @@ window.SESCINC.SeedData = {
         "equipe": "CHARLIE",
         "descricao": "ACIONAMENTO DO SESCINC PARA BATISMO DE AERONAVE",
         "acoes": "Comunico que por volta das 21:45h até às 22:20h, foi realizado posicionamento estratégico, conforme solicitado pelo\nSupervisor de Emergência Magno, próximo a taxiway L4 (quadrante EE42) para a operação de batismo da aeronave B777 200, prefixo N776AN, do Operador American Airlines.",
-        "localizacao": "Quadrante EE42",
+        "localizacao": "Pátio 3",
         "quadrante": "EE42",
         "viaturas": []
       },
@@ -26733,7 +26745,7 @@ window.SESCINC.SeedData = {
         "equipe": "CHARLIE",
         "descricao": "ACIONAMENTO DO SESCINC PARA DERRAMAMENTO DE COMBUSTÍVEL",
         "acoes": "Comunico por volta das 06:48h, o SESCINC foi acionado via rádio transceptor, no canal resposta e emergência, pelo COE para um vazamento de combustível na posição de pátio 23. De imediato o BA-CE Wendel Soares se deslocou, junto com o CCI 03, até o local informado.\nÀs 06:53h, o BA-CE comunica a chegada ao local informado e inicia avaliação.\nÀs 06:58h, o BA-CE comunica que se trata de um vazamento de QAV, já controlado, proveniente de um caminhão abastecedor da empresa Air BP, matrícula BP1007, no quadrante \"Y43\", tendo próximo uma aeronave A320, prefixo PR-MHM. De imediato o BA-CE estabeleceu linha de mangueira.\nÀs 07:04h, o Supervisor de pátio Ronald Antônio, matrícula 91400-16, da empresa Riogaleão, solicita o deslocamento do caminhão abastecedor do local, para que pudesse ser iniciado o deslocamento da aeronave no pushback, o BA-CE comunica a possibilidade do deslocamento.\nApós retirada do caminhão abastecedor do local do derreamento e retirada da aeronave da posição 23, no pushback, o Operador de abastecimento Leonardo Farias, matrícula 86722-25, da empresa Air BP, deu continuidade na mitigação do combustível derramado.\nÀs 07:09, o BA-CE comunica ao COE término da mitigação, sendo utilizado 20 mantas da própria empresa.\nÀs 07:10h, o BA-CE comunica que o local já está em segurança, não apresenta mais risco de incêndio e retorno do CCI 03 ao pátio da SCI.\nÀs 07:29h, o BA-CE comunica a chega do CCI 03 a SCI.",
-        "localizacao": "Posição 23",
+        "localizacao": "Pátio 1",
         "quadrante": null,
         "viaturas": [
           "CCI 03"
@@ -26748,7 +26760,7 @@ window.SESCINC.SeedData = {
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE FLUÍDO DERRAMADO",
         "acoes": "Comunico que às 15h37, o COE acionou o SESCINC, via rádio transceptor, informando que a equipe de Fiscalização reportou um vazamento de óleo hidráulico proveniente de um veículo da empresa Gate Gourmet, localizado na posição 37. Em seguida, o BA-CE Thales Silva solicitou o deslocamento do BA-LR Bruno Blas para atendimento da ocorrência.\nÀs 15h38, o BA-LR solicitou ao COE informações sobre a existência de aeronaves nas proximidades do vazamento, sendo informado que havia uma aeronave da empresa Gol estacionada próxima ao local.\nÀs 15h39, o BA-LR comunicou o início do deslocamento das viaturas CRS 01 e CCI 03 para o atendimento da ocorrência.\nÀs 15h44, a viatura CRS 01 informou que o local do vazamento correspondia à posição AA43 do mapa de grade interno.\nÀs 15h45, o BA-LR informou ao COE que estava realizando levantamento de informações referentes ao caminhão da empresa Gate Gourmet, o qual já não se encontrava no local, mantendo contato com o fiscal de pátio para obtenção de maiores detalhes sobre a ocorrência.\nÀs 15h48, o BA-LR informou ao COE que o vazamento era proveniente do sistema hidráulico do baú do caminhão da Gate Gourmet, de identificação GGL027, com área afetada de aproximadamente 2 m². Informou ainda que o operador responsável era Deivid Cunha e que o condutor do veículo era Deivid Lima, matrícula 9535819, o qual já havia solicitado à equipe da empresa o início da mitigação do vazamento.\nÀs 15h51, o BA-LR comunicou ao COE que, em entendimento com o fiscal de pátio Daniel, ficou acordado que, caso houvesse demora por parte da empresa Gate Gourmet para iniciar a mitigação, a própria equipe do SESCINC executaria o procedimento, visando preservar a segurança operacional e minimizar impactos na operação da aeronave da empresa Gol.\nÀs 15h52, o BA-LR informou ao PACI 01 que a aeronave estacionada nas proximidades do vazamento possuía o prefixo PR-GGE.\nÀs 15h55, o BA-LR informou ao COE que a equipe da Gate Gourmet havia iniciado a mitigação do fluido derramado.\nÀs 15h58, o BA-LR comunicou ao COE o término da mitigação, informando que não havia mais fluido derramado sobre o pavimento nem riscos remanescentes no local. Na sequência, as viaturas CRS 01 e CCI 03 retornaram ao pátio do Central Faísca, sendo encerrado o atendimento da ocorrência.",
-        "localizacao": "Posição 37",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
           "CCI 03",
@@ -26779,7 +26791,7 @@ window.SESCINC.SeedData = {
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE FLUÍDO DERRAMADO",
         "acoes": "Comunico que às 10h25, o COE acionou o SESCINC, via rádio transceptor, informando a existência de um vazamento de óleo na posição 30, proveniente de um caminhão da empresa de comissaria. O BA-CE Thales Silva questionou se havia aeronave nas proximidades do local, sendo informado pelo COE que havia uma aeronave da empresa LATAM estacionada próxima à ocorrência. Em seguida, o BA-CE solicitou que o BA-LR Bruno Blas se deslocasse até a posição 30 para averiguação do fluido derramado.\nÀs 10h27, o BA-LR informou ao COE o início do deslocamento das viaturas CACE 025 e CCI 02 para atendimento da ocorrência.\nÀs 10h32, o BA-LR comunicou a chegada das viaturas ao local do vazamento e informou o início da prevenção operacional com o CCI 02, visando garantir a segurança da operação nas proximidades da aeronave.\nÀs 10h33, o BA-LR informou ao COE que estava realizando as averiguações necessárias para identificação da origem do vazamento.\nÀs 10h35, o CCI 02 informou ao OC João Vitor que a ocorrência se localizava na posição Z43 do mapa de grade interno.\nÀs 10h36, o BA-LR informou ao COE que o vazamento de óleo hidráulico era proveniente de um caminhão da empresa Sky Chefs, identificado pelo prefixo SKY27, com área afetada de aproximadamente 1 m². Informou ainda que o condutor do veículo era André dos Santos, matrícula 8559325, e que a própria empresa já havia sido acionada para realizar a mitigação do fluido derramado.\nÀs 10h49, o BA-LR comunicou ao COE que a equipe da Sky Chefs havia iniciado a mitigação do fluído derramado.\nAinda às 10h49, o Supervisor de Emergência solicitou ao BA-LR a realização de registro fotográfico da área após a conclusão da mitigação, para encaminhamento ao setor de Sustentabilidade. O BA-LR informou não possuir telefone celular no momento, esclarecendo que o aparelho operacional se encontrava em posse do BA-CE, em razão da realização do PTR-BA programado para a presente data. Diante disso, o Supervisor orientou que fosse solicitado ao fiscal de pátio responsável pela ocorrência a realização do registro fotográfico.\nÀs 10h52, o BA-LR informou ao COE o término da mitigação do fluido derramado, comunicando o retorno das viaturas envolvidas ao pátio do Central Faísca. Informou ainda ao Supervisor de Emergência que a solicitação do registro fotográfico havia sido repassada ao fiscal de pátio Jeferson.",
-        "localizacao": "Posição 30",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
           "CCI 02",
@@ -26810,7 +26822,7 @@ window.SESCINC.SeedData = {
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE FLUÍDO DERRAMADO",
         "acoes": "Comunico que às 20h40, o COE acionou o SESCINC, informando a existência de um vazamento de óleo hidráulico na posição 23. Imediatamente o BA-CE Thales Silva questionou se havia aeronave nas proximidades da ocorrência, sendo informado pelo COE que havia uma aeronave estacionada próxima ao local. Em seguida, solicitou o deslocamento das viaturas CACE 025, CRS 01 e CCI 03 para atendimento da ocorrência.\nÀs 20h45, o BA-CE informou ao COE que a equipe já se encontrava na posição 23, iniciando a averiguação da ocorrência.\nÀs 20h46, a equipe da CRS 01 informou ao OC João Vitor do PACI 01 que o vazamento se encontrava na posição Y43 do mapa de grade interno. Foi identificado que o fluido hidráulico era proveniente de uma aeronave da empresa Gol, modelo Boeing 737-800, prefixo PR-GXU. Na sequência, o BA-CE comunicou ao COE que o vazamento se encontrava contido, sem risco de incêndio. Informou ainda que o mecânico responsável pela aeronave era Marcelo Amorim, matrícula 9025126. O BA-LR Bruno Blas comunicou ao BA-CE que havia sido estabelecido o perímetro de segurança, com o isolamento da área realizado pela equipe da CRS 01.\nÀs 20h49, o BA-CE informou ao COE que a equipe de Fiscalização já se encontrava no local e que a área contaminada era de aproximadamente 3 m². Informou também que não havia risco de atingir nenhuma canaleta de drenagem pluvial e que a equipe de manutenção da empresa Gol já havia iniciado os procedimentos de mitigação do fluído derramado.\nÀs 20h55, o BA-CE solicitou o retorno da viatura CACE 025 ao Central Faísca, permanecendo em prontidão operacional.\nÀs 21h15, o BA-CE comunicou ao COE o término da mitigação do fluido derramado, informando que não havia mais riscos no local. Na sequência, as viaturas CCI 03 e CRS 01 iniciaram o retorno ao Central Faísca.\nÀs 21h26, o BA-CE informou ao COE a chegada das viaturas ao pátio do Central Faísca, sendo encerrado o atendimento da ocorrência.",
-        "localizacao": "Posição 23",
+        "localizacao": "Pátio 1",
         "quadrante": null,
         "viaturas": [
           "CCI 03",
@@ -26827,7 +26839,7 @@ window.SESCINC.SeedData = {
         "equipe": "BRAVO",
         "descricao": "O COE informou ao Faísca Líder, via rádio transceptor, sobre uma ocorrência de vazamento de óleo hidráulico.",
         "acoes": "Ao chegar no local, o vazamento de óleo hidráulico oriundo de um trator de Pushback da empresa Swissport (modelo Rucker, prefixo ATC1111602), localizado na Posição 28. Diante disso, foram imediatamente deslocados a viatura CCI 03 e o veículo CACE. As equipes chegaram ao local às 13h08, onde foi constatado um derramamento de combustível em uma área de aproximadamente 4 m². Após avaliação técnica da cena, verificou-se que o equipamento já se encontrava em área segura e sem riscos adicionais de vazamento ou de incêndio. A ocorrência foi finalizada com sucesso às 13h18.",
-        "localizacao": "Posição 28",
+        "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
           "CCI 03",
@@ -26844,9 +26856,10 @@ window.SESCINC.SeedData = {
         "equipe": "BRAVO",
         "descricao": "o Faísca Líder foi acionado pelo COE para efetuar a avaliação de um princípio de incêndio em um trator",
         "acoes": "Às 17h58, o Faísca Líder foi acionado pelo COE para efetuar a avaliação de um princípio de incêndio em um trator da empresa DNATA (prefixo BTU-1989) na Posição 21. Embora o incidente inicial estivesse sob controle do condutor do equipamento, procedeu-se ao deslocamento preventivo do CCI 04 (às 18h00) e da viatura CACE. Ao chegarem ao local às 18h01, os combatentes iniciaram a análise do cenário e constataram a ausência de risco imediato de incêndio.\nVisando garantir uma resposta célere diante de qualquer hipótese de reignição, a equipe permaneceu em postura preventivo-operacional junto ao equipamento utilizando um extintor de CO₂. Às 18h18, a equipe de manutenção chegou ao local, efetuando o desgarramento da bateria e a desenergização do trator às 18h23, ocasião em que o mecânico identificou que a falha teve origem no motor de arranque.\nApós a desmobilização parcial, o CCI 04 retornou à base às 18h25, enquanto a viatura CACE e o Faísca Líder mantiveram-se no local acompanhando o processo de reboque do equipamento para a área de manutenção da empresa responsável. Às 18h33, com o início do reboque do veículo, a operação foi declarada encerrada pelo SESCINC. Às 18h34, o Faísca Líder reportou ao COE a substituição e o devido recolhimento do extintor de CO₂ utilizado na ação preventiva.",
-        "localizacao": "Posição 21",
+        "localizacao": "Pátio 1",
         "quadrante": null,
         "viaturas": [
+          "CCI 04",
           "CACE",
           "FAÍSCA LÍDER"
         ]
@@ -26860,7 +26873,7 @@ window.SESCINC.SeedData = {
         "equipe": "CHARLIE",
         "descricao": "ACIONAMENTO DO SESCINC PARA INCÊNDIO EM VEGETAÇÃO",
         "acoes": "Comunico que por volta das 13:46 COE aciona PACI 2, via rádio transceptor, para avaliação de fumaça que foi avistada pelas câmeras próximo ao PACI 2. De imediato o BA-CE Wendel Soares solicita ao PACI 2 que realize avaliação no entorno do PACI 2.\nÀs 13:52h, o CCI 05 inicia deslocamento e direção ao PACI 2 antigo para averiguar a fumaça avistada, quando identifica fora das cercanias do aeródromo, 2 focos de incêndio nos quadrantes H18 e H19, sem a possibilidade e alcançalos com  jato de canhão. \nÀs 13:54h, o BA-CE inicia o deslocamento para o local informado pelo CCI 05, e solícita ao COE apoio de recurso externo, devido a distância a cercanias do aeródromo e não ser possível o combate com  canhão do CCI 05.\nˋAs 13:56h, solicitado pelo BA-CE, CCI 05 inicia o resfriamento da vegetação próximo a cercanias do aeródromo, de forma preventiva, para evitar que o foco de incêndio se aproxime.\nÀs 14:08h, o BA-CE chega ao local, quadrante H18 e H19, e identifica que com a utilização do CCI 02 é possível alcançar os focos de incêdio e assim foi feito, logrando exito no combate.\nˋAs 14:09h, por eterminação do BA-CE o CCI 02 iniciou deslocamento para o quadrante H25, para combate em um novo foco de incêndio, porém esse estando mais distante, não foi possível alcançar com o jato de canhão do CCI 02. \nˋAs 14:11h, o COE solicita o deslocamento dos Bombeiros Estrutural, com a viatura OPS 024, pela área externa, para poder realizar combate ao foco de incendio no quadrante H25. \nÀs 14:36h, OPS 024 chega próximo ao quadrante H18  H19, porém não é possivel deslocamento com a viatura, chegando apenas ao quadrante H18 e H19, não sendo possível acessar o quadrante H25, devido a altura da vegetação.\nÀs 14:40h, o BA-CE identifica que o foco de incêndio no quadrante H25, se extinguiu por meios própios  imediatamente comunica ao COE.\nÀs 14:45h, após os focos e incêdios serem debelados, o BA-CE comunica ao COE que o local não presenta mais risco e o retorno das viaturas do SESCINC a base.\nÀs 14:48, o BA-CE comunica ao COE que todos os recursos já se encontram nas bases.",
-        "localizacao": "Quadrante S",
+        "localizacao": "Sistema 10-28",
         "quadrante": "S",
         "viaturas": [
           "CCI 02",
@@ -26891,7 +26904,7 @@ window.SESCINC.SeedData = {
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC PARA RETIRADA DE FOD DA PPD 15X33",
         "acoes": "Comunico que, às 17h00, o COE acionou o SESCINC, via rádio transceptor, solicitando apoio do CRS para atendimento de ocorrência envolvendo AKE’S que se encontravam próximos à aeronave da empresa Sideral, em razão das condições de vento forte e da necessidade de liberação da área operacional.\nÀs 17h05, a viatura CACE 025 e CRS 01 iniciaram deslocamento para o pátio militar. \nÀs 17h07, após solicitação do BA-CE Thales Silva, o COE confirmou que o acionamento se referia à posição 22, próxima à aeronave da Sideral.\nÀs 17h09, o BA-CE informou a chegada das viaturas CRS 01 e CACE 025 à posição 22, permanecendo no local para aguardar instruções.\nÀs 17h15, o COE solicitou ao PACI UNO que verificasse, por meio de seu campo visual, possíveis impactos decorrentes do vento forte na área de apoio, sendo informado que não havia alterações visíveis.\nÀs 17h18, o Supervisor de Emergência Marcos informou ao COE que, devido ao vento forte, estava sendo dificultada a manipulação de alguns AKES.\nÀs 17h27, foi informado pelo supervisor Marcos que a equipe do SESCINC realizaria a amarração de alguns AKES, com o objetivo de possibilitar seu deslocamento para uma área mais distante da aeronave da SIDERAL e garantir a sua segurança.\nÀs 17h38, o Supervisor de Emergência informou que os AKES que se encontravam próximos à aeronave e que poderiam representar risco já haviam sido retirados, permanecendo algumas barreiras no local.\n Às 17h39, foi informado que alguns AKES se encontravam dentro da canaleta, impossibilitando sua remoção naquele momento.\nÀs 17h45, o COE solicitou ao Supervisor de Emergência e ao BA-CE o apoio da equipagem do CCI 03 para auxiliar na desobstrução e retirada dos AKES. Na sequência, às 17h46, o BA-CE solicitou o deslocamento do CCI 03 para apoio à retirada dos AKES da canaleta próxima ao TECA, visando à liberação completa da Pista 15x33.\nÀs 17h47, o Supervisor de Emergência informou que o CCI 03 seria empregado na retirada dos AKES da pista, enquanto o CRS 01 atuaria na retirada dos equipamentos localizados na canaleta, buscando agilizar a liberação da pista 15x33.\nÀs 17h49, o Supervisor de Emergência informou ao CCI 03 que a maioria dos AKES que necessitavam ser retirados encontrava-se na TAXIWAY J. \nÀs 17h50, o BA-LR Bruno Blas informou que a equipe do CRS já se encontrava próxima à canaleta.\nÀs 17h54, o BA-CE comunicou ao COE que o CCI 03 já se encontrava próximo à TAXIWAY J, auxiliando na retirada dos AKES para liberação da Pista 15x33.\nÀs 17h56, o COE solicitou o deslocamento da equipe completa do Brasa 1 para o TECA, lado ar, para apoio à operação.\n Às 17h57, também foi acionado o Brasa 3, com sua equipe completa, para deslocamento ao PV UNO, acesso ao lado ar.\nÀs 18h00, a viatura CACE 025 informou ao BA-CE a posição PP42 do mapa de grade, onde se encontravam os AKES removidos. Questionado pelo COE se a remoção havia sido realizada com auxílio de trator, o BA-CE informou que os AKES haviam sido retirados manualmente da TAXIWAY J e da área protegida da Pista 15x33, sendo conduzidos para o pátio do TECA.\nÀs 18h07, o Brasa 3 informou sua chegada ao local da ocorrência.\nÀs 18h12, o BA-LR informou ao BA-CE que todos os AKES existentes na canaleta em frente ao TECA já haviam sido retirados e que o CRS se deslocaria para auxiliar na remoção dos demais AKES junto à equipe do CCI 03.\nÀs 18h14, o BA-CE informou ao COE que a equipe de HANDLING já se encontrava no local realizando a remoção dos AKES.\nÀs 18h15, o BA-LR informou o início de uma varredura na canaleta próxima ao pátio em frente ao TECA, com o objetivo de verificar a existência de materiais ou objetos que pudessem interferir na operação.\nÀs 18h17, o CCI 03 solicitou apoio do CRS 01, com utilização de lanternas, para auxiliar na retirada de um AKE.\nÀs 18h20, o Supervisor de Emergência informou ao COE que estava sendo realizado um levantamento da área e que os AKES próximos à canaleta já haviam sido retirados.\nÀs 18h22, o BA-CE informou ao COE que, após vistoria realizada pela equipe do SESCINC na área gramada próxima ao pátio do TECA, não foram identificados, em princípio, outros AKES na área compreendida entre a TAXIWAY J e as proximidades da via de serviço conhecida como “retão”. Na sequência, o COE solicitou o retorno do CCI 03 ao Central Faísca, visando à liberação da Pista 15x33.\nÀs 18h24, o Supervisor de Emergência solicitou às equipes das viaturas CACE 025 e CRS 01 que se deslocassem até a TAXIWAY J, onde seriam conduzidas pela equipe de Fiscalização até a SCI.\nÀs 18h26, o COE solicitou às equipes do Brasa 1 e Brasa 3 que retornassem às suas respectivas bases. O Supervisor de Emergência informou que estava realizando a travessia da pista com as viaturas CRS 01 e CCI 03 em direção ao Central Faísca.\nÀs 18h27, o Supervisor de Emergência determinou que o CCI 03 e o CRS 01 prosseguissem no deslocamento até o pátio do Central Faísca no visual.\nÀs 18h29, o COE informou que a Pista 15x33 encontrava-se livre e operacional, sendo encerrado o atendimento da ocorrência.",
-        "localizacao": "Pátio Militar",
+        "localizacao": "Área de Cargas TECA",
         "quadrante": null,
         "viaturas": [
           "CCI 03",
@@ -26908,13 +26921,13 @@ window.SESCINC.SeedData = {
         "equipe": "BRAVO",
         "descricao": "A SUPERVISÃO DE EMERGÊNCIA INFORMOU O AVISTAMENTO DE DOIS CANINOS NAS PROXIMIDADES DA POSIÇÃO 87.",
         "acoes": "Às 12h05, a Supervisão de Emergência informou o avistamento de dois caninos nas proximidades da Posição 87. Em resposta imediata, às 12h06, a viatura CRS deslocou-se ao local para efetuar o monitoramento e a eventual captura dos animais, posicionando-se na área às 12h07. Diante da ausência inicial dos animais no local indicado, a equipe manteve o acompanhamento ostensivo. Às 12h12, mediante relato de uma colaboradora da empresa SUNSET, tomou-se conhecimento de que os animais haviam evadido em direção à área de mata localizada atrás do Pátio Militar. A equipe da viatura CRS realizou nova varredura na região, contudo, os animais não foram reavistados. Diante disso, a operação foi declarada encerrada às 12h14, com o regresso da viatura ao pátio da Central Faísca.",
-        "localizacao": "Pátio Militar",
+        "localizacao": "Pátio 3",
         "quadrante": null,
         "viaturas": [
           "CRS"
         ]
       }
     ],
-    "uploadedAt": "2026-08-06T22:27:37.563367Z"
+    "uploadedAt": "2026-08-11T14:52:47.493079Z"
   }
 };

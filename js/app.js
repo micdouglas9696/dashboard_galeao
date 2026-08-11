@@ -98,10 +98,10 @@
   function loadData() {
     // Check storage version to force re-seed after major data update (v6 - Fully Unified Datasets)
     const dbVersion = localStorage.getItem('sescinc_db_version');
-    if (dbVersion !== '6') {
-      console.log('[App] Local storage outdated. Forcing re-seed to version 6 (Fully Unified Datasets).');
+    if (dbVersion !== '8') {
+      console.log('[App] Local storage outdated. Forcing re-seed to version 8 (Strict Hotspot Mapping & Keyword Collision Fix).');
       localStorage.clear();
-      localStorage.setItem('sescinc_db_version', '6');
+      localStorage.setItem('sescinc_db_version', '8');
     }
 
     let tafData = loadStorage(STORAGE_KEYS.TAF);

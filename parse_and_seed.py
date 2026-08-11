@@ -553,14 +553,16 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
     meses_map = {1: 'Janeiro', 2: 'Fevereiro', 3: 'Março', 4: 'Abril', 5: 'Maio', 6: 'Junho', 7: 'Julho', 8: 'Agosto', 9: 'Setembro', 10: 'Outubro', 11: 'Novembro', 12: 'Dezembro'}
     records = []
     
-    for r in range(6, ws.max_row + 1):
+    start_row = 7 if is_second_sem else 6
+    for r in range(start_row, ws.max_row + 1):
         val_date = ws.cell(row=r, column=1).value
         val_tipo = ws.cell(row=r, column=3 if is_second_sem else 2).value
         val_equipe = ws.cell(row=r, column=4 if is_second_sem else 3).value
         val_desc = ws.cell(row=r, column=5 if is_second_sem else 4).value
         val_acoes = ws.cell(row=r, column=6 if is_second_sem else 5).value
+        val_local = ws.cell(row=r, column=7).value if is_second_sem else None
         
-        if not (val_date or val_tipo or val_desc or val_acoes):
+        if not (val_date or val_tipo or val_desc or val_acoes or val_local):
             continue
 
         date_str = str(val_date)[:10] if val_date else ''
@@ -573,7 +575,7 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
                 mes_str = meses_map.get(int(m.group(1)), 'Julho' if is_second_sem else 'Janeiro')
 
         tipo_raw = str(val_tipo).strip() if val_tipo else 'OUTROS'
-        equipe = str(val_equipe).strip() if val_equipe else 'N/I'
+        equipe = str(val_equipe).strip().upper() if val_equipe else 'N/I'
         desc = str(val_desc).strip() if val_desc else ''
         acoes = str(val_acoes).strip() if val_acoes else ''
         full_txt = f'{desc} {acoes}'.upper()
@@ -617,32 +619,78 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
         if m_q:
             quadrante = m_q.group(1).upper()
 
-        location = 'Pátio de Aeronaves'
-        if 'CABECEIRA 28' in full_txt or ('28' in full_txt and 'CABECEIRA' in full_txt):
-            location = 'Cabeceira 28'
-        elif 'CABECEIRA 15' in full_txt or ('15' in full_txt and 'CABECEIRA' in full_txt):
-            location = 'Cabeceira 15'
-        elif 'CABECEIRA 10' in full_txt or ('10' in full_txt and 'CABECEIRA' in full_txt):
-            location = 'Cabeceira 10'
-        elif 'CABECEIRA 33' in full_txt or ('33' in full_txt and 'CABECEIRA' in full_txt):
-            location = 'Cabeceira 33'
-        elif 'PÁTIO MILITAR' in full_txt or 'PATIO MILITAR' in full_txt:
-            location = 'Pátio Militar'
-        elif 'HANGAR' in full_txt:
-            location = 'Hangar United / Manutenção'
-        elif 'PÍER SUL' in full_txt or 'PIER SUL' in full_txt:
-            location = 'Píer Sul'
-        elif 'TECA' in full_txt:
-            location = 'Área de Cargas TECA'
-        else:
-            m_pos = re.search(r'POSIÇÃO\s*(\d+)', full_txt)
-            if m_pos:
-                location = f'Posição {m_pos.group(1)}'
-            elif quadrante:
-                location = f'Quadrante {quadrante}'
+        # Extract location: prioritize Column G (val_local) if present
+        location = None
+        if val_local and str(val_local).strip():
+            loc_str = str(val_local).strip().upper()
+            if '10-28' in loc_str or '10/28' in loc_str:
+                location = 'Sistema 10-28'
+            elif '15-30' in loc_str or '15/30' in loc_str or '15-33' in loc_str or '15/33' in loc_str:
+                location = 'Sistema 15-30'
+            elif 'CAB.10' in loc_str or 'CAB 10' in loc_str or 'CABECEIRA 10' in loc_str:
+                location = 'Cabeceira 10'
+            elif 'CAB.15' in loc_str or 'CAB 15' in loc_str or 'CABECEIRA 15' in loc_str:
+                location = 'Cabeceira 15'
+            elif 'CAB.28' in loc_str or 'CAB 28' in loc_str or 'CABECEIRA 28' in loc_str:
+                location = 'Cabeceira 28'
+            elif 'CAB.33' in loc_str or 'CAB 33' in loc_str or 'CABECEIRA 33' in loc_str:
+                location = 'Cabeceira 33'
+            elif 'PÁTIO 01' in loc_str or 'PATIO 01' in loc_str or 'PÁTIO 1' in loc_str or 'PATIO 1' in loc_str:
+                location = 'Pátio 1'
+            elif 'PÁTIO 02' in loc_str or 'PATIO 02' in loc_str or 'PÁTIO 2' in loc_str or 'PATIO 2' in loc_str:
+                location = 'Pátio 2'
+            elif 'PÁTIO 03' in loc_str or 'PATIO 03' in loc_str or 'PÁTIO 3' in loc_str or 'PATIO 3' in loc_str:
+                location = 'Pátio 3'
+            elif 'PÁTIO 5' in loc_str or 'PATIO 5' in loc_str or 'PÁTIO 05' in loc_str or 'PATIO 05' in loc_str:
+                location = 'Pátio 5'
+            elif 'MILITAR' in loc_str or 'FAB' in loc_str:
+                location = 'Pátio Militar'
+            elif 'LÍDER' in loc_str or 'LIDER' in loc_str:
+                location = 'Pátio Líder'
+            elif 'UNITED' in loc_str or 'HANGAR' in loc_str:
+                location = 'Hangar United / Manutenção'
+            elif 'TECA' in loc_str:
+                if 'EXPORTAÇÃO' in loc_str or 'EXPORTACAO' in loc_str:
+                    location = 'TECA Exportação'
+                else:
+                    location = 'Área de Cargas TECA'
+
+        if not location:
+            if 'SISTEMA 10-28' in full_txt or 'SISTEMA 10/28' in full_txt:
+                location = 'Sistema 10-28'
+            elif 'SISTEMA 15-30' in full_txt or 'SISTEMA 15/30' in full_txt or 'SISTEMA 15-33' in full_txt:
+                location = 'Sistema 15-30'
+            elif 'CABECEIRA 28' in full_txt or ('28' in full_txt and 'CABECEIRA' in full_txt):
+                location = 'Cabeceira 28'
+            elif 'CABECEIRA 15' in full_txt or ('15' in full_txt and 'CABECEIRA' in full_txt):
+                location = 'Cabeceira 15'
+            elif 'CABECEIRA 10' in full_txt or ('10' in full_txt and 'CABECEIRA' in full_txt):
+                location = 'Cabeceira 10'
+            elif 'CABECEIRA 33' in full_txt or ('33' in full_txt and 'CABECEIRA' in full_txt):
+                location = 'Cabeceira 33'
+            elif 'PÁTIO MILITAR' in full_txt or 'PATIO MILITAR' in full_txt:
+                location = 'Pátio Militar'
+            elif 'HANGAR' in full_txt:
+                location = 'Hangar United / Manutenção'
+            elif 'PÍER SUL' in full_txt or 'PIER SUL' in full_txt or 'PÁTIO 3' in full_txt or 'PATIO 3' in full_txt:
+                location = 'Pátio 3'
+            elif 'PÁTIO 1' in full_txt or 'PATIO 1' in full_txt or 'PÁTIO 01' in full_txt:
+                location = 'Pátio 1'
+            elif 'PÁTIO 2' in full_txt or 'PATIO 2' in full_txt or 'PÁTIO 02' in full_txt:
+                location = 'Pátio 2'
+            elif 'TECA' in full_txt:
+                location = 'Área de Cargas TECA'
+            else:
+                m_pos = re.search(r'POSIÇÃO\s*(\d+)', full_txt)
+                if m_pos:
+                    location = f'Posição {m_pos.group(1)}'
+                elif quadrante:
+                    location = f'Quadrante {quadrante}'
+                else:
+                    location = 'Pátio 2'
 
         vehicles = []
-        for v in ['CCI 01', 'CCI 02', 'CCI 03', 'CCI 05', 'CCI 07', 'CRS', 'CACE', 'BRASA UNO', 'BRASA DOS', 'FAÍSCA LÍDER']:
+        for v in ['CCI 01', 'CCI 02', 'CCI 03', 'CCI 04', 'CCI 05', 'CCI 07', 'CRS', 'CACE', 'BRASA UNO', 'BRASA DOS', 'FAÍSCA LÍDER']:
             if v in full_txt:
                 vehicles.append(v)
 
@@ -668,7 +716,10 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
 def parse_actuation():
     """Parse both 1st semester and 2nd semester actuation spreadsheets."""
     f1 = os.path.join(BASE_DIR, 'ATUAÇÃO SESCINC 1 SEMESTRE 2026  03-07 - Copia.xlsx')
-    f2 = os.path.join(BASE_DIR, 'julho dados', 'ATUAÇÃO SESCINC 2° SEMESTRE 2026.xlsx')
+    f2_novo = os.path.join(BASE_DIR, 'ATUAÇÃO SESCINC JULHO 2026 novo.xlsx')
+    f2_old = os.path.join(BASE_DIR, 'julho dados', 'ATUAÇÃO SESCINC 2° SEMESTRE 2026.xlsx')
+    
+    f2 = f2_novo if os.path.exists(f2_novo) else f2_old
     
     recs1 = parse_actuation_file(f1, '1° SEMESTRE 2026', is_second_sem=False)
     recs2 = parse_actuation_file(f2, '2° SEMESTRE 2026', is_second_sem=True)

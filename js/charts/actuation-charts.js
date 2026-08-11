@@ -19,20 +19,50 @@ window.SESCINC.ActuationCharts = (function () {
 
   // Coordenadas geográficas otimizadas para visibilidade total em telas de 14 polegadas (com recuo de bordas)
   const HOTSPOTS = [
-    { id: 'h-cab-28', name: 'Cabeceira 28 (CAB 28)', top: 10.0, left: 86.0, align: 'pin-align-left-down', keywords: ['CABECEIRA 28', 'CAB 28', '28'] },
-    { id: 'h-cab-10', name: 'Cabeceira 10 (CAB 10)', top: 25.0, left: 22.0, align: 'pin-align-right', keywords: ['CABECEIRA 10', 'CAB 10', '10'] },
-    { id: 'h-cab-15', name: 'Cabeceira 15 (CAB 15)', top: 44.0, left: 12.0, align: 'pin-align-right', keywords: ['CABECEIRA 15', 'CAB 15', '15'] },
-    { id: 'h-cab-33', name: 'Cabeceira 33 (CAB 33)', top: 85.0, left: 60.0, align: 'pin-align-top', keywords: ['CABECEIRA 33', 'CAB 33', '33'] },
-    { id: 'h-patio-lider', name: 'Pátio Líder', top: 27.0, left: 69.0, align: 'pin-align-center', keywords: ['LÍDER', 'LIDER', 'HANGAR LÍDER'] },
-    { id: 'h-patio-united', name: 'Pátio United / Hangar TAP', top: 26.0, left: 80.0, align: 'pin-align-left', keywords: ['UNITED', 'TAP', 'HANGAR UNITED', 'HANGAR'] },
-    { id: 'h-patio-1', name: 'Pátio 1 (TPS 1)', top: 50.0, left: 28.0, align: 'pin-align-center', keywords: ['PÁTIO 1', 'PATIO 1', 'TPS 1', 'TPS1', 'TERMINAL 1'] },
-    { id: 'h-patio-2', name: 'Pátio 2 (TPS 2 / Principal)', top: 57.0, left: 37.0, align: 'pin-align-center', keywords: ['PÁTIO 2', 'PATIO 2', 'TPS 2', 'TPS2', 'TERMINAL 2', 'POSIÇÃO', 'PÁTIO DE AERONAVES', 'PÁTIO'] },
-    { id: 'h-patio-3', name: 'Pátio 3 (Píer Sul)', top: 65.0, left: 49.0, align: 'pin-align-center', keywords: ['PÁTIO 3', 'PATIO 3', 'PÍER SUL', 'PIER SUL', 'PÍER', 'FINGERS'] },
-    { id: 'h-patio-militar', name: 'Pátio Militar (FAB / Base Aérea)', top: 78.0, left: 53.0, align: 'pin-align-center', keywords: ['MILITAR', 'FAB', 'C-105', 'BASE AÉREA', 'BASE AEREA'] },
-    { id: 'h-teca-imp', name: 'TECA Importação', top: 82.0, left: 39.0, align: 'pin-align-right', keywords: ['IMPORTAÇÃO', 'IMPORTACAO', 'TECA IMPORTAÇÃO', 'TECA', 'SUBESTAÇÃO', 'SUBESTACAO', 'V-58', 'CARGAS'] },
-    { id: 'h-teca-exp', name: 'TECA Exportação', top: 86.0, left: 45.0, align: 'pin-align-center', keywords: ['EXPORTAÇÃO', 'EXPORTACAO', 'TECA EXPORTAÇÃO'] },
-    { id: 'h-patio-5', name: 'Pátio 5', top: 90.0, left: 52.0, align: 'pin-align-top', keywords: ['PÁTIO 5', 'PATIO 5'] }
+    { id: 'h-sistema-10-28', name: 'Sistema 10-28', top: 17.0, left: 54.0, align: 'pin-align-center', keywords: ['SISTEMA 10-28', 'SISTEMA 10/28', '10-28', '10/28', 'PISTA 10X28'] },
+    { id: 'h-sistema-15-30', name: 'Sistema 15-30', top: 62.0, left: 35.0, align: 'pin-align-center', keywords: ['SISTEMA 15-30', 'SISTEMA 15/30', 'SISTEMA 15-33', 'SISTEMA 15/33', '15-30', '15/30', '15-33', '15/33', 'PISTA 15X33'] },
+    { id: 'h-cab-28', name: 'Cabeceira 28 (CAB 28)', top: 10.0, left: 86.0, align: 'pin-align-left-down', keywords: ['CABECEIRA 28', 'CAB.28', 'CAB 28', 'CAB-28', 'CAB. 28'] },
+    { id: 'h-cab-10', name: 'Cabeceira 10 (CAB 10)', top: 25.0, left: 22.0, align: 'pin-align-right', keywords: ['CABECEIRA 10', 'CAB.10', 'CAB 10', 'CAB-10'] },
+    { id: 'h-cab-15', name: 'Cabeceira 15 (CAB 15)', top: 44.0, left: 12.0, align: 'pin-align-right', keywords: ['CABECEIRA 15', 'CAB.15', 'CAB 15', 'CAB-15'] },
+    { id: 'h-cab-33', name: 'Cabeceira 33 (CAB 33)', top: 85.0, left: 60.0, align: 'pin-align-top', keywords: ['CABECEIRA 33', 'CAB.33', 'CAB 33', 'CAB-33'] },
+    { id: 'h-patio-militar', name: 'Pátio Militar (FAB / Base Aérea)', top: 78.0, left: 53.0, align: 'pin-align-center', keywords: ['PÁTIO MILITAR', 'PATIO MILITAR', 'MILITAR', 'FAB', 'C-105', 'BASE AÉREA', 'BASE AEREA'] },
+    { id: 'h-patio-lider', name: 'Pátio Líder', top: 27.0, left: 69.0, align: 'pin-align-center', keywords: ['PÁTIO LÍDER', 'PATIO LIDER', 'LÍDER', 'LIDER', 'HANGAR LÍDER'] },
+    { id: 'h-patio-united', name: 'Pátio United / Hangar TAP', top: 26.0, left: 80.0, align: 'pin-align-left', keywords: ['PÁTIO UNITED', 'PATIO UNITED', 'UNITED', 'TAP', 'HANGAR UNITED', 'HANGAR'] },
+    { id: 'h-patio-1', name: 'Pátio 1 (TPS 1)', top: 50.0, left: 28.0, align: 'pin-align-center', keywords: ['PÁTIO 1', 'PATIO 1', 'PÁTIO 01', 'PATIO 01', 'TPS 1', 'TPS1', 'TERMINAL 1'] },
+    { id: 'h-patio-3', name: 'Pátio 3 (Píer Sul)', top: 65.0, left: 49.0, align: 'pin-align-center', keywords: ['PÁTIO 3', 'PATIO 3', 'PÁTIO 03', 'PATIO 03', 'PÍER SUL', 'PIER SUL', 'PÍER', 'FINGERS'] },
+    { id: 'h-patio-5', name: 'Pátio 5', top: 90.0, left: 52.0, align: 'pin-align-top', keywords: ['PÁTIO 5', 'PATIO 5', 'PÁTIO 05', 'PATIO 05'] },
+    { id: 'h-patio-2', name: 'Pátio 2 (TPS 2 / Principal)', top: 57.0, left: 37.0, align: 'pin-align-center', keywords: ['PÁTIO 2', 'PATIO 2', 'PÁTIO 02', 'PATIO 02', 'TPS 2', 'TPS2', 'TERMINAL 2', 'PÁTIO PRINCIPAL'] },
+    { id: 'h-teca-exp', name: 'TECA Exportação', top: 86.0, left: 45.0, align: 'pin-align-center', keywords: ['TECA EXPORTAÇÃO', 'TECA EXPORTACAO', 'EXPORTAÇÃO', 'EXPORTACAO'] },
+    { id: 'h-teca-imp', name: 'TECA Importação', top: 82.0, left: 39.0, align: 'pin-align-right', keywords: ['TECA IMPORTAÇÃO', 'TECA IMPORTACAO', 'ÁREA DE CARGAS TECA', 'TECA', 'IMPORTAÇÃO', 'IMPORTACAO', 'SUBESTAÇÃO', 'SUBESTACAO', 'V-58', 'CARGAS'] }
   ];
+
+  /**
+   * Associa com precisão um registro a um Hotspot do mapa
+   */
+  function getHotspotForRecord(d) {
+    if (!d) return HOTSPOTS.find(h => h.id === 'h-patio-2');
+    const loc = (d.localizacao || '').toUpperCase();
+    const fullText = (loc + ' ' + (d.descricao || '') + ' ' + (d.acoes || '')).toUpperCase();
+    
+    // 1. Tentar correspondência direta com d.localizacao
+    for (let i = 0; i < HOTSPOTS.length; i++) {
+      const h = HOTSPOTS[i];
+      if (h.keywords.some(kw => loc.includes(kw))) {
+        return h;
+      }
+    }
+    
+    // 2. Tentar correspondência no texto completo
+    for (let i = 0; i < HOTSPOTS.length; i++) {
+      const h = HOTSPOTS[i];
+      if (h.keywords.some(kw => fullText.includes(kw))) {
+        return h;
+      }
+    }
+    
+    // Fallback: Pátio Principal
+    return HOTSPOTS.find(h => h.id === 'h-patio-2') || HOTSPOTS[0];
+  }
 
   /**
    * Aplica o filtro de mês
@@ -106,17 +136,8 @@ window.SESCINC.ActuationCharts = (function () {
       if (d.equipe && d.equipe !== 'N/I') {
         teamCounts[d.equipe] = (teamCounts[d.equipe] || 0) + 1;
       }
-      const fullText = (d.descricao + ' ' + d.acoes + ' ' + d.localizacao).toUpperCase();
-      let matched = false;
-      for (let i = 0; i < HOTSPOTS.length; i++) {
-        const h = HOTSPOTS[i];
-        if (h.keywords.some(kw => fullText.includes(kw.toUpperCase()))) {
-          hotspotCounts[h.id]++;
-          matched = true;
-          break;
-        }
-      }
-      if (!matched) hotspotCounts['h-patio-2']++;
+      const h = getHotspotForRecord(d);
+      if (h) hotspotCounts[h.id] = (hotspotCounts[h.id] || 0) + 1;
     });
 
     let topType = 'Nenhum';
@@ -182,22 +203,8 @@ window.SESCINC.ActuationCharts = (function () {
     });
 
     data.forEach(d => {
-      const fullText = (d.descricao + ' ' + d.acoes + ' ' + d.localizacao).toUpperCase();
-      let matched = false;
-
-      for (let i = 0; i < HOTSPOTS.length; i++) {
-        const h = HOTSPOTS[i];
-        if (h.keywords.some(kw => fullText.includes(kw.toUpperCase()))) {
-          hotspotCounts[h.id]++;
-          matched = true;
-          break;
-        }
-      }
-
-      // Realloca ocorrências sem match específico no Pátio Principal
-      if (!matched) {
-        hotspotCounts['h-patio-2']++;
-      }
+      const h = getHotspotForRecord(d);
+      if (h) hotspotCounts[h.id] = (hotspotCounts[h.id] || 0) + 1;
     });
 
     // Desenhar manchas de calor no canvas
@@ -262,10 +269,7 @@ window.SESCINC.ActuationCharts = (function () {
    * Exibe modal com detalhes das ocorrências no hotspot clicado
    */
   function showHotspotDetails(hotspot, data) {
-    const matchedRecords = data.filter(d => {
-      const fullText = (d.descricao + ' ' + d.acoes + ' ' + d.localizacao).toUpperCase();
-      return hotspot.keywords.some(kw => fullText.includes(kw.toUpperCase()));
-    });
+    const matchedRecords = data.filter(d => getHotspotForRecord(d).id === hotspot.id);
 
     const overlay = document.getElementById('actuation-modal-overlay');
     const titleEl = document.getElementById('actuation-modal-title');

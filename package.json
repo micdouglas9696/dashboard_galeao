@@ -1,0 +1,9 @@
+{
+  "name": "dashboard-galeao-sescinc",
+  "version": "1.0.0",
+  "description": "Dashboard SESCINC SBGL Galeão",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -l 3000"
+  }
+}
