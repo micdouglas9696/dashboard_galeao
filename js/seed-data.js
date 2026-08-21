@@ -1,7 +1,7 @@
 /**
  * SESCINC SBGL Dashboard — Seed Data
  * Automatically generated from Excel spreadsheets
- * Generated at: 2026-08-11T11:52:47.494794
+ * Generated at: 2026-08-21T13:22:29.913905
  */
 
 window.SESCINC = window.SESCINC || {};
@@ -18,7 +18,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -32,7 +32,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'52\"",
         "corridaSeconds": 712,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -46,7 +46,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -60,7 +60,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -74,7 +74,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "10'55\"",
         "corridaSeconds": 655,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -88,7 +88,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -102,7 +102,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -116,7 +116,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -130,7 +130,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'59\"",
         "corridaSeconds": 719,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -144,7 +144,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'45\"",
         "corridaSeconds": 705,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -158,7 +158,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -172,7 +172,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'10\"",
         "corridaSeconds": 670,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -186,7 +186,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -200,7 +200,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'59\"",
         "corridaSeconds": 719,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -214,7 +214,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'37\"",
         "corridaSeconds": 697,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -228,7 +228,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "13'55\"",
         "corridaSeconds": 835,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -242,7 +242,7 @@ window.SESCINC.SeedData = {
         "barra": 7,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -256,7 +256,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -270,7 +270,7 @@ window.SESCINC.SeedData = {
         "barra": 1,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -284,7 +284,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "11'20\"",
         "corridaSeconds": 680,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -298,7 +298,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -312,7 +312,7 @@ window.SESCINC.SeedData = {
         "barra": 12,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -326,7 +326,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -340,7 +340,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -354,7 +354,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -368,7 +368,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -382,7 +382,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -396,7 +396,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -410,7 +410,7 @@ window.SESCINC.SeedData = {
         "barra": 1,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -424,7 +424,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -438,7 +438,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -452,7 +452,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -466,7 +466,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -480,7 +480,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12''00''",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -494,7 +494,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'53\"",
         "corridaSeconds": 713,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -508,7 +508,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -522,7 +522,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -536,7 +536,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -550,7 +550,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -564,7 +564,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -578,7 +578,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -592,7 +592,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -606,7 +606,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -620,7 +620,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -634,7 +634,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -648,7 +648,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -662,7 +662,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -676,7 +676,7 @@ window.SESCINC.SeedData = {
         "barra": 38,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -690,7 +690,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -704,7 +704,7 @@ window.SESCINC.SeedData = {
         "barra": 11,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -718,7 +718,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -732,7 +732,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -746,7 +746,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -760,7 +760,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -774,7 +774,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -788,7 +788,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -802,7 +802,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'40\"",
         "corridaSeconds": 700,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -816,7 +816,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'18\"",
         "corridaSeconds": 678,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -830,7 +830,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'40\"",
         "corridaSeconds": 700,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -844,7 +844,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'48\"",
         "corridaSeconds": 708,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -858,7 +858,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -872,7 +872,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'59\"",
         "corridaSeconds": 719,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -886,7 +886,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'19\"",
         "corridaSeconds": 679,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -900,7 +900,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'36\"",
         "corridaSeconds": 696,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -914,7 +914,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -928,7 +928,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -942,7 +942,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -956,7 +956,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -970,7 +970,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'27\"",
         "corridaSeconds": 687,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -984,7 +984,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'39\"",
         "corridaSeconds": 699,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -998,7 +998,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'57\"",
         "corridaSeconds": 717,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -1012,7 +1012,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'59\"",
         "corridaSeconds": 719,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -1026,7 +1026,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'11\"",
         "corridaSeconds": 671,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Abril"
       },
@@ -1040,7 +1040,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.465m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1054,7 +1054,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1068,7 +1068,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.100m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1082,7 +1082,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1096,7 +1096,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.430m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1110,7 +1110,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.550m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1124,7 +1124,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1138,7 +1138,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.200m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1152,7 +1152,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.550m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1166,7 +1166,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1180,7 +1180,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1194,7 +1194,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1208,7 +1208,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1222,7 +1222,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.460m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1236,7 +1236,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.160m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1250,7 +1250,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1264,7 +1264,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.270m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1278,7 +1278,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1292,7 +1292,7 @@ window.SESCINC.SeedData = {
         "barra": 7,
         "corrida": "2.465m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1306,7 +1306,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1320,7 +1320,7 @@ window.SESCINC.SeedData = {
         "barra": 15,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1334,7 +1334,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1348,7 +1348,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1362,7 +1362,7 @@ window.SESCINC.SeedData = {
         "barra": 9,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1376,7 +1376,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1390,7 +1390,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1404,7 +1404,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1418,7 +1418,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1432,7 +1432,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1446,7 +1446,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1460,7 +1460,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1474,7 +1474,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1488,7 +1488,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1502,7 +1502,7 @@ window.SESCINC.SeedData = {
         "barra": 1,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1516,7 +1516,7 @@ window.SESCINC.SeedData = {
         "barra": 15,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1530,7 +1530,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1544,7 +1544,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.420m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1558,7 +1558,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.490m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1572,7 +1572,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.420m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1586,7 +1586,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1600,7 +1600,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1614,7 +1614,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1628,7 +1628,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1642,7 +1642,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.800m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1656,7 +1656,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.800m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1670,7 +1670,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.200m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1684,7 +1684,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1698,7 +1698,7 @@ window.SESCINC.SeedData = {
         "barra": 9,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1712,7 +1712,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.200m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1726,7 +1726,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.200m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1740,7 +1740,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1754,7 +1754,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.420m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1768,7 +1768,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.520m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1782,7 +1782,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1796,7 +1796,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1810,7 +1810,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1824,7 +1824,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1838,7 +1838,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1852,7 +1852,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1866,7 +1866,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.850m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1880,7 +1880,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.750m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1894,7 +1894,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.900m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1908,7 +1908,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1922,7 +1922,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.800m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1936,7 +1936,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1950,7 +1950,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1964,7 +1964,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1978,7 +1978,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.650m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -1992,7 +1992,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -2006,7 +2006,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -2020,7 +2020,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "3.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -2034,7 +2034,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.900m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Fevereiro"
       },
@@ -2048,7 +2048,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.460m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2062,7 +2062,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2076,7 +2076,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.100m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2090,7 +2090,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2104,7 +2104,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.410m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2118,7 +2118,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2132,7 +2132,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2146,7 +2146,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.050m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2160,7 +2160,7 @@ window.SESCINC.SeedData = {
         "barra": 7,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2174,7 +2174,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.110m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2188,7 +2188,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.530m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2202,7 +2202,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.530m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2216,7 +2216,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2230,7 +2230,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2244,7 +2244,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.100m",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2258,7 +2258,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.430m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2272,7 +2272,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.250m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2286,7 +2286,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "2.530m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2300,7 +2300,7 @@ window.SESCINC.SeedData = {
         "barra": 7,
         "corrida": "2.430m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2314,7 +2314,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.530m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2328,7 +2328,7 @@ window.SESCINC.SeedData = {
         "barra": 15,
         "corrida": "11'20\"",
         "corridaSeconds": 680,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2342,7 +2342,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'52\"",
         "corridaSeconds": 712,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2356,7 +2356,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2370,7 +2370,7 @@ window.SESCINC.SeedData = {
         "barra": 9,
         "corrida": "10'30\"",
         "corridaSeconds": 630,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2384,7 +2384,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2398,7 +2398,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2412,7 +2412,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2426,7 +2426,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'57\"",
         "corridaSeconds": 717,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2440,7 +2440,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2454,7 +2454,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "13'00\"",
         "corridaSeconds": 780,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2468,7 +2468,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2482,7 +2482,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2496,7 +2496,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2510,7 +2510,7 @@ window.SESCINC.SeedData = {
         "barra": 1,
         "corrida": "12'55\"",
         "corridaSeconds": 775,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2524,7 +2524,7 @@ window.SESCINC.SeedData = {
         "barra": 15,
         "corrida": "13'30\"",
         "corridaSeconds": 810,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2538,7 +2538,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.420m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2552,7 +2552,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.420m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2566,7 +2566,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.490m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2580,7 +2580,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2594,7 +2594,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2608,7 +2608,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2622,7 +2622,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2636,7 +2636,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2650,7 +2650,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.800m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2664,7 +2664,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.800m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2678,7 +2678,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2692,7 +2692,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2706,7 +2706,7 @@ window.SESCINC.SeedData = {
         "barra": 9,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2720,7 +2720,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2734,7 +2734,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.200m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2748,7 +2748,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2762,7 +2762,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.420m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2776,7 +2776,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.520m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2790,7 +2790,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2804,7 +2804,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2818,7 +2818,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2832,7 +2832,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2846,7 +2846,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2860,7 +2860,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2874,7 +2874,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.850m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2888,7 +2888,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.750m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2902,7 +2902,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.900m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2916,7 +2916,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2930,7 +2930,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.800m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2944,7 +2944,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2958,7 +2958,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2972,7 +2972,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -2986,7 +2986,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.650m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -3000,7 +3000,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -3014,7 +3014,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -3028,7 +3028,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "3.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -3042,7 +3042,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.900m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Janeiro"
       },
@@ -3056,7 +3056,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3070,7 +3070,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3084,7 +3084,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3098,7 +3098,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'45\"",
         "corridaSeconds": 705,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3112,7 +3112,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "10'50\"",
         "corridaSeconds": 650,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3126,7 +3126,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3140,7 +3140,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3154,7 +3154,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'26\"",
         "corridaSeconds": 686,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3168,7 +3168,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3182,7 +3182,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3196,7 +3196,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'51\"",
         "corridaSeconds": 711,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3210,7 +3210,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3224,7 +3224,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3238,7 +3238,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3252,7 +3252,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "13'15\"",
         "corridaSeconds": 795,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3266,7 +3266,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'57\"",
         "corridaSeconds": 717,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3280,7 +3280,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "13'00\"",
         "corridaSeconds": 780,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3294,7 +3294,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "11'52\"",
         "corridaSeconds": 712,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3308,7 +3308,7 @@ window.SESCINC.SeedData = {
         "barra": 7,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3322,7 +3322,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'53\"",
         "corridaSeconds": 713,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3336,7 +3336,7 @@ window.SESCINC.SeedData = {
         "barra": 12,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3350,7 +3350,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'52\"",
         "corridaSeconds": 712,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3364,7 +3364,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3378,7 +3378,7 @@ window.SESCINC.SeedData = {
         "barra": 1,
         "corrida": "13'40\"",
         "corridaSeconds": 820,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3392,7 +3392,7 @@ window.SESCINC.SeedData = {
         "barra": 9,
         "corrida": "11'10\"",
         "corridaSeconds": 670,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3406,7 +3406,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3420,7 +3420,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3434,7 +3434,7 @@ window.SESCINC.SeedData = {
         "barra": 12,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3448,7 +3448,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'59\"",
         "corridaSeconds": 719,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3462,7 +3462,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3476,7 +3476,7 @@ window.SESCINC.SeedData = {
         "barra": 12,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3490,7 +3490,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3504,7 +3504,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3518,7 +3518,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3532,7 +3532,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3546,7 +3546,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'57\"",
         "corridaSeconds": 717,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3560,7 +3560,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3574,7 +3574,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3588,7 +3588,7 @@ window.SESCINC.SeedData = {
         "barra": 1,
         "corrida": "12'20\"",
         "corridaSeconds": 740,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3602,7 +3602,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3616,7 +3616,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3630,7 +3630,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3644,7 +3644,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'54\"",
         "corridaSeconds": 714,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3658,7 +3658,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3672,7 +3672,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3686,7 +3686,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3700,7 +3700,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3714,7 +3714,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3728,7 +3728,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3742,7 +3742,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3756,7 +3756,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3770,7 +3770,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3784,7 +3784,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3798,7 +3798,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3812,7 +3812,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3826,7 +3826,7 @@ window.SESCINC.SeedData = {
         "barra": 12,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3840,7 +3840,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3854,7 +3854,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3868,7 +3868,7 @@ window.SESCINC.SeedData = {
         "barra": 11,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3882,7 +3882,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3896,7 +3896,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3910,7 +3910,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3924,7 +3924,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3938,7 +3938,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3952,7 +3952,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3966,7 +3966,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'38\"",
         "corridaSeconds": 698,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3980,7 +3980,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'46\"",
         "corridaSeconds": 706,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -3994,7 +3994,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11\"54",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4008,7 +4008,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'10\"",
         "corridaSeconds": 670,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4022,7 +4022,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4036,7 +4036,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'35\"",
         "corridaSeconds": 695,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4050,7 +4050,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'47\"",
         "corridaSeconds": 707,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4064,7 +4064,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'54\"",
         "corridaSeconds": 714,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4078,7 +4078,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'10\"",
         "corridaSeconds": 670,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4092,7 +4092,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'59\"",
         "corridaSeconds": 719,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4106,7 +4106,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'10\"",
         "corridaSeconds": 670,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4120,7 +4120,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'27\"",
         "corridaSeconds": 687,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4134,7 +4134,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4148,7 +4148,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'39\"",
         "corridaSeconds": 699,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4162,7 +4162,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'38\"",
         "corridaSeconds": 698,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4176,7 +4176,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'20\"",
         "corridaSeconds": 680,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4190,7 +4190,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'36\"",
         "corridaSeconds": 696,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4204,7 +4204,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4218,7 +4218,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4232,7 +4232,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'15\"",
         "corridaSeconds": 675,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Maio"
       },
@@ -4246,7 +4246,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4260,7 +4260,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4274,7 +4274,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'51\"",
         "corridaSeconds": 711,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4288,7 +4288,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'59\"",
         "corridaSeconds": 719,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4302,7 +4302,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'30\"",
         "corridaSeconds": 690,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4316,7 +4316,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "10'53\"",
         "corridaSeconds": 653,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4330,7 +4330,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'01\"",
         "corridaSeconds": 661,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4344,7 +4344,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4358,7 +4358,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "11'47\"",
         "corridaSeconds": 707,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4372,7 +4372,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4386,7 +4386,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'59\"",
         "corridaSeconds": 719,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4400,7 +4400,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'57\"",
         "corridaSeconds": 717,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4414,7 +4414,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'40\"",
         "corridaSeconds": 700,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4428,7 +4428,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'22\"",
         "corridaSeconds": 682,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4442,7 +4442,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4456,7 +4456,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'57\"",
         "corridaSeconds": 717,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4470,7 +4470,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4484,7 +4484,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'31\"",
         "corridaSeconds": 691,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4498,7 +4498,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "14'00\"",
         "corridaSeconds": 840,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4512,7 +4512,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "11'33\"",
         "corridaSeconds": 693,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4526,7 +4526,7 @@ window.SESCINC.SeedData = {
         "barra": 7,
         "corrida": "11'28\"",
         "corridaSeconds": 688,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4540,7 +4540,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'54\"",
         "corridaSeconds": 714,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Março"
       },
@@ -4554,7 +4554,7 @@ window.SESCINC.SeedData = {
         "barra": 15,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4568,7 +4568,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4582,7 +4582,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4596,7 +4596,7 @@ window.SESCINC.SeedData = {
         "barra": 9,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4610,7 +4610,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4624,7 +4624,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4638,7 +4638,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4652,7 +4652,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4666,7 +4666,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4680,7 +4680,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4694,7 +4694,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4708,7 +4708,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4722,7 +4722,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4736,7 +4736,7 @@ window.SESCINC.SeedData = {
         "barra": 1,
         "corrida": "2.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4750,7 +4750,7 @@ window.SESCINC.SeedData = {
         "barra": 15,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4764,7 +4764,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4778,7 +4778,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "2.480m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4792,7 +4792,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4806,7 +4806,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.480m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4820,7 +4820,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "2.480m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4834,7 +4834,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.200m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4848,7 +4848,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.200m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4862,7 +4862,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "2.520m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4876,7 +4876,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4890,7 +4890,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4904,7 +4904,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "2.480m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4918,7 +4918,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.480m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4932,7 +4932,7 @@ window.SESCINC.SeedData = {
         "barra": 12,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4946,7 +4946,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "2.300m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4960,7 +4960,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.480m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4974,7 +4974,7 @@ window.SESCINC.SeedData = {
         "barra": 11,
         "corrida": "2.700m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -4988,7 +4988,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.480m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5002,7 +5002,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.480m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5016,7 +5016,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5030,7 +5030,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5044,7 +5044,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "2.480m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5058,7 +5058,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5072,7 +5072,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5086,7 +5086,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5100,7 +5100,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.450m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5114,7 +5114,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.850m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5128,7 +5128,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.750m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5142,7 +5142,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.900m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5156,7 +5156,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5170,7 +5170,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.800m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5184,7 +5184,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.600m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5198,7 +5198,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5212,7 +5212,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5226,7 +5226,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.650m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5240,7 +5240,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "2.500m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5254,7 +5254,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.400m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5268,7 +5268,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "3.000m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5282,7 +5282,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "2.900m",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Março"
       },
@@ -5296,7 +5296,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5310,7 +5310,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'57\"",
         "corridaSeconds": 717,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5324,7 +5324,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'20\"",
         "corridaSeconds": 680,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5338,7 +5338,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'51\"",
         "corridaSeconds": 711,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5352,7 +5352,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'51\"",
         "corridaSeconds": 711,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5366,7 +5366,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5380,7 +5380,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'45\"",
         "corridaSeconds": 705,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5394,7 +5394,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'33\"",
         "corridaSeconds": 693,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5408,7 +5408,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'48\"",
         "corridaSeconds": 708,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5422,7 +5422,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'53\"",
         "corridaSeconds": 713,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5436,7 +5436,7 @@ window.SESCINC.SeedData = {
         "barra": 0,
         "corrida": "NR",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "nr",
         "mes": "Junho"
       },
@@ -5450,7 +5450,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5464,7 +5464,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'31\"",
         "corridaSeconds": 691,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5478,7 +5478,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "13'10\"",
         "corridaSeconds": 790,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5492,7 +5492,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5506,7 +5506,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'53\"",
         "corridaSeconds": 713,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5520,7 +5520,7 @@ window.SESCINC.SeedData = {
         "barra": 2,
         "corrida": "12'58\"",
         "corridaSeconds": 778,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5534,7 +5534,7 @@ window.SESCINC.SeedData = {
         "barra": 6,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5548,7 +5548,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'15\"",
         "corridaSeconds": 675,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5562,7 +5562,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5576,7 +5576,7 @@ window.SESCINC.SeedData = {
         "barra": 13,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5590,7 +5590,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ferias",
         "mes": "Junho"
       },
@@ -5604,7 +5604,7 @@ window.SESCINC.SeedData = {
         "barra": 1,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5618,7 +5618,7 @@ window.SESCINC.SeedData = {
         "barra": 9,
         "corrida": "11'00\"",
         "corridaSeconds": 660,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5632,7 +5632,7 @@ window.SESCINC.SeedData = {
         "barra": 4,
         "corrida": "11'40\"",
         "corridaSeconds": 700,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5646,7 +5646,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5660,7 +5660,7 @@ window.SESCINC.SeedData = {
         "barra": 12,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5674,7 +5674,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5688,7 +5688,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5702,7 +5702,7 @@ window.SESCINC.SeedData = {
         "barra": 12,
         "corrida": "11'55\"",
         "corridaSeconds": 715,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5716,7 +5716,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5730,7 +5730,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5744,7 +5744,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "nr",
         "mes": "Junho"
       },
@@ -5758,7 +5758,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5772,7 +5772,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5786,7 +5786,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'50\"",
         "corridaSeconds": 710,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5800,7 +5800,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5814,7 +5814,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5828,7 +5828,7 @@ window.SESCINC.SeedData = {
         "barra": 1,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5842,7 +5842,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5856,7 +5856,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "nr",
         "mes": "Junho"
       },
@@ -5870,7 +5870,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5884,7 +5884,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'47\"",
         "corridaSeconds": 707,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5898,7 +5898,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'57\"",
         "corridaSeconds": 717,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5912,7 +5912,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'20\"",
         "corridaSeconds": 680,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5926,7 +5926,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'51\"",
         "corridaSeconds": 711,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5940,7 +5940,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'51\"",
         "corridaSeconds": 711,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5954,7 +5954,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5968,7 +5968,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'45\"",
         "corridaSeconds": 705,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5982,7 +5982,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'53\"",
         "corridaSeconds": 713,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -5996,7 +5996,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'48\"",
         "corridaSeconds": 708,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6010,7 +6010,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'53\"",
         "corridaSeconds": 713,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6024,7 +6024,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6038,7 +6038,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6052,7 +6052,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6066,7 +6066,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'45\"",
         "corridaSeconds": 705,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6080,7 +6080,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6094,7 +6094,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'53\"",
         "corridaSeconds": 713,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6108,7 +6108,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'46\"",
         "corridaSeconds": 706,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6122,7 +6122,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'59\"",
         "corridaSeconds": 719,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6136,7 +6136,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'17\"",
         "corridaSeconds": 737,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6150,7 +6150,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "12'00\"",
         "corridaSeconds": 720,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6164,7 +6164,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6178,7 +6178,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6192,7 +6192,7 @@ window.SESCINC.SeedData = {
         "barra": 8,
         "corrida": "11'05\"",
         "corridaSeconds": 665,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6206,7 +6206,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'19\"",
         "corridaSeconds": 679,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6220,7 +6220,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'23\"",
         "corridaSeconds": 683,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6234,7 +6234,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'46\"",
         "corridaSeconds": 706,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6248,7 +6248,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'09\"",
         "corridaSeconds": 669,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6262,7 +6262,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'12\"",
         "corridaSeconds": 672,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6276,7 +6276,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'58\"",
         "corridaSeconds": 718,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6290,7 +6290,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6304,7 +6304,7 @@ window.SESCINC.SeedData = {
         "barra": 5,
         "corrida": "11'09\"",
         "corridaSeconds": 669,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6318,7 +6318,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'20\"",
         "corridaSeconds": 680,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6332,7 +6332,7 @@ window.SESCINC.SeedData = {
         "barra": 3,
         "corrida": "11'49\"",
         "corridaSeconds": 709,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6346,7 +6346,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'15\"",
         "corridaSeconds": 675,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6360,7 +6360,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "10'08\"",
         "corridaSeconds": 608,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6374,7 +6374,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'15\"",
         "corridaSeconds": 675,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6388,7 +6388,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "11'18\"",
         "corridaSeconds": 678,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6402,7 +6402,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "10'08\"",
         "corridaSeconds": 608,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6416,7 +6416,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "10'08\"",
         "corridaSeconds": 608,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6430,7 +6430,7 @@ window.SESCINC.SeedData = {
         "barra": 10,
         "corrida": "10'08\"",
         "corridaSeconds": 608,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Junho"
       },
@@ -6444,7 +6444,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'57\"",
         "corridaSeconds": 117,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6458,7 +6458,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'37\"",
         "corridaSeconds": 157,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6472,7 +6472,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'19\"",
         "corridaSeconds": 139,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6486,7 +6486,7 @@ window.SESCINC.SeedData = {
         "barra": 30,
         "corrida": "1'57\"",
         "corridaSeconds": 117,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6500,7 +6500,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'17\"",
         "corridaSeconds": 137,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6514,7 +6514,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'33\"",
         "corridaSeconds": 153,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6528,7 +6528,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'20\"",
         "corridaSeconds": 140,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6542,7 +6542,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'15\"",
         "corridaSeconds": 135,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6556,7 +6556,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'03\"",
         "corridaSeconds": 123,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6570,7 +6570,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'22\"",
         "corridaSeconds": 142,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6584,7 +6584,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "3'00\"",
         "corridaSeconds": 180,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6598,7 +6598,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'11\"",
         "corridaSeconds": 131,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6612,7 +6612,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'47\"",
         "corridaSeconds": 167,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6626,7 +6626,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ferias",
         "mes": "Julho"
       },
@@ -6640,7 +6640,7 @@ window.SESCINC.SeedData = {
         "barra": 30,
         "corrida": "1'55\"",
         "corridaSeconds": 115,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6654,7 +6654,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'15\"",
         "corridaSeconds": 135,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6668,7 +6668,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'33\"",
         "corridaSeconds": 153,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6682,7 +6682,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'25\"",
         "corridaSeconds": 145,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6696,7 +6696,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'24\"",
         "corridaSeconds": 144,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6710,7 +6710,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'53\"",
         "corridaSeconds": 113,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6724,7 +6724,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'10\"",
         "corridaSeconds": 130,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6738,7 +6738,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'16\"",
         "corridaSeconds": 136,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6752,7 +6752,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'50\"",
         "corridaSeconds": 110,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6766,7 +6766,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'50\"",
         "corridaSeconds": 170,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6780,7 +6780,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "TROCA",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6794,7 +6794,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'15\"",
         "corridaSeconds": 135,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6808,7 +6808,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FOLGA",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6822,7 +6822,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "TROCA",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6836,7 +6836,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "3'00\"",
         "corridaSeconds": 180,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6850,7 +6850,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ferias",
         "mes": "Julho"
       },
@@ -6864,7 +6864,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'00\"",
         "corridaSeconds": 120,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6878,7 +6878,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'20\"",
         "corridaSeconds": 140,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6892,7 +6892,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "3'24\"",
         "corridaSeconds": 204,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6906,7 +6906,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'49\"",
         "corridaSeconds": 109,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6920,7 +6920,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ferias",
         "mes": "Julho"
       },
@@ -6934,7 +6934,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'25\"",
         "corridaSeconds": 145,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6948,7 +6948,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'00\"",
         "corridaSeconds": 120,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6962,7 +6962,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "ATESTADO",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6976,7 +6976,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "3'57\"",
         "corridaSeconds": 237,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -6990,7 +6990,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "TROCA",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7004,7 +7004,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "3'00\"",
         "corridaSeconds": 180,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7018,7 +7018,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'03\"",
         "corridaSeconds": 123,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7032,7 +7032,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'08\"",
         "corridaSeconds": 128,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7046,7 +7046,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'28\"",
         "corridaSeconds": 148,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7060,7 +7060,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'00\"",
         "corridaSeconds": 120,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7074,7 +7074,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'59\"",
         "corridaSeconds": 179,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7088,7 +7088,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "3'16\"",
         "corridaSeconds": 196,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7102,7 +7102,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'12\"",
         "corridaSeconds": 132,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7116,7 +7116,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'28\"",
         "corridaSeconds": 148,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7130,7 +7130,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'50\"",
         "corridaSeconds": 110,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7144,7 +7144,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'06\"",
         "corridaSeconds": 126,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7158,7 +7158,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "3'58\"",
         "corridaSeconds": 238,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7172,7 +7172,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'49\"",
         "corridaSeconds": 169,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7186,7 +7186,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'43\"",
         "corridaSeconds": 103,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7200,7 +7200,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'58\"",
         "corridaSeconds": 178,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7214,7 +7214,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'06\"",
         "corridaSeconds": 126,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7228,7 +7228,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'55\"",
         "corridaSeconds": 115,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7242,7 +7242,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'58\"",
         "corridaSeconds": 118,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7256,7 +7256,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "4'02\"",
         "corridaSeconds": 242,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7270,7 +7270,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "3'09\"",
         "corridaSeconds": 189,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7284,7 +7284,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'49\"",
         "corridaSeconds": 169,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7298,7 +7298,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'03\"",
         "corridaSeconds": 123,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7312,7 +7312,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'36\"",
         "corridaSeconds": 156,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7326,7 +7326,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'27\"",
         "corridaSeconds": 147,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7340,7 +7340,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'53\"",
         "corridaSeconds": 113,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7354,7 +7354,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'47\"",
         "corridaSeconds": 107,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7368,7 +7368,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'05\"",
         "corridaSeconds": 125,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7382,7 +7382,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'10\"",
         "corridaSeconds": 130,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7396,7 +7396,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'26\"",
         "corridaSeconds": 146,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7410,7 +7410,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'10\"",
         "corridaSeconds": 130,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7424,7 +7424,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'48\"",
         "corridaSeconds": 108,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7438,7 +7438,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "3'50\"",
         "corridaSeconds": 230,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7452,7 +7452,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'28\"",
         "corridaSeconds": 148,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7466,7 +7466,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "1'47\"",
         "corridaSeconds": 107,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7480,7 +7480,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'25\"",
         "corridaSeconds": 145,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7494,7 +7494,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'45\"",
         "corridaSeconds": 165,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7508,7 +7508,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'13\"",
         "corridaSeconds": 133,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7522,7 +7522,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'30\"",
         "corridaSeconds": 150,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7536,7 +7536,7 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "status": "ferias",
         "mes": "Julho"
       },
@@ -7550,7 +7550,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'56\"",
         "corridaSeconds": 176,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7564,7 +7564,7 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'38\"",
         "corridaSeconds": 158,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       },
@@ -7578,12 +7578,12 @@ window.SESCINC.SeedData = {
         "barra": 45,
         "corrida": "2'53\"",
         "corridaSeconds": 173,
-        "resultado": "Satisfatório",
+        "resultado": "ACOP - A",
         "status": "ok",
         "mes": "Julho"
       }
     ],
-    "uploadedAt": "2026-08-11T14:52:47.492975Z"
+    "uploadedAt": "2026-08-21T16:22:29.910656Z"
   },
   "tpepr": {
     "records": [
@@ -7593,7 +7593,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7602,7 +7602,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7611,7 +7611,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7620,7 +7620,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7629,7 +7629,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7638,7 +7638,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7647,7 +7647,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7656,7 +7656,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7665,7 +7665,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7674,7 +7674,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7683,7 +7683,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7692,7 +7692,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7701,7 +7701,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7710,7 +7710,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Abril"
       },
       {
@@ -7719,7 +7719,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7728,7 +7728,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 72,
         "tempoFormatted": "01:12",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Abril"
       },
       {
@@ -7737,7 +7737,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 33,
         "tempoFormatted": "00:33",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7746,7 +7746,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7755,7 +7755,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7764,7 +7764,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7773,7 +7773,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7782,7 +7782,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7791,7 +7791,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7800,7 +7800,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7809,7 +7809,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7818,7 +7818,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7827,7 +7827,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7836,7 +7836,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7845,7 +7845,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7854,7 +7854,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7863,7 +7863,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7872,7 +7872,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7881,7 +7881,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7890,7 +7890,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7899,7 +7899,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7908,7 +7908,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7917,7 +7917,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7926,7 +7926,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7935,7 +7935,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7944,7 +7944,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 77,
         "tempoFormatted": "01:17",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Abril"
       },
       {
@@ -7953,7 +7953,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7962,7 +7962,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7971,7 +7971,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7980,7 +7980,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7989,7 +7989,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -7998,7 +7998,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Abril"
       },
       {
@@ -8007,7 +8007,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8016,7 +8016,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8025,7 +8025,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8034,7 +8034,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8043,7 +8043,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8052,7 +8052,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8061,7 +8061,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8070,7 +8070,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8079,7 +8079,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8088,7 +8088,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Abril"
       },
       {
@@ -8097,7 +8097,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8106,7 +8106,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8115,7 +8115,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8124,7 +8124,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8133,7 +8133,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8142,7 +8142,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8151,7 +8151,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8160,7 +8160,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8169,7 +8169,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8178,7 +8178,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8187,7 +8187,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8196,7 +8196,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8205,7 +8205,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Abril"
       },
       {
@@ -8214,7 +8214,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8223,7 +8223,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Abril"
       },
       {
@@ -8232,7 +8232,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8241,7 +8241,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8250,7 +8250,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8259,7 +8259,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8268,7 +8268,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8277,7 +8277,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8286,7 +8286,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8295,7 +8295,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8304,7 +8304,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8313,7 +8313,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 73,
         "tempoFormatted": "01:13",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8322,7 +8322,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8331,7 +8331,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8340,7 +8340,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8349,7 +8349,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8358,7 +8358,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 74,
         "tempoFormatted": "01:14",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8367,7 +8367,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8376,7 +8376,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8385,7 +8385,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 71,
         "tempoFormatted": "01:11",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8394,7 +8394,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8403,7 +8403,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8412,7 +8412,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8421,7 +8421,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8430,7 +8430,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8439,7 +8439,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8448,7 +8448,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8457,7 +8457,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8466,7 +8466,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8475,7 +8475,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8484,7 +8484,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8493,7 +8493,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8502,7 +8502,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8511,7 +8511,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8520,7 +8520,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 33,
         "tempoFormatted": "00:33",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8529,7 +8529,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8538,7 +8538,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 78,
         "tempoFormatted": "01:18",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8547,7 +8547,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8556,7 +8556,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8565,7 +8565,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8574,7 +8574,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 74,
         "tempoFormatted": "01:14",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8583,7 +8583,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8592,7 +8592,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 80,
         "tempoFormatted": "01:20",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8601,7 +8601,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8610,7 +8610,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8619,7 +8619,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8628,7 +8628,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8637,7 +8637,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8646,7 +8646,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8655,7 +8655,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8664,7 +8664,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8673,7 +8673,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8682,7 +8682,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8691,7 +8691,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Fevereiro"
       },
       {
@@ -8700,7 +8700,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8709,7 +8709,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8718,7 +8718,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8727,7 +8727,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8736,7 +8736,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8745,7 +8745,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8754,7 +8754,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8763,7 +8763,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8772,7 +8772,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8781,7 +8781,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8790,7 +8790,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8799,7 +8799,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8808,7 +8808,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8817,7 +8817,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8826,7 +8826,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8835,7 +8835,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8844,7 +8844,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8853,7 +8853,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8862,7 +8862,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8871,7 +8871,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8880,7 +8880,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Fevereiro"
       },
       {
@@ -8889,7 +8889,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8898,7 +8898,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8907,7 +8907,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -8916,7 +8916,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8925,7 +8925,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8934,7 +8934,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8943,7 +8943,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8952,7 +8952,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8961,7 +8961,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8970,7 +8970,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -8979,7 +8979,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8988,7 +8988,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -8997,7 +8997,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9006,7 +9006,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9015,7 +9015,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 80,
         "tempoFormatted": "01:20",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9024,7 +9024,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9033,7 +9033,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9042,7 +9042,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9051,7 +9051,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9060,7 +9060,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9069,7 +9069,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9078,7 +9078,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9087,7 +9087,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9096,7 +9096,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9105,7 +9105,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9114,7 +9114,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9123,7 +9123,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9132,7 +9132,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9141,7 +9141,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9150,7 +9150,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9159,7 +9159,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9168,7 +9168,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9177,7 +9177,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 33,
         "tempoFormatted": "00:33",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9186,7 +9186,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9195,7 +9195,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 78,
         "tempoFormatted": "01:18",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9204,7 +9204,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9213,7 +9213,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9222,7 +9222,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9231,7 +9231,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9240,7 +9240,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 66,
         "tempoFormatted": "01:06",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9249,7 +9249,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 80,
         "tempoFormatted": "01:20",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9258,7 +9258,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 80,
         "tempoFormatted": "01:20",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9267,7 +9267,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9276,7 +9276,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9285,7 +9285,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9294,7 +9294,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9303,7 +9303,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 66,
         "tempoFormatted": "01:06",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9312,7 +9312,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9321,7 +9321,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9330,7 +9330,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9339,7 +9339,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9348,7 +9348,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9357,7 +9357,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9366,7 +9366,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Janeiro"
       },
       {
@@ -9375,7 +9375,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9384,7 +9384,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9393,7 +9393,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9402,7 +9402,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9411,7 +9411,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9420,7 +9420,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9429,7 +9429,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 37,
         "tempoFormatted": "00:37",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9438,7 +9438,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9447,7 +9447,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9456,7 +9456,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9465,7 +9465,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9474,7 +9474,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9483,7 +9483,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9492,7 +9492,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9501,7 +9501,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9510,7 +9510,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9519,7 +9519,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9528,7 +9528,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9537,7 +9537,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9546,7 +9546,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9555,7 +9555,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9564,7 +9564,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Janeiro"
       },
       {
@@ -9573,7 +9573,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9582,7 +9582,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 67,
         "tempoFormatted": "01:07",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -9591,7 +9591,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9600,7 +9600,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9609,7 +9609,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9618,7 +9618,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -9627,7 +9627,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9636,7 +9636,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9645,7 +9645,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9654,7 +9654,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9663,7 +9663,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9672,7 +9672,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9681,7 +9681,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9690,7 +9690,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -9699,7 +9699,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 85,
         "tempoFormatted": "01:25",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -9708,7 +9708,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -9717,7 +9717,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -9726,7 +9726,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -9735,7 +9735,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 31,
         "tempoFormatted": "00:31",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9744,7 +9744,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9753,7 +9753,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9762,7 +9762,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9771,7 +9771,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9780,7 +9780,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9789,7 +9789,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9798,7 +9798,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9807,7 +9807,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9816,7 +9816,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 31,
         "tempoFormatted": "00:31",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9825,7 +9825,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9834,7 +9834,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9843,7 +9843,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9852,7 +9852,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9861,7 +9861,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9870,7 +9870,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9879,7 +9879,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -9888,7 +9888,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9897,7 +9897,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9906,7 +9906,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9915,7 +9915,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9924,7 +9924,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9933,7 +9933,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9942,7 +9942,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9951,7 +9951,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 77,
         "tempoFormatted": "01:17",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -9960,7 +9960,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9969,7 +9969,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9978,7 +9978,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9987,7 +9987,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -9996,7 +9996,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10005,7 +10005,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10014,7 +10014,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10023,7 +10023,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10032,7 +10032,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10041,7 +10041,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10050,7 +10050,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10059,7 +10059,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10068,7 +10068,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10077,7 +10077,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10086,7 +10086,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10095,7 +10095,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10104,7 +10104,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10113,7 +10113,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10122,7 +10122,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10131,7 +10131,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10140,7 +10140,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10149,7 +10149,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10158,7 +10158,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10167,7 +10167,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10176,7 +10176,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10185,7 +10185,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10194,7 +10194,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10203,7 +10203,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10212,7 +10212,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10221,7 +10221,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Maio"
       },
       {
@@ -10230,7 +10230,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 66,
         "tempoFormatted": "01:06",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Maio"
       },
       {
@@ -10239,7 +10239,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10248,7 +10248,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10257,7 +10257,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10266,7 +10266,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10275,7 +10275,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10284,7 +10284,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10293,7 +10293,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10302,7 +10302,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10311,7 +10311,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10320,7 +10320,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 67,
         "tempoFormatted": "01:07",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10329,7 +10329,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10338,7 +10338,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10347,7 +10347,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10356,7 +10356,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10365,7 +10365,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10374,7 +10374,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10383,7 +10383,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10392,7 +10392,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10401,7 +10401,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10410,7 +10410,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10419,7 +10419,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10428,7 +10428,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10437,7 +10437,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10446,7 +10446,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10455,7 +10455,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10464,7 +10464,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10473,7 +10473,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10482,7 +10482,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10491,7 +10491,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10500,7 +10500,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10509,7 +10509,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10518,7 +10518,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10527,7 +10527,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10536,7 +10536,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10545,7 +10545,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 33,
         "tempoFormatted": "00:33",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10554,7 +10554,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10563,7 +10563,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 78,
         "tempoFormatted": "01:18",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10572,7 +10572,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10581,7 +10581,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10590,7 +10590,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10599,7 +10599,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10608,7 +10608,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10617,7 +10617,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10626,7 +10626,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10635,7 +10635,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10644,7 +10644,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10653,7 +10653,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10662,7 +10662,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10671,7 +10671,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10680,7 +10680,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10689,7 +10689,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10698,7 +10698,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10707,7 +10707,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10716,7 +10716,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 85,
         "tempoFormatted": "01:25",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10725,7 +10725,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10734,7 +10734,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10743,7 +10743,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10752,7 +10752,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10761,7 +10761,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Março"
       },
       {
@@ -10770,7 +10770,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10779,7 +10779,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10788,7 +10788,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10797,7 +10797,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10806,7 +10806,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10815,7 +10815,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10824,7 +10824,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10833,7 +10833,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10842,7 +10842,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10851,7 +10851,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10860,7 +10860,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10869,7 +10869,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10878,7 +10878,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10887,7 +10887,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10896,7 +10896,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10905,7 +10905,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10914,7 +10914,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Março"
       },
       {
@@ -10923,7 +10923,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -10932,7 +10932,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -10941,7 +10941,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -10950,7 +10950,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -10959,7 +10959,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -10968,7 +10968,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -10977,7 +10977,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -10986,7 +10986,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 74,
         "tempoFormatted": "01:14",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -10995,7 +10995,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11004,7 +11004,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11013,7 +11013,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11022,7 +11022,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11031,7 +11031,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11040,7 +11040,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11049,7 +11049,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11058,7 +11058,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11067,7 +11067,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11076,7 +11076,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11085,7 +11085,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 39,
         "tempoFormatted": "00:39",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11094,7 +11094,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11112,7 +11112,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11121,7 +11121,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 0,
         "tempoFormatted": "FÉRIAS",
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "mes": "Junho"
       },
       {
@@ -11130,7 +11130,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11139,7 +11139,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11148,7 +11148,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11157,7 +11157,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11166,7 +11166,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11175,7 +11175,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11184,7 +11184,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11193,7 +11193,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11202,7 +11202,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11211,7 +11211,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11220,7 +11220,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 0,
         "tempoFormatted": "",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11229,7 +11229,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11238,7 +11238,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11247,7 +11247,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 34,
         "tempoFormatted": "00:34",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11256,7 +11256,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11265,7 +11265,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11274,7 +11274,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 75,
         "tempoFormatted": "01:15",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11283,7 +11283,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11292,7 +11292,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11301,7 +11301,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11310,7 +11310,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11319,7 +11319,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11328,7 +11328,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11337,7 +11337,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 0,
         "tempoFormatted": "",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11346,7 +11346,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11355,7 +11355,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 90,
         "tempoFormatted": "01:30",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11364,7 +11364,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11382,7 +11382,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11391,7 +11391,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 0,
         "tempoFormatted": "",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11400,7 +11400,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11409,7 +11409,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 76,
         "tempoFormatted": "01:16",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11427,7 +11427,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11436,7 +11436,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11445,7 +11445,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11454,7 +11454,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 0,
         "tempoFormatted": "",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11463,7 +11463,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11472,7 +11472,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 0,
         "tempoFormatted": "",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11481,7 +11481,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 0,
         "tempoFormatted": "",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11490,7 +11490,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 78,
         "tempoFormatted": "01:18",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11499,7 +11499,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 81,
         "tempoFormatted": "01:21",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11508,7 +11508,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11517,7 +11517,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11526,7 +11526,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11535,7 +11535,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11544,7 +11544,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11553,7 +11553,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11562,7 +11562,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11571,7 +11571,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11580,7 +11580,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11589,7 +11589,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11598,7 +11598,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11607,7 +11607,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11616,7 +11616,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11625,7 +11625,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11634,7 +11634,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11643,7 +11643,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11652,7 +11652,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11661,7 +11661,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11670,7 +11670,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11679,7 +11679,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Junho"
       },
       {
@@ -11688,7 +11688,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 88,
         "tempoFormatted": "01:28",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11697,7 +11697,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 83,
         "tempoFormatted": "01:23",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11706,7 +11706,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 88,
         "tempoFormatted": "01:28",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Junho"
       },
       {
@@ -11715,7 +11715,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11724,7 +11724,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11733,7 +11733,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11742,7 +11742,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11751,7 +11751,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11760,7 +11760,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11769,7 +11769,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11778,7 +11778,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -11787,7 +11787,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11796,7 +11796,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -11805,7 +11805,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 88,
         "tempoFormatted": "01:28",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -11814,7 +11814,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11823,7 +11823,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11832,7 +11832,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11841,7 +11841,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11850,7 +11850,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11859,7 +11859,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 85,
         "tempoFormatted": "01:25",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -11868,7 +11868,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11877,7 +11877,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 31,
         "tempoFormatted": "00:31",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11886,7 +11886,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11913,7 +11913,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11922,7 +11922,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11931,7 +11931,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11940,7 +11940,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11949,7 +11949,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11958,7 +11958,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11967,7 +11967,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11976,7 +11976,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 0,
         "tempoFormatted": "FÉRIAS",
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "mes": "Julho"
       },
       {
@@ -11985,7 +11985,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 35,
         "tempoFormatted": "00:35",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -11994,7 +11994,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12003,7 +12003,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12012,7 +12012,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12021,7 +12021,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 0,
         "tempoFormatted": "FÉRIAS",
-        "resultado": "Insatisfatório",
+        "resultado": "ACOP - B",
         "mes": "Julho"
       },
       {
@@ -12030,7 +12030,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 35,
         "tempoFormatted": "00:35",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12039,7 +12039,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12048,7 +12048,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12057,7 +12057,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12066,7 +12066,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12075,7 +12075,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12084,7 +12084,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12093,7 +12093,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12102,7 +12102,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12111,7 +12111,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12120,7 +12120,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12129,7 +12129,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12138,7 +12138,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12147,7 +12147,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 72,
         "tempoFormatted": "01:12",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12156,7 +12156,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12165,7 +12165,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 72,
         "tempoFormatted": "01:12",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12174,7 +12174,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12183,7 +12183,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12192,7 +12192,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 81,
         "tempoFormatted": "01:21",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12201,7 +12201,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12210,7 +12210,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12219,7 +12219,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12228,7 +12228,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12237,7 +12237,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12246,7 +12246,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12255,7 +12255,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12264,7 +12264,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12273,7 +12273,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-CE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12282,7 +12282,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12291,7 +12291,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12300,7 +12300,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12309,7 +12309,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12318,7 +12318,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12327,7 +12327,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12336,7 +12336,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12345,7 +12345,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12354,7 +12354,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12363,7 +12363,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12372,7 +12372,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12381,7 +12381,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12390,7 +12390,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12399,7 +12399,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12408,7 +12408,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12417,7 +12417,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12426,7 +12426,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12435,7 +12435,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12444,7 +12444,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
-        "resultado": "Excelente",
+        "resultado": "ACOP - A",
         "mes": "Julho"
       },
       {
@@ -12453,7 +12453,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 88,
         "tempoFormatted": "01:28",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12462,7 +12462,7 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 83,
         "tempoFormatted": "01:23",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       },
       {
@@ -12471,11 +12471,11 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Bom",
+        "resultado": "Em evolução",
         "mes": "Julho"
       }
     ],
-    "uploadedAt": "2026-08-11T14:52:47.493047Z"
+    "uploadedAt": "2026-08-21T16:22:29.910675Z"
   },
   "tr": {
     "records": [
@@ -13160,7 +13160,7 @@ window.SESCINC.SeedData = {
         "status": "ok"
       }
     ],
-    "uploadedAt": "2026-08-11T14:52:47.493064Z"
+    "uploadedAt": "2026-08-21T16:22:29.910683Z"
   },
   "teorica": {
     "records": [
@@ -25606,7 +25606,7 @@ window.SESCINC.SeedData = {
         ]
       }
     ],
-    "uploadedAt": "2026-08-11T14:52:47.493072Z"
+    "uploadedAt": "2026-08-21T16:22:29.910690Z"
   },
   "actuation": {
     "records": [
@@ -26928,6 +26928,6 @@ window.SESCINC.SeedData = {
         ]
       }
     ],
-    "uploadedAt": "2026-08-11T14:52:47.493079Z"
+    "uploadedAt": "2026-08-21T16:22:29.910696Z"
   }
 };

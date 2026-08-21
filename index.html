@@ -20,7 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
   <!-- Dashboard Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=12.0">
+  <link rel="stylesheet" href="css/styles.css?v=15.0">
 </head>
 <body data-section="overview">
 
@@ -341,16 +341,16 @@
           <div class="kpi-card" id="kpi-taf-sat">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
-              <span class="kpi-unit">aptos</span>
+              <span class="kpi-unit">satisfatório</span>
             </div>
-            <div class="kpi-label">Satisfatórios</div>
+            <div class="kpi-label">ACOP - A</div>
           </div>
           <div class="kpi-card" id="kpi-taf-insat">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
-              <span class="kpi-unit">inaptos</span>
+              <span class="kpi-unit">insatisfeita</span>
             </div>
-            <div class="kpi-label">Insatisfatórios</div>
+            <div class="kpi-label">ACOP - B</div>
           </div>
           <div class="kpi-card" id="kpi-taf-pct">
             <div class="kpi-value-container">
@@ -378,7 +378,7 @@
                 </button>
               </div>
             </div>
-            <div class="chart-card-desc">Distribuição percentual global de satisfação física (Satisfatório vs. Insatisfatório vs. Não Realizado/Férias) obtida a partir do Teste de Avaliação Física (TAF).</div>
+            <div class="chart-card-desc">Distribuição percentual global de satisfação física (ACOP - A vs. ACOP - B vs. Não Realizado/Férias) obtida a partir do Teste de Avaliação Física (TAF).</div>
             <div class="chart-container">
               <canvas id="tafDonut"></canvas>
             </div>
@@ -398,7 +398,7 @@
                 </button>
               </div>
             </div>
-            <div class="chart-card-desc">Contagem absoluta de bombeiros aprovados (Satisfatório) e reprovados (Insatisfatório) no TAF por equipe operacional, auxiliando no monitoramento do efetivo disponível.</div>
+            <div class="chart-card-desc">Contagem absoluta de bombeiros aptos (ACOP - A) e reprovados (ACOP - B) no TAF por equipe operacional, auxiliando no monitoramento do efetivo disponível.</div>
             <div class="chart-container">
               <canvas id="tafEquipe"></canvas>
             </div>
@@ -554,23 +554,23 @@
           <div class="kpi-card" id="kpi-tpepr-exc">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
-              <span class="kpi-unit">≤ 60s (excelente)</span>
+              <span class="kpi-unit">≤ 60s (satisfatório)</span>
             </div>
-            <div class="kpi-label">Excelente</div>
+            <div class="kpi-label">ACOP - A</div>
           </div>
           <div class="kpi-card" id="kpi-tpepr-bom">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
-              <span class="kpi-unit">61s-90s (bom)</span>
+              <span class="kpi-unit">61s-90s</span>
             </div>
-            <div class="kpi-label">Bom</div>
+            <div class="kpi-label">Em evolução</div>
           </div>
           <div class="kpi-card" id="kpi-tpepr-ruim">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
-              <span class="kpi-unit">> 90s (insatisfatório)</span>
+              <span class="kpi-unit">> 90s (insatisfeita)</span>
             </div>
-            <div class="kpi-label">Insatisfatório</div>
+            <div class="kpi-label">ACOP - B</div>
           </div>
         </div>
 
@@ -591,7 +591,7 @@
                 </button>
               </div>
             </div>
-            <div class="chart-card-desc">Métrica de rapidez para colocação do Equipamento de Proteção Respiratória (EPR). A escala é subdividida em Excelente (≤60 segundos), Bom (61 a 90 segundos) e Insatisfatório (>90 segundos).</div>
+            <div class="chart-card-desc">Métrica de prontidão operacional para colocação do Equipamento de Proteção Respiratória (EPR). A escala é subdividida em ACOP - A (≤60 segundos - Satisfatório), Em evolução (61 a 90 segundos) e ACOP - B (>90 segundos - Insatisfeita).</div>
             <div class="chart-container">
               <canvas id="tpeprDonut"></canvas>
             </div>
@@ -611,7 +611,7 @@
                 </button>
               </div>
             </div>
-            <div class="chart-card-desc">Contagem absoluta de bombeiros aprovados (Satisfatório) e reprovados (Insatisfatório) no TAF por equipe operacional, auxiliando no monitoramento do efetivo disponível.</div>
+            <div class="chart-card-desc">Contagem absoluta de bombeiros por classificação ACOP (ACOP - A, Em evolução, ACOP - B) no TP-EPR por equipe operacional, auxiliando no monitoramento do efetivo disponível.</div>
             <div class="chart-container">
               <canvas id="tpeprEquipe"></canvas>
             </div>
@@ -1211,8 +1211,9 @@
                     <label class="form-label" for="manual-taf-resultado">Resultado</label>
                     <select id="manual-taf-resultado">
                       <option value="">Selecione...</option>
-                      <option value="SATISFATÓRIO">Satisfatório</option>
-                      <option value="INSATISFATÓRIO">Insatisfatório</option>
+                      <option value="ACOP - A">ACOP - A (Satisfatório)</option>
+                      <option value="Em evolução">Em evolução</option>
+                      <option value="ACOP - B">ACOP - B (Insatisfeita)</option>
                     </select>
                   </div>
                 </div>
@@ -1260,9 +1261,9 @@
                     <label class="form-label" for="manual-tpepr-resultado">Resultado</label>
                     <select id="manual-tpepr-resultado">
                       <option value="">Selecione...</option>
-                      <option value="EXCELENTE">Excelente</option>
-                      <option value="BOM">Bom</option>
-                      <option value="RUIM">Insatisfatório</option>
+                      <option value="ACOP - A">ACOP - A (Satisfatório - ≤60s)</option>
+                      <option value="Em evolução">Em evolução (61s a 90s)</option>
+                      <option value="ACOP - B">ACOP - B (Insatisfeita - >90s)</option>
                     </select>
                   </div>
                 </div>
@@ -1443,7 +1444,9 @@
               <span class="text-xs text-muted">Clique nos marcadores de cada setor para consultar o relatório detalhado das ocorrências.</span>
             </div>
             <div class="map-legend flex items-center gap-4 text-xs font-semibold">
-              <span class="flex items-center gap-1"><span class="legend-dot internal"></span> Indicadores de Calor Aeroportuários</span>
+              <span class="flex items-center gap-1"><span class="legend-dot" style="background:#10b981; box-shadow: 0 0 8px rgba(16,185,129,0.8); border-radius:50%; width:10px; height:10px; display:inline-block;"></span> Verde (0–1)</span>
+              <span class="flex items-center gap-1"><span class="legend-dot" style="background:#f59e0b; box-shadow: 0 0 8px rgba(245,158,11,0.8); border-radius:50%; width:10px; height:10px; display:inline-block;"></span> Amarelo (2–4)</span>
+              <span class="flex items-center gap-1"><span class="legend-dot" style="background:#ef4444; box-shadow: 0 0 8px rgba(239,68,68,0.8); border-radius:50%; width:10px; height:10px; display:inline-block;"></span> Vermelho (5+)</span>
             </div>
           </div>
 
@@ -1750,23 +1753,23 @@
   <!-- ============================================================
        JS MODULES
        ============================================================ -->
-  <script src="js/storage.js?v=12.0"></script>
-  <script src="js/parsers/names.js?v=12.0"></script>
-  <script src="js/parsers/taf.js?v=12.0"></script>
-  <script src="js/parsers/tpepr.js?v=12.0"></script>
-  <script src="js/parsers/tr.js?v=12.0"></script>
-  <script src="js/parsers/teorica.js?v=12.0"></script>
-  <script src="js/filters.js?v=12.0"></script>
-  <script src="js/charts/overview-charts.js?v=12.0"></script>
-  <script src="js/charts/taf-charts.js?v=12.0"></script>
-  <script src="js/charts/tpepr-charts.js?v=12.0"></script>
-  <script src="js/charts/tr-charts.js?v=12.0"></script>
-  <script src="js/charts/teorica-charts.js?v=12.0"></script>
-  <script src="js/charts/actuation-charts.js?v=12.0"></script>
-  <script src="js/export.js?v=12.0"></script>
-  <script src="js/manual-entry.js?v=12.0"></script>
-  <script src="js/seed-data.js?v=12.0"></script>
-  <script src="js/app.js?v=12.0"></script>
+  <script src="js/storage.js?v=15.0"></script>
+  <script src="js/parsers/names.js?v=15.0"></script>
+  <script src="js/parsers/taf.js?v=15.0"></script>
+  <script src="js/parsers/tpepr.js?v=15.0"></script>
+  <script src="js/parsers/tr.js?v=15.0"></script>
+  <script src="js/parsers/teorica.js?v=15.0"></script>
+  <script src="js/filters.js?v=15.0"></script>
+  <script src="js/charts/overview-charts.js?v=15.0"></script>
+  <script src="js/charts/taf-charts.js?v=15.0"></script>
+  <script src="js/charts/tpepr-charts.js?v=15.0"></script>
+  <script src="js/charts/tr-charts.js?v=15.0"></script>
+  <script src="js/charts/teorica-charts.js?v=15.0"></script>
+  <script src="js/charts/actuation-charts.js?v=15.0"></script>
+  <script src="js/export.js?v=15.0"></script>
+  <script src="js/manual-entry.js?v=15.0"></script>
+  <script src="js/seed-data.js?v=15.0"></script>
+  <script src="js/app.js?v=15.0"></script>
 
 </body>
 </html>

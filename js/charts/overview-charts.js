@@ -13,8 +13,8 @@
     amber: '#ffd32a', red: '#ff0055', purple: '#b026ff',
     pink: '#ff007f', indigo: '#6366f1', teal: '#14b8a6',
     equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#ff0055', 'FOLGUISTA': '#b026ff' },
-    resultadosTAF: { 'Satisfatório': '#00ff87', 'Insatisfatório': '#ff0055' },
-    resultadosTPEPR: { 'Excelente': '#00ff87', 'Bom': '#ffd32a', 'Insatisfatório': '#ff0055' }
+    resultadosTAF: { 'ACOP - A': '#00ff87', 'Em evolução': '#ffd32a', 'ACOP - B': '#ff0055' },
+    resultadosTPEPR: { 'ACOP - A': '#00ff87', 'Em evolução': '#ffd32a', 'ACOP - B': '#ff0055' }
   };
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
@@ -50,17 +50,29 @@
 
   /* ── KPI helpers ── */
 
+  function isTafApto(res) {
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s === 'acop - a' || s.indexOf('satisfat') >= 0 || s === 'apto';
+  }
+
+  function isTpeprApto(res) {
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s === 'acop - a' || s.indexOf('excelent') >= 0 || s.indexOf('satisfat') >= 0;
+  }
+
   function calcTAFPercent(records) {
     if (!records || !records.length) return 0;
     const ok = records.filter(r => r.status === 'ok');
     if (!ok.length) return 0;
-    const sat = ok.filter(r => r.resultado === 'Satisfatório').length;
+    const sat = ok.filter(r => isTafApto(r.resultado)).length;
     return Math.round((sat / ok.length) * 100);
   }
 
   function calcTPEPRPercent(records) {
     if (!records || !records.length) return 0;
-    const exc = records.filter(r => r.resultado === 'Excelente').length;
+    const exc = records.filter(r => isTpeprApto(r.resultado)).length;
     return Math.round((exc / records.length) * 100);
   }
 
@@ -92,8 +104,8 @@
     const teoRecs = (allData.teorica || []).filter(r => r.equipe === equipe);
     const trRecs = (allData.tr || []).filter(r => r.equipe === equipe && r.status === 'ok');
 
-    const tafPct = tafRecs.length ? Math.round((tafRecs.filter(r => r.resultado === 'Satisfatório').length / tafRecs.length) * 100) : 0;
-    const tpeprPct = tpeprRecs.length ? Math.round((tpeprRecs.filter(r => r.resultado === 'Excelente').length / tpeprRecs.length) * 100) : 0;
+    const tafPct = tafRecs.length ? Math.round((tafRecs.filter(r => isTafApto(r.resultado)).length / tafRecs.length) * 100) : 0;
+    const tpeprPct = tpeprRecs.length ? Math.round((tpeprRecs.filter(r => isTpeprApto(r.resultado)).length / tpeprRecs.length) * 100) : 0;
     const teoPct = teoRecs.length ? Math.round((teoRecs.reduce((s, r) => s + (r.nota || 0), 0) / teoRecs.length)) : 0;
     const trPct = trRecs.length ? Math.round((trRecs.filter(r => r.tempoSeconds <= getMetaForRecord(r)).length / trRecs.length) * 100) : 0;
 

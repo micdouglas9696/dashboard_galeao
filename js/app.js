@@ -96,12 +96,12 @@
   /* ── Data loading ── */
 
   function loadData() {
-    // Check storage version to force re-seed after major data update (v6 - Fully Unified Datasets)
+    // Check storage version to force re-seed after major data update (v9 - ACOP Naming)
     const dbVersion = localStorage.getItem('sescinc_db_version');
-    if (dbVersion !== '8') {
-      console.log('[App] Local storage outdated. Forcing re-seed to version 8 (Strict Hotspot Mapping & Keyword Collision Fix).');
+    if (dbVersion !== '9') {
+      console.log('[App] Local storage outdated. Forcing re-seed to version 9 (ACOP Naming: ACOP - A, Em evolução, ACOP - B).');
       localStorage.clear();
-      localStorage.setItem('sescinc_db_version', '8');
+      localStorage.setItem('sescinc_db_version', '9');
     }
 
     let tafData = loadStorage(STORAGE_KEYS.TAF);
@@ -130,10 +130,22 @@
     allData = {
       taf: (tafData && tafData.records) ? tafData.records.map(function(r) {
         if (!r.mes) r.mes = 'Junho';
+        if (r.resultado) {
+          const s = String(r.resultado).trim().toLowerCase();
+          if (s === 'satisfatório' || s === 'satisfatorio' || s === 'apto' || s === 'acop - a') r.resultado = 'ACOP - A';
+          else if (s === 'em evolução' || s === 'em evolucao') r.resultado = 'Em evolução';
+          else if (s === 'insatisfatório' || s === 'insatisfatorio' || s === 'insatisfeita' || s === 'inapto' || s === 'acop - b') r.resultado = 'ACOP - B';
+        }
         return r;
       }) : [],
       tpepr: (tpeprData && tpeprData.records) ? tpeprData.records.map(function(r) {
         if (!r.mes) r.mes = 'Junho';
+        if (r.resultado) {
+          const s = String(r.resultado).trim().toLowerCase();
+          if (s === 'excelente' || s === 'satisfatório' || s === 'satisfatorio' || s === 'acop - a') r.resultado = 'ACOP - A';
+          else if (s === 'bom' || s === 'em evolução' || s === 'em evolucao') r.resultado = 'Em evolução';
+          else if (s === 'insatisfatório' || s === 'insatisfatorio' || s === 'ruim' || s === 'insatisfeita' || s === 'acop - b') r.resultado = 'ACOP - B';
+        }
         return r;
       }) : [],
       tr: (trData && trData.records) ? trData.records : [],

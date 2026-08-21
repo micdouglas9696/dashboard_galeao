@@ -20,7 +20,7 @@ window.SESCINC.ActuationCharts = (function () {
   // Coordenadas geográficas otimizadas para visibilidade total em telas de 14 polegadas (com recuo de bordas)
   const HOTSPOTS = [
     { id: 'h-sistema-10-28', name: 'Sistema 10-28', top: 17.0, left: 54.0, align: 'pin-align-center', keywords: ['SISTEMA 10-28', 'SISTEMA 10/28', '10-28', '10/28', 'PISTA 10X28'] },
-    { id: 'h-sistema-15-30', name: 'Sistema 15-30', top: 62.0, left: 35.0, align: 'pin-align-center', keywords: ['SISTEMA 15-30', 'SISTEMA 15/30', 'SISTEMA 15-33', 'SISTEMA 15/33', '15-30', '15/30', '15-33', '15/33', 'PISTA 15X33'] },
+    { id: 'h-sistema-15-30', name: 'Sistema 15-30', top: 62.0, left: 20.5, align: 'pin-align-center', keywords: ['SISTEMA 15-30', 'SISTEMA 15/30', 'SISTEMA 15-33', 'SISTEMA 15/33', '15-30', '15/30', '15-33', '15/33', 'PISTA 15X33'] },
     { id: 'h-cab-28', name: 'Cabeceira 28 (CAB 28)', top: 10.0, left: 86.0, align: 'pin-align-left-down', keywords: ['CABECEIRA 28', 'CAB.28', 'CAB 28', 'CAB-28', 'CAB. 28'] },
     { id: 'h-cab-10', name: 'Cabeceira 10 (CAB 10)', top: 25.0, left: 22.0, align: 'pin-align-right', keywords: ['CABECEIRA 10', 'CAB.10', 'CAB 10', 'CAB-10'] },
     { id: 'h-cab-15', name: 'Cabeceira 15 (CAB 15)', top: 44.0, left: 12.0, align: 'pin-align-right', keywords: ['CABECEIRA 15', 'CAB.15', 'CAB 15', 'CAB-15'] },
@@ -35,6 +35,40 @@ window.SESCINC.ActuationCharts = (function () {
     { id: 'h-teca-exp', name: 'TECA Exportação', top: 86.0, left: 45.0, align: 'pin-align-center', keywords: ['TECA EXPORTAÇÃO', 'TECA EXPORTACAO', 'EXPORTAÇÃO', 'EXPORTACAO'] },
     { id: 'h-teca-imp', name: 'TECA Importação', top: 82.0, left: 39.0, align: 'pin-align-right', keywords: ['TECA IMPORTAÇÃO', 'TECA IMPORTACAO', 'ÁREA DE CARGAS TECA', 'TECA', 'IMPORTAÇÃO', 'IMPORTACAO', 'SUBESTAÇÃO', 'SUBESTACAO', 'V-58', 'CARGAS'] }
   ];
+
+  /**
+   * Helper para classificação em 3 tons de calor:
+   * - Verde: 0 a 1 ocorrência (Baixa / Tranquilo)
+   * - Amarelo: 2 a 4 ocorrências (Média / Atenção)
+   * - Vermelho: 5+ ocorrências (Alta concentração / Ponto Crítico)
+   */
+  function getHeatTier(count) {
+    if (count <= 1) {
+      // Tom 1: Verde (0 a 1 ocorrência)
+      return {
+        tier: 'low',
+        label: 'Verde (0–1)',
+        canvas0: 'rgba(16, 185, 129, 0.70)',
+        canvas50: 'rgba(16, 185, 129, 0.20)'
+      };
+    }
+    if (count <= 4) {
+      // Tom 2: Amarelo (2 a 4 ocorrências)
+      return {
+        tier: 'med',
+        label: 'Amarelo (2–4)',
+        canvas0: 'rgba(245, 158, 11, 0.80)',
+        canvas50: 'rgba(245, 158, 11, 0.28)'
+      };
+    }
+    // Tom 3: Vermelho (5+ ocorrências)
+    return {
+      tier: 'high',
+      label: 'Vermelho (5+)',
+      canvas0: 'rgba(239, 68, 68, 0.88)',
+      canvas50: 'rgba(239, 68, 68, 0.35)'
+    };
+  }
 
   /**
    * Associa com precisão um registro a um Hotspot do mapa
@@ -163,20 +197,20 @@ window.SESCINC.ActuationCharts = (function () {
     HOTSPOTS.forEach(h => {
       if (hotspotCounts[h.id] > maxLocCount) {
         maxLocCount = hotspotCounts[h.id];
-        topLoc = h.name.split('(')[0].trim();
+        topLoc = h.name;
       }
     });
 
     if (totalEl) totalEl.textContent = total;
 
     if (topLocEl) topLocEl.textContent = topLoc;
-    if (topLocCountEl) topLocCountEl.textContent = maxLocCount + ' acionamento' + (maxLocCount !== 1 ? 's' : '');
+    if (topLocCountEl) topLocCountEl.textContent = maxLocCount + ' acionamentos';
 
     if (topTypeEl) topTypeEl.textContent = topType;
-    if (topTypeCountEl) topTypeCountEl.textContent = maxTypeCount + ' acionamento' + (maxTypeCount !== 1 ? 's' : '');
+    if (topTypeCountEl) topTypeCountEl.textContent = maxTypeCount + ' acionamentos';
 
-    if (topTeamEl) topTeamEl.textContent = topTeam.startsWith('Equipe') ? topTeam : 'Equipe ' + topTeam;
-    if (topTeamCountEl) topTeamCountEl.textContent = maxTeamCount + ' acionamento' + (maxTeamCount !== 1 ? 's' : '');
+    if (topTeamEl) topTeamEl.textContent = 'Equipe ' + topTeam;
+    if (topTeamCountEl) topTeamCountEl.textContent = maxTeamCount + ' acionamentos';
   }
 
   /**
@@ -207,18 +241,19 @@ window.SESCINC.ActuationCharts = (function () {
       if (h) hotspotCounts[h.id] = (hotspotCounts[h.id] || 0) + 1;
     });
 
-    // Desenhar manchas de calor no canvas
+    // Desenhar manchas de calor no canvas com 3 tons térmicos
     HOTSPOTS.forEach(h => {
       const count = hotspotCounts[h.id];
       if (count > 0) {
         const x = (h.left / 100) * width;
         const y = (h.top / 100) * height;
-        const radius = Math.min(85, 28 + count * 5);
+        const radius = Math.min(95, 30 + count * 4.5);
+        const heat = getHeatTier(count);
 
         const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
-        gradient.addColorStop(0, 'rgba(2, 132, 199, 0.70)');
-        gradient.addColorStop(0.5, 'rgba(2, 132, 199, 0.25)');
-        gradient.addColorStop(1, 'rgba(2, 132, 199, 0)');
+        gradient.addColorStop(0, heat.canvas0);
+        gradient.addColorStop(0.5, heat.canvas50);
+        gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
         ctx.fillStyle = gradient;
         ctx.beginPath();
@@ -227,19 +262,20 @@ window.SESCINC.ActuationCharts = (function () {
       }
     });
 
-    // Atualizar marcadores HTML
+    // Atualizar marcadores HTML com 3 tons
     const pinContainer = document.getElementById('airport-pins-container');
     if (!pinContainer) return;
     pinContainer.innerHTML = '';
 
     HOTSPOTS.forEach(h => {
       const count = hotspotCounts[h.id];
+      const heat = getHeatTier(count);
 
       const pin = document.createElement('div');
-      pin.className = 'airport-pin ' + (h.align || 'pin-align-center') + (count > 0 ? ' active' : ' empty');
+      pin.className = 'airport-pin pin-tier-' + heat.tier + ' ' + (h.align || 'pin-align-center') + (count > 0 ? ' active' : ' empty');
       pin.style.top = h.top + '%';
       pin.style.left = h.left + '%';
-      pin.setAttribute('title', h.name + ': ' + count + ' acionamentos');
+      pin.setAttribute('title', h.name + ': ' + count + ' acionamentos (' + heat.label + ')');
 
       pin.innerHTML = `
         <div class="pin-badge">${count}</div>

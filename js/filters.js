@@ -21,8 +21,8 @@
   };
 
   const RESULTADOS_BY_SECTION = {
-    taf: ['Satisfatório', 'Insatisfatório'],
-    tpepr: ['Excelente', 'Bom', 'Insatisfatório']
+    taf: ['ACOP - A', 'Em evolução', 'ACOP - B'],
+    tpepr: ['ACOP - A', 'Em evolução', 'ACOP - B']
   };
 
   let currentSection = 'overview';
@@ -173,7 +173,14 @@
 
       // Resultado filter (section-dependent)
       if (allowedFilters.includes('resultado')) {
-        if (f.resultados.length && r.resultado && !f.resultados.includes(r.resultado)) return false;
+        if (f.resultados.length && r.resultado) {
+          let resNorm = r.resultado;
+          const s = String(resNorm).trim().toLowerCase();
+          if (s === 'acop - a' || s.indexOf('satisfat') >= 0 || s.indexOf('excelent') >= 0 || s === 'apto') resNorm = 'ACOP - A';
+          else if (s === 'em evolução' || s === 'em evolucao' || s === 'bom') resNorm = 'Em evolução';
+          else if (s === 'acop - b' || s.indexOf('insatisf') >= 0 || s.indexOf('insatisfe') >= 0 || s.indexOf('ruim') >= 0 || s === 'inapto') resNorm = 'ACOP - B';
+          if (!f.resultados.includes(resNorm) && !f.resultados.includes(r.resultado)) return false;
+        }
       }
 
       // Search filter

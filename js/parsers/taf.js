@@ -221,7 +221,18 @@ window.SESCINC.Parsers.TAF = {
       var corrida = row[7] != null ? String(row[7]).trim() : '';
       var corridaSeconds = this._parseCorridaTime(row[7]);
 
-      var resultado = row[8] != null ? String(row[8]).trim() : '';
+      var resultadoRaw = row[8] != null ? String(row[8]).trim() : '';
+      var resultado = 'ACOP - A';
+      if (resultadoRaw) {
+        var lowerRes = resultadoRaw.toLowerCase();
+        if (lowerRes.indexOf('insatisf') >= 0 || lowerRes === 'b' || lowerRes.indexOf('inapto') >= 0 || resultadoRaw.toUpperCase() === 'ACOP - B') {
+          resultado = 'ACOP - B';
+        } else if (lowerRes.indexOf('evolu') >= 0) {
+          resultado = 'Em evolução';
+        } else {
+          resultado = 'ACOP - A';
+        }
+      }
 
       var mesNormalized = '';
       if (window.SESCINC && window.SESCINC.Names && window.SESCINC.Names.extractMonth) {

@@ -126,7 +126,9 @@
     const barra = parseInt(($id('manual-taf-barra') || {}).value) || 0;
     const minVal = ($id('manual-taf-corrida-min') || {}).value || '';
     const segVal = ($id('manual-taf-corrida-seg') || {}).value || '';
-    const resultado = ($id('manual-taf-resultado') || {}).value || '';
+    let resultado = ($id('manual-taf-resultado') || {}).value || '';
+    if (resultado.toUpperCase() === 'SATISFATÓRIO') resultado = 'ACOP - A';
+    else if (resultado.toUpperCase() === 'INSATISFATÓRIO') resultado = 'ACOP - B';
 
     if (!nome || !equipe || !resultado) {
       showToast('Preencha os campos obrigatórios: Nome, Equipe e Resultado.', 'error');
@@ -157,6 +159,7 @@
     const equipe = ($id('manual-tpepr-equipe') || {}).value || '';
     const funcao = ($id('manual-tpepr-funcao') || {}).value || '';
     const tempoInput = ($id('manual-tpepr-tempo') || {}).value || '';
+    const resultadoSel = ($id('manual-tpepr-resultado') || {}).value || '';
 
     if (!nome || !equipe || !tempoInput) {
       showToast('Preencha os campos obrigatórios: Nome, Equipe e Tempo.', 'error');
@@ -175,10 +178,18 @@
       tempoFormatted = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
     }
 
-    // Determine resultado based on time (aligned with spreadsheet: Excelente <= 60s, Bom <= 90s, Insatisfatório > 90s)
-    let resultado = 'Insatisfatório';
-    if (tempoSeconds <= 60) resultado = 'Excelente';
-    else if (tempoSeconds <= 90) resultado = 'Bom';
+    // Determine resultado based on selection or time
+    let resultado = 'ACOP - B';
+    if (resultadoSel) {
+      if (resultadoSel.toUpperCase() === 'EXCELENTE' || resultadoSel.toUpperCase() === 'ACOP - A') resultado = 'ACOP - A';
+      else if (resultadoSel.toUpperCase() === 'BOM' || resultadoSel === 'Em evolução') resultado = 'Em evolução';
+      else if (resultadoSel.toUpperCase() === 'RUIM' || resultadoSel.toUpperCase() === 'ACOP - B' || resultadoSel.toUpperCase() === 'INSATISFATÓRIO') resultado = 'ACOP - B';
+      else resultado = resultadoSel;
+    } else {
+      if (tempoSeconds <= 60) resultado = 'ACOP - A';
+      else if (tempoSeconds <= 90) resultado = 'Em evolução';
+      else resultado = 'ACOP - B';
+    }
 
     return {
       nome, equipe, funcao, tempoSeconds, tempoFormatted, resultado,

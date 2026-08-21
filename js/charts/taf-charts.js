@@ -13,8 +13,30 @@
     amber: '#fbbf24', red: '#ef4444', purple: '#c084fc',
     pink: '#f472b6', indigo: '#818cf8', teal: '#2dd4bf',
     equipes: { 'ALFA': '#38bdf8', 'BRAVO': '#34d399', 'CHARLIE': '#fbbf24', 'DELTA': '#ef4444', 'FOLGUISTA': '#c084fc' },
-    resultadosTAF: { 'Satisfatório': '#34d399', 'Insatisfatório': '#ef4444' }
+    resultadosTAF: { 'ACOP - A': '#34d399', 'Em evolução': '#fbbf24', 'ACOP - B': '#ef4444' }
   };
+
+  function isAcopA(res) {
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s === 'acop - a' || s.indexOf('satisfat') >= 0 || s === 'apto';
+  }
+  function isEmEvolucao(res) {
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s === 'em evolução' || s === 'em evolucao';
+  }
+  function isAcopB(res) {
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s === 'acop - b' || s.indexOf('insatisf') >= 0 || s.indexOf('insatisfe') >= 0 || s === 'inapto';
+  }
+  function formatTafResultado(res) {
+    if (isAcopA(res)) return 'ACOP - A';
+    if (isEmEvolucao(res)) return 'Em evolução';
+    if (isAcopB(res)) return 'ACOP - B';
+    return res || '—';
+  }
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
   const AGE_BUCKETS = ['18-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51+'];
@@ -88,8 +110,8 @@
 
   function renderKPIs(records) {
     const ok = records.filter(r => r.status === 'ok');
-    const sat = ok.filter(r => r.resultado === 'Satisfatório');
-    const insat = ok.filter(r => r.resultado === 'Insatisfatório');
+    const sat = ok.filter(r => isAcopA(r.resultado));
+    const insat = ok.filter(r => isAcopB(r.resultado));
     const pct = ok.length ? Math.round((sat.length / ok.length) * 100) : 0;
 
     setText('kpi-taf-total', ok.length);
@@ -177,19 +199,24 @@
 
     const tc = getThemeColors();
     const ok = records.filter(r => r.status === 'ok');
-    const sat = ok.filter(r => r.resultado === 'Satisfatório').length;
-    const insat = ok.filter(r => r.resultado === 'Insatisfatório').length;
+    const sat = ok.filter(r => isAcopA(r.resultado)).length;
+    const evol = ok.filter(r => isEmEvolucao(r.resultado)).length;
+    const insat = ok.filter(r => isAcopB(r.resultado)).length;
 
     const isBar = activeDonutType === 'bar';
     const chartType = isBar ? 'bar' : activeDonutType;
 
+    const labels = evol > 0 ? ['ACOP - A', 'Em evolução', 'ACOP - B'] : ['ACOP - A', 'ACOP - B'];
+    const dataValues = evol > 0 ? [sat, evol, insat] : [sat, insat];
+    const bgColors = evol > 0 ? [tc.green, tc.amber, tc.red] : [tc.green, tc.red];
+
     const config = {
       type: chartType,
       data: {
-        labels: ['Satisfatório', 'Insatisfatório'],
+        labels: labels,
         datasets: [{
-          data: [sat, insat],
-          backgroundColor: [tc.green, tc.red],
+          data: dataValues,
+          backgroundColor: bgColors,
           borderColor: 'rgba(0,0,0,0.3)',
           borderWidth: 2
         }]
@@ -211,7 +238,7 @@
       };
     } else {
       config.options.cutout = '65%';
-      config.options.plugins.centerText = { text: `${sat + insat}`, subText: 'avaliados' };
+      config.options.plugins.centerText = { text: `${sat + evol + insat}`, subText: 'avaliados' };
     }
 
     chartInstances.tafDonut = new Chart(ctx, config);
@@ -226,16 +253,22 @@
     const ok = records.filter(r => r.status === 'ok');
     const equipes = EQUIPES.filter(e => ok.some(r => r.equipe === e));
 
-    const satData = equipes.map(e => ok.filter(r => r.equipe === e && r.resultado === 'Satisfatório').length);
-    const insatData = equipes.map(e => ok.filter(r => r.equipe === e && r.resultado === 'Insatisfatório').length);
+    const satData = equipes.map(e => ok.filter(r => r.equipe === e && isAcopA(r.resultado)).length);
+    const evolData = equipes.map(e => ok.filter(r => r.equipe === e && isEmEvolucao(r.resultado)).length);
+    const insatData = equipes.map(e => ok.filter(r => r.equipe === e && isAcopB(r.resultado)).length);
+
+    const hasEvol = evolData.some(v => v > 0);
 
     const isStacked = activeEquipeType === 'bar';
     const isLine = activeEquipeType === 'line';
 
     const datasets = [
-      { label: 'Satisfatório', data: satData, backgroundColor: tc.green, borderColor: tc.green },
-      { label: 'Insatisfatório', data: insatData, backgroundColor: tc.red, borderColor: tc.red }
+      { label: 'ACOP - A', data: satData, backgroundColor: tc.green, borderColor: tc.green }
     ];
+    if (hasEvol) {
+      datasets.push({ label: 'Em evolução', data: evolData, backgroundColor: tc.amber, borderColor: tc.amber });
+    }
+    datasets.push({ label: 'ACOP - B', data: insatData, backgroundColor: tc.red, borderColor: tc.red });
 
     datasets.forEach(d => {
       if (isLine) {
@@ -262,10 +295,10 @@
           const datasetIndex = activeElement.datasetIndex;
 
           const team = equipes[dataIndex];
-          const resultType = datasetIndex === 0 ? 'Satisfatório' : 'Insatisfatório';
+          const resultType = datasets[datasetIndex] ? datasets[datasetIndex].label : '';
 
           const okRecs = currentRecords.filter(r => r.status === 'ok');
-          const names = okRecs.filter(r => r.equipe === team && r.resultado === resultType)
+          const names = okRecs.filter(r => r.equipe === team && formatTafResultado(r.resultado) === resultType)
                               .map(r => r.nome).filter(Boolean);
 
           if (names.length && window.SESCINC.showDetailModal) {
@@ -302,7 +335,7 @@
 
     const data = funcoes.map(f => {
       const group = ok.filter(r => r.funcao === f);
-      const sat = group.filter(r => r.resultado === 'Satisfatório').length;
+      const sat = group.filter(r => isAcopA(r.resultado)).length;
       return group.length ? Math.round((sat / group.length) * 100) : 0;
     });
 
@@ -476,7 +509,7 @@
 
     const bucketCounts = AGE_BUCKETS.map(bucket => {
       const group = ok.filter(r => getAgeBucket(r.idade) === bucket);
-      const sat = group.filter(r => r.resultado === 'Satisfatório').length;
+      const sat = group.filter(r => isAcopA(r.resultado)).length;
       const total = group.length;
       return { total, sat, ratio: total ? sat / total : 0 };
     });
@@ -560,7 +593,7 @@
 
     const bucketData = buckets.map(b => {
       const group = ok.filter(b.filter);
-      const sat = group.filter(r => r.resultado === 'Satisfatório').length;
+      const sat = group.filter(r => isAcopA(r.resultado)).length;
       const total = group.length;
       const ratio = total ? sat / total : 0;
       return { total, sat, ratio, names: group.map(r => r.nome).filter(Boolean) };
@@ -639,8 +672,9 @@
       const isMuted = r.status === 'ferias' || r.status === 'nr';
       if (isMuted) tr.classList.add('row-muted');
 
-      const badgeClass = r.resultado === 'Satisfatório' ? 'badge-green' : 'badge-red';
+      const badgeClass = isAcopA(r.resultado) ? 'badge-green' : (isEmEvolucao(r.resultado) ? 'badge-amber' : 'badge-red');
       const statusLabel = r.status === 'ferias' ? 'Férias' : r.status === 'nr' ? 'NR' : '';
+      const displayResultado = formatTafResultado(r.resultado);
 
       tr.innerHTML = `
         <td>${r.nome || '—'}</td>
@@ -652,7 +686,7 @@
         <td>${r.abdominal != null ? r.abdominal : '—'}</td>
         <td>${r.barra != null ? r.barra : '—'}</td>
         <td>${r.corrida || '—'}</td>
-        <td>${isMuted ? `<span class="badge badge-muted">${statusLabel}</span>` : `<span class="badge ${badgeClass}">${r.resultado}</span>`}</td>
+        <td>${isMuted ? `<span class="badge badge-muted">${statusLabel}</span>` : `<span class="badge ${badgeClass}">${displayResultado}</span>`}</td>
       `;
       tbody.appendChild(tr);
     });

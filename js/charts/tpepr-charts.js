@@ -19,16 +19,39 @@
       red: isDark ? '#ef4444' : '#c62828',
       blue: isDark ? '#38bdf8' : '#0284c7',
       resultadosTPEPR: {
-        'Excelente': isDark ? '#6ee7b7' : '#34d399',
-        'Bom': isDark ? '#fbbf24' : '#d97706',
-        'Insatisfatório': isDark ? '#ef4444' : '#c62828'
+        'ACOP - A': isDark ? '#6ee7b7' : '#34d399',
+        'Em evolução': isDark ? '#fbbf24' : '#d97706',
+        'ACOP - B': isDark ? '#ef4444' : '#c62828'
       }
     };
   }
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
-  const RESULTADO_ORDER = ['Excelente', 'Bom', 'Insatisfatório'];
+  const RESULTADO_ORDER = ['ACOP - A', 'Em evolução', 'ACOP - B'];
   const chartInstances = {};
+
+  function isTpeprAcopA(res) {
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s === 'acop - a' || s.indexOf('excelent') >= 0 || s.indexOf('satisfat') >= 0;
+  }
+  function isTpeprEmEvolucao(res) {
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s === 'em evolução' || s === 'em evolucao' || s === 'bom';
+  }
+  function isTpeprAcopB(res) {
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s === 'acop - b' || s.indexOf('insatisf') >= 0 || s.indexOf('insatisfe') >= 0 || s.indexOf('ruim') >= 0;
+  }
+  function formatTpeprResultado(res) {
+    if (isTpeprAcopA(res)) return 'ACOP - A';
+    if (isTpeprEmEvolucao(res)) return 'Em evolução';
+    if (isTpeprAcopB(res)) return 'ACOP - B';
+    if (String(res).toLowerCase().indexOf('feria') >= 0) return 'Férias';
+    return res || '—';
+  }
 
   function destroyChart(key) {
     if (chartInstances[key]) {
@@ -57,9 +80,9 @@
   /* ── KPIs ── */
 
   function renderKPIs(records) {
-    const exc = records.filter(r => r.resultado === 'Excelente').length;
-    const bom = records.filter(r => r.resultado === 'Bom').length;
-    const ruim = records.filter(r => r.resultado === 'Insatisfatório').length;
+    const exc = records.filter(r => isTpeprAcopA(r.resultado)).length;
+    const bom = records.filter(r => isTpeprEmEvolucao(r.resultado)).length;
+    const ruim = records.filter(r => isTpeprAcopB(r.resultado)).length;
 
     setText('kpi-tpepr-total', records.length);
     setText('kpi-tpepr-exc', exc);
@@ -116,7 +139,11 @@
     if (!ctx) return;
 
     const tc = getThemeColors();
-    const counts = RESULTADO_ORDER.map(r => records.filter(rec => rec.resultado === r).length);
+    const counts = [
+      records.filter(rec => isTpeprAcopA(rec.resultado)).length,
+      records.filter(rec => isTpeprEmEvolucao(rec.resultado)).length,
+      records.filter(rec => isTpeprAcopB(rec.resultado)).length
+    ];
     const isBar = activeDonutType === 'bar';
     const chartType = isBar ? 'bar' : activeDonutType;
 
@@ -166,9 +193,10 @@
     const isLine = activeEquipeType === 'line';
 
     const datasets = RESULTADO_ORDER.map(resultado => {
+      const matchFn = resultado === 'ACOP - A' ? isTpeprAcopA : (resultado === 'Em evolução' ? isTpeprEmEvolucao : isTpeprAcopB);
       const config = {
         label: resultado,
-        data: equipes.map(e => records.filter(r => r.equipe === e && r.resultado === resultado).length),
+        data: equipes.map(e => records.filter(r => r.equipe === e && matchFn(r.resultado)).length),
         backgroundColor: tc.resultadosTPEPR[resultado],
         borderColor: tc.resultadosTPEPR[resultado]
       };
@@ -201,7 +229,7 @@
           const team = equipes[dataIndex];
           const resultType = RESULTADO_ORDER[datasetIndex];
 
-          const names = currentRecords.filter(r => r.equipe === team && r.resultado === resultType)
+          const names = currentRecords.filter(r => r.equipe === team && formatTpeprResultado(r.resultado) === resultType)
                                       .map(r => r.nome).filter(Boolean);
 
           if (names.length && window.SESCINC.showDetailModal) {
@@ -376,8 +404,11 @@
     tbody.innerHTML = '';
     records.forEach(r => {
       const tr = document.createElement('tr');
-      const badgeClass = r.resultado === 'Excelente' ? 'badge-green' :
-                         r.resultado === 'Bom' ? 'badge-amber' : 'badge-red';
+      const isMuted = String(r.resultado || '').toLowerCase().indexOf('feria') >= 0;
+      const badgeClass = isTpeprAcopA(r.resultado) ? 'badge-green' :
+                         isTpeprEmEvolucao(r.resultado) ? 'badge-amber' :
+                         isTpeprAcopB(r.resultado) ? 'badge-red' : 'badge-muted';
+      const displayResultado = formatTpeprResultado(r.resultado);
 
       tr.innerHTML = `
         <td>${r.nome || '—'}</td>
@@ -385,7 +416,7 @@
         <td>${r.equipe || '—'}</td>
         <td>${r.funcao || '—'}</td>
         <td>${r.tempoFormatted || '—'}</td>
-        <td><span class="badge ${badgeClass}">${r.resultado || '—'}</span></td>
+        <td><span class="badge ${badgeClass}">${displayResultado}</span></td>
       `;
       tbody.appendChild(tr);
     });

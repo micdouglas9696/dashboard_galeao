@@ -218,12 +218,14 @@ def parse_taf_file(filepath, month_name):
             if corrida.upper() == 'NR' or (flexao is None and abdominal is None and barra is None and not corrida):
                 status = 'nr'
         
-        resultado = str(row[8]).strip() if row[8] else 'Satisfatório'
+        resultado = str(row[8]).strip() if row[8] else 'ACOP - A'
         # Normalize resultado
-        if 'insatisf' in resultado.lower():
-            resultado = 'Insatisfatório'
-        elif 'satisf' in resultado.lower():
-            resultado = 'Satisfatório'
+        if 'insatisf' in resultado.lower() or 'b' in resultado.lower() or 'inapto' in resultado.lower():
+            resultado = 'ACOP - B'
+        elif 'evolu' in resultado.lower():
+            resultado = 'Em evolução'
+        elif 'satisf' in resultado.lower() or 'a' in resultado.lower() or 'apto' in resultado.lower():
+            resultado = 'ACOP - A'
         
         records.append({
             'nome': nome_str,
@@ -352,15 +354,19 @@ def parse_tpepr_file(filepath, month_name):
             if tempo_formatted == 'FÉRIAS':
                 resultado = 'Férias'
             elif tempo_seconds <= 60:
-                resultado = 'Excelente'
+                resultado = 'ACOP - A'
             elif tempo_seconds <= 90:
-                resultado = 'Bom'
+                resultado = 'Em evolução'
             else:
-                resultado = 'Insatisfatório'
+                resultado = 'ACOP - B'
         
         # Normalize resultado
-        if 'ruim' in resultado.lower() or 'insatisf' in resultado.lower():
-            resultado = 'Insatisfatório'
+        if 'excelente' in resultado.lower() or 'satisf' in resultado.lower() or resultado.strip().upper() == 'ACOP - A':
+            resultado = 'ACOP - A'
+        elif 'bom' in resultado.lower() or 'evolu' in resultado.lower():
+            resultado = 'Em evolução'
+        elif 'ruim' in resultado.lower() or 'insatisf' in resultado.lower() or resultado.strip().upper() == 'ACOP - B':
+            resultado = 'ACOP - B'
         
         records.append({
             'nome': nome_str,
@@ -535,7 +541,7 @@ def parse_teorica(colaborador_map):
 
 # ────────── Main ──────────
 
-BASE_DIR = '/Users/m.dbranding/Desktop/OSeas'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PLANILHAS_DIR = os.path.join(BASE_DIR, 'js', 'planilhas')
 
 

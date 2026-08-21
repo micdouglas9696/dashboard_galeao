@@ -177,16 +177,32 @@ window.SESCINC.Parsers.TPEPR = {
       var tempoFormatted = this._formatTime(tempoSeconds);
 
       // Resultado (da planilha)
-      var resultado = row[5] != null ? String(row[5]).trim() : '';
+      var resultadoRaw = row[5] != null ? String(row[5]).trim() : '';
+      var resultado = '';
 
-      // Se resultado vazio, classifica automaticamente
+      if (resultadoRaw) {
+        var lowerRes = resultadoRaw.toLowerCase();
+        if (lowerRes.indexOf('excelente') >= 0 || lowerRes.indexOf('satisfat') >= 0 || resultadoRaw.toUpperCase() === 'ACOP - A') {
+          resultado = 'ACOP - A';
+        } else if (lowerRes.indexOf('bom') >= 0 || lowerRes.indexOf('evolu') >= 0) {
+          resultado = 'Em evolução';
+        } else if (lowerRes.indexOf('ruim') >= 0 || lowerRes.indexOf('insatisf') >= 0 || resultadoRaw.toUpperCase() === 'ACOP - B') {
+          resultado = 'ACOP - B';
+        } else if (lowerRes.indexOf('férias') >= 0 || lowerRes.indexOf('ferias') >= 0) {
+          resultado = 'Férias';
+        } else {
+          resultado = resultadoRaw;
+        }
+      }
+
+      // Se resultado vazio, classifica automaticamente pelo tempo
       if (!resultado && tempoSeconds !== null) {
         if (tempoSeconds <= 60) {
-          resultado = 'Excelente';
+          resultado = 'ACOP - A';
         } else if (tempoSeconds <= 90) {
-          resultado = 'Bom';
+          resultado = 'Em evolução';
         } else {
-          resultado = 'Insatisfatório';
+          resultado = 'ACOP - B';
         }
       }
 
