@@ -467,11 +467,12 @@ window.SESCINC.ActuationCharts = (function () {
       chartTypesInstance = new Chart(ctxTypes, config);
     }
 
-    // Chart 2: Distribuição Mensal (Jan-Jul)
+    // Chart 2: Distribuição Mensal (Jan-Dez)
     const ctxMonthly = document.getElementById('chart-actuation-monthly');
     if (ctxMonthly) {
       if (chartMonthlyInstance) chartMonthlyInstance.destroy();
-      const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'];
+      const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+                     'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
       const monthlyCounts = meses.map(() => 0);
 
       data.forEach(d => {

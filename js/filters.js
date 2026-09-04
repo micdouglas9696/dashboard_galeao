@@ -21,8 +21,8 @@
   };
 
   const RESULTADOS_BY_SECTION = {
-    taf: ['ACOP - A', 'Em evolução', 'ACOP - B'],
-    tpepr: ['ACOP - A', 'Em evolução', 'ACOP - B']
+    taf: ['ACOP - A', 'ACOP - B', 'Em evolução', 'Não Realizado', 'Férias'],
+    tpepr: ['ACOP - A', 'ACOP - B', 'Em evolução', 'Não Realizado', 'Férias']
   };
 
   let currentSection = 'overview';
@@ -176,9 +176,21 @@
         if (f.resultados.length && r.resultado) {
           let resNorm = r.resultado;
           const s = String(resNorm).trim().toLowerCase();
-          if (s === 'acop - a' || s.indexOf('satisfat') >= 0 || s.indexOf('excelent') >= 0 || s === 'apto') resNorm = 'ACOP - A';
-          else if (s === 'em evolução' || s === 'em evolucao' || s === 'bom') resNorm = 'Em evolução';
-          else if (s === 'acop - b' || s.indexOf('insatisf') >= 0 || s.indexOf('insatisfe') >= 0 || s.indexOf('ruim') >= 0 || s === 'inapto') resNorm = 'ACOP - B';
+          if (r.status === 'nr' || s.indexOf('permuta') >= 0 || s === 'nr' || s.indexOf('não realizado') >= 0 || s.indexOf('nao realizado') >= 0) {
+            resNorm = 'Não Realizado';
+          } else if (r.status === 'ferias' || s.indexOf('férias') >= 0 || s.indexOf('ferias') >= 0) {
+            resNorm = 'Férias';
+          } else if (s === 'acop - a' || s.indexOf('satisfat') >= 0 || s.indexOf('excelent') >= 0 || s === 'apto') {
+            resNorm = 'ACOP - A';
+          } else if (s === 'acop - b' || s === 'bom') {
+            resNorm = 'ACOP - B';
+          } else if (s === 'em evolução' || s === 'em evolucao') {
+            resNorm = 'Em evolução';
+          } else if (section === 'tpepr' && (s.indexOf('insatisf') >= 0 || s.indexOf('insatisfe') >= 0 || s.indexOf('ruim') >= 0)) {
+            resNorm = 'Em evolução';
+          } else if (section === 'taf' && (s.indexOf('insatisf') >= 0 || s.indexOf('insatisfe') >= 0 || s.indexOf('ruim') >= 0 || s === 'inapto')) {
+            resNorm = 'ACOP - B';
+          }
           if (!f.resultados.includes(resNorm) && !f.resultados.includes(r.resultado)) return false;
         }
       }

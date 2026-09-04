@@ -139,22 +139,61 @@ window.SESCINC.Parsers.TR = {
   },
 
   /**
-   * Verifica se uma string é um identificador CCI.
+   * Verifica se uma string é um identificador CCI ou código de viatura.
    * @param {string} value
    * @returns {boolean}
    */
   _isCCI: function (value) {
     if (!value) return false;
-    var str = String(value).trim();
-    // Começa com dígito (ex: "1°CCI") ou contém "CCI"
-    return /^\d/.test(str) || str.toUpperCase().indexOf('CCI') >= 0;
+    var str = String(value).trim().toUpperCase();
+    if (/^\d/.test(str) || str.indexOf('CCI') >= 0) return true;
+    if (/^F-?0?[1-9]$/.test(str) || /^F-?358$/.test(str) || str.indexOf('F0') >= 0 || str.indexOf('F358') >= 0) return true;
+    return false;
   },
 
   /**
-   * Constrói mapeamento dinâmico de colunas para meses e CCIs.
+   * Normaliza o CCI e extrai o código da viatura (F01..F358).
+   * @param {string} cciVal
+   * @returns {{ cci: string, viaturaCodigo: string }}
+   */
+  _normalizeCCI: function (cciVal) {
+    var raw = String(cciVal || '').trim().toUpperCase();
+
+    // Mapeamento direto de códigos F01 a F358
+    if (raw === 'F01' || raw === 'F-01' || raw === 'F1' || raw === '1°CCI' || raw === '1CCI' || raw === '1ºCCI') {
+      return { cci: '1°CCI', viaturaCodigo: 'F01' };
+    }
+    if (raw === 'F02' || raw === 'F-02' || raw === 'F2' || raw === '2°CCI' || raw === '2CCI' || raw === '2ºCCI') {
+      return { cci: '2°CCI', viaturaCodigo: 'F02' };
+    }
+    if (raw === 'F03' || raw === 'F-03' || raw === 'F3' || raw === '3°CCI' || raw === '3CCI' || raw === '3ºCCI') {
+      return { cci: '3°CCI', viaturaCodigo: 'F03' };
+    }
+    if (raw === 'F04' || raw === 'F-04' || raw === 'F4' || raw === '4°CCI' || raw === '4CCI' || raw === '4ºCCI') {
+      return { cci: '4°CCI', viaturaCodigo: 'F04' };
+    }
+    if (raw === 'F05' || raw === 'F-05' || raw === 'F5' || raw === '5°CCI' || raw === '5CCI' || raw === '5ºCCI') {
+      return { cci: '5°CCI', viaturaCodigo: 'F05' };
+    }
+    if (raw === 'F358' || raw === 'F-358' || raw === '358' || raw.indexOf('358') >= 0) {
+      return { cci: 'CCI 358', viaturaCodigo: 'F358' };
+    }
+
+    var normalizedCCI = raw;
+    if (!/°/.test(normalizedCCI) && /^\d/.test(normalizedCCI)) {
+      normalizedCCI = normalizedCCI.replace(/^(\d+)\s*/, '$1°');
+      if (normalizedCCI.indexOf('CCI') < 0) {
+        normalizedCCI += 'CCI';
+      }
+    }
+    return { cci: normalizedCCI, viaturaCodigo: '' };
+  },
+
+  /**
+   * Constrói mapeamento dinâmico de colunas para meses, CCIs e observações.
    * @param {Array} row7 — Linha 7 (index 6) com nomes dos meses
-   * @param {Array} row8 — Linha 8 (index 7) com nomes dos CCIs
-   * @returns {Object[]} — Array de { col, month, monthInfo, cci }
+   * @param {Array} row8 — Linha 8 (index 7) com nomes dos CCIs / Viatura / Obs
+   * @returns {Object[]} — Array de { col, month, monthInfo, cci, viaturaCodigo, obsCol }
    */
   _buildColumnMap: function (row7, row8) {
     var mapping = [];
@@ -177,21 +216,14 @@ window.SESCINC.Parsers.TR = {
       // Verifica CCI na row8
       var cciVal = row8 && row8[col] != null ? String(row8[col]).trim() : '';
       if (cciVal !== '' && this._isCCI(cciVal) && currentMonth) {
-        // Normaliza CCI: garante formato N°CCI
-        var normalizedCCI = cciVal;
-        if (!/°/.test(normalizedCCI) && /^\d/.test(normalizedCCI)) {
-          // Formato "1CCI" → "1°CCI"
-          normalizedCCI = normalizedCCI.replace(/^(\d+)\s*/, '$1°');
-          if (normalizedCCI.toUpperCase().indexOf('CCI') < 0) {
-            normalizedCCI += 'CCI';
-          }
-        }
+        var norm = this._normalizeCCI(cciVal);
 
         mapping.push({
           col: col,
           month: currentMonth,
           monthInfo: currentMonthInfo,
-          cci: normalizedCCI
+          cci: norm.cci,
+          viaturaCodigo: norm.viaturaCodigo
         });
       }
     }
@@ -200,37 +232,49 @@ window.SESCINC.Parsers.TR = {
   },
 
   /**
-   * Determina status e valor de uma célula de tempo.
+   * Determina status, valor de tempo e observação de uma célula.
    * @param {*} cellValue
-   * @returns {{ tempoSeconds: number|null, tempoFormatted: string|null, status: string }}
+   * @returns {{ tempoSeconds: number|null, tempoFormatted: string|null, status: string, observacao: string }}
    */
   _parseCellValue: function (cellValue) {
     if (cellValue === null || cellValue === undefined || cellValue === '') {
-      return { tempoSeconds: null, tempoFormatted: null, status: 'empty' };
+      return { tempoSeconds: null, tempoFormatted: null, status: 'empty', observacao: '' };
     }
 
     var str = String(cellValue).trim().toUpperCase();
 
-    if (str === 'NR') {
-      return { tempoSeconds: null, tempoFormatted: null, status: 'nr' };
+    // Permuta detectada
+    if (str.indexOf('PERMUTA') >= 0) {
+      return { tempoSeconds: null, tempoFormatted: 'Não Realizado', status: 'nr', observacao: 'Permuta' };
+    }
+
+    if (str === 'NR' || str.indexOf('NÃO REALIZADO') >= 0 || str.indexOf('NAO REALIZADO') >= 0) {
+      return { tempoSeconds: null, tempoFormatted: 'Não Realizado', status: 'nr', observacao: 'Não Realizado' };
     }
 
     if (str === 'X') {
-      return { tempoSeconds: null, tempoFormatted: null, status: 'na' };
+      return { tempoSeconds: null, tempoFormatted: null, status: 'na', observacao: '' };
     }
 
-    var seconds = this._parseTime(cellValue);
+    var timeValue = cellValue;
+    if (typeof cellValue === 'string') {
+      timeValue = cellValue
+        .replace(/\s*[-–—]\s*F-?(?:358|0?[1-9])\s*$/i, '')
+        .trim();
+    }
+
+    var seconds = this._parseTime(timeValue);
     if (seconds !== null) {
       return {
         tempoSeconds: seconds,
         tempoFormatted: this._formatTime(seconds),
-        status: 'ok'
+        status: 'ok',
+        observacao: ''
       };
     }
 
-    // Valor não reconhecido
-    console.warn('[SESCINC TR] Valor não reconhecido: "' + cellValue + '"');
-    return { tempoSeconds: null, tempoFormatted: null, status: 'empty' };
+    // Se tiver texto explicativo ou observação
+    return { tempoSeconds: null, tempoFormatted: null, status: 'empty', observacao: String(cellValue).trim() };
   },
 
   /**
@@ -271,6 +315,10 @@ window.SESCINC.Parsers.TR = {
     }
 
     var records = [];
+    var mappedCols = {};
+    for (var mapIdx = 0; mapIdx < columnMap.length; mapIdx++) {
+      mappedCols[columnMap[mapIdx].col] = true;
+    }
 
     // Rows 9-12 (index 8-11): equipes
     for (var rowIdx = 8; rowIdx < Math.min(data.length, 20); rowIdx++) {
@@ -302,12 +350,37 @@ window.SESCINC.Parsers.TR = {
         var cellValue = row[mapping.col] != null ? row[mapping.col] : null;
         var parsed = this._parseCellValue(cellValue);
 
+        // Verifica se há coluna adjacente de observação ou viatura
+        var obsText = parsed.observacao;
+        var viaturaCod = mapping.viaturaCodigo;
+        var embeddedVehicle = String(cellValue || '').toUpperCase().match(/F-?(?:358|0?[1-9])/);
+        if (embeddedVehicle) {
+          viaturaCod = this._normalizeCCI(embeddedVehicle[0]).viaturaCodigo;
+        }
+
+        // Se a próxima coluna tiver texto de observação referente ao mês/CCI
+        if (mapping.col + 1 < row.length && !mappedCols[mapping.col + 1]) {
+          var nextVal = row[mapping.col + 1];
+          if (nextVal && typeof nextVal === 'string' && !this._isCCI(nextVal) && isNaN(parseFloat(nextVal))) {
+            if (String(nextVal).toUpperCase().indexOf('PERMUTA') >= 0) {
+              parsed.status = 'nr';
+              parsed.tempoFormatted = 'Não Realizado';
+              parsed.tempoSeconds = null;
+              obsText = String(nextVal).trim();
+            } else if (String(nextVal).trim().length > 3) {
+              obsText = String(nextVal).trim();
+            }
+          }
+        }
+
         records.push({
           cabeceira: cabeceira,
           equipe: equipe,
           mes: mapping.monthInfo.name,
           mesIndex: mapping.monthInfo.index,
           cci: mapping.cci,
+          viaturaCodigo: viaturaCod,
+          observacao: obsText || '',
           tempoFormatted: parsed.tempoFormatted,
           tempoSeconds: parsed.tempoSeconds,
           status: parsed.status

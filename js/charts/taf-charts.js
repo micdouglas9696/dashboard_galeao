@@ -13,7 +13,7 @@
     amber: '#fbbf24', red: '#ef4444', purple: '#c084fc',
     pink: '#f472b6', indigo: '#818cf8', teal: '#2dd4bf',
     equipes: { 'ALFA': '#38bdf8', 'BRAVO': '#34d399', 'CHARLIE': '#fbbf24', 'DELTA': '#ef4444', 'FOLGUISTA': '#c084fc' },
-    resultadosTAF: { 'ACOP - A': '#34d399', 'Em evolução': '#fbbf24', 'ACOP - B': '#ef4444' }
+    resultadosTAF: { 'ACOP - A': '#34d399', 'ACOP - B': '#fbbf24', 'Em evolução': '#ef4444' }
   };
 
   function isAcopA(res) {
@@ -31,10 +31,18 @@
     const s = String(res).trim().toLowerCase();
     return s === 'acop - b' || s.indexOf('insatisf') >= 0 || s.indexOf('insatisfe') >= 0 || s === 'inapto';
   }
+  function isTafMuted(res, status) {
+    if (status === 'nr' || status === 'ferias') return true;
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s.indexOf('feria') >= 0 || s.indexOf('não realizado') >= 0 || s.indexOf('nao realizado') >= 0 || s.indexOf('permuta') >= 0 || s === 'nr';
+  }
   function formatTafResultado(res) {
     if (isAcopA(res)) return 'ACOP - A';
     if (isEmEvolucao(res)) return 'Em evolução';
     if (isAcopB(res)) return 'ACOP - B';
+    if (String(res).toLowerCase().indexOf('feria') >= 0) return 'Férias';
+    if (String(res).toLowerCase().indexOf('permuta') >= 0 || String(res).toLowerCase().indexOf('não realizado') >= 0 || String(res).toLowerCase().indexOf('nao realizado') >= 0 || String(res).toUpperCase() === 'NR') return 'Não Realizado';
     return res || '—';
   }
 
@@ -206,9 +214,9 @@
     const isBar = activeDonutType === 'bar';
     const chartType = isBar ? 'bar' : activeDonutType;
 
-    const labels = evol > 0 ? ['ACOP - A', 'Em evolução', 'ACOP - B'] : ['ACOP - A', 'ACOP - B'];
-    const dataValues = evol > 0 ? [sat, evol, insat] : [sat, insat];
-    const bgColors = evol > 0 ? [tc.green, tc.amber, tc.red] : [tc.green, tc.red];
+    const labels = ['ACOP - A', 'ACOP - B', 'Em evolução'];
+    const dataValues = [sat, insat, evol];
+    const bgColors = [tc.green, tc.amber, tc.red];
 
     const config = {
       type: chartType,
@@ -257,18 +265,14 @@
     const evolData = equipes.map(e => ok.filter(r => r.equipe === e && isEmEvolucao(r.resultado)).length);
     const insatData = equipes.map(e => ok.filter(r => r.equipe === e && isAcopB(r.resultado)).length);
 
-    const hasEvol = evolData.some(v => v > 0);
-
     const isStacked = activeEquipeType === 'bar';
     const isLine = activeEquipeType === 'line';
 
     const datasets = [
       { label: 'ACOP - A', data: satData, backgroundColor: tc.green, borderColor: tc.green }
     ];
-    if (hasEvol) {
-      datasets.push({ label: 'Em evolução', data: evolData, backgroundColor: tc.amber, borderColor: tc.amber });
-    }
-    datasets.push({ label: 'ACOP - B', data: insatData, backgroundColor: tc.red, borderColor: tc.red });
+    datasets.push({ label: 'ACOP - B', data: insatData, backgroundColor: tc.amber, borderColor: tc.amber });
+    datasets.push({ label: 'Em evolução', data: evolData, backgroundColor: tc.red, borderColor: tc.red });
 
     datasets.forEach(d => {
       if (isLine) {
@@ -669,12 +673,12 @@
     tbody.innerHTML = '';
     records.forEach(r => {
       const tr = document.createElement('tr');
-      const isMuted = r.status === 'ferias' || r.status === 'nr';
+      const isMuted = isTafMuted(r.resultado, r.status);
       if (isMuted) tr.classList.add('row-muted');
 
-      const badgeClass = isAcopA(r.resultado) ? 'badge-green' : (isEmEvolucao(r.resultado) ? 'badge-amber' : 'badge-red');
-      const statusLabel = r.status === 'ferias' ? 'Férias' : r.status === 'nr' ? 'NR' : '';
-      const displayResultado = formatTafResultado(r.resultado);
+      const badgeClass = isMuted ? 'badge-muted' : (isAcopA(r.resultado) ? 'badge-green' : (isAcopB(r.resultado) ? 'badge-amber' : 'badge-red'));
+      let displayResultado = formatTafResultado(r.resultado);
+      if (displayResultado === 'Não Realizado' && r.motivo) displayResultado += ' (' + r.motivo + ')';
 
       tr.innerHTML = `
         <td>${r.nome || '—'}</td>
@@ -686,7 +690,7 @@
         <td>${r.abdominal != null ? r.abdominal : '—'}</td>
         <td>${r.barra != null ? r.barra : '—'}</td>
         <td>${r.corrida || '—'}</td>
-        <td>${isMuted ? `<span class="badge badge-muted">${statusLabel}</span>` : `<span class="badge ${badgeClass}">${displayResultado}</span>`}</td>
+        <td><span class="badge ${badgeClass}">${displayResultado}</span></td>
       `;
       tbody.appendChild(tr);
     });

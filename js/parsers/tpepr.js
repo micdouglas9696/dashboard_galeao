@@ -148,61 +148,106 @@ window.SESCINC.Parsers.TPEPR = {
 
     var records = [];
 
-    // NOTA: Coluna A é vazia (offset de 1)
-    // Colunas: B(1)=Nome, C(2)=Equipe, D(3)=Função, E(4)=Tempo, F(5)=Resultado
-    // Dados começam na linha 6 (index 5)
+    // Detecta cabeçalho para offset de coluna
+    var colOffset = 0;
+    for (var h = 0; h < Math.min(data.length, 6); h++) {
+      var hRow = data[h] || [];
+      for (var c = 0; c < hRow.length; c++) {
+        if (String(hRow[c] || '').toUpperCase().indexOf('NOME') >= 0) {
+          colOffset = c;
+          break;
+        }
+      }
+    }
+
     for (var i = 5; i < data.length; i++) {
       var row = data[i];
       if (!row || row.length === 0) continue;
 
-      var nome = row[1] != null ? String(row[1]).trim() : '';
+      var nome = row[colOffset] != null ? String(row[colOffset]).trim() : '';
 
       // Pula linhas vazias ou de resumo
       if (!nome || this._isSummaryRow(nome)) continue;
       if (nome.toUpperCase().indexOf('NOME') >= 0) continue;
 
+      var rowText = row.map(function (c) { return String(c || '').toUpperCase(); }).join(' ');
+
+      // Detecta status especial: Permuta ou Férias
+      var isPermuta = rowText.indexOf('PERMUTA') >= 0;
+      var isFerias = rowText.indexOf('FERIAS') >= 0 || rowText.indexOf('FÉRIAS') >= 0;
+      var isNaoRealizado = rowText.indexOf('NÃO REALIZADO') >= 0 ||
+                           rowText.indexOf('NAO REALIZADO') >= 0 ||
+                           rowText.indexOf('NÃO REALIZADIO') >= 0 ||
+                           rowText.indexOf('NAO REALIZADIO') >= 0 ||
+                           rowText.indexOf('FOLGA') >= 0 ||
+                           rowText.indexOf('ATESTADO') >= 0;
+      var motivo = isPermuta ? 'Permuta' :
+                   (rowText.indexOf('FOLGA') >= 0 ? 'Folga' :
+                   (rowText.indexOf('ATESTADO') >= 0 ? 'Atestado' :
+                   (isNaoRealizado ? 'Não Realizado' : (isFerias ? 'Férias' : ''))));
+
       // Equipe
-      var equipe = row[2] != null ? String(row[2]).trim().toUpperCase() : '';
+      var equipe = row[colOffset + 1] != null ? String(row[colOffset + 1]).trim().toUpperCase() : '';
 
       // Função normalizada
       var funcao = '';
       if (window.SESCINC && window.SESCINC.Names) {
-        funcao = window.SESCINC.Names.normalizeFuncao(row[3] != null ? String(row[3]) : '');
+        funcao = window.SESCINC.Names.normalizeFuncao(row[colOffset + 2] != null ? String(row[colOffset + 2]) : '');
       } else {
-        funcao = row[3] != null ? String(row[3]).trim().toUpperCase() : '';
+        funcao = row[colOffset + 2] != null ? String(row[colOffset + 2]).trim().toUpperCase() : '';
       }
 
       // Tempo
-      var tempoSeconds = this._parseTime(row[4]);
-      var tempoFormatted = this._formatTime(tempoSeconds);
+      var tempoSeconds = isPermuta || isNaoRealizado || isFerias ? null : this._parseTime(row[colOffset + 3]);
+      var tempoFormatted = isPermuta || (isNaoRealizado && !isFerias) ? 'Não Realizado' : (isFerias ? 'Férias' : this._formatTime(tempoSeconds));
 
-      // Resultado (da planilha)
-      var resultadoRaw = row[5] != null ? String(row[5]).trim() : '';
+      // Status
+      var status = 'ok';
+      if (isPermuta || (isNaoRealizado && !isFerias)) {
+        status = 'nr';
+      } else if (isFerias) {
+        status = 'ferias';
+      } else if (tempoSeconds === null && String(row[colOffset + 3] || '').toUpperCase() === 'NR') {
+        status = 'nr';
+        motivo = motivo || 'Não Realizado';
+      }
+
+      // Resultado
+      var resultadoRaw = row[colOffset + 4] != null ? String(row[colOffset + 4]).trim() : '';
       var resultado = '';
 
-      if (resultadoRaw) {
+      if (isPermuta || (isNaoRealizado && !isFerias)) {
+        resultado = 'Não Realizado';
+      } else if (isFerias) {
+        resultado = 'Férias';
+      } else if (resultadoRaw) {
         var lowerRes = resultadoRaw.toLowerCase();
-        if (lowerRes.indexOf('excelente') >= 0 || lowerRes.indexOf('satisfat') >= 0 || resultadoRaw.toUpperCase() === 'ACOP - A') {
+        if (lowerRes.indexOf('permuta') >= 0 || lowerRes === 'nr' || lowerRes.indexOf('não realizado') >= 0) {
+          resultado = 'Não Realizado';
+          status = 'nr';
+        } else if (lowerRes.indexOf('excelente') >= 0 || lowerRes.indexOf('satisfat') >= 0 || ['ACOP - A', 'ACOP A', 'ACOP-A'].indexOf(resultadoRaw.toUpperCase()) >= 0) {
           resultado = 'ACOP - A';
-        } else if (lowerRes.indexOf('bom') >= 0 || lowerRes.indexOf('evolu') >= 0) {
-          resultado = 'Em evolução';
-        } else if (lowerRes.indexOf('ruim') >= 0 || lowerRes.indexOf('insatisf') >= 0 || resultadoRaw.toUpperCase() === 'ACOP - B') {
+        } else if (lowerRes === 'bom' || ['ACOP - B', 'ACOP B', 'ACOP-B'].indexOf(resultadoRaw.toUpperCase()) >= 0) {
           resultado = 'ACOP - B';
+        } else if (lowerRes.indexOf('ruim') >= 0 || lowerRes.indexOf('insatisf') >= 0 || lowerRes.indexOf('insatisfe') >= 0 || lowerRes.indexOf('evolu') >= 0) {
+          resultado = 'Em evolução';
         } else if (lowerRes.indexOf('férias') >= 0 || lowerRes.indexOf('ferias') >= 0) {
           resultado = 'Férias';
+          status = 'ferias';
         } else {
           resultado = resultadoRaw;
         }
       }
 
-      // Se resultado vazio, classifica automaticamente pelo tempo
-      if (!resultado && tempoSeconds !== null) {
+      // Se resultado vazio e status ok, classifica automaticamente pelo tempo:
+      // ≤ 60s: ACOP - A | 61s-90s: ACOP - B | > 90s: Em evolução
+      if (!resultado && status === 'ok' && tempoSeconds !== null) {
         if (tempoSeconds <= 60) {
           resultado = 'ACOP - A';
         } else if (tempoSeconds <= 90) {
-          resultado = 'Em evolução';
-        } else {
           resultado = 'ACOP - B';
+        } else {
+          resultado = 'Em evolução';
         }
       }
 
@@ -218,7 +263,9 @@ window.SESCINC.Parsers.TPEPR = {
         funcao: funcao,
         tempoSeconds: tempoSeconds,
         tempoFormatted: tempoFormatted,
-        resultado: resultado,
+        resultado: resultado || (status === 'nr' ? 'Não Realizado' : 'ACOP - A'),
+        status: status,
+        motivo: motivo || null,
         mes: mesNormalized
       });
     }

@@ -1,7 +1,7 @@
 /**
  * SESCINC SBGL Dashboard — Seed Data
  * Automatically generated from Excel spreadsheets
- * Generated at: 2026-08-21T13:22:29.913905
+ * Generated at: 2026-09-03T23:35:32.443279
  */
 
 window.SESCINC = window.SESCINC || {};
@@ -20,6 +20,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -34,6 +35,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 712,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -48,6 +50,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -62,6 +65,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -76,6 +80,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 655,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -90,6 +95,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -104,6 +110,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -118,6 +125,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -132,6 +140,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 719,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -146,6 +155,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 705,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -160,6 +170,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -174,6 +185,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 670,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -188,6 +200,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -202,6 +215,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 719,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -216,6 +230,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 697,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -230,6 +245,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 835,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -244,6 +260,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -258,6 +275,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -272,6 +290,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -286,6 +305,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 680,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -300,6 +320,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -314,6 +335,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -328,6 +350,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -342,6 +365,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -356,6 +380,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -370,6 +395,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -384,6 +410,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -398,6 +425,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -412,6 +440,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -426,6 +455,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -440,6 +470,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -454,6 +485,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -468,6 +500,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -482,6 +515,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -496,6 +530,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 713,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -510,6 +545,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -524,6 +560,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -538,6 +575,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -552,6 +590,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -566,6 +605,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -580,6 +620,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -594,6 +635,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -608,6 +650,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -622,6 +665,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -636,6 +680,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -650,6 +695,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -664,6 +710,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -678,6 +725,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -692,6 +740,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -706,6 +755,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -720,6 +770,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -734,6 +785,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -748,6 +800,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -762,6 +815,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -776,6 +830,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -790,6 +845,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -804,6 +860,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 700,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -818,6 +875,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 678,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -832,6 +890,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 700,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -846,6 +905,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 708,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -860,6 +920,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -874,6 +935,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 719,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -888,6 +950,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 679,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -902,6 +965,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 696,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -916,6 +980,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -930,6 +995,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -944,6 +1010,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -958,6 +1025,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -972,6 +1040,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 687,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -986,6 +1055,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 699,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -1000,6 +1070,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 717,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -1014,6 +1085,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 719,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -1028,6 +1100,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 671,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -1042,6 +1115,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1056,6 +1130,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1070,6 +1145,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1084,6 +1160,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1098,6 +1175,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1112,6 +1190,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1126,6 +1205,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1140,6 +1220,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1154,6 +1235,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1168,6 +1250,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1182,6 +1265,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1196,6 +1280,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1210,6 +1295,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1224,6 +1310,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1238,6 +1325,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1252,6 +1340,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1266,6 +1355,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1280,6 +1370,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1294,6 +1385,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1308,6 +1400,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1322,6 +1415,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1336,6 +1430,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1350,6 +1445,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1364,6 +1460,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1378,6 +1475,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1392,6 +1490,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1406,6 +1505,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1420,6 +1520,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1434,6 +1535,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1448,6 +1550,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1462,6 +1565,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1476,6 +1580,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1490,6 +1595,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1504,6 +1610,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1518,6 +1625,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1532,6 +1640,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1546,6 +1655,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1560,6 +1670,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1574,6 +1685,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1588,6 +1700,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1602,6 +1715,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1616,6 +1730,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1630,6 +1745,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1644,6 +1760,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1658,6 +1775,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1672,6 +1790,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1686,6 +1805,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1700,6 +1820,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1714,6 +1835,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1728,6 +1850,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1742,6 +1865,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1756,6 +1880,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1770,6 +1895,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1784,6 +1910,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1798,6 +1925,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1812,6 +1940,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1826,6 +1955,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1840,6 +1970,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1854,6 +1985,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1868,6 +2000,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1882,6 +2015,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1896,6 +2030,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1910,6 +2045,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1924,6 +2060,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1938,6 +2075,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1952,6 +2090,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1966,6 +2105,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1980,6 +2120,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -1994,6 +2135,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -2008,6 +2150,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -2022,6 +2165,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -2036,6 +2180,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -2050,6 +2195,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2064,6 +2210,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2078,6 +2225,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2092,6 +2240,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2106,6 +2255,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2120,6 +2270,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2134,6 +2285,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2148,6 +2300,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2162,6 +2315,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2176,6 +2330,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2190,6 +2345,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2204,6 +2360,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2218,6 +2375,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2232,6 +2390,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2246,6 +2405,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2260,6 +2420,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2274,6 +2435,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2288,6 +2450,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2302,6 +2465,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2316,6 +2480,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2330,6 +2495,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 680,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2344,6 +2510,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 712,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2358,6 +2525,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2372,6 +2540,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 630,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2386,6 +2555,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2400,6 +2570,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2414,6 +2585,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2428,6 +2600,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 717,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2442,6 +2615,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2456,6 +2630,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 780,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2470,6 +2645,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2484,6 +2660,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2498,6 +2675,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2512,6 +2690,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 775,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2526,6 +2705,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 810,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2540,6 +2720,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2554,6 +2735,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2568,6 +2750,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2582,6 +2765,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2596,6 +2780,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2610,6 +2795,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2624,6 +2810,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2638,6 +2825,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2652,6 +2840,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2666,6 +2855,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2680,6 +2870,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2694,6 +2885,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2708,6 +2900,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2722,6 +2915,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2736,6 +2930,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2750,6 +2945,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2764,6 +2960,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2778,6 +2975,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2792,6 +2990,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2806,6 +3005,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2820,6 +3020,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2834,6 +3035,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2848,6 +3050,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2862,6 +3065,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2876,6 +3080,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2890,6 +3095,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2904,6 +3110,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2918,6 +3125,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2932,6 +3140,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2946,6 +3155,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2960,6 +3170,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2974,6 +3185,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -2988,6 +3200,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -3002,6 +3215,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -3016,6 +3230,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -3030,6 +3245,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -3044,6 +3260,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -3058,6 +3275,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3072,6 +3290,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3086,6 +3305,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3100,6 +3320,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 705,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3114,6 +3335,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 650,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3128,6 +3350,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3142,6 +3365,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3156,6 +3380,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 686,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3170,6 +3395,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3184,6 +3410,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3198,6 +3425,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 711,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3212,6 +3440,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3226,6 +3455,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3240,6 +3470,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3254,6 +3485,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 795,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3268,6 +3500,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 717,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3282,6 +3515,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 780,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3296,6 +3530,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 712,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3310,6 +3545,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3324,6 +3560,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 713,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3338,6 +3575,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3352,6 +3590,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 712,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3366,6 +3605,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3380,6 +3620,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 820,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3394,6 +3635,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 670,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3408,6 +3650,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3422,6 +3665,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3436,6 +3680,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3450,6 +3695,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 719,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3464,6 +3710,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3478,6 +3725,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3492,6 +3740,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3506,6 +3755,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3520,6 +3770,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3534,6 +3785,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3548,6 +3800,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 717,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3562,6 +3815,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3576,6 +3830,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3590,6 +3845,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 740,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3604,6 +3860,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3618,6 +3875,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3632,6 +3890,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3646,6 +3905,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 714,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3660,6 +3920,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3674,6 +3935,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3688,6 +3950,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3702,6 +3965,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3716,6 +3980,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3730,6 +3995,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3744,6 +4010,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3758,6 +4025,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3772,6 +4040,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3786,6 +4055,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3800,6 +4070,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3814,6 +4085,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3828,6 +4100,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3842,6 +4115,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3856,6 +4130,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3870,6 +4145,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3884,6 +4160,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3898,6 +4175,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3912,6 +4190,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3926,6 +4205,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3940,6 +4220,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3954,6 +4235,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3968,6 +4250,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 698,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3982,6 +4265,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 706,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -3996,6 +4280,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4010,6 +4295,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 670,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4024,6 +4310,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4038,6 +4325,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 695,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4052,6 +4340,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 707,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4066,6 +4355,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 714,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4080,6 +4370,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 670,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4094,6 +4385,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 719,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4108,6 +4400,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 670,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4122,6 +4415,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 687,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4136,6 +4430,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4150,6 +4445,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 699,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4164,6 +4460,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 698,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4178,6 +4475,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 680,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4192,6 +4490,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 696,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4206,6 +4505,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4220,6 +4520,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4234,6 +4535,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 675,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -4248,6 +4550,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4262,6 +4565,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4276,6 +4580,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 711,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4290,6 +4595,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 719,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4304,6 +4610,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 690,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4318,6 +4625,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 653,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4332,6 +4640,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 661,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4346,6 +4655,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4360,6 +4670,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 707,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4374,6 +4685,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4388,6 +4700,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 719,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4402,6 +4715,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 717,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4416,6 +4730,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 700,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4430,6 +4745,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 682,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4444,6 +4760,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4458,6 +4775,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 717,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4472,6 +4790,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4486,6 +4805,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 691,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4500,6 +4820,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 840,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4514,6 +4835,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 693,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4528,6 +4850,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 688,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4542,6 +4865,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 714,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4556,6 +4880,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4570,6 +4895,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4584,6 +4910,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4598,6 +4925,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4612,6 +4940,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4626,6 +4955,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4640,6 +4970,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4654,6 +4985,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4668,6 +5000,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4682,6 +5015,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4696,6 +5030,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4710,6 +5045,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4724,6 +5060,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4738,6 +5075,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4752,6 +5090,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4766,6 +5105,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4780,6 +5120,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4794,6 +5135,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4808,6 +5150,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4822,6 +5165,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4836,6 +5180,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4850,6 +5195,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4864,6 +5210,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4878,6 +5225,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4892,6 +5240,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4906,6 +5255,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4920,6 +5270,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4934,6 +5285,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4948,6 +5300,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4962,6 +5315,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4976,6 +5330,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -4990,6 +5345,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5004,6 +5360,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5018,6 +5375,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5032,6 +5390,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5046,6 +5405,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5060,6 +5420,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5074,6 +5435,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5088,6 +5450,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5102,6 +5465,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5116,6 +5480,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5130,6 +5495,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5144,6 +5510,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5158,6 +5525,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5172,6 +5540,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5186,6 +5555,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5200,6 +5570,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5214,6 +5585,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5228,6 +5600,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5242,6 +5615,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5256,6 +5630,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5270,6 +5645,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5284,6 +5660,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -5298,6 +5675,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5312,6 +5690,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 717,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5326,6 +5705,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 680,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5340,6 +5720,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 711,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5354,6 +5735,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 711,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5368,6 +5750,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5382,6 +5765,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 705,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5396,6 +5780,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 693,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5410,6 +5795,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 708,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5424,6 +5810,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 713,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5436,8 +5823,9 @@ window.SESCINC.SeedData = {
         "barra": 0,
         "corrida": "NR",
         "corridaSeconds": null,
-        "resultado": "ACOP - B",
+        "resultado": "Não Realizado",
         "status": "nr",
+        "motivo": "Não Realizado",
         "mes": "Junho"
       },
       {
@@ -5452,6 +5840,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5466,6 +5855,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 691,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5480,6 +5870,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 790,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5494,6 +5885,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5508,6 +5900,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 713,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5522,6 +5915,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 778,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5536,6 +5930,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5550,6 +5945,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 675,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5564,6 +5960,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5578,6 +5975,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5590,8 +5988,9 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "ACOP - A",
+        "resultado": "Férias",
         "status": "ferias",
+        "motivo": "Férias",
         "mes": "Junho"
       },
       {
@@ -5606,6 +6005,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5620,6 +6020,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 660,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5634,6 +6035,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 700,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5648,6 +6050,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5662,6 +6065,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5676,6 +6080,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5690,6 +6095,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5704,6 +6110,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 715,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5718,6 +6125,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5732,6 +6140,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5744,8 +6153,9 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "",
         "corridaSeconds": null,
-        "resultado": "ACOP - B",
+        "resultado": "Não Realizado",
         "status": "nr",
+        "motivo": "Não Realizado",
         "mes": "Junho"
       },
       {
@@ -5760,6 +6170,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5774,6 +6185,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5788,6 +6200,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 710,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5802,6 +6215,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5816,6 +6230,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5830,6 +6245,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5844,6 +6260,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5856,8 +6273,9 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "",
         "corridaSeconds": null,
-        "resultado": "ACOP - B",
+        "resultado": "Não Realizado",
         "status": "nr",
+        "motivo": "Não Realizado",
         "mes": "Junho"
       },
       {
@@ -5872,6 +6290,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5886,6 +6305,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 707,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5900,6 +6320,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 717,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5914,6 +6335,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 680,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5928,6 +6350,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 711,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5942,6 +6365,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 711,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5956,6 +6380,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5970,6 +6395,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 705,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5984,6 +6410,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 713,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -5998,6 +6425,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 708,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6012,6 +6440,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 713,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6026,6 +6455,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6040,6 +6470,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6054,6 +6485,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6068,6 +6500,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 705,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6082,6 +6515,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6096,6 +6530,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 713,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6110,6 +6545,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 706,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6124,6 +6560,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 719,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6138,6 +6575,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 737,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6152,6 +6590,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 720,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6166,6 +6605,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6180,6 +6620,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6194,6 +6635,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 665,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6208,6 +6650,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 679,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6222,6 +6665,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 683,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6236,6 +6680,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 706,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6250,6 +6695,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 669,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6264,6 +6710,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 672,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6278,6 +6725,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 718,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6292,6 +6740,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6306,6 +6755,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 669,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6320,6 +6770,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 680,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6334,6 +6785,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 709,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6348,6 +6800,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 675,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6362,6 +6815,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 608,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6376,6 +6830,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 675,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6390,6 +6845,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 678,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6404,6 +6860,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 608,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6418,6 +6875,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 608,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6432,6 +6890,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 608,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -6446,6 +6905,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 117,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6460,6 +6920,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 157,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6474,6 +6935,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 139,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6488,6 +6950,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 117,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6502,6 +6965,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 137,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6516,6 +6980,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 153,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6530,6 +6995,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 140,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6544,6 +7010,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 135,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6558,6 +7025,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 123,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6572,6 +7040,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 142,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6586,6 +7055,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 180,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6600,6 +7070,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 131,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6614,6 +7085,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 167,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6626,8 +7098,9 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "ACOP - B",
+        "resultado": "Férias",
         "status": "ferias",
+        "motivo": "Férias",
         "mes": "Julho"
       },
       {
@@ -6642,6 +7115,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 115,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6656,6 +7130,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 135,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6670,6 +7145,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 153,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6684,6 +7160,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 145,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6698,6 +7175,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 144,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6712,6 +7190,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 113,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6726,6 +7205,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 130,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6740,6 +7220,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 136,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6754,6 +7235,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 110,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6768,6 +7250,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 170,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6782,6 +7265,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6796,6 +7280,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 135,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6806,10 +7291,11 @@ window.SESCINC.SeedData = {
         "flexao": null,
         "abdominal": null,
         "barra": null,
-        "corrida": "FOLGA",
+        "corrida": "Não Realizado",
         "corridaSeconds": null,
-        "resultado": "ACOP - B",
-        "status": "ok",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Folga",
         "mes": "Julho"
       },
       {
@@ -6824,6 +7310,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6838,6 +7325,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 180,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6850,8 +7338,9 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "ACOP - B",
+        "resultado": "Férias",
         "status": "ferias",
+        "motivo": "Férias",
         "mes": "Julho"
       },
       {
@@ -6866,6 +7355,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 120,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6880,6 +7370,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 140,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6894,6 +7385,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 204,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6908,6 +7400,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 109,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6920,8 +7413,9 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "ACOP - B",
+        "resultado": "Férias",
         "status": "ferias",
+        "motivo": "Férias",
         "mes": "Julho"
       },
       {
@@ -6936,6 +7430,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 145,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6950,6 +7445,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 120,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6960,10 +7456,11 @@ window.SESCINC.SeedData = {
         "flexao": null,
         "abdominal": null,
         "barra": null,
-        "corrida": "ATESTADO",
+        "corrida": "Não Realizado",
         "corridaSeconds": null,
-        "resultado": "ACOP - B",
-        "status": "ok",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Atestado",
         "mes": "Julho"
       },
       {
@@ -6978,6 +7475,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 237,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -6992,6 +7490,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": null,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7006,6 +7505,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 180,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7020,6 +7520,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 123,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7034,6 +7535,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 128,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7048,6 +7550,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 148,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7062,6 +7565,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 120,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7076,6 +7580,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 179,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7090,6 +7595,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 196,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7104,6 +7610,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 132,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7118,6 +7625,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 148,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7132,6 +7640,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 110,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7146,6 +7655,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 126,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7160,6 +7670,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 238,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7174,6 +7685,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 169,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7188,6 +7700,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 103,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7202,6 +7715,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 178,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7216,6 +7730,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 126,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7230,6 +7745,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 115,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7244,6 +7760,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 118,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7258,6 +7775,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 242,
         "resultado": "ACOP - B",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7272,6 +7790,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 189,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7286,6 +7805,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 169,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7300,6 +7820,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 123,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7314,6 +7835,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 156,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7328,6 +7850,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 147,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7342,6 +7865,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 113,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7356,6 +7880,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 107,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7370,6 +7895,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 125,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7384,6 +7910,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 130,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7398,6 +7925,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 146,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7412,6 +7940,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 130,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7426,6 +7955,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 108,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7440,6 +7970,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 230,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7454,6 +7985,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 148,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7468,6 +8000,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 107,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7482,6 +8015,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 145,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7496,6 +8030,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 165,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7510,6 +8045,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 133,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7524,6 +8060,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 150,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7536,8 +8073,24 @@ window.SESCINC.SeedData = {
         "barra": null,
         "corrida": "FÉRIAS",
         "corridaSeconds": null,
-        "resultado": "ACOP - B",
+        "resultado": "Férias",
         "status": "ferias",
+        "motivo": "Férias",
+        "mes": "Julho"
+      },
+      {
+        "nome": "MARCUS VINICIUS ANDRADE DE AVILA",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "idade": 37,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'00\"",
+        "corridaSeconds": 120,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7552,6 +8105,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 176,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7566,6 +8120,7 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 158,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -7580,10 +8135,1376 @@ window.SESCINC.SeedData = {
         "corridaSeconds": 173,
         "resultado": "ACOP - A",
         "status": "ok",
+        "motivo": null,
         "mes": "Julho"
+      },
+      {
+        "nome": "BRUNO DOS SANTOS LEAL BLAS",
+        "equipe": "ALFA",
+        "funcao": "BA-LR",
+        "idade": 35,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'57\"",
+        "corridaSeconds": 117,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RAFAEL RIBEIRO DE SIQUEIRA",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "idade": 35,
+        "flexao": null,
+        "abdominal": null,
+        "barra": null,
+        "corrida": "Não Realizado",
+        "corridaSeconds": null,
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Permuta",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "CARLOS ALBERTO BARBOSA DA SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "idade": 42,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'19\"",
+        "corridaSeconds": 139,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MAICON NEI DA SILVA ROCHA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 42,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'59\"",
+        "corridaSeconds": 119,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALESSANDRO CARDOSO DE OLIVEIRA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 51,
+        "flexao": 20,
+        "abdominal": 30,
+        "barra": 30,
+        "corrida": "2'00\"",
+        "corridaSeconds": 120,
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "JAMERSON UBIRACY DE ARAÚJO",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 50,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'21\"",
+        "corridaSeconds": 141,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALESSANDRO DA SILVA TEIXEIRA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 45,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "3'10\"",
+        "corridaSeconds": 190,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUAN ALVES DOS SANTOS",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 31,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'59\"",
+        "corridaSeconds": 119,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RODRIGO FERNANDES JUCÁ E SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "idade": 46,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'24\"",
+        "corridaSeconds": 144,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MICHELL SOARES DA CONCEIÇÃO",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "idade": 35,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'50\"",
+        "corridaSeconds": 110,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "YURE MALLET FONSECA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 30,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'38\"",
+        "corridaSeconds": 158,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DOUGLAS TEIXEIRA ALVES",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 37,
+        "flexao": 20,
+        "abdominal": 30,
+        "barra": 45,
+        "corrida": "2'44\"",
+        "corridaSeconds": 164,
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "HENRIQUE DE PINNA GOMES BRITTO",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 33,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'38\"",
+        "corridaSeconds": 158,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RENATO CARREIRO MARTINS",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 38,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'12\"",
+        "corridaSeconds": 132,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUIZ FERNANDO VIEIRA PEREIRA SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 35,
+        "flexao": 20,
+        "abdominal": 30,
+        "barra": 30,
+        "corrida": "2'02\"",
+        "corridaSeconds": 122,
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "PAULO ROBERTO FERNANDES",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "idade": 55,
+        "flexao": 20,
+        "abdominal": 30,
+        "barra": 30,
+        "corrida": "1'58\"",
+        "corridaSeconds": 118,
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "GESSILDO DA SILVA SOARES",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "idade": 33,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'16\"",
+        "corridaSeconds": 136,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "GERSON DA SILVA FERREIRA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 35,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'23\"",
+        "corridaSeconds": 143,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MAICON DOUGLAS FELIX ROCHA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 27,
+        "flexao": null,
+        "abdominal": null,
+        "barra": null,
+        "corrida": "Não Realizado",
+        "corridaSeconds": null,
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Folga",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DYLAN BAGARELLI LOUREIRO",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 22,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'53\"",
+        "corridaSeconds": 113,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DANIEL OSÓRIO DE LIMA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 35,
+        "flexao": null,
+        "abdominal": null,
+        "barra": null,
+        "corrida": "Não Realizado",
+        "corridaSeconds": null,
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Permuta",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUCIANO FERREIRA LOPES WANDERLEY",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "idade": 23,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'09\"",
+        "corridaSeconds": 129,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "THALES DOS SANTOS SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA-CE",
+        "idade": 39,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'08\"",
+        "corridaSeconds": 128,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALAN RICARDO ALMEIDA SA SEVERO",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 40,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'13\"",
+        "corridaSeconds": 133,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALBERT FERREIRA DA SILVA XARIFA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 33,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'48\"",
+        "corridaSeconds": 108,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALEX CORREA SANTANA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 33,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'59\"",
+        "corridaSeconds": 119,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ELIOMAR AGOSTINHO DA SILVA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 51,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'20\"",
+        "corridaSeconds": 140,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FABIO JUNIOR SANTOS BARCELLOS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 45,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'36\"",
+        "corridaSeconds": 156,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FERNANDO BATISTA DO NASCIMENTO",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "idade": 36,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'14\"",
+        "corridaSeconds": 134,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "KASSIO VIEIRA DE SENNA ALMEIDA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 36,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'50\"",
+        "corridaSeconds": 110,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEANDRO RODRIGUES DA SILVA",
+        "equipe": "BRAVO",
+        "funcao": "BA-MA",
+        "idade": 40,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'47\"",
+        "corridaSeconds": 107,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEANDRO MENDES BARBOSA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 40,
+        "flexao": null,
+        "abdominal": null,
+        "barra": null,
+        "corrida": "FÉRIAS",
+        "corridaSeconds": null,
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCELO LEANDRO DE OLIVEIRA COUTINHO",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 38,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'56\"",
+        "corridaSeconds": 116,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCOS VINICIUS SANTOS FIDELIS",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "idade": 33,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'53\"",
+        "corridaSeconds": 113,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCUS VINICIUS ANDRADE DE AVILA",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "idade": 37,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'10\"",
+        "corridaSeconds": 130,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MAURÍCIO DE SOUZA OLIVEIRA",
+        "equipe": "BRAVO",
+        "funcao": "BA-RE",
+        "idade": 57,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'57\"",
+        "corridaSeconds": 177,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MURILO PEREIRA DE ASSIS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 32,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'46\"",
+        "corridaSeconds": 106,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "PAULO RICARDO RIBEIRO KHATE E BRITO",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "idade": 34,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'10\"",
+        "corridaSeconds": 130,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RAFAEL LUIZ DE ALMEIDA SOUZA",
+        "equipe": "BRAVO",
+        "funcao": "BA-LR",
+        "idade": 29,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'20\"",
+        "corridaSeconds": 140,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RAMON SIEIA MEDEIROS",
+        "equipe": "BRAVO",
+        "funcao": "BA-CE",
+        "idade": 35,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'03\"",
+        "corridaSeconds": 123,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RENATO MELO DE LIMA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 41,
+        "flexao": null,
+        "abdominal": null,
+        "barra": null,
+        "corrida": "Não Realizado",
+        "corridaSeconds": null,
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Atestado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "SANDRO RAMOS PRADO",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "idade": 50,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "3'58\"",
+        "corridaSeconds": 238,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "TARICK SEIXAS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 39,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'58\"",
+        "corridaSeconds": 118,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "THIAGO DA SILVA SOUZA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 34,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "3'07\"",
+        "corridaSeconds": 187,
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "YAGO ARINO DA ROCHA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "idade": 37,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'10\"",
+        "corridaSeconds": 130,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "WENDEL DE OLIVEIRA SOARES",
+        "equipe": "CHARLIE",
+        "funcao": "BA-CE",
+        "idade": 37,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'19\"",
+        "corridaSeconds": 139,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCELO BARBOSA DE SOUZA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-LR",
+        "idade": 48,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'09\"",
+        "corridaSeconds": 129,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEANDRO DA ROCHA SANT’ANNA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MA",
+        "idade": 31,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'15\"",
+        "corridaSeconds": 135,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FABIO DE SOUZA FONSECA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MC",
+        "idade": 39,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'49\"",
+        "corridaSeconds": 169,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RICARDO GOMES MARINHO",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 51,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "3'20\"",
+        "corridaSeconds": 200,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RODRIGO ALVES DE SOUZA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 31,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'05\"",
+        "corridaSeconds": 125,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "VAGNER DE OLIVEIRA REZENDE",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 44,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'04\"",
+        "corridaSeconds": 124,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "THALES DIEGO SOARES FERREIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 36,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'47\"",
+        "corridaSeconds": 107,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ROGÉRIO CERVO MOTTA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MC",
+        "idade": 54,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'14\"",
+        "corridaSeconds": 134,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "NIELSON DE SOUZA OLIVEIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 43,
+        "flexao": null,
+        "abdominal": null,
+        "barra": null,
+        "corrida": "FÉRIAS",
+        "corridaSeconds": null,
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FLÁVIO EMANOEL SANTOS DE OLIVEIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 43,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'34\"",
+        "corridaSeconds": 154,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUCIANO SIQUEIRA DA SILVA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 50,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'36\"",
+        "corridaSeconds": 156,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "VINÍCIUS DOS SANTOS PIRES",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 38,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'54\"",
+        "corridaSeconds": 174,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "IGOR DA SILVA DO AMARAL",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 37,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'04\"",
+        "corridaSeconds": 124,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "SALATIEL DOS SANTOS LUIZ GOULART",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 43,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'58\"",
+        "corridaSeconds": 118,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ÁTILA DE FRETAS NETO",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 24,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'58\"",
+        "corridaSeconds": 118,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCELO DOMINGOS CARUNCHO",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 58,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "3'20\"",
+        "corridaSeconds": 200,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "PAULO ROGÉRIO MARQUES MEDEIROS",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 45,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "3'17\"",
+        "corridaSeconds": 197,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FRANCISCO SIMÃO DE LIMA NETO SÁ",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 32,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'58\"",
+        "corridaSeconds": 118,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEANDRO RICARDO LIMA DE OLIVEIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "idade": 40,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'21\"",
+        "corridaSeconds": 141,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "BRUNO DA SILVA SANTOS",
+        "equipe": "DELTA",
+        "funcao": "BA-RE",
+        "idade": 34,
+        "flexao": null,
+        "abdominal": null,
+        "barra": null,
+        "corrida": "FÉRIAS",
+        "corridaSeconds": null,
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DOUGLAS ARAÚJO DOS SANTOS",
+        "equipe": "DELTA",
+        "funcao": "BA-MA",
+        "idade": 43,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'27\"",
+        "corridaSeconds": 147,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "JOSÉ LUIZ MACHADO PINHEIRO",
+        "equipe": "DELTA",
+        "funcao": "BA-RE",
+        "idade": 49,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'53\"",
+        "corridaSeconds": 113,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ANDRE JORGE DOS SANTOS",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "idade": 46,
+        "flexao": null,
+        "abdominal": null,
+        "barra": null,
+        "corrida": "FÉRIAS",
+        "corridaSeconds": null,
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "EDSON COELHO DAVID",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 40,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'05\"",
+        "corridaSeconds": 125,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "KLEBER SANTOS DE OLIVEIRA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 42,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'10\"",
+        "corridaSeconds": 130,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LANDRO RODRIGO SILVEIRA ROSA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 41,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'26\"",
+        "corridaSeconds": 146,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUCAS DIAS DE FARIAS",
+        "equipe": "DELTA",
+        "funcao": "BA-LR",
+        "idade": 35,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'10\"",
+        "corridaSeconds": 130,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCUS PAULO DA LUZ OLIVEIRA DA SILVEIRA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 26,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'48\"",
+        "corridaSeconds": 108,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DEIVID LOPES",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 43,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "3'50\"",
+        "corridaSeconds": 230,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RODRIGO OLIVEIRA ALVES",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 38,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'28\"",
+        "corridaSeconds": 148,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MAYKE SAETTA CORREIA MEDEIROS LIMA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 22,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'47\"",
+        "corridaSeconds": 107,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ROGER PEREIRA DA SILVA BARBOSA OZÓRIO",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "idade": 36,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'25\"",
+        "corridaSeconds": 145,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ANDRE MIGUEL MEIRA SILVA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 51,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'45\"",
+        "corridaSeconds": 165,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "SERGIO LUIZ DOS SANTOS JUNIOR",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 38,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'13\"",
+        "corridaSeconds": 133,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "THIAGO CRUZ LEITE",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 36,
+        "flexao": 32,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'30\"",
+        "corridaSeconds": 150,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ADRIANO NASSAR VALENÇA",
+        "equipe": "DELTA",
+        "funcao": "BA-CE",
+        "idade": 38,
+        "flexao": 32,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'38\"",
+        "corridaSeconds": 158,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCUS VINICIUS ANDRADE DE AVILA",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "idade": 37,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'00\"",
+        "corridaSeconds": 120,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUIZ FELIPE SOBRAL DO NASCIMENTO",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 35,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'56\"",
+        "corridaSeconds": 176,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "WESLEY DE CARVALHO CORREA",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "idade": 35,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'38\"",
+        "corridaSeconds": 158,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ROBERT DOS SANTOS CUNHA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "idade": 42,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'53\"",
+        "corridaSeconds": 173,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "HÉLIO ISMERIM DOS SANTOS",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA-MC",
+        "idade": 55,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'24\"",
+        "corridaSeconds": 144,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "SAMUEL GALDINO DE BARCELOS",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "idade": 23,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "1'38\"",
+        "corridaSeconds": 98,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "JEAN PATRICK NASCIMENTOI LOURENÇO",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "idade": 25,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "3'00\"",
+        "corridaSeconds": 180,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DANIEL NATAN SIEIA ROCHA",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "idade": 26,
+        "flexao": null,
+        "abdominal": null,
+        "barra": null,
+        "corrida": "Não Realizado",
+        "corridaSeconds": null,
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Folga",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DYLAN BAGARELLI LOUREIRO",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA-MC",
+        "idade": 21,
+        "flexao": 30,
+        "abdominal": 45,
+        "barra": 45,
+        "corrida": "2'06\"",
+        "corridaSeconds": 126,
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
       }
     ],
-    "uploadedAt": "2026-08-21T16:22:29.910656Z"
+    "uploadedAt": "2026-09-04T02:35:32.438402Z"
   },
   "tpepr": {
     "records": [
@@ -7594,6 +9515,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7603,6 +9526,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7612,6 +9537,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7621,6 +9548,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7630,6 +9559,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7639,6 +9570,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7648,6 +9581,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7657,6 +9592,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7666,6 +9603,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7675,6 +9614,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7684,6 +9625,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7693,6 +9636,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7702,6 +9647,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7710,7 +9657,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7720,6 +9669,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7728,7 +9679,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 72,
         "tempoFormatted": "01:12",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7738,6 +9691,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 33,
         "tempoFormatted": "00:33",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7747,6 +9702,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7756,6 +9713,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7765,6 +9724,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7774,6 +9735,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7783,6 +9746,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7792,6 +9757,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7801,6 +9768,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7810,6 +9779,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7819,6 +9790,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7828,6 +9801,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7837,6 +9812,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7846,6 +9823,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7855,6 +9834,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7864,6 +9845,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7873,6 +9856,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7882,6 +9867,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7891,6 +9878,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7900,6 +9889,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7909,6 +9900,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7918,6 +9911,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7927,6 +9922,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7936,6 +9933,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7944,7 +9943,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 77,
         "tempoFormatted": "01:17",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7954,6 +9955,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7963,6 +9966,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7972,6 +9977,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7981,6 +9988,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7990,6 +9999,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -7998,7 +10009,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8008,6 +10021,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8017,6 +10032,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8026,6 +10043,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8035,6 +10054,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8044,6 +10065,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8053,6 +10076,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8062,6 +10087,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8071,6 +10098,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8080,6 +10109,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8088,7 +10119,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8098,6 +10131,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8107,6 +10142,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8116,6 +10153,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8125,6 +10164,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8134,6 +10175,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8143,6 +10186,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8152,6 +10197,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8161,6 +10208,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8170,6 +10219,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8179,6 +10230,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8188,6 +10241,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8197,6 +10252,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8205,7 +10262,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8215,6 +10274,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8224,6 +10285,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Abril"
       },
       {
@@ -8233,6 +10296,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8242,6 +10307,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8250,7 +10317,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8260,6 +10329,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8269,6 +10340,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8278,6 +10351,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8287,6 +10362,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8296,6 +10373,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8304,7 +10383,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8313,7 +10394,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 73,
         "tempoFormatted": "01:13",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8322,7 +10405,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8332,6 +10417,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8341,6 +10428,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8349,7 +10438,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8358,7 +10449,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 74,
         "tempoFormatted": "01:14",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8368,6 +10461,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8376,7 +10471,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8385,7 +10482,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 71,
         "tempoFormatted": "01:11",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8395,6 +10494,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8404,6 +10505,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8413,6 +10516,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8422,6 +10527,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8431,6 +10538,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8440,6 +10549,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8449,6 +10560,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8458,6 +10571,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8467,6 +10582,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8476,6 +10593,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8485,6 +10604,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8494,6 +10615,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8502,7 +10625,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8512,6 +10637,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8521,6 +10648,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 33,
         "tempoFormatted": "00:33",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8530,6 +10659,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8538,7 +10669,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 78,
         "tempoFormatted": "01:18",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8548,6 +10681,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8557,6 +10692,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8566,6 +10703,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8574,7 +10713,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 74,
         "tempoFormatted": "01:14",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8583,7 +10724,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8592,7 +10735,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 80,
         "tempoFormatted": "01:20",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8601,7 +10746,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8611,6 +10758,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8619,7 +10768,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8629,6 +10780,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8638,6 +10791,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8646,7 +10801,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8655,7 +10812,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8664,7 +10823,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8673,7 +10834,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8682,7 +10845,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8691,7 +10856,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8701,6 +10868,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8710,6 +10879,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8719,6 +10890,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8728,6 +10901,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8737,6 +10912,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8746,6 +10923,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8755,6 +10934,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8764,6 +10945,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8773,6 +10956,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8782,6 +10967,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8791,6 +10978,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8800,6 +10989,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8809,6 +11000,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8818,6 +11011,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8827,6 +11022,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8836,6 +11033,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8845,6 +11044,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8854,6 +11055,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8863,6 +11066,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8872,6 +11077,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8881,6 +11088,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Fevereiro"
       },
       {
@@ -8890,6 +11099,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8899,6 +11110,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8907,7 +11120,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8917,6 +11132,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8926,6 +11143,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8935,6 +11154,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8944,6 +11165,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8953,6 +11176,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8962,6 +11187,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8970,7 +11197,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8980,6 +11209,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8989,6 +11220,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -8998,6 +11231,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9007,6 +11242,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9015,7 +11252,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 80,
         "tempoFormatted": "01:20",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9025,6 +11264,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9034,6 +11275,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9043,6 +11286,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9052,6 +11297,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9061,6 +11308,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9070,6 +11319,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9079,6 +11330,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9088,6 +11341,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9097,6 +11352,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9106,6 +11363,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9115,6 +11374,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9124,6 +11385,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9133,6 +11396,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9142,6 +11407,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9151,6 +11418,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9159,7 +11428,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9169,6 +11440,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9178,6 +11451,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 33,
         "tempoFormatted": "00:33",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9187,6 +11462,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9195,7 +11472,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 78,
         "tempoFormatted": "01:18",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9205,6 +11484,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9214,6 +11495,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9223,6 +11506,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9231,7 +11516,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9240,7 +11527,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 66,
         "tempoFormatted": "01:06",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9249,7 +11538,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 80,
         "tempoFormatted": "01:20",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9258,7 +11549,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 80,
         "tempoFormatted": "01:20",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9268,6 +11561,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9276,7 +11571,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9286,6 +11583,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9295,6 +11594,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9303,7 +11604,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 66,
         "tempoFormatted": "01:06",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9312,7 +11615,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9322,6 +11627,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9331,6 +11638,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9340,6 +11649,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9348,7 +11659,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9358,6 +11671,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9366,7 +11681,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9376,6 +11693,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9385,6 +11704,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9394,6 +11715,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9403,6 +11726,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9412,6 +11737,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9421,6 +11748,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9430,6 +11759,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 37,
         "tempoFormatted": "00:37",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9439,6 +11770,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9448,6 +11781,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9457,6 +11792,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9466,6 +11803,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9475,6 +11814,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9484,6 +11825,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9493,6 +11836,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9502,6 +11847,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9511,6 +11858,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9520,6 +11869,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9529,6 +11880,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9538,6 +11891,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9547,6 +11902,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9556,6 +11913,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9565,6 +11924,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Janeiro"
       },
       {
@@ -9574,6 +11935,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9582,7 +11945,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 67,
         "tempoFormatted": "01:07",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9592,6 +11957,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9601,6 +11968,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9610,6 +11979,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9618,7 +11989,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9628,6 +12001,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9637,6 +12012,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9646,6 +12023,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9655,6 +12034,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9664,6 +12045,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9673,6 +12056,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9682,6 +12067,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9690,7 +12077,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9699,7 +12088,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 85,
         "tempoFormatted": "01:25",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9708,7 +12099,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9717,7 +12110,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9726,7 +12121,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9736,6 +12133,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 31,
         "tempoFormatted": "00:31",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9745,6 +12144,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9754,6 +12155,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9763,6 +12166,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9772,6 +12177,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9781,6 +12188,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9790,6 +12199,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9799,6 +12210,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9808,6 +12221,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9817,6 +12232,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 31,
         "tempoFormatted": "00:31",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9826,6 +12243,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9835,6 +12254,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9844,6 +12265,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9853,6 +12276,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9862,6 +12287,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9871,6 +12298,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9879,7 +12308,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9889,6 +12320,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9898,6 +12331,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9907,6 +12342,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9916,6 +12353,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9925,6 +12364,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9934,6 +12375,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9943,6 +12386,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9951,7 +12396,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 77,
         "tempoFormatted": "01:17",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9961,6 +12408,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9970,6 +12419,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9979,6 +12430,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9988,6 +12441,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -9997,6 +12452,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10006,6 +12463,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10015,6 +12474,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10024,6 +12485,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10033,6 +12496,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10042,6 +12507,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10051,6 +12518,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10060,6 +12529,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10069,6 +12540,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10078,6 +12551,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10087,6 +12562,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10096,6 +12573,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10105,6 +12584,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10114,6 +12595,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10123,6 +12606,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10132,6 +12617,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10141,6 +12628,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10150,6 +12639,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10159,6 +12650,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10168,6 +12661,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10177,6 +12672,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10186,6 +12683,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10195,6 +12694,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10204,6 +12705,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10213,6 +12716,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10222,6 +12727,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10230,7 +12737,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 66,
         "tempoFormatted": "01:06",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Maio"
       },
       {
@@ -10240,6 +12749,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10249,6 +12760,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10258,6 +12771,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10267,6 +12782,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10276,6 +12793,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10285,6 +12804,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10294,6 +12815,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10302,7 +12825,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10312,6 +12837,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10320,7 +12847,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 67,
         "tempoFormatted": "01:07",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10330,6 +12859,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10339,6 +12870,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10348,6 +12881,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10357,6 +12892,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10366,6 +12903,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10375,6 +12914,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10383,7 +12924,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10393,6 +12936,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10402,6 +12947,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10411,6 +12958,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10420,6 +12969,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10429,6 +12980,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10438,6 +12991,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10447,6 +13002,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10456,6 +13013,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10465,6 +13024,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10474,6 +13035,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10483,6 +13046,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10492,6 +13057,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10501,6 +13068,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10510,6 +13079,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10519,6 +13090,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10527,7 +13100,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-RE",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10537,6 +13112,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10546,6 +13123,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 33,
         "tempoFormatted": "00:33",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10555,6 +13134,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10563,7 +13144,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 78,
         "tempoFormatted": "01:18",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10573,6 +13156,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10582,6 +13167,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10591,6 +13178,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10599,7 +13188,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MA",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10609,6 +13200,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10617,7 +13210,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10626,7 +13221,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10635,7 +13232,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10645,6 +13244,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10654,6 +13255,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10663,6 +13266,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10672,6 +13277,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10680,7 +13287,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10690,6 +13299,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10699,6 +13310,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10707,7 +13320,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10716,7 +13331,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 85,
         "tempoFormatted": "01:25",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10726,6 +13343,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10734,7 +13353,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10744,6 +13365,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10753,6 +13376,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10761,7 +13386,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10771,6 +13398,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10780,6 +13409,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10789,6 +13420,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10798,6 +13431,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10807,6 +13442,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10816,6 +13453,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10825,6 +13464,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10834,6 +13475,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10843,6 +13486,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10852,6 +13497,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10861,6 +13508,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10870,6 +13519,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10879,6 +13530,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10888,6 +13541,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10897,6 +13552,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10906,6 +13563,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10915,6 +13574,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Março"
       },
       {
@@ -10924,6 +13585,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -10933,6 +13596,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -10942,6 +13607,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -10951,6 +13618,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -10960,6 +13629,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -10969,6 +13640,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -10978,6 +13651,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -10986,7 +13661,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 74,
         "tempoFormatted": "01:14",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -10996,6 +13673,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11004,7 +13683,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11013,7 +13694,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11023,6 +13706,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11032,6 +13717,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11041,6 +13728,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11050,6 +13739,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11059,6 +13750,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11067,7 +13760,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11077,6 +13772,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11086,6 +13783,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 39,
         "tempoFormatted": "00:39",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11095,15 +13794,19 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "MAICON NEI DA SILVA ROCHA",
         "equipe": "ALFA",
         "funcao": "BA2",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "FÉRIAS",
         "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Férias",
         "mes": "Junho"
       },
       {
@@ -11113,15 +13816,19 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "ALBERT FERREIRA DA SILVA XARIFA",
         "equipe": "BRAVO",
         "funcao": "BA2",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "FÉRIAS",
-        "resultado": "ACOP - B",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Férias",
         "mes": "Junho"
       },
       {
@@ -11131,6 +13838,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11140,6 +13849,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11149,6 +13860,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11158,6 +13871,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11167,6 +13882,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11176,6 +13893,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11185,6 +13904,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11194,6 +13915,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11202,7 +13925,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11212,15 +13937,19 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "MAURÍCIO DE SOUZA OLIVEIRA",
         "equipe": "BRAVO",
         "funcao": "BA-RE",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11230,6 +13959,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11239,6 +13970,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11248,6 +13981,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 34,
         "tempoFormatted": "00:34",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11257,6 +13992,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11265,7 +14002,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11274,7 +14013,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 75,
         "tempoFormatted": "01:15",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11284,6 +14025,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11293,6 +14036,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11302,6 +14047,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11311,6 +14058,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11320,6 +14069,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11329,15 +14080,19 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "IGOR DA SILVA DO AMARAL",
         "equipe": "CHARLIE",
         "funcao": "BA-MC",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11347,6 +14102,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11355,7 +14112,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 90,
         "tempoFormatted": "01:30",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11364,16 +14123,20 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "ROGERIO CERVO MOTTA",
         "equipe": "CHARLIE",
         "funcao": "BA-MC",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "FÉRIAS",
         "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Férias",
         "mes": "Junho"
       },
       {
@@ -11383,15 +14146,19 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "FRANCISCO SIMÃO DE LIMA NETO SA",
         "equipe": "CHARLIE",
         "funcao": "BA-RE",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11400,7 +14167,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 65,
         "tempoFormatted": "01:05",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11409,16 +14178,20 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 76,
         "tempoFormatted": "01:16",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "SALATIEL DOS SANTOS LUIZ GOULART",
         "equipe": "CHARLIE",
         "funcao": "BA2",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "FÉRIAS",
         "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Férias",
         "mes": "Junho"
       },
       {
@@ -11428,6 +14201,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11436,7 +14211,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11446,15 +14223,19 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "RICARDO GOMES MARINHO",
         "equipe": "CHARLIE",
         "funcao": "BA2",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11464,24 +14245,30 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "FLÁVIO EMANOEL SANTOS DE OLIVEIRA",
         "equipe": "CHARLIE",
         "funcao": "BA2",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
         "nome": "ALEX CORREA SANTANA",
         "equipe": "CHARLIE",
         "funcao": "BA2",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11490,7 +14277,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 78,
         "tempoFormatted": "01:18",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11499,7 +14288,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 81,
         "tempoFormatted": "01:21",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11509,6 +14300,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11518,6 +14311,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11527,6 +14322,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11536,6 +14333,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11545,6 +14344,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11554,6 +14355,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11563,6 +14366,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11572,6 +14377,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11581,6 +14388,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11590,6 +14399,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11599,6 +14410,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11608,6 +14421,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11617,6 +14432,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11626,6 +14443,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11635,6 +14454,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11644,6 +14465,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11653,6 +14476,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11662,6 +14487,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11671,6 +14498,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11680,6 +14509,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11688,7 +14519,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 88,
         "tempoFormatted": "01:28",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11697,7 +14530,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 83,
         "tempoFormatted": "01:23",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11706,7 +14541,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 88,
         "tempoFormatted": "01:28",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Junho"
       },
       {
@@ -11716,6 +14553,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11725,6 +14564,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11734,6 +14575,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11743,6 +14586,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11752,6 +14597,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11761,6 +14608,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11770,6 +14619,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11778,7 +14629,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11788,6 +14641,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11796,7 +14651,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11805,7 +14662,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 88,
         "tempoFormatted": "01:28",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11815,6 +14674,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11824,6 +14685,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 43,
         "tempoFormatted": "00:43",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11833,6 +14696,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11842,6 +14707,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 42,
         "tempoFormatted": "00:42",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11851,6 +14718,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11859,7 +14728,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 85,
         "tempoFormatted": "01:25",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11869,6 +14740,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11878,6 +14751,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 31,
         "tempoFormatted": "00:31",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11887,24 +14762,30 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
         "nome": "LUIZ FERNANDO VIEIRA PEREIRA SILVA",
         "equipe": "ALFA",
         "funcao": "BA2",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "FÉRIAS",
         "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Férias",
         "mes": "Julho"
       },
       {
         "nome": "MAICON NEI DA SILVA ROCHA",
         "equipe": "ALFA",
         "funcao": "BA2",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "FÉRIAS",
         "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Férias",
         "mes": "Julho"
       },
       {
@@ -11914,6 +14795,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11923,6 +14806,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 40,
         "tempoFormatted": "00:40",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11932,6 +14817,19 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Julho"
+      },
+      {
+        "nome": "FABIO JUNIOR SANTOS BARCELLOS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 41,
+        "tempoFormatted": "00:41",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11941,6 +14839,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11950,6 +14850,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11959,6 +14861,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 45,
         "tempoFormatted": "00:45",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11968,15 +14872,19 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
         "nome": "MARCELO LEANDRO DE OLIVEIRA COUTINHO",
         "equipe": "BRAVO",
         "funcao": "BA2",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "FÉRIAS",
-        "resultado": "ACOP - B",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Férias",
         "mes": "Julho"
       },
       {
@@ -11986,6 +14894,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 35,
         "tempoFormatted": "00:35",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -11995,6 +14905,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12004,6 +14916,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12013,15 +14927,19 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
         "nome": "PAULO RICARDO RIBEIRO KHATE E BRITO",
         "equipe": "BRAVO",
         "funcao": "BA-MC",
-        "tempoSeconds": 0,
+        "tempoSeconds": null,
         "tempoFormatted": "FÉRIAS",
-        "resultado": "ACOP - B",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Férias",
         "mes": "Julho"
       },
       {
@@ -12031,6 +14949,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 35,
         "tempoFormatted": "00:35",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12040,6 +14960,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12048,7 +14970,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12057,7 +14981,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 70,
         "tempoFormatted": "01:10",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12067,6 +14993,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12075,7 +15003,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12085,6 +15015,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12094,6 +15026,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12102,7 +15036,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-LR",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12112,6 +15048,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12121,6 +15059,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 53,
         "tempoFormatted": "00:53",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12129,7 +15069,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 68,
         "tempoFormatted": "01:08",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12138,7 +15080,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12147,7 +15091,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 72,
         "tempoFormatted": "01:12",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12157,6 +15103,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12165,7 +15113,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 72,
         "tempoFormatted": "01:12",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12175,6 +15125,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 58,
         "tempoFormatted": "00:58",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12184,6 +15136,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12192,7 +15146,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 81,
         "tempoFormatted": "01:21",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12202,6 +15158,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12210,7 +15168,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12219,7 +15179,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 61,
         "tempoFormatted": "01:01",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12228,7 +15190,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12237,7 +15201,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 69,
         "tempoFormatted": "01:09",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12246,7 +15212,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 64,
         "tempoFormatted": "01:04",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12256,6 +15224,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12264,7 +15234,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 62,
         "tempoFormatted": "01:02",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12274,6 +15246,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12283,6 +15257,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 60,
         "tempoFormatted": "01:00",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12292,6 +15268,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12301,6 +15279,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 51,
         "tempoFormatted": "00:51",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12310,6 +15290,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12319,6 +15301,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 41,
         "tempoFormatted": "00:41",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12328,6 +15312,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 46,
         "tempoFormatted": "00:46",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12337,6 +15323,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 48,
         "tempoFormatted": "00:48",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12346,6 +15334,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 49,
         "tempoFormatted": "00:49",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12355,6 +15345,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 59,
         "tempoFormatted": "00:59",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12364,6 +15356,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 54,
         "tempoFormatted": "00:54",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12373,6 +15367,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 52,
         "tempoFormatted": "00:52",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12382,6 +15378,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 56,
         "tempoFormatted": "00:56",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12391,6 +15389,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12400,6 +15400,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 44,
         "tempoFormatted": "00:44",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12409,6 +15411,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 50,
         "tempoFormatted": "00:50",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12418,6 +15422,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 57,
         "tempoFormatted": "00:57",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12427,6 +15433,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 36,
         "tempoFormatted": "00:36",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12436,6 +15444,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 47,
         "tempoFormatted": "00:47",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12445,6 +15455,8 @@ window.SESCINC.SeedData = {
         "tempoSeconds": 55,
         "tempoFormatted": "00:55",
         "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12453,7 +15465,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA-MC",
         "tempoSeconds": 88,
         "tempoFormatted": "01:28",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12462,7 +15476,9 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 83,
         "tempoFormatted": "01:23",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
       },
       {
@@ -12471,11 +15487,992 @@ window.SESCINC.SeedData = {
         "funcao": "BA2",
         "tempoSeconds": 63,
         "tempoFormatted": "01:03",
-        "resultado": "Em evolução",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
         "mes": "Julho"
+      },
+      {
+        "nome": "BRUNO DOS SANTOS LEAL BLAS",
+        "equipe": "ALFA",
+        "funcao": "BA-LR",
+        "tempoSeconds": 39,
+        "tempoFormatted": "00:39",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RAFAEL RIBEIRO DE SIQUEIRA",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": null,
+        "tempoFormatted": "Não Realizado",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Permuta",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "CARLOS ALBERTO BARBOSA DA SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 0,
+        "tempoFormatted": "00:00",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALESSANDRO CARDOSO DE OLIVEIRA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 44,
+        "tempoFormatted": "00:44",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "JAMERSON UBIRACY DE ARAÚJO",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 48,
+        "tempoFormatted": "00:48",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALESSANDRO DA SILVA TEIXEIRA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 47,
+        "tempoFormatted": "00:47",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUAN ALVES DOS SANTOS",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RODRIGO FERNANDES JUCÁ E SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 71,
+        "tempoFormatted": "01:11",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MICHELL SOARES DA CONCEIÇÃO",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "YURE MALLET FONSECA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 65,
+        "tempoFormatted": "01:05",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DOUGLAS TEIXEIRA ALVES",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 61,
+        "tempoFormatted": "01:01",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "HENRIQUE DE PINNA GOMES BRITTO",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 63,
+        "tempoFormatted": "01:03",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RENATO CARREIRO MARTINS",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALAN RICARDO ALMEIDA SA SEVERO",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 56,
+        "tempoFormatted": "00:56",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "PAULO ROBERTO FERNANDES",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "GESSILDO DA SILVA SOARES",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 43,
+        "tempoFormatted": "00:43",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "GERSON DA SILVA FERREIRA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 51,
+        "tempoFormatted": "00:51",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MAICON DOUGLAS FELIX ROCHA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": null,
+        "tempoFormatted": "Não Realizado",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Folga",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DANIEL OSÓRIO DE LIMA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": null,
+        "tempoFormatted": "Não Realizado",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Permuta",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUCIANO FERREIRA LOPES WANDERLEY",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 29,
+        "tempoFormatted": "00:29",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "THALES DOS SANTOS SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA-CE",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUIZ FERNANDO VIEIRA PEREIRA SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 62,
+        "tempoFormatted": "01:02",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MAICON NEI DA SILVA ROCHA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALBERT FERREIRA DA SILVA XARIFA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 46,
+        "tempoFormatted": "00:46",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ALEX CORREA SANTANA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 48,
+        "tempoFormatted": "00:48",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ELIOMAR AGOSTINHO DA SILVA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FABIO JUNIOR SANTOS BARCELLOS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FERNANDO BATISTA DO NASCIMENTO",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "tempoSeconds": 58,
+        "tempoFormatted": "00:58",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "KASSIO VIEIRA DE SENNA ALMEIDA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 40,
+        "tempoFormatted": "00:40",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEANDRO MENDES BARBOSA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 0,
+        "tempoFormatted": "00:00",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEANDRO RODRIGUES DA SILVA",
+        "equipe": "BRAVO",
+        "funcao": "BA-MA",
+        "tempoSeconds": 32,
+        "tempoFormatted": "00:32",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCELO LEANDRO DE OLIVEIRA COUTINHO",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 60,
+        "tempoFormatted": "01:00",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCOS VINICIUS SANTOS FIDELIS",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "tempoSeconds": 43,
+        "tempoFormatted": "00:43",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCUS VINICIUS ANDRADE DE AVILA",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "tempoSeconds": 60,
+        "tempoFormatted": "01:00",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MAURÍCIO DE SOUZA OLIVEIRA",
+        "equipe": "BRAVO",
+        "funcao": "BA-RE",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MURILO PEREIRA DE ASSIS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 41,
+        "tempoFormatted": "00:41",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "PAULO RICARDO RIBEIRO KHATE E BRITO",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "tempoSeconds": 51,
+        "tempoFormatted": "00:51",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RAFAEL LUIZ DE ALMEIDA SOUZA",
+        "equipe": "BRAVO",
+        "funcao": "BA-LR",
+        "tempoSeconds": 35,
+        "tempoFormatted": "00:35",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RAMON SIEIA MEDEIROS",
+        "equipe": "BRAVO",
+        "funcao": "BA-CE",
+        "tempoSeconds": 48,
+        "tempoFormatted": "00:48",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "SANDRO RAMOS PRADO",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 68,
+        "tempoFormatted": "01:08",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "TARICK SEIXAS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 61,
+        "tempoFormatted": "01:01",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "THIAGO DA SILVA SOUZA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 58,
+        "tempoFormatted": "00:58",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "YAGO ARINO DA ROCHA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 60,
+        "tempoFormatted": "01:00",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "WENDEL DE OLIVEIRA SOARES",
+        "equipe": "CHARLIE",
+        "funcao": "BA-CE",
+        "tempoSeconds": 43,
+        "tempoFormatted": "00:43",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCELO BARBOSA DE SOUZA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-LR",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEANDRO DA ROCHA SANT’ANNA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MA",
+        "tempoSeconds": 66,
+        "tempoFormatted": "01:06",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FABIO DE SOUZA FONSECA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MC",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RICARDO GOMES MARINHO",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RODRIGO ALVES DE SOUZA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "VAGNER DE OLIVEIRA REZENDE",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 58,
+        "tempoFormatted": "00:58",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "THALES DIEGO SOARES FERREIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ROGÉRIO CERVO MOTTA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MC",
+        "tempoSeconds": 74,
+        "tempoFormatted": "01:14",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "NIELSON DE SOUZA OLIVEIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 0,
+        "tempoFormatted": "00:00",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FLÁVIO EMANOEL SANTOS DE OLIVEIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 49,
+        "tempoFormatted": "00:49",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUCIANO SIQUEIRA DA SILVA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "VINÍCIUS DOS SANTOS PIRES",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DYLAN BAGARELLI LOUREIRO",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 45,
+        "tempoFormatted": "00:45",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "IGOR DA SILVA DO AMARAL",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MC",
+        "tempoSeconds": 66,
+        "tempoFormatted": "01:06",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "SALATIEL DOS SANTOS LUIZ GOULART",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 65,
+        "tempoFormatted": "01:05",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ÁTILA DE FRETAS NETO",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 66,
+        "tempoFormatted": "01:06",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCELO DOMINGOS CARUNCHO",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 78,
+        "tempoFormatted": "01:18",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "PAULO ROGÉRIO MARQUES MEDEIROS",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 64,
+        "tempoFormatted": "01:04",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEANDRO RICARDO LIMA DE OLIVEIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 42,
+        "tempoFormatted": "00:42",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "FRANCISCO SIMÃO DE LIMA NETO SÁ",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ADRIANO NASSAR VALENÇA",
+        "equipe": "DELTA",
+        "funcao": "BA-CE",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ANDRÉ JORGE DOS SANTOS",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 0,
+        "tempoFormatted": "00:00",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "JOSÉ LUIZ MACHADO PINHEIRO",
+        "equipe": "DELTA",
+        "funcao": "BA-RE",
+        "tempoSeconds": 51,
+        "tempoFormatted": "00:51",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "BRUNO DA SILVA SANTOS",
+        "equipe": "DELTA",
+        "funcao": "BA-RE",
+        "tempoSeconds": 0,
+        "tempoFormatted": "00:00",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Agosto"
+      },
+      {
+        "nome": "EDSON COELHO DAVID",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DEIVID LOPES",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 70,
+        "tempoFormatted": "01:10",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEONARDO MONTEIRO DA SILVA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 46,
+        "tempoFormatted": "00:46",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUCAS DIAS DE FARIAS",
+        "equipe": "DELTA",
+        "funcao": "BA-LR",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "MARCUS PAULO DA LUZ OLIVEIRA DA SILVEIRA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 49,
+        "tempoFormatted": "00:49",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DOUGLAS ARAÚJO DOS SANTOS",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "RODRIGO OLIVEIRA ALVES",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ROGER PEREIRA DA SILVA BARBOSA OZÓRIO",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "SERGIO LUIZ DOS SANTOS JUNIOR",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 56,
+        "tempoFormatted": "00:56",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LEANDRO RODRIGO SILVEIRA ROSA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "WESLEY DE CARVALHO CORREA",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 44,
+        "tempoFormatted": "00:44",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ANDRÉ MIGUEL MEIRE",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "ÉDIPO FERNANDES DA SILVA",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "CARLOS ALBERTO DOS S. LESSA JUNIOR",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 36,
+        "tempoFormatted": "00:36",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "THIAGO CRUZ LEITE",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 47,
+        "tempoFormatted": "00:47",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "LUIZ FELIPE SOBRAL DO NASCIMENTO",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 55,
+        "tempoFormatted": "00:55",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "KLEBER SANTOS DE OLIVEIRA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 53,
+        "tempoFormatted": "00:53",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "HÉLIO ISMERIM DOS SANTOS",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "SAMUEL GALDINO DE BARCELOS",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "JEAN PATRICK NASCIMENTOI LOURENÇO",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "tempoSeconds": 51,
+        "tempoFormatted": "00:51",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Agosto"
+      },
+      {
+        "nome": "DANIEL NATAN SIEIA ROCHA",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "tempoSeconds": null,
+        "tempoFormatted": "Não Realizado",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Folga",
+        "mes": "Agosto"
       }
     ],
-    "uploadedAt": "2026-08-21T16:22:29.910675Z"
+    "uploadedAt": "2026-09-04T02:35:32.438411Z"
   },
   "tr": {
     "records": [
@@ -12485,6 +16482,8 @@ window.SESCINC.SeedData = {
         "mes": "Janeiro",
         "mesIndex": 0,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:58",
         "tempoSeconds": 118,
         "status": "ok"
@@ -12495,6 +16494,8 @@ window.SESCINC.SeedData = {
         "mes": "Janeiro",
         "mesIndex": 0,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "03:23",
         "tempoSeconds": 203,
         "status": "ok"
@@ -12505,6 +16506,8 @@ window.SESCINC.SeedData = {
         "mes": "Janeiro",
         "mesIndex": 0,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:43",
         "tempoSeconds": 223,
         "status": "ok"
@@ -12515,6 +16518,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12525,6 +16530,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12535,6 +16542,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12545,6 +16554,8 @@ window.SESCINC.SeedData = {
         "mes": "Maio",
         "mesIndex": 4,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:47",
         "tempoSeconds": 107,
         "status": "ok"
@@ -12555,6 +16566,8 @@ window.SESCINC.SeedData = {
         "mes": "Maio",
         "mesIndex": 4,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "03:33",
         "tempoSeconds": 213,
         "status": "ok"
@@ -12565,6 +16578,8 @@ window.SESCINC.SeedData = {
         "mes": "Maio",
         "mesIndex": 4,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:40",
         "tempoSeconds": 220,
         "status": "ok"
@@ -12575,6 +16590,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:49",
         "tempoSeconds": 109,
         "status": "ok"
@@ -12585,6 +16602,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "01:56",
         "tempoSeconds": 116,
         "status": "ok"
@@ -12595,6 +16614,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:34",
         "tempoSeconds": 214,
         "status": "ok"
@@ -12605,6 +16626,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
         "tempoFormatted": "03:41",
         "tempoSeconds": 221,
         "status": "ok"
@@ -12615,6 +16638,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12625,6 +16650,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12635,6 +16662,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12645,6 +16674,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:40",
         "tempoSeconds": 100,
         "status": "ok"
@@ -12655,6 +16686,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "01:45",
         "tempoSeconds": 105,
         "status": "ok"
@@ -12665,6 +16698,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:30",
         "tempoSeconds": 210,
         "status": "ok"
@@ -12675,6 +16710,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
         "tempoFormatted": "03:40",
         "tempoSeconds": 220,
         "status": "ok"
@@ -12685,6 +16722,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12695,6 +16734,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12705,6 +16746,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12715,6 +16758,8 @@ window.SESCINC.SeedData = {
         "mes": "Abril",
         "mesIndex": 3,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:58",
         "tempoSeconds": 118,
         "status": "ok"
@@ -12725,6 +16770,8 @@ window.SESCINC.SeedData = {
         "mes": "Abril",
         "mesIndex": 3,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "02:38",
         "tempoSeconds": 158,
         "status": "ok"
@@ -12735,6 +16782,8 @@ window.SESCINC.SeedData = {
         "mes": "Abril",
         "mesIndex": 3,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:12",
         "tempoSeconds": 192,
         "status": "ok"
@@ -12745,6 +16794,8 @@ window.SESCINC.SeedData = {
         "mes": "Abril",
         "mesIndex": 3,
         "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
         "tempoFormatted": "03:27",
         "tempoSeconds": 207,
         "status": "ok"
@@ -12755,6 +16806,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "02:12",
         "tempoSeconds": 132,
         "status": "ok"
@@ -12765,6 +16818,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "02:15",
         "tempoSeconds": 135,
         "status": "ok"
@@ -12775,6 +16830,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:45",
         "tempoSeconds": 225,
         "status": "ok"
@@ -12785,6 +16842,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
         "tempoFormatted": "03:50",
         "tempoSeconds": 230,
         "status": "ok"
@@ -12795,6 +16854,8 @@ window.SESCINC.SeedData = {
         "mes": "Fevereiro",
         "mesIndex": 1,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:54",
         "tempoSeconds": 114,
         "status": "ok"
@@ -12805,6 +16866,8 @@ window.SESCINC.SeedData = {
         "mes": "Fevereiro",
         "mesIndex": 1,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "02:03",
         "tempoSeconds": 123,
         "status": "ok"
@@ -12815,6 +16878,8 @@ window.SESCINC.SeedData = {
         "mes": "Fevereiro",
         "mesIndex": 1,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:09",
         "tempoSeconds": 189,
         "status": "ok"
@@ -12825,6 +16890,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12835,6 +16902,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12845,6 +16914,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12855,6 +16926,8 @@ window.SESCINC.SeedData = {
         "mes": "Janeiro",
         "mesIndex": 0,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:55",
         "tempoSeconds": 115,
         "status": "ok"
@@ -12865,6 +16938,8 @@ window.SESCINC.SeedData = {
         "mes": "Janeiro",
         "mesIndex": 0,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "03:45",
         "tempoSeconds": 225,
         "status": "ok"
@@ -12875,6 +16950,8 @@ window.SESCINC.SeedData = {
         "mes": "Janeiro",
         "mesIndex": 0,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:56",
         "tempoSeconds": 236,
         "status": "ok"
@@ -12885,6 +16962,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12895,6 +16974,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12905,6 +16986,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12915,6 +16998,8 @@ window.SESCINC.SeedData = {
         "mes": "Maio",
         "mesIndex": 4,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12925,6 +17010,8 @@ window.SESCINC.SeedData = {
         "mes": "Maio",
         "mesIndex": 4,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12935,6 +17022,8 @@ window.SESCINC.SeedData = {
         "mes": "Maio",
         "mesIndex": 4,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12945,6 +17034,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:52",
         "tempoSeconds": 112,
         "status": "ok"
@@ -12955,6 +17046,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "03:43",
         "tempoSeconds": 223,
         "status": "ok"
@@ -12965,6 +17058,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "04:10",
         "tempoSeconds": 250,
         "status": "ok"
@@ -12975,6 +17070,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12985,6 +17082,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -12995,6 +17094,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13005,6 +17106,8 @@ window.SESCINC.SeedData = {
         "mes": "Abril",
         "mesIndex": 3,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:39",
         "tempoSeconds": 99,
         "status": "ok"
@@ -13015,6 +17118,8 @@ window.SESCINC.SeedData = {
         "mes": "Abril",
         "mesIndex": 3,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "03:38",
         "tempoSeconds": 218,
         "status": "ok"
@@ -13025,6 +17130,8 @@ window.SESCINC.SeedData = {
         "mes": "Abril",
         "mesIndex": 3,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:56",
         "tempoSeconds": 236,
         "status": "ok"
@@ -13035,6 +17142,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13045,6 +17154,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13055,6 +17166,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13065,6 +17178,8 @@ window.SESCINC.SeedData = {
         "mes": "Fevereiro",
         "mesIndex": 1,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:46",
         "tempoSeconds": 106,
         "status": "ok"
@@ -13075,6 +17190,8 @@ window.SESCINC.SeedData = {
         "mes": "Fevereiro",
         "mesIndex": 1,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "03:18",
         "tempoSeconds": 198,
         "status": "ok"
@@ -13085,6 +17202,8 @@ window.SESCINC.SeedData = {
         "mes": "Fevereiro",
         "mesIndex": 1,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "03:37",
         "tempoSeconds": 217,
         "status": "ok"
@@ -13095,6 +17214,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13105,6 +17226,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13115,6 +17238,8 @@ window.SESCINC.SeedData = {
         "mes": "Março",
         "mesIndex": 2,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13125,6 +17250,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13135,6 +17262,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13145,6 +17274,8 @@ window.SESCINC.SeedData = {
         "mes": "Junho",
         "mesIndex": 5,
         "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
         "tempoFormatted": "NR",
         "tempoSeconds": null,
         "status": "nr"
@@ -13155,12 +17286,758 @@ window.SESCINC.SeedData = {
         "mes": "Maio",
         "mesIndex": 4,
         "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
         "tempoFormatted": "01:51",
         "tempoSeconds": 111,
         "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "ALFA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "ALFA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "ALFA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "ALFA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "ALFA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "01:48",
+        "tempoSeconds": 108,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "ALFA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F05",
+        "observacao": "",
+        "tempoFormatted": "01:56",
+        "tempoSeconds": 116,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "ALFA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "03:23",
+        "tempoSeconds": 203,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "ALFA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F358",
+        "observacao": "",
+        "tempoFormatted": "03:32",
+        "tempoSeconds": 212,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "BRAVO",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "BRAVO",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "BRAVO",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "BRAVO",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "CHARLIE",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "CHARLIE",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "CHARLIE",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "CHARLIE",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "CHARLIE",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "02:18",
+        "tempoSeconds": 138,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "CHARLIE",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F05",
+        "observacao": "",
+        "tempoFormatted": "02:35",
+        "tempoSeconds": 155,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "CHARLIE",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "03:29",
+        "tempoSeconds": 209,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "CHARLIE",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F358",
+        "observacao": "",
+        "tempoFormatted": "03:45",
+        "tempoSeconds": 225,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "DELTA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "DELTA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "DELTA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "DELTA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "DELTA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "01:44",
+        "tempoSeconds": 104,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "DELTA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F05",
+        "observacao": "",
+        "tempoFormatted": "03:08",
+        "tempoSeconds": 188,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "28",
+        "equipe": "DELTA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F358",
+        "observacao": "",
+        "tempoFormatted": "03:08",
+        "tempoSeconds": 188,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "ALFA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "ALFA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "ALFA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "ALFA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "ALFA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "01:49",
+        "tempoSeconds": 109,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "ALFA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "03:24",
+        "tempoSeconds": 204,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "ALFA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F358",
+        "observacao": "",
+        "tempoFormatted": "03:28",
+        "tempoSeconds": 208,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "BRAVO",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "BRAVO",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "BRAVO",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "BRAVO",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "CHARLIE",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "CHARLIE",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "CHARLIE",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "CHARLIE",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "CHARLIE",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "01:32",
+        "tempoSeconds": 92,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "CHARLIE",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "02:57",
+        "tempoSeconds": 177,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "CHARLIE",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F358",
+        "observacao": "",
+        "tempoFormatted": "03:03",
+        "tempoSeconds": 183,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "DELTA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F01",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "DELTA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F02",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "DELTA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "DELTA",
+        "mes": "Julho",
+        "mesIndex": 6,
+        "cci": "4°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "NR",
+        "tempoSeconds": null,
+        "status": "nr"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "DELTA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "01:21",
+        "tempoSeconds": 81,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "DELTA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "03:08",
+        "tempoSeconds": 188,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "33",
+        "equipe": "DELTA",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F358",
+        "observacao": "",
+        "tempoFormatted": "03:08",
+        "tempoSeconds": 188,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "15",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "1°CCI",
+        "viaturaCodigo": "F358",
+        "observacao": "",
+        "tempoFormatted": "01:43",
+        "tempoSeconds": 103,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "15",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "2°CCI",
+        "viaturaCodigo": "F03",
+        "observacao": "",
+        "tempoFormatted": "02:06",
+        "tempoSeconds": 126,
+        "status": "ok"
+      },
+      {
+        "cabeceira": "15",
+        "equipe": "BRAVO",
+        "mes": "Agosto",
+        "mesIndex": 7,
+        "cci": "3°CCI",
+        "viaturaCodigo": "F04",
+        "observacao": "",
+        "tempoFormatted": "02:51",
+        "tempoSeconds": 171,
+        "status": "ok"
       }
     ],
-    "uploadedAt": "2026-08-21T16:22:29.910683Z"
+    "uploadedAt": "2026-09-04T02:35:32.438413Z"
   },
   "teorica": {
     "records": [
@@ -14887,7 +19764,7 @@ window.SESCINC.SeedData = {
         "funcaoOriginal": "BA MC",
         "aeroporto": "SBGL",
         "nota": 92.5,
-        "equipe": "BRAVO",
+        "equipe": "DELTA",
         "questoes": [
           {
             "num": 1,
@@ -24611,7 +29488,7 @@ window.SESCINC.SeedData = {
         "funcaoOriginal": "BA",
         "aeroporto": "SBGL",
         "nota": 100.0,
-        "equipe": "Não identificada",
+        "equipe": "FOLGUISTA",
         "questoes": [
           {
             "num": 1,
@@ -24754,7 +29631,7 @@ window.SESCINC.SeedData = {
         "funcaoOriginal": "BA MC",
         "aeroporto": "SBGL",
         "nota": 97.5,
-        "equipe": "CHARLIE",
+        "equipe": "FOLGUISTA",
         "questoes": [
           {
             "num": 1,
@@ -25606,7 +30483,7 @@ window.SESCINC.SeedData = {
         ]
       }
     ],
-    "uploadedAt": "2026-08-21T16:22:29.910690Z"
+    "uploadedAt": "2026-09-04T02:35:32.438415Z"
   },
   "actuation": {
     "records": [
@@ -25622,7 +30499,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 29",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -25650,7 +30527,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 28",
         "quadrante": "B05",
         "viaturas": [
-          "CCI 05"
+          "CCI 05 (F05)"
         ]
       },
       {
@@ -25665,7 +30542,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 59",
         "quadrante": "EE41",
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -25680,7 +30557,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 128",
         "quadrante": null,
         "viaturas": [
-          "CCI 01",
+          "CCI 01 (F01)",
           "CRS",
           "CACE"
         ]
@@ -25710,7 +30587,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 25",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -25725,7 +30602,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
-          "CCI 05",
+          "CCI 05 (F05)",
           "CRS",
           "BRASA UNO"
         ]
@@ -25755,7 +30632,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio Militar",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -25770,7 +30647,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
-          "CCI 05"
+          "CCI 05 (F05)"
         ]
       },
       {
@@ -25800,7 +30677,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 32",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -25830,9 +30707,9 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 28",
         "quadrante": null,
         "viaturas": [
-          "CCI 01",
-          "CCI 02",
-          "CCI 04",
+          "CCI 01 (F01)",
+          "CCI 02 (F02)",
+          "CCI 04 (F04)",
           "CRS",
           "CACE"
         ]
@@ -25864,7 +30741,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Hangar United / Manutenção",
         "quadrante": "P-16",
         "viaturas": [
-          "CCI 05"
+          "CCI 05 (F05)"
         ]
       },
       {
@@ -25879,10 +30756,10 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 77",
         "quadrante": null,
         "viaturas": [
-          "CCI 01",
-          "CCI 02",
-          "CCI 04",
-          "CCI 05",
+          "CCI 01 (F01)",
+          "CCI 02 (F02)",
+          "CCI 04 (F04)",
+          "CCI 05 (F05)",
           "CCI 07",
           "CRS",
           "CACE"
@@ -25900,9 +30777,9 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 28",
         "quadrante": null,
         "viaturas": [
-          "CCI 01",
-          "CCI 02",
-          "CCI 05",
+          "CCI 01 (F01)",
+          "CCI 02 (F02)",
+          "CCI 05 (F05)",
           "CCI 07",
           "CRS",
           "CACE"
@@ -25920,9 +30797,9 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 28",
         "quadrante": null,
         "viaturas": [
-          "CCI 02",
-          "CCI 04",
-          "CCI 05",
+          "CCI 02 (F02)",
+          "CCI 04 (F04)",
+          "CCI 05 (F05)",
           "CCI 07",
           "CRS",
           "CACE"
@@ -25953,7 +30830,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Quadrante FF41",
         "quadrante": "FF41",
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -25968,7 +30845,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 34",
         "quadrante": null,
         "viaturas": [
-          "CCI 01",
+          "CCI 01 (F01)",
           "CACE"
         ]
       },
@@ -25984,9 +30861,9 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 28",
         "quadrante": null,
         "viaturas": [
-          "CCI 02",
-          "CCI 04",
-          "CCI 05",
+          "CCI 02 (F02)",
+          "CCI 04 (F04)",
+          "CCI 05 (F05)",
           "CCI 07",
           "CRS",
           "CACE"
@@ -26032,8 +30909,8 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio Militar",
         "quadrante": null,
         "viaturas": [
-          "CCI 01",
-          "CCI 02",
+          "CCI 01 (F01)",
+          "CCI 02 (F02)",
           "CRS",
           "CACE"
         ]
@@ -26050,9 +30927,9 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 15",
         "quadrante": null,
         "viaturas": [
-          "CCI 01",
-          "CCI 02",
-          "CCI 04",
+          "CCI 01 (F01)",
+          "CCI 02 (F02)",
+          "CCI 04 (F04)",
           "CRS",
           "CACE"
         ]
@@ -26069,7 +30946,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 29",
         "quadrante": null,
         "viaturas": [
-          "CCI 01",
+          "CCI 01 (F01)",
           "CACE",
           "FAÍSCA LÍDER"
         ]
@@ -26099,7 +30976,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio Militar",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -26129,7 +31006,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Área de Cargas TECA",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -26157,7 +31034,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 3",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -26172,7 +31049,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 53",
         "quadrante": null,
         "viaturas": [
-          "CCI 01",
+          "CCI 01 (F01)",
           "CACE"
         ]
       },
@@ -26201,7 +31078,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 77",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -26229,7 +31106,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -26259,7 +31136,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 3",
         "quadrante": null,
         "viaturas": [
-          "CCI 01"
+          "CCI 01 (F01)"
         ]
       },
       {
@@ -26274,7 +31151,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Área de Cargas TECA",
         "quadrante": null,
         "viaturas": [
-          "CCI 04"
+          "CCI 04 (F04)"
         ]
       },
       {
@@ -26289,7 +31166,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Quadrante G-26",
         "quadrante": "G-26",
         "viaturas": [
-          "CCI 02"
+          "CCI 02 (F02)"
         ]
       },
       {
@@ -26304,7 +31181,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
-          "CCI 04",
+          "CCI 04 (F04)",
           "CACE"
         ]
       },
@@ -26320,7 +31197,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 23",
         "quadrante": "Y43",
         "viaturas": [
-          "CCI 04",
+          "CCI 04 (F04)",
           "CRS"
         ]
       },
@@ -26352,7 +31229,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 23",
         "quadrante": null,
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CACE",
           "FAÍSCA LÍDER"
         ]
@@ -26368,7 +31245,10 @@ window.SESCINC.SeedData = {
         "acoes": "Informo que às 15:33 a SCI foi acionada pelo COE via rádio transceptor para um princípio de incêndio na ROMEU devido a soltura de fogos do manejo de fauna para afujantamento dos passáros. Tendo deslocado de imediato o CCI 358 chegando ao local com brevidade e debelando o fogo de imediato encerrando a operação às 15:44.",
         "localizacao": "Pátio 2",
         "quadrante": null,
-        "viaturas": []
+        "viaturas": [
+          "CCI 03 (F03)",
+          "CCI 358 (F358)"
+        ]
       },
       {
         "id": "ACT-55",
@@ -26382,7 +31262,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 80",
         "quadrante": null,
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CACE",
           "FAÍSCA LÍDER"
         ]
@@ -26415,7 +31295,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio Militar",
         "quadrante": null,
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CRS",
           "CACE"
         ]
@@ -26460,6 +31340,8 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
+          "CCI 03 (F03)",
+          "CCI 358 (F358)",
           "FAÍSCA LÍDER"
         ]
       },
@@ -26475,7 +31357,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Posição 71",
         "quadrante": "DD39",
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CRS",
           "CACE"
         ]
@@ -26492,7 +31374,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 3",
         "quadrante": "BB41",
         "viaturas": [
-          "CCI 02"
+          "CCI 02 (F02)"
         ]
       },
       {
@@ -26552,8 +31434,8 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 15",
         "quadrante": null,
         "viaturas": [
-          "CCI 02",
-          "CCI 03",
+          "CCI 02 (F02)",
+          "CCI 03 (F03)",
           "CRS",
           "CACE"
         ]
@@ -26570,7 +31452,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 3",
         "quadrante": null,
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CACE",
           "BRASA UNO",
           "FAÍSCA LÍDER"
@@ -26588,7 +31470,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Área de Cargas TECA",
         "quadrante": "JJ48",
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CACE"
         ]
       },
@@ -26619,7 +31501,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Quadrante FF40",
         "quadrante": "FF40",
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CACE"
         ]
       },
@@ -26648,7 +31530,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 1",
         "quadrante": null,
         "viaturas": [
-          "CCI 04",
+          "CCI 04 (F04)",
           "CRS",
           "CACE",
           "FAÍSCA LÍDER"
@@ -26666,7 +31548,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Sistema 10-28",
         "quadrante": "I25",
         "viaturas": [
-          "CCI 05",
+          "CCI 05 (F05)",
           "CACE"
         ]
       },
@@ -26682,7 +31564,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 2",
         "quadrante": "Z43",
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CACE"
         ]
       },
@@ -26698,8 +31580,9 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 15",
         "quadrante": null,
         "viaturas": [
-          "CCI 03",
-          "CCI 04",
+          "CCI 03 (F03)",
+          "CCI 04 (F04)",
+          "CCI 358 (F358)",
           "CRS",
           "CACE"
         ]
@@ -26716,9 +31599,11 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 28",
         "quadrante": null,
         "viaturas": [
-          "CCI 02",
-          "CCI 04",
-          "CCI 05",
+          "CCI 02 (F02)",
+          "CCI 03 (F03)",
+          "CCI 04 (F04)",
+          "CCI 05 (F05)",
+          "CCI 358 (F358)",
           "CRS",
           "CACE"
         ]
@@ -26748,7 +31633,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 1",
         "quadrante": null,
         "viaturas": [
-          "CCI 03"
+          "CCI 03 (F03)"
         ]
       },
       {
@@ -26763,7 +31648,8 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
+          "CCI 358 (F358)",
           "CRS"
         ]
       },
@@ -26779,7 +31665,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Cabeceira 28",
         "quadrante": null,
         "viaturas": [
-          "CCI 02"
+          "CCI 02 (F02)"
         ]
       },
       {
@@ -26794,7 +31680,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
-          "CCI 02",
+          "CCI 02 (F02)",
           "CACE"
         ]
       },
@@ -26810,7 +31696,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio Militar",
         "quadrante": null,
         "viaturas": [
-          "CCI 02"
+          "CCI 02 (F02)"
         ]
       },
       {
@@ -26825,7 +31711,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 1",
         "quadrante": null,
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CRS",
           "CACE"
         ]
@@ -26842,7 +31728,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 2",
         "quadrante": null,
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CACE",
           "FAÍSCA LÍDER"
         ]
@@ -26859,7 +31745,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Pátio 1",
         "quadrante": null,
         "viaturas": [
-          "CCI 04",
+          "CCI 04 (F04)",
           "CACE",
           "FAÍSCA LÍDER"
         ]
@@ -26876,8 +31762,8 @@ window.SESCINC.SeedData = {
         "localizacao": "Sistema 10-28",
         "quadrante": "S",
         "viaturas": [
-          "CCI 02",
-          "CCI 05"
+          "CCI 02 (F02)",
+          "CCI 05 (F05)"
         ]
       },
       {
@@ -26892,7 +31778,7 @@ window.SESCINC.SeedData = {
         "localizacao": "Área de Cargas TECA",
         "quadrante": "PP45",
         "viaturas": [
-          "CCI 03"
+          "CCI 03 (F03)"
         ]
       },
       {
@@ -26907,9 +31793,11 @@ window.SESCINC.SeedData = {
         "localizacao": "Área de Cargas TECA",
         "quadrante": null,
         "viaturas": [
-          "CCI 03",
+          "CCI 03 (F03)",
           "CRS",
-          "CACE"
+          "CACE",
+          "BRASA UNO",
+          "BRASA 3"
         ]
       },
       {
@@ -26926,8 +31814,201 @@ window.SESCINC.SeedData = {
         "viaturas": [
           "CRS"
         ]
+      },
+      {
+        "id": "ACT-2S-7",
+        "data": "2026-08-07",
+        "mes": "Agosto",
+        "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
+        "tipo": "Incêndio em Vegetação",
+        "equipe": "BRAVO",
+        "descricao": "Às 13h25, o Centro de Operações de Emergência (CES) informou ao Supervisor de Emergência, via rádio, a presença de um foco de incêndio em vegetação localizado próximo à cabeceira 28, no quadrante K02 do mapa de grade",
+        "acoes": "Ato contínuo, às 13h26, o Faísca Líder solicitou o imediato deslocamento da viatura CCI 07 para o atendimento da ocorrência, tendo a equipe chegado ao local às 13h29.\nOs procedimentos de combate e extinção do fogo foram conduzidos com celeridade, sendo reportado às 13h31 que o incêndio havia sido debelado e que a equipe permaneceria no ponto estratégico para o resfriamento da área afetada. Às 13h32, a operação foi declarada concluída com sucesso, mantendo-se a área devidamente resfriada e em condições de segurança.\nApós a conclusão dos trabalhos, o CCI 07 iniciou o regresso ao PACI 02 às 13h41, vindo a reportar ao COE, às 13h42, que a dimensão da área atingida foi de aproximadamente 10 metros quadrados. O término total do deslocamento e a chegada da viatura ao PACI 02 ocorreram às 13h47.\nConstatou-se que o foco de incêndio na vegetação foi ocasionado pela soltura de fogos conduzida pela colaboradora Larissa Nascimento dos Santos (Matrícula 92827-23), representante da empresa RADAR, durante a execução do serviço de afugentamento de aves.",
+        "localizacao": "Cabeceira 28",
+        "quadrante": "K02",
+        "viaturas": [
+          "CCI 07",
+          "FAÍSCA LÍDER"
+        ]
+      },
+      {
+        "id": "ACT-2S-8",
+        "data": "2026-08-10",
+        "mes": "Agosto",
+        "tipo_raw": "OUTROS",
+        "tipo": "Outros Acionamentos",
+        "equipe": "ALFA",
+        "descricao": "ACIONAMENTO DO SESCINC PARA PREVENEÇÃO DE ABASTECIMENTO DE OXIGÊNIO EM AERONAVE",
+        "acoes": "Comunico que às 08h53, o Supervisor de Emergência Marcos acionou o SESCINC, via rádio transceptor, solicitando apoio para realização de prevenção durante o reabastecimento de oxigênio de uma aeronave da Força Aérea Brasileira (FAB), no Pátio Militar.\nÀs 08h57, o BA-CE Thales Silva informou ao COE o início do deslocamento do CCI 03, da SCI com destino ao Pátio Militar.\nÀs 08h59, o BA-CE informou ao COE que o CCI 03 se encontrava posicionada no Pátio Militar, dando início à prevenção durante o reabastecimento de oxigênio da aeronave operada pela Força Aérea Brasileira (FAB), modelo KC-390, identificação 2857. Informou ainda que o responsável pelo reabastecimento era o 3º Sargento da Força Aérea Brasileira, Vicente.\nÀs 09h00, o CCI 03 informou ao BA-CE que se encontrava posicionado na posição II39, conforme mapa de grade interno do Pátio Militar.\nÀs 09h10, o BA-CE informou ao COE o término da prevenção, sendo iniciado o retorno da viatura CCI 03 para o pátio da Base Central Faísca.\nÀs 09h13, o BA-CE informou ao COE a chegada da viatura CCI 03 à Base Central Faísca, encerrando a ocorrência.",
+        "localizacao": "Pátio Militar",
+        "quadrante": null,
+        "viaturas": [
+          "CCI 03 (F03)"
+        ]
+      },
+      {
+        "id": "ACT-2S-9",
+        "data": "2026-08-12",
+        "mes": "Agosto",
+        "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
+        "tipo": "Condição de Urgência",
+        "equipe": "BRAVO",
+        "descricao": "#NAME?",
+        "acoes": "Posteriormente, às 06h39, a Torre de Controle acionou formalmente o alerta na condição de \"PAM PAM\". Tratava-se da aeronave modelo Embraer 295, de prefixo PS-ADN, transportando 127 pessoas a bordo (POB), com 3.500 kg de combustível remanescente, sem a presença de carga perigosa e com pouso previsto para a cabeceira 15.\nÀs 06h43, todos os recursos operacionais e viaturas de emergência já se encontravam devidamente posicionados nos postos de alarme designados. A aeronave efetuou o pouso com segurança às 06h51, sem o registro de anormalidades ou danos visuais aparentes, vindo a parar em frente à Taxiway D, no quadrante EE-49 do mapa de grade.\nÀs 06h56, o comandante efetuou o corte dos motores para possibilitar a aproximação e verificação de segurança das viaturas CCI. Logo após o procedimento, a emergência foi descaracterizada pelo próprio comandante da aeronave. Diante do encerramento da ocorrência, os recursos do SESCINC retornaram às suas respectivas bases, mantendo-se o monitoramento contínuo por meio do sistema de câmeras da central PACI Uno.",
+        "localizacao": "Cabeceira 15",
+        "quadrante": "EE-49",
+        "viaturas": []
+      },
+      {
+        "id": "ACT-2S-10",
+        "data": "2026-08-12",
+        "mes": "Agosto",
+        "tipo_raw": "OUTROS",
+        "tipo": "Outros Acionamentos",
+        "equipe": "CHARLIE",
+        "descricao": "ACIONAMENTO DO SESCINC PARA AVALIAÇÃO APÓS UM PRINCÍPIO DE INCÊNDIO",
+        "acoes": "Comunico que por volta das 13:54 o COE aciona a equipe SESCINC, via rádio transceptor, para avaliação de um princípio de incêndio que já havia sido debelado, em um trator, na posição de pátio 45. De imediato o BA-CE Wendel Soares inicia deslocamento com a viatura CACE e solicita deslocamento do CCI 358 e viatura CRS.\nÀs 13:57h, o BA-CE comunica chegada a local e início de avaliação.\nÀs 13:58h, o BA-CE comunica que o princípio de incêndio foi proveniente de um curto circuito no trator da empresa Swissport, matrícula CTU1137 e que já havia sido controlado pelo eletricista André Luiz, matrícula 98220-23, da própria empresa, sendo utilizado um extintor de PQS do trator e realizado o corte da alimentação elétrica do equipamento, estando localizado no quadrante AA40.\nÀs 16:00h, o BA-CE comunica que o trator será rebocado por um outro trator da empresa Swissport, com matrícula TCU 1923, sendo operado pelo colaborador Denison dos Santos, matrícula 80399-25, até o lado terra, para ser realizado reparo.\nÀs 14:06h, o BA-CE comunica que o local está seguro, não apresenta mais risco de incêndio e que as viaturas retornarão a base.\nÀs 14:14, o BA-CE comunica que todas as viaturas já estão em suas bases.",
+        "localizacao": "Quadrante AA40",
+        "quadrante": "AA40",
+        "viaturas": [
+          "CCI 03 (F03)",
+          "CCI 358 (F358)",
+          "CRS",
+          "CACE"
+        ]
+      },
+      {
+        "id": "ACT-2S-11",
+        "data": "2026-08-14",
+        "mes": "Agosto",
+        "tipo_raw": "OUTROS",
+        "tipo": "Outros Acionamentos",
+        "equipe": "ALFA",
+        "descricao": "ACIONAMENTO DO SESCINC PARA RISCO DE INCÊNDIO EM CAMINHÃO ABASTECEDOR ENGUIÇADO",
+        "acoes": "Comunico que, às 12h40, o COE acionou o Supervisor de Emergência Marcos, informando sobre um caminhão abastecedor que se encontrava enguiçado na posição 39, no Pátio 2. Diante da situação, às 12h42, o Supervisor de Emergência acionou o SESCINC, via rádio transceptor, informando sobre o ocorrido e solicitando uma averiguação quanto à existência de possível risco de incêndio.\n\nÀs 12h44, o BA-CE Thales Silva iniciou o deslocamento da viatura CACE 025 com destino à posição 39, para realização da averiguação.\n\nÀs 12h47, o BA-CE informou ao COE a chegada da viatura CACE 025 ao local, identificando o caminhão abastecedor pelo prefixo AIRBP 219. Segundo relato do funcionário Marcos Paulo, matrícula 9163524, o veículo apresentava uma pane eletrônica, não havendo qualquer tipo de vazamento e não sendo identificado risco de incêndio no momento.\n\nÀs 12h48, o COE questionou sobre a previsão para o equipamento voltar a funcionar. Após consulta ao colaborador Marcos Paulo, o BA-CE informou que o veículo aguardava a chegada do mecânico, que compareceria ao local com uma mangueira pneumática para realizar um procedimento de liberação do equipamento, com previsão de aproximadamente 20 a 30 minutos para conclusão.\n\nÀs 12h49, o BA-CE informou ao COE que a área já se encontrava devidamente sinalizada e isolada pelo próprio colaborador da empresa AIRBP.\n\nÀs 12h50, o BA-CE informou ao COE que a ocorrência se encontrava na posição BB42, conforme mapa de grade interno.\n\nÀs 12h52, o BA-CE informou ao COE que a Fiscalização de Pátio já se encontrava no local e, após averiguação, constatou que não havia risco de incêndio naquele momento, sendo informado o retorno da viatura CACE 025 à base. O Supervisor de Emergência orientou o BA-CE a informar à Fiscalização de Pátio que, diante de qualquer alteração na situação, o SESCINC deveria ser acionado imediatamente. Ressalto que tal orientação foi alinhada com o Fiscal de Pátio Paiva.",
+        "localizacao": "Pátio 2",
+        "quadrante": null,
+        "viaturas": [
+          "CACE"
+        ]
+      },
+      {
+        "id": "ACT-2S-12",
+        "data": "2026-08-14",
+        "mes": "Agosto",
+        "tipo_raw": "OUTROS",
+        "tipo": "Outros Acionamentos",
+        "equipe": "ALFA",
+        "descricao": "ACIONAMENTO DO SESCINC PARA PRINCÍPIO DE INCÊNDIO EM TRATOR REBOCADOR",
+        "acoes": "Comunico que, às 17h37, o COE acionou o SESCINC, via rádio transceptor, informando sobre um princípio de incêndio em um trator rebocador localizado na posição 26, tendo sido informado também que o combate já havia sido iniciado, sendo solicitado o deslocamento do SESCINC para averiguação da ocorrência.\n\nÀs 17h38, o BA-CE Thales Silva informou o início do deslocamento das viaturas CACE 025, CCI 03 e CRS 01 com destino à posição 26.\n\nÀs 17h40, o Supervisor de Emergência Nilson informou a chegada ao local da ocorrência.\n\nÀs 17h41, o Supervisor de Emergência informou ao BA-CE que o incêndio já se encontrava controlado, porém solicitou o deslocamento do BA-CE até o local para realização da averiguação.\n\nÀs 17h42, o PACI Uno informou ao BA-CE que a ocorrência estava localizada na posição Z43, conforme mapa de grade interno.\n\nÀs 17h43, o BA-CE informou ao COE a chegada ao local da ocorrência.\n\nÀs 17h44, o BA-CE informou ao COE que o princípio de incêndio havia ocorrido em um trator rebocador da empresa WFS, identificação RE388. Informou ainda que o princípio de incêndio havia sido controlado pelo colaborador da empresa Orbital, Alexandre, matrícula 9043021, utilizando o próprio extintor de incêndio do trator rebocador. Após a averiguação, foi constatado que não havia mais risco de incêndio no equipamento.\n\nÀs 17h45, o BA-CE informou que a equipe de manutenção já havia sido acionada para comparecer à posição 26 e realizar as tratativas necessárias no equipamento.\n\nÀs 17h46, o BA-CE informou ao COE que a equipe de manutenção da empresa Orbital já se encontrava na posição 26.\n\nÀs 17h47, o BA-LR Bruno Blas informou ao BA-CE que as equipes do CCI 03 e do CRS 01 haviam iniciado o procedimento de isolamento do local da ocorrência.\n\nÀs 17h49, o BA-CE informou ao COE que a bateria do trator rebocador envolvido no princípio de incêndio já havia sido removida pela equipe de manutenção.\n\nÀs 17h53, o BA-CE informou ao COE o retorno das viaturas e recursos empregados para a SCI, comunicando que a situação se encontrava controlada.\n\nÀs 17h54, o BA-CE informou ao COE que o trator rebocador permanecia na posição 26 e que a Fiscalização de Pátio se encontrava no local, realizando as tratativas necessárias para a remoção do equipamento.\n\nÀs 18h02, o BA-CE informou ao COE que as viaturas do SESCINC já se encontravam no pátio da SCI, encerrando a ocorrência.",
+        "localizacao": "Posição 26",
+        "quadrante": null,
+        "viaturas": [
+          "CCI 03 (F03)",
+          "CRS",
+          "CACE"
+        ]
+      },
+      {
+        "id": "ACT-2S-13",
+        "data": "2026-08-16",
+        "mes": "Agosto",
+        "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
+        "tipo": "Condição de Urgência",
+        "equipe": "CHARLIE",
+        "descricao": "ACIONAMENTO DO SESCINC PARA ATENDIMENTO A CONDIÇÃO DE URGÊNCIA",
+        "acoes": "Comunico que às 14h54 a TWR acionou o SESCINC, via rádio transceptor, informando que a aeronave GOL (Boeing 737-800 MAX), prefixo PSGPA, havia declarado condição de urgência em razão de colisão com pássaros na decolagem na pista 15x33, resultando em pane de perda de velocidade da aeronave. Foi informado que a aeronave transportava 191 passageiros a bordo, possuía autonomia de 6100 kg de combustível, não transportava carga perigosa, não era aeronave militar e nem municionada, e realizaria o pouso pela cabeceira 28 da pista 10x28, com estimativa de chegada em 10 minutos após o acionamento via rádio.\nNeste momento foi iniciado check de rádio da TWR Galeão, quando acionado Central Faísca, o BA-CE Wendel Soares comunicou o início de deslocamento das viaturas do SESCINC até os posicionamentos para intervenção pré estabelecidos.\nÀs 14h55, as viaturas CCI 02 e CCI 05 informaram que já se encontravam posicionadas em frente ao PACI 02.\nÀs 14h57, as viaturas CCI 04 e CCI 358 informaram posicionamento na taxiway BB, e a viatura CRS informou posicionamento na taxiway P.\nÀs 14h58, a viatura CACE informou posicionamento na taxiway BB.\nÀs 15h04, a aeronave realizou o toque em solo na Cabeceira 28. A aeronave deslocou-se para a posição 32 no pátio com o acompanhamento das viaturas CACE, CCI04, CCI358 e CRS.\nÀs 15h08, o piloto descaracterizou a emergência em solo, informação repassada via rádio pela TWR Galeão, neste momento o BA-CE solicitou o retorno dos CCI’s 02 e 05, comunicou a continuidade o acompanhamento da aeronave de forma preventiva pelas viaturas CCI’s 04 e 358, viatura CRS e seguindo também o acompanhamento a viatura CACE.\nÀs 15h15, as viaturas CCI 02 e CCI 05 comunicaram as chegadas em suas bases no PACI 02.\nÀs 15h20, após a chegada da aeronave na posição 32, o BA-CE estabeleceu contato com o mecânico da companhia aérea GOL, srº Marcos, matrícula ANAC 746537, onde foi comunicado pelo mecânico que a aeronave não apresentava nenhum risco de incêndio.\nÀs 15h21, o BA-CE comunicou o retorno das viaturas do SESCINC as suas bases e retorno ao canal de rádio Resposta Emergência.\nÀs 15h26, as viaturas CCI 04 e CCI 358 comunicaram a chegada à base no PACI 01.\nÀs 15h40, as viaturas CACE e CRS chegaram à Central Faísca, encerrando o atendimento da ocorrência.",
+        "localizacao": "Cabeceira 28",
+        "quadrante": null,
+        "viaturas": [
+          "CCI 02 (F02)",
+          "CCI 03 (F03)",
+          "CCI 04 (F04)",
+          "CCI 05 (F05)",
+          "CCI 358 (F358)",
+          "CRS",
+          "CACE"
+        ]
+      },
+      {
+        "id": "ACT-2S-14",
+        "data": "2026-08-17",
+        "mes": "Agosto",
+        "tipo_raw": "PREVENÇÃO A GIRO DE MOTOR",
+        "tipo": "Giro de Motor (Prevenção)",
+        "equipe": "DELTA",
+        "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO A GIRO DE MOTOR",
+        "acoes": "O BA-CE  SOLICITOU O DESLOCAMENTO DO CCI 03 ATÉ O LOCAL INFORMADO PARA REALIZAR UM POSICIONAMENTO DE PREVENÇÃO NA AERONAVE",
+        "localizacao": "Pátio Militar",
+        "quadrante": null,
+        "viaturas": [
+          "CCI 03 (F03)"
+        ]
+      },
+      {
+        "id": "ACT-2S-15",
+        "data": "2026-08-18",
+        "mes": "Agosto",
+        "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
+        "tipo": "Incêndio em Vegetação",
+        "equipe": "ALFA",
+        "descricao": "ACIONAMENTO DO SESCINC EM VIRTUDE DE INCÊNDIO EM VEGETAÇÃO",
+        "acoes": "Comunico que, às 16h42, o COE acionou o SESCINC, via rádio transceptor, no canal Resposta Emergência, informando sobre a presença de fumaça próxima à grade do PACI 02. De imediato, o BA-CE Thales Silva questionou o PACI 01 quanto à possibilidade de visualização de algum foco de incêndio. O PACI 01 informou que não era possível visualizar o foco a olho nu, sendo utilizado o auxílio de binóculo. Diante da informação, o BA-CE solicitou o deslocamento imediato da viatura CCI 02 para o local da ocorrência.\nÀs 16h43, o Supervisor de Emergência Marcos comunicou ao PACI 02 que a fumaça estaria localizada próxima à grade, na lateral do PACI 02.\nÀs 16h44, o CCI 02 informou ao BA-CE que havia conseguido visualizar a presença de fumaça no local e que iniciaria o combate ao princípio de incêndio em vegetação, utilizando água como agente extintor.\nÀs 16h45, o CCI 02 comunicou ao BA-CE a localização do foco de incêndio, identificada no mapa de grade interno como H18.\nÀs 16h46, o CCI 02 informou ao BA-CE que o foco de incêndio havia sido debelado, não sendo identificados outros focos ou riscos remanescentes no local. Na sequência, comunicou o retorno da viatura para a base.\nÀs 16h50, a CCI 02 confirmou ao BA-CE sua chegada à base, encerrando a ocorrência.",
+        "localizacao": "Sistema 10-28",
+        "quadrante": null,
+        "viaturas": [
+          "CCI 02 (F02)"
+        ]
+      },
+      {
+        "id": "ACT-2S-16",
+        "data": "2026-08-21",
+        "mes": "Agosto",
+        "tipo_raw": "DERRAMAMENTO DE FLUÍDO HIDRÁULICO",
+        "tipo": "Derramamento de Óleo / Fluído",
+        "equipe": "DELTA",
+        "descricao": "ACIONAMENTO DO SESCINC EM VIRTUDE DE UM DERRAMAMENTO DE FLUÍDO HIDRÁULICO",
+        "acoes": "Para avaliação da ocorrência, foi deslocada a viatura CRS, que chegou ao local às 07h55. Após avaliação da situação, foi constatado que não havia riscos à segurança operacional. Verificou-se que, durante o deslocamento do Loader, houve derramamento de óleo hidráulico, deixando um rastro de aproximadamente 10 metros, restrito à via de serviço.\n\nA viatura CRS permaneceu no local, mantendo a área isolada e sob controle até a chegada da empresa responsável pela mitigação e limpeza do derramamento, que chegou ao local às 08h15.",
+        "localizacao": "Área de Cargas TECA",
+        "quadrante": null,
+        "viaturas": [
+          "CRS"
+        ]
+      },
+      {
+        "id": "ACT-2S-17",
+        "data": "2026-08-25",
+        "mes": "Agosto",
+        "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
+        "tipo": "Condição de Urgência",
+        "equipe": "DELTA",
+        "descricao": "ACIONAMENTO DO SESCINC PARA ATENDIMENTO A CONDIÇÃO DE URGÊNCIA",
+        "acoes": "Às 10h24, informo que bradou uma emergência aeronáutica envolvendo a aeronave da FAB Embraer 110 de Prefixo 2342, em condição de urgência, devido a pane no trem de pouso (trem de pouso não recolhido).  \n\n  \n\nAs 10h25 equipe sescinc se deslocou com os recursos para o posicionamento para intervenção \n\n  \n\nAs 10h28 todos os recursos já estavam posicionados e a aeronave na curta final. \n\n  \n\nÀs 10h29, a aeronave realizou pouso com segurança, trem de pouso baixado corretamente, sem qualquer anormalidade. \n\n  \n\nApós o pouso da aeronave a equipe realizou o acompanhamento da aeronave que livrou na Taxiway G e seguindo até o Pátio Militar, em seguida a  TWR informou que o piloto descaracterizou a ocorrência. \n\nA equipe sescinc retornou a base, sem incidentes adicionais. \n\n  \n\nViaturas presentes no local: \n\n  \n\nCACE: chegada às  10h25 \n\nCCI03: chegada às 10h25 \n\nCCI04: chegada às 10h27 \n\nCRS: chegada às 10h27 \n\n  \n\nTérmino da Ocorrência \n\n  \n\nA ocorrência foi encerrada às 10h33.",
+        "localizacao": "Pátio Militar",
+        "quadrante": null,
+        "viaturas": [
+          "CRS",
+          "CACE"
+        ]
+      },
+      {
+        "id": "ACT-2S-18",
+        "data": "2026-08-26",
+        "mes": "Agosto",
+        "tipo_raw": "OUTROS",
+        "tipo": "Outros Acionamentos",
+        "equipe": "ALFA",
+        "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE FLUÍDO DERRAMADO",
+        "acoes": "Comunico que, às 20h26, o COE acionou o SESCINC, via rádio transceptor, informando sobre um vazamento de óleo hidráulico proveniente de um caminhão da empresa Gate Gourmet, localizado na posição 78, havendo uma aeronave da empresa GOL nas proximidades da ocorrência.\nÀs 20h27, o BA-CE Thales Silva informou ao COE o início do deslocamento das viaturas CACE 025, CCI 03 e CRS 01 para atendimento da ocorrência.\nÀs 20h30, o BA-CE informou ao COE a chegada da equipe do SESCINC à posição 78 e o início da averiguação.\nÀs 20h31, o BA-CE informou ao COE a presença do Supervisor de Emergência no local da ocorrência.\nÀs 20h32, o BA-LR Bruno Blas informou ao BA-CE que a equipe do CRS 01 estava realizando a ampliação do perímetro de isolamento da área afetada pelo vazamento.\nÀs 20h33, o BA-CE informou ao COE que o vazamento era proveniente de um caminhão de comissaria da empresa Gate Gourmet, de identificação GGL 032. Segundo informações do colaborador da empresa Gate Gourmet presente no local, o fluido derramado tratava-se de óleo hidráulico, sendo informado ainda que o vazamento já se encontrava contido e que a equipe de manutenção havia sido acionada.\nAinda às 20h33, o CCI 03 informou ao PACI Uno a localização da ocorrência, posicionada na EE37, conforme mapa de grade interno. Informou também que a aeronave presente nas proximidades era um A330 da empresa GOL, prefixo ECNBN.\nÀs 20h34, o BA-CE informou ao COE a identificação do responsável da empresa Gate Gourmet presente no local, Douglas, matrícula 9638415.\nÀs 20h35, o BA-CE informou ao COE que a área contaminada pelo fluido derramado era de aproximadamente 40 m², não havendo, naquele momento, risco de o produto atingir a canaleta de águas pluviais.\nÀs 20h36, o BA-CE informou ao COE que a área já se encontrava isolada pela equipe do CRS 01 e que a Fiscalização de Pátio também estava presente no local, acompanhando a ocorrência.\nÀs 20h50, o CCI 03 informou ao BA-CE a necessidade de reposicionamento da viatura, em razão da impossibilidade de obter visualização adequada do fluido derramado a partir da posição em que se encontrava.\nÀs 20h51, o BA-CE informou ao COE que outro caminhão da empresa Gate Gourmet, identificação GGL 001, encontrava-se no local para realizar o transbordo do material presente no veículo que havia ocasionado o vazamento. Informou ainda que a equipe de manutenção já se encontrava na área para as tratativas necessárias.\nÀs 20h53, o BA-CE informou ao COE o início do procedimento de mitigação do fluido derramado pela equipe da empresa Gate Gourmet.\nÀs 21h02, o CCI 03 informou ao BA-CE que realizaria novo reposicionamento da viatura.\nÀs 21h17, o BA-CE informou ao COE que o fluido derramado na posição 78 já havia sido mitigado, não havendo mais risco de incêndio no local. Diante da conclusão das tratativas e da normalização da situação, a equipe do SESCINC iniciou o retorno dos recursos empregados para a base.\nÀs 21h20, o BA-CE informou ao COE que todos os recursos do SESCINC já se encontravam posicionados na base, encerrando a ocorrência.",
+        "localizacao": "Posição 78",
+        "quadrante": null,
+        "viaturas": [
+          "CCI 03 (F03)",
+          "CRS",
+          "CACE"
+        ]
       }
     ],
-    "uploadedAt": "2026-08-21T16:22:29.910696Z"
+    "uploadedAt": "2026-09-04T02:35:32.438416Z"
   }
 };

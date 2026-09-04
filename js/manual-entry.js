@@ -11,7 +11,7 @@
   const FUNCOES = ['BA', 'BA2', 'BA-MC', 'BA-LR', 'BA-RE', 'BA-CE', 'BA-MA', 'OC'];
   const MESES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
                  'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
-  const CCIS = ['1°CCI', '2°CCI', '3°CCI'];
+  const CCIS = ['1°CCI', '2°CCI', '3°CCI', '4°CCI', '5°CCI', 'CCI 358'];
 
   const FORMS = ['form-taf', 'form-tpepr', 'form-tr', 'form-teorica'];
 
@@ -178,21 +178,22 @@
       tempoFormatted = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
     }
 
-    // Determine resultado based on selection or time
-    let resultado = 'ACOP - B';
+    // Determine resultado based on selection or time: ≤60s ACOP - A, 61-90s ACOP - B, >90s Em evolução
+    let resultado = 'Em evolução';
     if (resultadoSel) {
       if (resultadoSel.toUpperCase() === 'EXCELENTE' || resultadoSel.toUpperCase() === 'ACOP - A') resultado = 'ACOP - A';
-      else if (resultadoSel.toUpperCase() === 'BOM' || resultadoSel === 'Em evolução') resultado = 'Em evolução';
-      else if (resultadoSel.toUpperCase() === 'RUIM' || resultadoSel.toUpperCase() === 'ACOP - B' || resultadoSel.toUpperCase() === 'INSATISFATÓRIO') resultado = 'ACOP - B';
+      else if (resultadoSel.toUpperCase() === 'BOM' || resultadoSel.toUpperCase() === 'ACOP - B') resultado = 'ACOP - B';
+      else if (resultadoSel.toUpperCase() === 'RUIM' || resultadoSel.toUpperCase() === 'EM EVOLUÇÃO' || resultadoSel.toUpperCase() === 'EM EVOLUCAO' || resultadoSel.toUpperCase() === 'INSATISFATÓRIO') resultado = 'Em evolução';
       else resultado = resultadoSel;
     } else {
       if (tempoSeconds <= 60) resultado = 'ACOP - A';
-      else if (tempoSeconds <= 90) resultado = 'Em evolução';
-      else resultado = 'ACOP - B';
+      else if (tempoSeconds <= 90) resultado = 'ACOP - B';
+      else resultado = 'Em evolução';
     }
 
     return {
       nome, equipe, funcao, tempoSeconds, tempoFormatted, resultado,
+      status: 'ok',
       _manual: true,
       _addedAt: new Date().toISOString()
     };
@@ -204,6 +205,7 @@
     const mes = ($id('manual-tr-mes') || {}).value || '';
     const cci = ($id('manual-tr-cci') || {}).value || '';
     const tempoInput = ($id('manual-tr-tempo') || {}).value || '';
+    const observacao = ($id('manual-tr-obs') || {}).value || '';
 
     if (!equipe || !mes || !cci || !tempoInput) {
       showToast('Preencha os campos obrigatórios: Equipe, Mês, CCI e Tempo.', 'error');
@@ -223,9 +225,18 @@
     }
 
     const mesIndex = MESES.indexOf(mes);
+    let viatCod = '';
+    if (cci === '1°CCI') viatCod = 'F01';
+    else if (cci === '2°CCI') viatCod = 'F02';
+    else if (cci === '3°CCI') viatCod = 'F03';
+    else if (cci === '4°CCI') viatCod = 'F04';
+    else if (cci === '5°CCI') viatCod = 'F05';
+    else if (cci === 'CCI 358') viatCod = 'F358';
 
     return {
-      cabeceira, equipe, mes, mesIndex, cci, tempoSeconds, tempoFormatted,
+      cabeceira, equipe, mes, mesIndex, cci, viaturaCodigo: viatCod,
+      observacao: observacao,
+      tempoSeconds, tempoFormatted,
       status: 'ok',
       _manual: true,
       _addedAt: new Date().toISOString()

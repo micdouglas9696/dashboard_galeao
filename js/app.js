@@ -8,16 +8,89 @@
   window.SESCINC = window.SESCINC || {};
 
   /* ── Detail Modal (global function for chart click handlers) ── */
-  window.SESCINC.showDetailModal = function (title, names) {
+  window.SESCINC.showDetailModal = function (title, items, options) {
     const overlay = document.getElementById('detail-modal');
     const titleEl = document.getElementById('detail-modal-title');
     const countEl = document.getElementById('detail-modal-count');
     const listEl = document.getElementById('detail-modal-list');
+    const modalEl = overlay ? overlay.querySelector('.detail-modal') : null;
     if (!overlay || !titleEl || !countEl || !listEl) return;
 
+    const records = Array.isArray(items) ? items : [];
+    const config = options || {};
+    const isTrDetail = config.type === 'tr';
+
     titleEl.textContent = title;
-    countEl.textContent = names.length + ' bombeiro' + (names.length !== 1 ? 's' : '');
-    listEl.innerHTML = names.sort().map(n => `<li>${n}</li>`).join('');
+    countEl.textContent = records.length + ' ' + (config.singular || 'bombeiro') + (records.length !== 1 ? (config.pluralSuffix || 's') : '');
+    if (modalEl) modalEl.classList.toggle('detail-modal--wide', isTrDetail);
+    listEl.classList.toggle('detail-modal-list--records', isTrDetail);
+    listEl.innerHTML = '';
+
+    if (isTrDetail) {
+      records.forEach(function (record) {
+        const li = document.createElement('li');
+        li.className = 'detail-record-card';
+
+        const header = document.createElement('div');
+        header.className = 'detail-record-header';
+
+        const cci = document.createElement('span');
+        cci.className = 'detail-record-cci';
+        cci.textContent = record.cci || 'CCI não informado';
+
+        const vehicle = document.createElement('span');
+        vehicle.className = 'detail-record-vehicle';
+        vehicle.textContent = 'Viatura: ' + (record.viatura || 'não informada');
+
+        const status = document.createElement('span');
+        status.className = 'badge ' + (record.badgeClass || 'badge-muted');
+        status.textContent = record.status || '—';
+
+        header.appendChild(cci);
+        header.appendChild(vehicle);
+        header.appendChild(status);
+        li.appendChild(header);
+
+        const grid = document.createElement('div');
+        grid.className = 'detail-record-grid';
+        [
+          ['Período', record.periodo],
+          ['Equipe', record.equipe],
+          ['Cabeceira', record.cabeceira],
+          ['Tempo de resposta', record.tempo]
+        ].forEach(function (entry) {
+          const field = document.createElement('div');
+          field.className = 'detail-record-field';
+          const label = document.createElement('span');
+          label.className = 'detail-record-label';
+          label.textContent = entry[0];
+          const value = document.createElement('strong');
+          value.textContent = entry[1] || '—';
+          field.appendChild(label);
+          field.appendChild(value);
+          grid.appendChild(field);
+        });
+        li.appendChild(grid);
+
+        if (record.observacao) {
+          const observation = document.createElement('div');
+          observation.className = 'detail-record-observation';
+          observation.textContent = 'Observação: ' + record.observacao;
+          li.appendChild(observation);
+        }
+
+        listEl.appendChild(li);
+      });
+    } else {
+      records.slice().sort(function (a, b) {
+        return String(a).localeCompare(String(b), 'pt-BR');
+      }).forEach(function (item) {
+        const li = document.createElement('li');
+        li.textContent = String(item);
+        listEl.appendChild(li);
+      });
+    }
+
     overlay.style.display = 'flex';
   };
 
@@ -51,7 +124,7 @@
     overview: 'Visão Geral',
     taf: 'TAF',
     tpepr: 'TP-EPR',
-    tr: 'Desempenho TR',
+    tr: 'Tempo Resposta',
     teorica: 'Avaliação Teórica',
     actuation: 'Atuação SESCINC',
     upload: 'Upload de Planilha',
@@ -96,12 +169,12 @@
   /* ── Data loading ── */
 
   function loadData() {
-    // Check storage version to force re-seed after major data update (v9 - ACOP Naming)
+    // Check storage version to force re-seed after prioritizing the official TAF result (v13)
     const dbVersion = localStorage.getItem('sescinc_db_version');
-    if (dbVersion !== '9') {
-      console.log('[App] Local storage outdated. Forcing re-seed to version 9 (ACOP Naming: ACOP - A, Em evolução, ACOP - B).');
+    if (dbVersion !== '13') {
+      console.log('[App] Local storage outdated. Forcing re-seed to version 13 (official TAF result and August 2026 data).');
       localStorage.clear();
-      localStorage.setItem('sescinc_db_version', '9');
+      localStorage.setItem('sescinc_db_version', '13');
     }
 
     let tafData = loadStorage(STORAGE_KEYS.TAF);
@@ -130,21 +203,37 @@
     allData = {
       taf: (tafData && tafData.records) ? tafData.records.map(function(r) {
         if (!r.mes) r.mes = 'Junho';
-        if (r.resultado) {
+        if (r.status === 'nr') {
+          r.resultado = 'Não Realizado';
+        } else if (r.status === 'ferias') {
+          r.resultado = 'Férias';
+        } else if (r.resultado) {
           const s = String(r.resultado).trim().toLowerCase();
-          if (s === 'satisfatório' || s === 'satisfatorio' || s === 'apto' || s === 'acop - a') r.resultado = 'ACOP - A';
+          if (s === 'satisfatório' || s === 'satisfatorio' || s === 'apto' || s === 'acop - a' || s === 'acop a' || s === 'acop-a') r.resultado = 'ACOP - A';
           else if (s === 'em evolução' || s === 'em evolucao') r.resultado = 'Em evolução';
-          else if (s === 'insatisfatório' || s === 'insatisfatorio' || s === 'insatisfeita' || s === 'inapto' || s === 'acop - b') r.resultado = 'ACOP - B';
+          else if (s === 'bom' || s === 'insatisfatório' || s === 'insatisfatorio' || s === 'insatisfeita' || s === 'inapto' || s === 'acop - b' || s === 'acop b' || s === 'acop-b') r.resultado = 'ACOP - B';
+          else if (s.indexOf('permuta') >= 0 || s === 'nr' || s.indexOf('não realizado') >= 0 || s.indexOf('nao realizado') >= 0) {
+            r.resultado = 'Não Realizado';
+            r.status = 'nr';
+          }
         }
         return r;
       }) : [],
       tpepr: (tpeprData && tpeprData.records) ? tpeprData.records.map(function(r) {
         if (!r.mes) r.mes = 'Junho';
-        if (r.resultado) {
+        if (r.status === 'nr') {
+          r.resultado = 'Não Realizado';
+        } else if (r.status === 'ferias') {
+          r.resultado = 'Férias';
+        } else if (r.resultado) {
           const s = String(r.resultado).trim().toLowerCase();
-          if (s === 'excelente' || s === 'satisfatório' || s === 'satisfatorio' || s === 'acop - a') r.resultado = 'ACOP - A';
-          else if (s === 'bom' || s === 'em evolução' || s === 'em evolucao') r.resultado = 'Em evolução';
-          else if (s === 'insatisfatório' || s === 'insatisfatorio' || s === 'ruim' || s === 'insatisfeita' || s === 'acop - b') r.resultado = 'ACOP - B';
+          if (s === 'excelente' || s === 'satisfatório' || s === 'satisfatorio' || s === 'acop - a' || s === 'acop a' || s === 'acop-a') r.resultado = 'ACOP - A';
+          else if (s === 'bom' || s === 'acop - b' || s === 'acop b' || s === 'acop-b') r.resultado = 'ACOP - B';
+          else if (s === 'insatisfatório' || s === 'insatisfatorio' || s === 'ruim' || s === 'insatisfeita' || s === 'em evolução' || s === 'em evolucao') r.resultado = 'Em evolução';
+          else if (s.indexOf('permuta') >= 0 || s === 'nr' || s.indexOf('não realizado') >= 0 || s.indexOf('nao realizado') >= 0) {
+            r.resultado = 'Não Realizado';
+            r.status = 'nr';
+          }
         }
         return r;
       }) : [],

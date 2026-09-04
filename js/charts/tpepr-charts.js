@@ -20,14 +20,14 @@
       blue: isDark ? '#38bdf8' : '#0284c7',
       resultadosTPEPR: {
         'ACOP - A': isDark ? '#6ee7b7' : '#34d399',
-        'Em evolução': isDark ? '#fbbf24' : '#d97706',
-        'ACOP - B': isDark ? '#ef4444' : '#c62828'
+        'ACOP - B': isDark ? '#fbbf24' : '#d97706',
+        'Em evolução': isDark ? '#ef4444' : '#c62828'
       }
     };
   }
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
-  const RESULTADO_ORDER = ['ACOP - A', 'Em evolução', 'ACOP - B'];
+  const RESULTADO_ORDER = ['ACOP - A', 'ACOP - B', 'Em evolução'];
   const chartInstances = {};
 
   function isTpeprAcopA(res) {
@@ -35,21 +35,28 @@
     const s = String(res).trim().toLowerCase();
     return s === 'acop - a' || s.indexOf('excelent') >= 0 || s.indexOf('satisfat') >= 0;
   }
-  function isTpeprEmEvolucao(res) {
-    if (!res) return false;
-    const s = String(res).trim().toLowerCase();
-    return s === 'em evolução' || s === 'em evolucao' || s === 'bom';
-  }
   function isTpeprAcopB(res) {
     if (!res) return false;
     const s = String(res).trim().toLowerCase();
-    return s === 'acop - b' || s.indexOf('insatisf') >= 0 || s.indexOf('insatisfe') >= 0 || s.indexOf('ruim') >= 0;
+    return s === 'acop - b' || s === 'bom';
+  }
+  function isTpeprEmEvolucao(res) {
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s === 'em evolução' || s === 'em evolucao' || s.indexOf('insatisf') >= 0 || s.indexOf('insatisfe') >= 0 || s.indexOf('ruim') >= 0;
+  }
+  function isTpeprMuted(res, status) {
+    if (status === 'nr' || status === 'ferias') return true;
+    if (!res) return false;
+    const s = String(res).trim().toLowerCase();
+    return s.indexOf('feria') >= 0 || s.indexOf('não realizado') >= 0 || s.indexOf('nao realizado') >= 0 || s.indexOf('permuta') >= 0 || s === 'nr';
   }
   function formatTpeprResultado(res) {
     if (isTpeprAcopA(res)) return 'ACOP - A';
-    if (isTpeprEmEvolucao(res)) return 'Em evolução';
     if (isTpeprAcopB(res)) return 'ACOP - B';
+    if (isTpeprEmEvolucao(res)) return 'Em evolução';
     if (String(res).toLowerCase().indexOf('feria') >= 0) return 'Férias';
+    if (String(res).toLowerCase().indexOf('permuta') >= 0 || String(res).toLowerCase().indexOf('não realizado') >= 0 || String(res).toLowerCase().indexOf('nao realizado') >= 0 || String(res).toUpperCase() === 'NR') return 'Não Realizado';
     return res || '—';
   }
 
@@ -80,14 +87,15 @@
   /* ── KPIs ── */
 
   function renderKPIs(records) {
-    const exc = records.filter(r => isTpeprAcopA(r.resultado)).length;
-    const bom = records.filter(r => isTpeprEmEvolucao(r.resultado)).length;
-    const ruim = records.filter(r => isTpeprAcopB(r.resultado)).length;
+    const okRecords = records.filter(r => !isTpeprMuted(r.resultado, r.status));
+    const acopA = okRecords.filter(r => isTpeprAcopA(r.resultado)).length;
+    const acopB = okRecords.filter(r => isTpeprAcopB(r.resultado)).length;
+    const evol = okRecords.filter(r => isTpeprEmEvolucao(r.resultado)).length;
 
-    setText('kpi-tpepr-total', records.length);
-    setText('kpi-tpepr-exc', exc);
-    setText('kpi-tpepr-bom', bom);
-    setText('kpi-tpepr-ruim', ruim);
+    setText('kpi-tpepr-total', okRecords.length);
+    setText('kpi-tpepr-exc', acopA);
+    setText('kpi-tpepr-bom', acopB);
+    setText('kpi-tpepr-ruim', evol);
   }
 
   let activeDonutType = 'doughnut';
@@ -139,10 +147,11 @@
     if (!ctx) return;
 
     const tc = getThemeColors();
+    const okRecords = records.filter(r => !isTpeprMuted(r.resultado, r.status));
     const counts = [
-      records.filter(rec => isTpeprAcopA(rec.resultado)).length,
-      records.filter(rec => isTpeprEmEvolucao(rec.resultado)).length,
-      records.filter(rec => isTpeprAcopB(rec.resultado)).length
+      okRecords.filter(rec => isTpeprAcopA(rec.resultado)).length,
+      okRecords.filter(rec => isTpeprAcopB(rec.resultado)).length,
+      okRecords.filter(rec => isTpeprEmEvolucao(rec.resultado)).length
     ];
     const isBar = activeDonutType === 'bar';
     const chartType = isBar ? 'bar' : activeDonutType;
@@ -175,7 +184,7 @@
       };
     } else {
       config.options.cutout = '65%';
-      config.options.plugins.centerText = { text: `${records.length}`, subText: 'avaliados' };
+      config.options.plugins.centerText = { text: `${okRecords.length}`, subText: 'avaliados' };
     }
 
     chartInstances.tpeprDonut = new Chart(ctx, config);
@@ -187,16 +196,17 @@
     if (!ctx) return;
 
     const tc = getThemeColors();
-    const equipes = EQUIPES.filter(e => records.some(r => r.equipe === e));
+    const okRecords = records.filter(r => !isTpeprMuted(r.resultado, r.status));
+    const equipes = EQUIPES.filter(e => okRecords.some(r => r.equipe === e));
 
     const isStacked = activeEquipeType === 'bar';
     const isLine = activeEquipeType === 'line';
 
     const datasets = RESULTADO_ORDER.map(resultado => {
-      const matchFn = resultado === 'ACOP - A' ? isTpeprAcopA : (resultado === 'Em evolução' ? isTpeprEmEvolucao : isTpeprAcopB);
+      const matchFn = resultado === 'ACOP - A' ? isTpeprAcopA : (resultado === 'ACOP - B' ? isTpeprAcopB : isTpeprEmEvolucao);
       const config = {
         label: resultado,
-        data: equipes.map(e => records.filter(r => r.equipe === e && matchFn(r.resultado)).length),
+        data: equipes.map(e => okRecords.filter(r => r.equipe === e && matchFn(r.resultado)).length),
         backgroundColor: tc.resultadosTPEPR[resultado],
         borderColor: tc.resultadosTPEPR[resultado]
       };
@@ -261,10 +271,11 @@
     if (!ctx) return;
 
     const tc = getThemeColors();
-    const funcoes = [...new Set(records.map(r => r.funcao))].filter(Boolean).sort();
+    const okRecords = records.filter(r => !isTpeprMuted(r.resultado, r.status) && r.tempoSeconds != null);
+    const funcoes = [...new Set(okRecords.map(r => r.funcao))].filter(Boolean).sort();
 
     const data = funcoes.map(f => {
-      const group = records.filter(r => r.funcao === f);
+      const group = okRecords.filter(r => r.funcao === f);
       return group.length ? Math.round(group.reduce((s, r) => s + (r.tempoSeconds || 0), 0) / group.length) : 0;
     });
 
@@ -324,11 +335,12 @@
     if (!ctx) return;
 
     const tc = getThemeColors();
+    const okRecords = records.filter(r => !isTpeprMuted(r.resultado, r.status) && r.tempoSeconds != null);
     const buckets = ['30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90+'];
     const ranges = [[30, 40], [40, 50], [50, 60], [60, 70], [70, 80], [80, 90], [90, Infinity]];
 
     const counts = ranges.map(([min, max]) =>
-      records.filter(r => r.tempoSeconds >= min && r.tempoSeconds < max).length
+      okRecords.filter(r => r.tempoSeconds >= min && r.tempoSeconds < max).length
     );
 
     const isRadar = activeHistogramType === 'radar';
@@ -363,7 +375,7 @@
           const bucketLabels = ['30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90+'];
           const rangesList = [[30, 40], [40, 50], [50, 60], [60, 70], [70, 80], [80, 90], [90, Infinity]];
           const [min, max] = rangesList[idx];
-          const names = currentRecords.filter(r => r.tempoSeconds >= min && r.tempoSeconds < max).map(r => r.nome).filter(Boolean);
+          const names = currentRecords.filter(r => !isTpeprMuted(r.resultado, r.status) && r.tempoSeconds >= min && r.tempoSeconds < max).map(r => r.nome).filter(Boolean);
           if (names.length && window.SESCINC.showDetailModal) {
             window.SESCINC.showDetailModal('Tempo: ' + bucketLabels[idx] + 's', names);
           }
@@ -404,11 +416,14 @@
     tbody.innerHTML = '';
     records.forEach(r => {
       const tr = document.createElement('tr');
-      const isMuted = String(r.resultado || '').toLowerCase().indexOf('feria') >= 0;
-      const badgeClass = isTpeprAcopA(r.resultado) ? 'badge-green' :
-                         isTpeprEmEvolucao(r.resultado) ? 'badge-amber' :
-                         isTpeprAcopB(r.resultado) ? 'badge-red' : 'badge-muted';
-      const displayResultado = formatTpeprResultado(r.resultado);
+      const isMuted = isTpeprMuted(r.resultado, r.status);
+      if (isMuted) tr.classList.add('row-muted');
+      const badgeClass = isMuted ? 'badge-muted' :
+                         isTpeprAcopA(r.resultado) ? 'badge-green' :
+                         isTpeprAcopB(r.resultado) ? 'badge-amber' :
+                         isTpeprEmEvolucao(r.resultado) ? 'badge-red' : 'badge-muted';
+      let displayResultado = formatTpeprResultado(r.resultado);
+      if (displayResultado === 'Não Realizado' && r.motivo) displayResultado += ' (' + r.motivo + ')';
 
       tr.innerHTML = `
         <td>${r.nome || '—'}</td>

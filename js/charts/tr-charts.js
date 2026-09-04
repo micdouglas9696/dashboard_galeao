@@ -36,25 +36,26 @@
   let heatmapLocalCcis = ['todos'];
 
   function getMetaForRecord(r) {
-    if (r.cci === '2°CCI') return 180;
-    if (r.cci === '3°CCI' || r.cci === '4°CCI') return 240;
-    return 120; // 1°CCI / default
+    if (r.cci === '2°CCI' || r.viaturaCodigo === 'F02') return 180;
+    if (r.cci === '3°CCI' || r.cci === '4°CCI' || r.cci === '5°CCI' || r.cci === 'CCI 358' || r.viaturaCodigo === 'F03' || r.viaturaCodigo === 'F04' || r.viaturaCodigo === 'F05' || r.viaturaCodigo === 'F358') return 240;
+    return 120; // 1°CCI / F01 / default
   }
 
   function classifyRecordTR(r) {
+    if (r.status === 'nr') return 'Não Realizado';
     const t = r.tempoSeconds;
     if (t == null || isNaN(t)) return 'na';
-    if (r.cci === '2°CCI') {
+    if (r.cci === '2°CCI' || r.viaturaCodigo === 'F02') {
       if (t <= 180) return 'Excelente';
       if (t <= 240) return 'Satisfatório';
       return 'Insatisfatório';
     }
-    if (r.cci === '3°CCI' || r.cci === '4°CCI') {
+    if (r.cci === '3°CCI' || r.cci === '4°CCI' || r.cci === '5°CCI' || r.cci === 'CCI 358' || r.viaturaCodigo === 'F03' || r.viaturaCodigo === 'F04' || r.viaturaCodigo === 'F05' || r.viaturaCodigo === 'F358') {
       if (t <= 240) return 'Excelente';
       if (t <= 300) return 'Satisfatório';
       return 'Insatisfatório';
     }
-    // 1°CCI / default
+    // 1°CCI / F01 / default
     if (t <= 120) return 'Excelente';
     if (t <= 180) return 'Satisfatório';
     return 'Insatisfatório';
@@ -189,16 +190,34 @@
   };
 
   function showTrDetailModal(title, records) {
-    const formattedList = records.map(r => {
-      const status = classifyRecordTR(r);
-      const emoji = status === 'Excelente' ? '🟢' : (status === 'Satisfatório' ? '🟡' : '🔴');
-      const formattedTime = formatTime(r.tempoSeconds);
-      const dateStr = r.data || MONTHS[r.mesIndex] || 'Data N/A';
-      return `${emoji} ${dateStr} — ${r.cci} — Equipe ${r.equipe} — Cab. ${r.cabeceira} — TR: ${formattedTime} (${status})`;
+    const detailRecords = records.slice().sort((a, b) => {
+      return String(a.viaturaCodigo || a.cci || '').localeCompare(String(b.viaturaCodigo || b.cci || ''), 'pt-BR') ||
+             String(a.equipe || '').localeCompare(String(b.equipe || ''), 'pt-BR');
+    }).map(r => {
+      const isNr = r.status === 'nr';
+      const status = isNr ? 'Não Realizado' : classifyRecordTR(r);
+      const formattedTime = isNr ? 'Não Realizado' : formatTime(r.tempoSeconds);
+      const dateStr = r.data || MONTHS[r.mesIndex] || r.mes || 'Data N/A';
+      const badgeClass = isNr ? 'badge-muted' :
+        (status === 'Excelente' ? 'badge-green' : (status === 'Satisfatório' ? 'badge-amber' : 'badge-red'));
+      return {
+        periodo: dateStr,
+        cci: r.cci,
+        viatura: r.viaturaCodigo || '',
+        equipe: r.equipe,
+        cabeceira: r.cabeceira,
+        tempo: formattedTime,
+        status: status,
+        badgeClass: badgeClass,
+        observacao: r.observacao || ''
+      };
     });
-    
+
     if (window.SESCINC && window.SESCINC.showDetailModal) {
-      window.SESCINC.showDetailModal(title, formattedList);
+      window.SESCINC.showDetailModal(title, detailRecords, {
+        type: 'tr',
+        singular: 'registro'
+      });
     }
   }
 
@@ -369,8 +388,8 @@
       ok = ok.filter(r => timelineLocalEquipes.includes(r.equipe));
     }
 
-    const ccis = timelineLocalCcis.includes('todos') ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : timelineLocalCcis;
-    const cciColors = { '1°CCI': '#00d2ff', '2°CCI': '#00ff87', '3°CCI': '#ffd32a', '4°CCI': '#b026ff' };
+    const ccis = timelineLocalCcis.includes('todos') ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI', '5°CCI', 'CCI 358'] : timelineLocalCcis;
+    const cciColors = { '1°CCI': '#00d2ff', '2°CCI': '#00ff87', '3°CCI': '#ffd32a', '4°CCI': '#b026ff', '5°CCI': '#f472b6', 'CCI 358': '#38bdf8' };
 
     const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
     const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
@@ -424,7 +443,7 @@
       if (activeCci === '2°CCI') {
         currentMetaLimit = 180;
         metaLabel = 'Meta (03:00)';
-      } else if (activeCci === '3°CCI' || activeCci === '4°CCI') {
+      } else if (activeCci === '3°CCI' || activeCci === '4°CCI' || activeCci === '5°CCI' || activeCci === 'CCI 358') {
         currentMetaLimit = 240;
         metaLabel = 'Meta (04:00)';
       }
@@ -485,7 +504,16 @@
           },
           tooltip: {
             callbacks: {
-              label: ctx => `${ctx.dataset.label}: ${formatTime(ctx.parsed.y || ctx.raw)}`
+              label: ctx => `${ctx.dataset.label}: ${formatTime(ctx.parsed.y || ctx.raw)}`,
+              afterLabel: function (ctx) {
+                if (String(ctx.dataset.label || '').includes('Meta')) return '';
+                const monthIndex = MONTHS.indexOf(ctx.chart.data.labels[ctx.dataIndex]);
+                const vehicles = [...new Set(ok
+                  .filter(r => r.mesIndex === monthIndex && r.cci === ctx.dataset.label)
+                  .map(r => r.viaturaCodigo)
+                  .filter(Boolean))];
+                return vehicles.length ? 'Viatura(s): ' + vehicles.join(', ') : 'Viatura: não informada';
+              }
             }
           }
         }
@@ -537,7 +565,7 @@
       ok = ok.filter(r => r.cabeceira === cciLocalCab);
     }
 
-    const ccis = cciLocalCcis.includes('todos') ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : cciLocalCcis;
+    const ccis = cciLocalCcis.includes('todos') ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI', '5°CCI', 'CCI 358'] : cciLocalCcis;
 
     const isHorizontal = activeCciType === 'horizontalBar';
     const isLine = activeCciType === 'line';
@@ -701,17 +729,15 @@
     const descEl = document.getElementById('tr-heatmap-desc');
     if (descEl) {
       if (heatmapLocalCcis.includes('todos') || heatmapLocalCcis.length > 1) {
-        descEl.innerHTML = `Matriz quadricular de conformidade mensal. As cores sinalizam se o tempo atendeu à meta de cada CCI: <strong>1° CCI</strong> atendeu a 2 min (Verde) ou alerta até 3 min (Amarelo); <strong>2° CCI</strong> atendeu a 3 min (Verde) ou alerta até 4 min (Amarelo); <strong>3° e 4° CCIs</strong> atenderam a 4 min (Verde) ou alerta até 5 min (Amarelo). Passou disso é Insatisfatório (Vermelho).`;
+        descEl.innerHTML = `Matriz quadricular de conformidade mensal. As cores sinalizam se o tempo atendeu à meta de cada CCI: <strong>1° CCI</strong> atendeu a 2 min (Verde) ou alerta até 3 min (Amarelo); <strong>2° CCI</strong> atendeu a 3 min (Verde) ou alerta até 4 min (Amarelo); <strong>3°, 4°, 5° e CCI 358</strong> atenderam a 4 min (Verde) ou alerta até 5 min (Amarelo). Passou disso é Insatisfatório (Vermelho).`;
       } else {
         const cciVal = heatmapLocalCcis[0];
         if (cciVal === '1°CCI') {
-          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>1° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>2 minutos (Verde)</strong>, ficou em estado de alerta até <strong>3 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>1° CCI (F01)</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>2 minutos (Verde)</strong>, ficou em estado de alerta até <strong>3 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
         } else if (cciVal === '2°CCI') {
-          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>2° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>3 minutos (Verde)</strong>, ficou em estado de alerta até <strong>4 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
-        } else if (cciVal === '3°CCI') {
-          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>3° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>4 minutos (Verde)</strong>, ficou em estado de alerta até <strong>5 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
-        } else if (cciVal === '4°CCI') {
-          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>4° CCI</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>4 minutos (Verde)</strong>, ficou em estado de alerta até <strong>5 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>2° CCI (F02)</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>3 minutos (Verde)</strong>, ficou em estado de alerta até <strong>4 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
+        } else if (cciVal === '3°CCI' || cciVal === '4°CCI' || cciVal === '5°CCI' || cciVal === 'CCI 358') {
+          descEl.innerHTML = `Matriz quadricular de conformidade mensal do <strong>${cciVal}</strong>. As cores sinalizam se a média de resposta atendeu à meta de <strong>4 minutos (Verde)</strong>, ficou em estado de alerta até <strong>5 minutos (Amarelo)</strong> ou excedeu o limite (Vermelho) em cada mês.`;
         }
       }
     }
@@ -719,7 +745,7 @@
     const usedMonthIndices = [...new Set(ok.map(r => r.mesIndex))].sort((a, b) => a - b);
     const labels = usedMonthIndices.map(i => MONTHS[i] || `Mês ${i + 1}`);
 
-    const ccis = heatmapLocalCcis.includes('todos') ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI'] : heatmapLocalCcis;
+    const ccis = heatmapLocalCcis.includes('todos') ? ['1°CCI', '2°CCI', '3°CCI', '4°CCI', '5°CCI', 'CCI 358'] : heatmapLocalCcis;
 
     const isStacked = activeHeatmapType === 'bar';
     const isLine = activeHeatmapType === 'line';
@@ -951,22 +977,31 @@
     filtered.forEach(r => {
       const tr = document.createElement('tr');
       const isNr = r.status === 'nr';
+      if (isNr) tr.classList.add('row-muted');
       const isWithin = r.status === 'ok' && r.tempoSeconds <= getMetaForRecord(r);
       const isAbove = r.status === 'ok' && r.tempoSeconds > getMetaForRecord(r);
 
       let tempoBadge = r.tempoFormatted || '—';
-      if (isWithin) tempoBadge = `<span class="badge badge-green">${r.tempoFormatted}</span>`;
+      if (isNr) tempoBadge = `<span class="badge badge-muted">${r.tempoFormatted || 'Não Realizado'}</span>`;
+      else if (isWithin) tempoBadge = `<span class="badge badge-green">${r.tempoFormatted}</span>`;
       else if (isAbove) tempoBadge = `<span class="badge badge-red">${r.tempoFormatted}</span>`;
 
-      let statusBadge = r.status === 'ok' ? 'OK' : '';
-      if (isNr) statusBadge = '<span class="badge badge-muted">NR</span>';
+      let statusBadge = r.status === 'ok' ? '<span class="badge badge-green">OK</span>' : '';
+      if (isNr) {
+        const isPermuta = r.observacao && r.observacao.toLowerCase().includes('permuta');
+        statusBadge = `<span class="badge badge-muted">${isPermuta ? 'Permuta (NR)' : 'NR'}</span>`;
+      }
+
+      const cciDisplay = r.viaturaCodigo ? `${r.cci} (${r.viaturaCodigo})` : (r.cci || '—');
+      const obsDisplay = r.observacao ? `<span style="font-size:12px; color:var(--text-secondary);">${r.observacao}</span>` : '—';
 
       tr.innerHTML = `
         <td>${r.cabeceira || '—'}</td>
         <td>${r.equipe || '—'}</td>
         <td>${r.mes || '—'}</td>
-        <td>${r.cci || '—'}</td>
+        <td>${cciDisplay}</td>
         <td>${tempoBadge}</td>
+        <td>${obsDisplay}</td>
         <td>${statusBadge}</td>
       `;
       tbody.appendChild(tr);

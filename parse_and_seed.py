@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 SESCINC SBGL Dashboard — Complete Seed Data Generator
-Parses ALL Excel spreadsheets (Janeiro-Junho) and generates updated seed-data.js
+Parses ALL Excel spreadsheets (Janeiro-Agosto) and generates updated seed-data.js
 with proper 'mes' field on ALL records to avoid duplication.
 """
 import openpyxl
@@ -178,7 +178,7 @@ def parse_taf_file(filepath, month_name):
         if not nome or str(nome).strip() == '':
             continue
         nome_str = str(nome).strip()
-        
+
         # Skip summary/total rows
         nome_upper = nome_str.upper()
         if any(kw in nome_upper for kw in ['TOTAL', 'CONTAGEM', 'SATISFAT', 'INSATISF']):
@@ -187,25 +187,44 @@ def parse_taf_file(filepath, month_name):
         equipe = str(row[1]).strip().upper() if row[1] else ''
         if not equipe or equipe == 'NONE':
             continue
-            
+
         funcao = normalize_funcao(row[2])
         
         # Handle idade - might have non-breaking spaces
         idade = clean_numeric(row[3])
         
-        # Handle FÉRIAS status
-        is_ferias = False
-        for cell_val in row[4:8]:
-            if cell_val and 'FERIAS' in str(cell_val).upper().replace('É', 'E'):
-                is_ferias = True
+        row_txt = ' '.join(str(c) for c in row if c is not None).upper()
+        resultado_raw = str(row[8]).strip() if len(row) > 8 and row[8] else ''
+        is_permuta = 'PERMUTA' in row_txt
+        is_ferias = 'FERIAS' in row_txt or 'FÉRIAS' in row_txt
+        is_not_realizado = any(marker in row_txt for marker in [
+            'NÃO REALIZADO', 'NAO REALIZADO', 'NÃO REALIZADIO',
+            'NAO REALIZADIO', 'FOLGA', 'ATESTADO'
+        ])
+        motivo = (
+            'Permuta' if is_permuta else
+            'Folga' if 'FOLGA' in row_txt else
+            'Atestado' if 'ATESTADO' in row_txt else
+            'Não Realizado' if is_not_realizado else
+            'Férias' if is_ferias else ''
+        )
         
-        if is_ferias:
+        if is_permuta or (is_not_realizado and not is_ferias):
+            status = 'nr'
+            flexao = None
+            abdominal = None
+            barra = None
+            corrida = 'Não Realizado'
+            corrida_seconds = None
+            resultado = 'Não Realizado'
+        elif is_ferias:
             status = 'ferias'
             flexao = None
             abdominal = None
             barra = None
             corrida = 'FÉRIAS'
             corrida_seconds = None
+            resultado = 'Férias'
         else:
             flexao = clean_numeric(row[4])
             abdominal = clean_numeric(row[5])
@@ -215,17 +234,30 @@ def parse_taf_file(filepath, month_name):
             corrida, corrida_seconds = clean_corrida(corrida_raw)
             
             status = 'ok'
-            if corrida.upper() == 'NR' or (flexao is None and abdominal is None and barra is None and not corrida):
+            if str(corrida).upper() == 'NR' or (flexao is None and abdominal is None and barra is None and not corrida):
                 status = 'nr'
-        
-        resultado = str(row[8]).strip() if row[8] else 'ACOP - A'
-        # Normalize resultado
-        if 'insatisf' in resultado.lower() or 'b' in resultado.lower() or 'inapto' in resultado.lower():
-            resultado = 'ACOP - B'
-        elif 'evolu' in resultado.lower():
-            resultado = 'Em evolução'
-        elif 'satisf' in resultado.lower() or 'a' in resultado.lower() or 'apto' in resultado.lower():
-            resultado = 'ACOP - A'
+                resultado = 'Não Realizado'
+                motivo = motivo or 'Não Realizado'
+            elif resultado_raw:
+                if 'permuta' in resultado_raw.lower() or resultado_raw.upper() == 'NR':
+                    resultado = 'Não Realizado'
+                    status = 'nr'
+                    motivo = 'Permuta' if 'permuta' in resultado_raw.lower() else (motivo or 'Não Realizado')
+                elif any(marker in resultado_raw.upper() for marker in ['NÃO REALIZADO', 'NAO REALIZADO', 'NÃO REALIZADIO', 'NAO REALIZADIO']):
+                    resultado = 'Não Realizado'
+                    status = 'nr'
+                    motivo = motivo or 'Não Realizado'
+                elif 'insatisf' in resultado_raw.lower() or 'inapto' in resultado_raw.lower() or resultado_raw.strip().upper() in ['B', 'BOM', 'ACOP - B', 'ACOP B', 'ACOP-B']:
+                    resultado = 'ACOP - B'
+                elif 'evolu' in resultado_raw.lower():
+                    resultado = 'Em evolução'
+                else:
+                    resultado = 'ACOP - A'
+            elif corrida_seconds is not None and corrida_seconds > 240:
+                # Fallback apenas quando a planilha não informa o Resultado.
+                resultado = 'Em evolução'
+            else:
+                resultado = 'ACOP - A'
         
         records.append({
             'nome': nome_str,
@@ -239,6 +271,7 @@ def parse_taf_file(filepath, month_name):
             'corridaSeconds': corrida_seconds,
             'resultado': resultado,
             'status': status,
+            'motivo': motivo or None,
             'mes': month_name
         })
     
@@ -267,33 +300,27 @@ def parse_tpepr_file(filepath, month_name):
         return records
     
     # Auto-detect column offset by checking header row (row 5)
-    # Some files have 6 cols (empty first col, data starts at B) 
-    # Some files have 5 cols (data starts at A)
     header_row = [ws.cell(row=5, column=c).value for c in range(1, 8)]
     
-    # Detect offset: if col A is None or col A contains 'NOME'
-    offset = 0  # default: no offset (5 cols)
+    offset = 0
     if header_row[0] is None and header_row[1] and 'NOME' in str(header_row[1]).upper():
-        offset = 1  # 6-col layout with empty first column
+        offset = 1
     elif header_row[0] and 'NOME' in str(header_row[0]).upper():
-        offset = 0  # 5-col layout
+        offset = 0
     else:
-        # Fallback: check if first cell of row 6 is None
         first_data = ws.cell(row=6, column=1).value
         if first_data is None:
             offset = 1
     
     print(f'    Column offset: {offset} ({"6-col" if offset else "5-col"} layout)')
     
-    # Column indices based on offset
-    col_nome = offset  # 0 or 1
+    col_nome = offset
     col_equipe = offset + 1
     col_funcao = offset + 2
     col_tempo = offset + 3
     col_resultado = offset + 4
     
     for row in ws.iter_rows(min_row=6, max_row=ws.max_row, values_only=True):
-        # Ensure row has enough columns
         row = list(row) + [None] * max(0, col_resultado + 1 - len(row))
         
         nome = row[col_nome]
@@ -312,61 +339,99 @@ def parse_tpepr_file(filepath, month_name):
             
         funcao = normalize_funcao(row[col_funcao])
         tempo_raw = row[col_tempo] if len(row) > col_tempo else None
-        resultado = str(row[col_resultado]).strip() if len(row) > col_resultado and row[col_resultado] else ''
+        resultado_raw = str(row[col_resultado]).strip() if len(row) > col_resultado and row[col_resultado] else ''
+
+        row_txt = ' '.join(str(c) for c in row if c is not None).upper()
+        is_permuta = 'PERMUTA' in row_txt
+        is_ferias = 'FERIAS' in row_txt or 'FÉRIAS' in row_txt
+        is_not_realizado = any(marker in row_txt for marker in [
+            'NÃO REALIZADO', 'NAO REALIZADO', 'NÃO REALIZADIO',
+            'NAO REALIZADIO', 'FOLGA', 'ATESTADO'
+        ])
+        motivo = (
+            'Permuta' if is_permuta else
+            'Folga' if 'FOLGA' in row_txt else
+            'Atestado' if 'ATESTADO' in row_txt else
+            'Não Realizado' if is_not_realizado else
+            'Férias' if is_ferias else ''
+        )
         
-        tempo_seconds = 0
+        tempo_seconds = None
         tempo_formatted = ''
         
-        if tempo_raw:
-            tempo_str = str(tempo_raw).strip().upper().replace('\xa0', '')
-            
-            if 'FERIAS' in tempo_str or 'FÉRIAS' in tempo_str:
-                tempo_formatted = 'FÉRIAS'
-                tempo_seconds = 0
-            elif isinstance(tempo_raw, datetime.time):
-                tempo_seconds = tempo_raw.hour * 3600 + tempo_raw.minute * 60 + tempo_raw.second
-                tempo_formatted = f"{tempo_raw.minute:02d}:{tempo_raw.second:02d}"
-            elif isinstance(tempo_raw, (int, float)):
-                total_sec = int(round(tempo_raw * 86400))
-                tempo_seconds = total_sec
-                minutos = total_sec // 60
-                segundos = total_sec % 60
-                tempo_formatted = f"{minutos:02d}:{segundos:02d}"
-            else:
-                parts = tempo_str.split(':')
-                if len(parts) == 3:
-                    try:
-                        tempo_seconds = int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
-                        tempo_formatted = f"{int(parts[1]):02d}:{int(parts[2]):02d}"
-                    except:
-                        tempo_formatted = str(tempo_raw).strip()
-                elif len(parts) == 2:
-                    try:
-                        tempo_seconds = int(parts[0]) * 60 + int(parts[1])
-                        tempo_formatted = f"{int(parts[0]):02d}:{int(parts[1]):02d}"
-                    except:
-                        tempo_formatted = str(tempo_raw).strip()
+        if is_permuta or (is_not_realizado and not is_ferias):
+            status = 'nr'
+            resultado = 'Não Realizado'
+            tempo_formatted = 'Não Realizado'
+            tempo_seconds = None
+        else:
+            if tempo_raw:
+                tempo_str = str(tempo_raw).strip().upper().replace('\xa0', '')
+
+                if 'FERIAS' in tempo_str or 'FÉRIAS' in tempo_str:
+                    tempo_formatted = 'FÉRIAS'
+                    tempo_seconds = None
+                    is_ferias = True
+                elif isinstance(tempo_raw, datetime.time):
+                    tempo_seconds = tempo_raw.hour * 3600 + tempo_raw.minute * 60 + tempo_raw.second
+                    tempo_formatted = f"{tempo_raw.minute:02d}:{tempo_raw.second:02d}"
+                elif isinstance(tempo_raw, (int, float)):
+                    total_sec = int(round(tempo_raw * 86400))
+                    tempo_seconds = total_sec
+                    minutos = total_sec // 60
+                    segundos = total_sec % 60
+                    tempo_formatted = f"{minutos:02d}:{segundos:02d}"
                 else:
-                    tempo_formatted = str(tempo_raw).strip()
-        
-        # Determine resultado if missing
-        if not resultado or resultado == 'None':
-            if tempo_formatted == 'FÉRIAS':
+                    parts = tempo_str.split(':')
+                    if len(parts) == 3:
+                        try:
+                            tempo_seconds = int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
+                            tempo_formatted = f"{int(parts[1]):02d}:{int(parts[2]):02d}"
+                        except:
+                            tempo_formatted = str(tempo_raw).strip()
+                    elif len(parts) == 2:
+                        try:
+                            tempo_seconds = int(parts[0]) * 60 + int(parts[1])
+                            tempo_formatted = f"{int(parts[0]):02d}:{int(parts[1]):02d}"
+                        except:
+                            tempo_formatted = str(tempo_raw).strip()
+                    else:
+                        tempo_formatted = str(tempo_raw).strip()
+
+            if is_ferias or 'feria' in resultado_raw.lower():
+                status = 'ferias'
                 resultado = 'Férias'
-            elif tempo_seconds <= 60:
-                resultado = 'ACOP - A'
-            elif tempo_seconds <= 90:
-                resultado = 'Em evolução'
+            elif tempo_formatted == 'NR' or resultado_raw.upper() == 'NR' or is_not_realizado:
+                status = 'nr'
+                resultado = 'Não Realizado'
+                motivo = motivo or 'Não Realizado'
             else:
-                resultado = 'ACOP - B'
-        
-        # Normalize resultado
-        if 'excelente' in resultado.lower() or 'satisf' in resultado.lower() or resultado.strip().upper() == 'ACOP - A':
-            resultado = 'ACOP - A'
-        elif 'bom' in resultado.lower() or 'evolu' in resultado.lower():
-            resultado = 'Em evolução'
-        elif 'ruim' in resultado.lower() or 'insatisf' in resultado.lower() or resultado.strip().upper() == 'ACOP - B':
-            resultado = 'ACOP - B'
+                status = 'ok'
+                # TP-EPR: ≤60s ACOP - A, 61-90s ACOP - B, >90s Em evolução
+                if not resultado_raw or resultado_raw == 'None':
+                    if tempo_seconds is not None:
+                        if tempo_seconds <= 60:
+                            resultado = 'ACOP - A'
+                        elif tempo_seconds <= 90:
+                            resultado = 'ACOP - B'
+                        else:
+                            resultado = 'Em evolução'
+                    else:
+                        resultado = 'ACOP - A'
+                else:
+                    lower_res = resultado_raw.lower()
+                    if 'permuta' in lower_res or 'não realizado' in lower_res:
+                        resultado = 'Não Realizado'
+                        status = 'nr'
+                        motivo = 'Permuta' if 'permuta' in lower_res else (motivo or 'Não Realizado')
+                    elif 'excelente' in lower_res or 'satisf' in lower_res or resultado_raw.strip().upper() in ['ACOP - A', 'ACOP A', 'ACOP-A']:
+                        resultado = 'ACOP - A'
+                    elif lower_res == 'bom' or resultado_raw.strip().upper() in ['ACOP - B', 'ACOP B', 'ACOP-B']:
+                        resultado = 'ACOP - B'
+                    elif 'ruim' in lower_res or 'insatisf' in lower_res or 'insatisfe' in lower_res or 'evolu' in lower_res:
+                        resultado = 'Em evolução'
+                    else:
+                        resultado = resultado_raw
         
         records.append({
             'nome': nome_str,
@@ -375,24 +440,49 @@ def parse_tpepr_file(filepath, month_name):
             'tempoSeconds': tempo_seconds,
             'tempoFormatted': tempo_formatted,
             'resultado': resultado,
+            'status': status,
+            'motivo': motivo or None,
             'mes': month_name
         })
-    
+
     wb.close()
     return records
 
 
-# ────────── TR Parser (unchanged from original) ──────────
+# ────────── TR Parser ──────────
 
-def parse_tr():
-    f = os.path.join(BASE_DIR, 'DESEMPENHO DA EXECUÇÃO TR.xlsx')
+def normalize_tr_cci(cci_raw):
+    """Normalize CCI string and return (normalized_cci, viatura_codigo)."""
+    s = str(cci_raw).strip().upper()
+    if s in ['F01', 'F-01', 'F1', '1°CCI', '1CCI', '1ºCCI']:
+        return '1°CCI', 'F01'
+    if s in ['F02', 'F-02', 'F2', '2°CCI', '2CCI', '2ºCCI']:
+        return '2°CCI', 'F02'
+    if s in ['F03', 'F-03', 'F3', '3°CCI', '3CCI', '3ºCCI']:
+        return '3°CCI', 'F03'
+    if s in ['F04', 'F-04', 'F4', '4°CCI', '4CCI', '4ºCCI']:
+        return '4°CCI', 'F04'
+    if s in ['F05', 'F-05', 'F5', '5°CCI', '5CCI', '5ºCCI']:
+        return '5°CCI', 'F05'
+    if '358' in s or s in ['F358', 'F-358']:
+        return 'CCI 358', 'F358'
+
+    if not '°' in s and s and s[0].isdigit():
+        s = re.sub(r'^(\d+)\s*', r'\1°', s)
+        if 'CCI' not in s:
+            s += 'CCI'
+    return s, ''
+
+
+def parse_tr(f):
+    if not os.path.exists(f):
+        print(f'Warning: File {f} not found.')
+        return []
     print(f'Parsing TR: {os.path.basename(f)}')
     wb = openpyxl.load_workbook(f, data_only=True)
     records = []
     
-    month_indices = {
-        'Janeiro': 0, 'Fevereiro': 1, 'Março': 2, 'Abril': 3, 'Maio': 4, 'Junho': 5
-    }
+    month_indices = MONTH_INDEX
     
     for sn in ['CABECEIRA 28', 'CABECEIRA 33', 'CABECEIRA 15']:
         ws = wb[sn]
@@ -412,29 +502,38 @@ def parse_tr():
             cci_val = row8[col_idx]
             if cci_val and current_month:
                 cci_str = str(cci_val).strip()
-                if 'CCI' in cci_str or any(char.isdigit() for char in cci_str):
+                if 'CCI' in cci_str.upper() or 'F0' in cci_str.upper() or '358' in cci_str.upper() or any(char.isdigit() for char in cci_str):
+                    norm_cci, viat_cod = normalize_tr_cci(cci_str)
                     col_mappings.append({
                         'col': col_idx + 1,
                         'month': current_month,
-                        'cci': cci_str
+                        'cci': norm_cci,
+                        'viaturaCodigo': viat_cod
                     })
         
         for r_idx in range(9, 13):
             equipe = str(ws.cell(row=r_idx, column=1).value).strip().upper()
             if not equipe or equipe == 'NONE':
                 continue
-                
+
+            mapped_cols = {item['col'] for item in col_mappings}
             for mapping in col_mappings:
                 c_idx = mapping['col']
                 val = ws.cell(row=r_idx, column=c_idx).value
-                
+
                 status = 'ok'
                 tempo_seconds = None
                 tempo_formatted = None
+                observacao = ''
+                viatura_codigo = mapping['viaturaCodigo']
                 
                 val_str = str(val).strip().upper() if val is not None else ''
                 
-                if val_str == 'NR':
+                if 'PERMUTA' in val_str:
+                    status = 'nr'
+                    tempo_formatted = 'Não Realizado'
+                    observacao = 'Permuta'
+                elif val_str == 'NR':
                     status = 'nr'
                     tempo_formatted = 'NR'
                 elif val_str == 'X' or val_str == '':
@@ -449,20 +548,31 @@ def parse_tr():
                         tempo_seconds = total_sec
                         tempo_formatted = f"{total_sec // 60:02d}:{total_sec % 60:02d}"
                     else:
-                        parts = val_str.split(':')
-                        if len(parts) >= 2:
-                            try:
-                                if len(parts) == 3:
-                                    tempo_seconds = int(parts[0]) * 60 + int(parts[1])
-                                    tempo_formatted = f"{int(parts[0]):02d}:{int(parts[1]):02d}"
-                                else:
-                                    tempo_seconds = int(parts[0]) * 60 + int(parts[1])
-                                    tempo_formatted = f"{int(parts[0]):02d}:{int(parts[1]):02d}"
-                            except:
-                                status = 'empty'
+                        vehicle_match = re.search(r'F-?(?:358|0?[1-9])', val_str)
+                        if vehicle_match:
+                            _, viatura_codigo = normalize_tr_cci(vehicle_match.group(0))
+
+                        time_match = re.search(r'(?<!\d)(\d{1,2}):([0-5]\d)(?!\d)', val_str)
+                        if time_match:
+                            minutes = int(time_match.group(1))
+                            seconds = int(time_match.group(2))
+                            tempo_seconds = minutes * 60 + seconds
+                            tempo_formatted = f"{minutes:02d}:{seconds:02d}"
                         else:
                             status = 'empty'
                 
+                # Check for adjacent observation column
+                if c_idx < ws.max_column and c_idx + 1 not in mapped_cols:
+                    next_val = ws.cell(row=r_idx, column=c_idx+1).value
+                    if next_val and isinstance(next_val, str) and len(next_val.strip()) > 3:
+                        if 'PERMUTA' in next_val.upper():
+                            status = 'nr'
+                            tempo_formatted = 'Não Realizado'
+                            tempo_seconds = None
+                            observacao = next_val.strip()
+                        elif not any(k in next_val.upper() for k in ['CCI', 'ALFA', 'BRAVO', 'CHARLIE', 'DELTA']):
+                            observacao = next_val.strip()
+
                 if status != 'na' and status != 'empty':
                     records.append({
                         'cabeceira': cabeceira,
@@ -470,6 +580,8 @@ def parse_tr():
                         'mes': mapping['month'],
                         'mesIndex': month_indices.get(mapping['month'], 0),
                         'cci': mapping['cci'],
+                        'viaturaCodigo': viatura_codigo,
+                        'observacao': observacao,
                         'tempoFormatted': tempo_formatted,
                         'tempoSeconds': tempo_seconds,
                         'status': status
@@ -696,9 +808,24 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
                     location = 'Pátio 2'
 
         vehicles = []
-        for v in ['CCI 01', 'CCI 02', 'CCI 03', 'CCI 04', 'CCI 05', 'CCI 07', 'CRS', 'CACE', 'BRASA UNO', 'BRASA DOS', 'FAÍSCA LÍDER']:
-            if v in full_txt:
-                vehicles.append(v)
+        vehicle_patterns = [
+            ('CCI 01 (F01)', ['CCI 01', 'CCI 1', 'CCI-01', 'CCI-1', 'F01', 'F-01', 'FAÍSCA 01', 'FAISCA 01']),
+            ('CCI 02 (F02)', ['CCI 02', 'CCI 2', 'CCI-02', 'CCI-2', 'F02', 'F-02', 'FAÍSCA 02', 'FAISCA 02']),
+            ('CCI 03 (F03)', ['CCI 03', 'CCI 3', 'CCI-03', 'CCI-3', 'F03', 'F-03', 'FAÍSCA 03', 'FAISCA 03']),
+            ('CCI 04 (F04)', ['CCI 04', 'CCI 4', 'CCI-04', 'CCI-4', 'F04', 'F-04', 'FAÍSCA 04', 'FAISCA 04']),
+            ('CCI 05 (F05)', ['CCI 05', 'CCI 5', 'CCI-05', 'CCI-5', 'F05', 'F-05', 'FAÍSCA 05', 'FAISCA 05']),
+            ('CCI 358 (F358)', ['CCI 358', 'CCI-358', 'F358', 'F-358', '358']),
+            ('CCI 07', ['CCI 07', 'CCI 7', 'CCI-07']),
+            ('CRS', ['CRS', 'CRS 01', 'CRS 1']),
+            ('CACE', ['CACE', 'CACE 025']),
+            ('BRASA UNO', ['BRASA UNO', 'BRASA 1', 'BRASA 01']),
+            ('BRASA DOS', ['BRASA DOS', 'BRASA 2', 'BRASA 02']),
+            ('BRASA 3', ['BRASA 3', 'BRASA 03', 'BRASA TRES']),
+            ('FAÍSCA LÍDER', ['FAÍSCA LÍDER', 'FAISCA LIDER', 'FAISCA LÍDER'])
+        ]
+        for v_name, aliases in vehicle_patterns:
+            if any(a in full_txt for a in aliases):
+                vehicles.append(v_name)
 
         prefix = 'ACT-2S' if is_second_sem else 'ACT'
         records.append({
@@ -720,17 +847,21 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
 
 
 def parse_actuation():
-    """Parse both 1st semester and 2nd semester actuation spreadsheets."""
+    """Parse first-semester and second-semester actuation spreadsheets."""
     f1 = os.path.join(BASE_DIR, 'ATUAÇÃO SESCINC 1 SEMESTRE 2026  03-07 - Copia.xlsx')
     f2_novo = os.path.join(BASE_DIR, 'ATUAÇÃO SESCINC JULHO 2026 novo.xlsx')
     f2_old = os.path.join(BASE_DIR, 'julho dados', 'ATUAÇÃO SESCINC 2° SEMESTRE 2026.xlsx')
+    agosto_dir = os.path.join(BASE_DIR, 'agosto')
+    f2_agosto = next((os.path.join(agosto_dir, f) for f in os.listdir(agosto_dir)
+                      if 'ATUA' in f.upper() and 'AGOSTO' in f.upper() and f.endswith('.xlsx')), None)
     
     f2 = f2_novo if os.path.exists(f2_novo) else f2_old
     
     recs1 = parse_actuation_file(f1, '1° SEMESTRE 2026', is_second_sem=False)
     recs2 = parse_actuation_file(f2, '2° SEMESTRE 2026', is_second_sem=True)
+    recs3 = parse_actuation_file(f2_agosto, '2° SEMESTRE 2026', is_second_sem=True) if f2_agosto else []
     
-    return recs1 + recs2
+    return recs1 + recs2 + recs3
 
 
 def main():
@@ -763,6 +894,16 @@ def main():
         records = parse_taf_file(julho_taf, 'Julho')
         all_taf_records.extend(records)
         print(f'    -> {len(records)} records for Julho')
+
+    # ── 2c. Parse TAF file from agosto ──
+    print('\n=== Parsing TAF Agosto (agosto) ===')
+    agosto_dir = os.path.join(BASE_DIR, 'agosto')
+    agosto_taf = next((os.path.join(agosto_dir, f) for f in os.listdir(agosto_dir)
+                       if 'TAF' in f.upper() and 'AGOSTO' in f.upper() and f.endswith('.xlsx')), None)
+    if agosto_taf:
+        records = parse_taf_file(agosto_taf, 'Agosto')
+        all_taf_records.extend(records)
+        print(f'    -> {len(records)} records for Agosto')
     
     # ── 3. Parse TP-EPR files from planilhas folder (Janeiro-Maio) ──
     print('\n=== Parsing TP-EPR files (planilhas folder) ===')
@@ -790,6 +931,15 @@ def main():
         records = parse_tpepr_file(julho_tpepr, 'Julho')
         all_tpepr_records.extend(records)
         print(f'    -> {len(records)} records for Julho')
+
+    # ── 4c. Parse TP-EPR file from agosto ──
+    print('\n=== Parsing TP-EPR Agosto (agosto) ===')
+    agosto_tpepr = next((os.path.join(agosto_dir, f) for f in os.listdir(agosto_dir)
+                         if 'TP-EPR' in f.upper() and 'AGOSTO' in f.upper() and f.endswith('.xlsx')), None)
+    if agosto_tpepr:
+        records = parse_tpepr_file(agosto_tpepr, 'Agosto')
+        all_tpepr_records.extend(records)
+        print(f'    -> {len(records)} records for Agosto')
     
     # ── 5. Deduplication check ──
     print('\n=== Deduplication Check ===')
@@ -798,7 +948,11 @@ def main():
     taf_seen = set()
     taf_deduped = []
     for r in all_taf_records:
-        key = (normalize_name(r['nome']), r['mes'])
+        key = (
+            normalize_name(r['nome']), r['mes'], r.get('equipe'), r.get('funcao'),
+            r.get('idade'), r.get('flexao'), r.get('abdominal'), r.get('barra'),
+            r.get('corrida'), r.get('corridaSeconds'), r.get('resultado'), r.get('status'), r.get('motivo')
+        )
         if key not in taf_seen:
             taf_seen.add(key)
             taf_deduped.append(r)
@@ -810,7 +964,10 @@ def main():
     tpepr_seen = set()
     tpepr_deduped = []
     for r in all_tpepr_records:
-        key = (normalize_name(r['nome']), r['mes'])
+        key = (
+            normalize_name(r['nome']), r['mes'], r.get('equipe'), r.get('funcao'),
+            r.get('tempoSeconds'), r.get('tempoFormatted'), r.get('resultado'), r.get('status'), r.get('motivo')
+        )
         if key not in tpepr_seen:
             tpepr_seen.add(key)
             tpepr_deduped.append(r)
@@ -820,7 +977,14 @@ def main():
     
     # ── 6. Parse TR ──
     print('\n=== Parsing TR ===')
-    tr_records = parse_tr()
+    tr_records = []
+    tr_sources = [
+        os.path.join(BASE_DIR, 'DESEMPENHO DA EXECUÇÃO TR.xlsx'),
+        os.path.join(agosto_dir, 'DESEMPENHO DA EXECUÇÃO TR 2º SEMESTRE.xlsx')
+    ]
+    for tr_source in tr_sources:
+        if os.path.exists(tr_source):
+            tr_records.extend(parse_tr(tr_source))
     print(f'    -> {len(tr_records)} TR records')
     
     # ── 7. Build colaborador map from ALL months for Teórica matching ──
@@ -866,23 +1030,23 @@ def main():
     seed_data = {
         'taf': {
             'records': all_taf_records,
-            'uploadedAt': datetime.datetime.utcnow().isoformat() + 'Z'
+            'uploadedAt': datetime.datetime.now(datetime.UTC).isoformat().replace('+00:00', 'Z')
         },
         'tpepr': {
             'records': all_tpepr_records,
-            'uploadedAt': datetime.datetime.utcnow().isoformat() + 'Z'
+            'uploadedAt': datetime.datetime.now(datetime.UTC).isoformat().replace('+00:00', 'Z')
         },
         'tr': {
             'records': tr_records,
-            'uploadedAt': datetime.datetime.utcnow().isoformat() + 'Z'
+            'uploadedAt': datetime.datetime.now(datetime.UTC).isoformat().replace('+00:00', 'Z')
         },
         'teorica': {
             'records': teorica_records,
-            'uploadedAt': datetime.datetime.utcnow().isoformat() + 'Z'
+            'uploadedAt': datetime.datetime.now(datetime.UTC).isoformat().replace('+00:00', 'Z')
         },
         'actuation': {
             'records': actuation_records,
-            'uploadedAt': datetime.datetime.utcnow().isoformat() + 'Z'
+            'uploadedAt': datetime.datetime.now(datetime.UTC).isoformat().replace('+00:00', 'Z')
         }
     }
     

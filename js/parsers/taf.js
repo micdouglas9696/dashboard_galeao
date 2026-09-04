@@ -185,13 +185,31 @@ window.SESCINC.Parsers.TAF = {
       var status = 'ok';
       var rowText = row.map(function (c) { return String(c || '').toUpperCase(); }).join(' ');
 
-      if (this._isFerias(rowText)) {
+      var isPermuta = rowText.indexOf('PERMUTA') >= 0;
+      var isFerias = this._isFerias(rowText);
+      var isNaoRealizado = rowText.indexOf('NÃO REALIZADO') >= 0 ||
+                           rowText.indexOf('NAO REALIZADO') >= 0 ||
+                           rowText.indexOf('NÃO REALIZADIO') >= 0 ||
+                           rowText.indexOf('NAO REALIZADIO') >= 0 ||
+                           rowText.indexOf('FOLGA') >= 0 ||
+                           rowText.indexOf('ATESTADO') >= 0;
+      var motivo = isPermuta ? 'Permuta' :
+                   (rowText.indexOf('FOLGA') >= 0 ? 'Folga' :
+                   (rowText.indexOf('ATESTADO') >= 0 ? 'Atestado' :
+                   (isNaoRealizado ? 'Não Realizado' : (isFerias ? 'Férias' : ''))));
+
+      if (isPermuta || (isNaoRealizado && !isFerias)) {
+        status = 'nr';
+      } else if (isFerias) {
         status = 'ferias';
       }
 
       var corridaRaw = row[7] != null ? String(row[7]).trim() : '';
       if (corridaRaw.toUpperCase() === 'NR' || rowText.indexOf(' NR ') >= 0 || rowText.indexOf(' NR') >= 0) {
-        if (status === 'ok') status = 'nr';
+        if (status === 'ok') {
+          status = 'nr';
+          motivo = motivo || 'Não Realizado';
+        }
       }
 
       // Normaliza equipe
@@ -221,17 +239,41 @@ window.SESCINC.Parsers.TAF = {
       var corrida = row[7] != null ? String(row[7]).trim() : '';
       var corridaSeconds = this._parseCorridaTime(row[7]);
 
+      if (status === 'nr' || status === 'ferias') {
+        flexao = null;
+        abdominal = null;
+        barra = null;
+        corrida = status === 'ferias' ? 'FÉRIAS' : 'Não Realizado';
+        corridaSeconds = null;
+      }
+
       var resultadoRaw = row[8] != null ? String(row[8]).trim() : '';
       var resultado = 'ACOP - A';
-      if (resultadoRaw) {
+
+      if (isPermuta || (isNaoRealizado && !isFerias)) {
+        resultado = 'Não Realizado';
+      } else if (isFerias) {
+        resultado = 'Férias';
+      } else if (status === 'nr') {
+        resultado = 'Não Realizado';
+      } else if (resultadoRaw) {
         var lowerRes = resultadoRaw.toLowerCase();
-        if (lowerRes.indexOf('insatisf') >= 0 || lowerRes === 'b' || lowerRes.indexOf('inapto') >= 0 || resultadoRaw.toUpperCase() === 'ACOP - B') {
+        if (lowerRes.indexOf('permuta') >= 0 || lowerRes === 'nr' || lowerRes.indexOf('não realizado') >= 0) {
+          resultado = 'Não Realizado';
+          status = 'nr';
+        } else if (lowerRes.indexOf('insatisf') >= 0 || lowerRes === 'b' || lowerRes === 'bom' || lowerRes.indexOf('inapto') >= 0 || ['ACOP - B', 'ACOP B', 'ACOP-B'].indexOf(resultadoRaw.toUpperCase()) >= 0) {
           resultado = 'ACOP - B';
         } else if (lowerRes.indexOf('evolu') >= 0) {
           resultado = 'Em evolução';
+        } else if (lowerRes.indexOf('férias') >= 0 || lowerRes.indexOf('ferias') >= 0) {
+          resultado = 'Férias';
+          status = 'ferias';
         } else {
           resultado = 'ACOP - A';
         }
+      } else if (corridaSeconds !== null && corridaSeconds > 240) {
+        // Fallback apenas quando a planilha não informa o Resultado.
+        resultado = 'Em evolução';
       }
 
       var mesNormalized = '';
@@ -252,6 +294,7 @@ window.SESCINC.Parsers.TAF = {
         corridaSeconds: corridaSeconds,
         resultado: resultado,
         status: status,
+        motivo: motivo || null,
         mes: mesNormalized
       });
     }

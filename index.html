@@ -75,7 +75,7 @@
             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
           </svg>
         </span>
-        <span class="nav-item-label">Desempenho TR</span>
+        <span class="nav-item-label">Tempo Resposta</span>
       </div>
       <div class="nav-item" data-section="teorica">
         <span class="nav-item-icon">
@@ -348,7 +348,7 @@
           <div class="kpi-card" id="kpi-taf-insat">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
-              <span class="kpi-unit">insatisfeita</span>
+              <span class="kpi-unit">bom</span>
             </div>
             <div class="kpi-label">ACOP - B</div>
           </div>
@@ -378,7 +378,7 @@
                 </button>
               </div>
             </div>
-            <div class="chart-card-desc">Distribuição percentual global de satisfação física (ACOP - A vs. ACOP - B vs. Não Realizado/Férias) obtida a partir do Teste de Avaliação Física (TAF).</div>
+            <div class="chart-card-desc">A classificação segue a coluna Resultado da planilha: ACOP - A corresponde a Satisfatório; ACOP - B corresponde a Bom; Em evolução identifica quem ainda precisa evoluir. A regra de tempo só é usada como apoio quando o Resultado estiver vazio. Permuta, Folga, Atestado e demais casos sem execução ficam em Não Realizado; Férias permanece separado e nenhum deles entra no total avaliado.</div>
             <div class="chart-container">
               <canvas id="tafDonut"></canvas>
             </div>
@@ -398,7 +398,7 @@
                 </button>
               </div>
             </div>
-            <div class="chart-card-desc">Contagem absoluta de bombeiros aptos (ACOP - A) e reprovados (ACOP - B) no TAF por equipe operacional, auxiliando no monitoramento do efetivo disponível.</div>
+            <div class="chart-card-desc">Contagem por equipe das classificações ACOP - A (Satisfatório), ACOP - B (Bom) e Em evolução. Não Realizado e Férias não entram no total de avaliados.</div>
             <div class="chart-container">
               <canvas id="tafEquipe"></canvas>
             </div>
@@ -563,14 +563,14 @@
               <span class="kpi-value">0</span>
               <span class="kpi-unit">61s-90s</span>
             </div>
-            <div class="kpi-label">Em evolução</div>
+            <div class="kpi-label">ACOP - B</div>
           </div>
           <div class="kpi-card" id="kpi-tpepr-ruim">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
-              <span class="kpi-unit">> 90s (insatisfeita)</span>
+              <span class="kpi-unit">&gt; 90s (em evolução)</span>
             </div>
-            <div class="kpi-label">ACOP - B</div>
+            <div class="kpi-label">Em evolução</div>
           </div>
         </div>
 
@@ -591,7 +591,7 @@
                 </button>
               </div>
             </div>
-            <div class="chart-card-desc">Métrica de prontidão operacional para colocação do Equipamento de Proteção Respiratória (EPR). A escala é subdividida em ACOP - A (≤60 segundos - Satisfatório), Em evolução (61 a 90 segundos) e ACOP - B (>90 segundos - Insatisfeita).</div>
+            <div class="chart-card-desc">Prontidão para colocação do EPR: ACOP - A até 60 segundos (Satisfatório), ACOP - B de 61 a 90 segundos (Bom) e Em evolução acima de 90 segundos. Permuta e demais casos sem execução ficam em Não Realizado; Férias permanece separado.</div>
             <div class="chart-container">
               <canvas id="tpeprDonut"></canvas>
             </div>
@@ -751,7 +751,7 @@
         <div class="charts-grid">
           <div class="chart-card full-width">
             <div class="chart-card-title">Evolução Mensal por CCI</div>
-            <div class="chart-card-desc">Evolução do tempo de resposta (TR) das viaturas (1°, 2°, 3° e 4° CCI) na cabeceira selecionada de Janeiro a Junho de 2026. A linha tracejada vermelha marca o limite crítico de segurança de acordo com a viatura selecionada.</div>
+            <div class="chart-card-desc">Evolução do tempo de resposta por CCI de janeiro a dezembro de 2026. Clique em um ponto ou barra para consultar período, equipe, cabeceira, tempo e a viatura utilizada (F01, F02, F03, F04, F05 ou F358). A linha tracejada mostra a meta do CCI selecionado.</div>
             
             <!-- Local Chart Filters for Timeline -->
             <div class="local-chart-filters">
@@ -779,10 +779,12 @@
                 <span class="local-filter-label">CCI:</span>
                 <div class="local-tabs timeline-cci-tabs">
                   <button class="local-tab active" data-val="todos">Todos</button>
-                  <button class="local-tab" data-val="1°CCI">1°CCI</button>
-                  <button class="local-tab" data-val="2°CCI">2°CCI</button>
-                  <button class="local-tab" data-val="3°CCI">3°CCI</button>
-                  <button class="local-tab" data-val="4°CCI">4°CCI</button>
+                  <button class="local-tab" data-val="1°CCI">1°CCI (F01)</button>
+                  <button class="local-tab" data-val="2°CCI">2°CCI (F02)</button>
+                  <button class="local-tab" data-val="3°CCI">3°CCI (F03)</button>
+                  <button class="local-tab" data-val="4°CCI">4°CCI (F04)</button>
+                  <button class="local-tab" data-val="5°CCI">5°CCI (F05)</button>
+                  <button class="local-tab" data-val="CCI 358">CCI 358 (F358)</button>
                 </div>
               </div>
             </div>
@@ -834,10 +836,12 @@
                 <span class="local-filter-label">CCI:</span>
                 <div class="local-tabs cci-cci-tabs">
                   <button class="local-tab active" data-val="todos">Todos</button>
-                  <button class="local-tab" data-val="1°CCI">1°CCI</button>
-                  <button class="local-tab" data-val="2°CCI">2°CCI</button>
-                  <button class="local-tab" data-val="3°CCI">3°CCI</button>
-                  <button class="local-tab" data-val="4°CCI">4°CCI</button>
+                  <button class="local-tab" data-val="1°CCI">1°CCI (F01)</button>
+                  <button class="local-tab" data-val="2°CCI">2°CCI (F02)</button>
+                  <button class="local-tab" data-val="3°CCI">3°CCI (F03)</button>
+                  <button class="local-tab" data-val="4°CCI">4°CCI (F04)</button>
+                  <button class="local-tab" data-val="5°CCI">5°CCI (F05)</button>
+                  <button class="local-tab" data-val="CCI 358">CCI 358 (F358)</button>
                 </div>
               </div>
             </div>
@@ -889,10 +893,12 @@
                 <span class="local-filter-label">CCI:</span>
                 <div class="local-tabs heatmap-cci-tabs">
                   <button class="local-tab active" data-val="todos">Todos</button>
-                  <button class="local-tab" data-val="1°CCI">1°CCI</button>
-                  <button class="local-tab" data-val="2°CCI">2°CCI</button>
-                  <button class="local-tab" data-val="3°CCI">3°CCI</button>
-                  <button class="local-tab" data-val="4°CCI">4°CCI</button>
+                  <button class="local-tab" data-val="1°CCI">1°CCI (F01)</button>
+                  <button class="local-tab" data-val="2°CCI">2°CCI (F02)</button>
+                  <button class="local-tab" data-val="3°CCI">3°CCI (F03)</button>
+                  <button class="local-tab" data-val="4°CCI">4°CCI (F04)</button>
+                  <button class="local-tab" data-val="5°CCI">5°CCI (F05)</button>
+                  <button class="local-tab" data-val="CCI 358">CCI 358 (F358)</button>
                 </div>
               </div>
             </div>
@@ -906,7 +912,7 @@
         <!-- Table -->
         <div class="table-wrapper" id="table-tr">
           <div class="table-header">
-            <span class="table-title">Registros de Tempo-Resposta</span>
+            <span class="table-title">Registros de Tempo Resposta</span>
           </div>
           <div class="table-scroll">
             <table>
@@ -915,8 +921,9 @@
                   <th>Cabeceira</th>
                   <th>Equipe</th>
                   <th>Mês</th>
-                  <th>CCI</th>
+                  <th>CCI / Viatura</th>
                   <th>Tempo</th>
+                  <th>Observação</th>
                   <th>Status</th>
                 </tr>
               </thead>
@@ -1213,7 +1220,7 @@
                       <option value="">Selecione...</option>
                       <option value="ACOP - A">ACOP - A (Satisfatório)</option>
                       <option value="Em evolução">Em evolução</option>
-                      <option value="ACOP - B">ACOP - B (Insatisfeita)</option>
+                      <option value="ACOP - B">ACOP - B (Bom)</option>
                     </select>
                   </div>
                 </div>
@@ -1262,8 +1269,8 @@
                     <select id="manual-tpepr-resultado">
                       <option value="">Selecione...</option>
                       <option value="ACOP - A">ACOP - A (Satisfatório - ≤60s)</option>
-                      <option value="Em evolução">Em evolução (61s a 90s)</option>
-                      <option value="ACOP - B">ACOP - B (Insatisfeita - >90s)</option>
+                      <option value="ACOP - B">ACOP - B (Bom - 61s a 90s)</option>
+                      <option value="Em evolução">Em evolução (&gt;90s)</option>
                     </select>
                   </div>
                 </div>
@@ -1399,6 +1406,11 @@
               <button class="month-tab" data-month="Maio" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Maio', window.SESCINC.AppData.actuation, this)">Mai</button>
               <button class="month-tab" data-month="Junho" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Junho', window.SESCINC.AppData.actuation, this)">Jun</button>
               <button class="month-tab" data-month="Julho" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Julho', window.SESCINC.AppData.actuation, this)">Jul</button>
+              <button class="month-tab" data-month="Agosto" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Agosto', window.SESCINC.AppData.actuation, this)">Ago</button>
+              <button class="month-tab" data-month="Setembro" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Setembro', window.SESCINC.AppData.actuation, this)">Set</button>
+              <button class="month-tab" data-month="Outubro" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Outubro', window.SESCINC.AppData.actuation, this)">Out</button>
+              <button class="month-tab" data-month="Novembro" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Novembro', window.SESCINC.AppData.actuation, this)">Nov</button>
+              <button class="month-tab" data-month="Dezembro" onclick="window.SESCINC.ActuationCharts.setMonthFilter('Dezembro', window.SESCINC.AppData.actuation, this)">Dez</button>
             </div>
           </div>
 
@@ -1487,7 +1499,7 @@
           <!-- Chart 2: Monthly Distribution -->
           <div class="chart-card">
             <div class="chart-card-header">
-              <div class="chart-card-title">Distribuição Mensal (Jan - Jun)</div>
+              <div class="chart-card-title">Distribuição Mensal (Jan - Dez)</div>
               <div class="chart-type-selector" data-chart="actuationMonthly">
                 <button class="btn-chart-type active" data-type="bar" title="Barras Agrupadas">
                   <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
