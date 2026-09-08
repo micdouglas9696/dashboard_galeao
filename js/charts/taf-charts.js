@@ -37,6 +37,11 @@
     const s = String(res).trim().toLowerCase();
     return s.indexOf('feria') >= 0 || s.indexOf('não realizado') >= 0 || s.indexOf('nao realizado') >= 0 || s.indexOf('permuta') >= 0 || s === 'nr';
   }
+  function isTafNaoRealizado(res, status) {
+    if (status === 'ferias') return false;
+    const s = String(res == null ? '' : res).trim().toLowerCase();
+    return status === 'nr' || s.indexOf('não realizado') >= 0 || s.indexOf('nao realizado') >= 0 || s.indexOf('permuta') >= 0 || s === 'nr';
+  }
   function formatTafResultado(res) {
     if (isAcopA(res)) return 'ACOP - A';
     if (isEmEvolucao(res)) return 'Em evolução';
@@ -114,18 +119,95 @@
     Chart.register(centerTextPlugin);
   }
 
+  /* ── Modal de Detalhes TAF ── */
+  function showTafModal(title, records) {
+    const detailRecords = (records || []).slice().sort((a, b) => {
+      return String(a.nome || '').localeCompare(String(b.nome || ''), 'pt-BR');
+    }).map(r => {
+      const isMuted = isTafMuted(r.resultado, r.status);
+      const badgeClass = isMuted ? 'badge-muted' : (isAcopA(r.resultado) ? 'badge-green' : (isAcopB(r.resultado) ? 'badge-amber' : 'badge-red'));
+      let displayResultado = formatTafResultado(r.resultado);
+      return {
+        nome: r.nome || 'Nome não informado',
+        equipe: r.equipe || '',
+        funcao: r.funcao || '',
+        mes: r.mes || '—',
+        idade: r.idade != null ? r.idade : null,
+        flexao: r.flexao != null ? r.flexao : null,
+        abdominal: r.abdominal != null ? r.abdominal : null,
+        barra: r.barra != null ? r.barra : null,
+        corrida: r.corrida || '—',
+        resultado: r.resultado,
+        displayResultado: displayResultado,
+        badgeClass: badgeClass,
+        status: r.status,
+        motivo: r.motivo || (isMuted ? (r.motivo || 'Não Realizado') : '')
+      };
+    });
+
+    if (window.SESCINC && window.SESCINC.showDetailModal) {
+      window.SESCINC.showDetailModal(title, detailRecords, {
+        type: 'taf',
+        singular: 'bombeiro'
+      });
+    }
+  }
+
   /* ── KPIs ── */
 
   function renderKPIs(records) {
     const ok = records.filter(r => r.status === 'ok');
     const sat = ok.filter(r => isAcopA(r.resultado));
     const insat = ok.filter(r => isAcopB(r.resultado));
+    const evol = ok.filter(r => isEmEvolucao(r.resultado));
+    const nr = records.filter(r => isTafNaoRealizado(r.resultado, r.status));
     const pct = ok.length ? Math.round((sat.length / ok.length) * 100) : 0;
 
     setText('kpi-taf-total', ok.length);
     setText('kpi-taf-sat', sat.length);
     setText('kpi-taf-insat', insat.length);
+    setText('kpi-taf-evol', evol.length);
+    setText('kpi-taf-nr', nr.length);
     setText('kpi-taf-pct', pct + '%');
+  }
+
+  let kpiListenersAttached = false;
+  function setupKpiClickHandlers() {
+    if (kpiListenersAttached) return;
+    const tafSection = document.getElementById('section-taf');
+    if (!tafSection) return;
+    kpiListenersAttached = true;
+
+    tafSection.addEventListener('click', function (e) {
+      const card = e.target.closest('.kpi-card--clickable');
+      if (!card || !card.closest('#section-taf')) return;
+
+      const filterType = card.getAttribute('data-taf-filter');
+      if (!filterType) return;
+
+      const okRecs = currentRecords.filter(r => r.status === 'ok');
+      let matching = [];
+      let title = '';
+
+      if (filterType === 'total') {
+        matching = okRecs;
+        title = 'TAF — Total Avaliados';
+      } else if (filterType === 'acop-a') {
+        matching = okRecs.filter(r => isAcopA(r.resultado));
+        title = 'TAF — ACOP - A (Satisfatório)';
+      } else if (filterType === 'acop-b') {
+        matching = okRecs.filter(r => isAcopB(r.resultado));
+        title = 'TAF — ACOP - B (Bom)';
+      } else if (filterType === 'evolucao') {
+        matching = okRecs.filter(r => isEmEvolucao(r.resultado));
+        title = 'TAF — Em evolução';
+      } else if (filterType === 'nr') {
+        matching = currentRecords.filter(r => isTafNaoRealizado(r.resultado, r.status));
+        title = 'TAF — Não Realizado';
+      }
+
+      showTafModal(title, matching);
+    });
   }
 
   let activeDonutType = 'doughnut';
@@ -232,6 +314,21 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function (evt, elements) {
+          if (!elements.length) return;
+          const idx = elements[0].index;
+          const label = labels[idx];
+          const okRecs = currentRecords.filter(r => r.status === 'ok');
+          let matching = [];
+          if (label === 'ACOP - A') {
+            matching = okRecs.filter(r => isAcopA(r.resultado));
+          } else if (label === 'ACOP - B') {
+            matching = okRecs.filter(r => isAcopB(r.resultado));
+          } else if (label === 'Em evolução') {
+            matching = okRecs.filter(r => isEmEvolucao(r.resultado));
+          }
+          showTafModal('TAF — ' + label, matching);
+        },
         plugins: {
           title: { display: true, text: 'Resultado TAF', font: { size: 16, weight: 'bold' }, color: tc.textColor },
           legend: { position: isBar ? 'top' : 'bottom', labels: { color: tc.textColor } }
@@ -302,12 +399,8 @@
           const resultType = datasets[datasetIndex] ? datasets[datasetIndex].label : '';
 
           const okRecs = currentRecords.filter(r => r.status === 'ok');
-          const names = okRecs.filter(r => r.equipe === team && formatTafResultado(r.resultado) === resultType)
-                              .map(r => r.nome).filter(Boolean);
-
-          if (names.length && window.SESCINC.showDetailModal) {
-            window.SESCINC.showDetailModal('Equipe ' + team + ' — ' + resultType, names);
-          }
+          const matching = okRecs.filter(r => r.equipe === team && formatTafResultado(r.resultado) === resultType);
+          showTafModal('Equipe ' + team + ' — ' + resultType, matching);
         },
         scales: {
           x: { title: { display: true, text: 'Equipe', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
@@ -364,6 +457,11 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function (evt, elements) {
+          if (!elements.length) return;
+          const funcao = funcoes[elements[0].index];
+          showTafModal('Função ' + funcao, currentRecords.filter(r => r.status === 'ok' && r.funcao === funcao));
+        },
         plugins: {
           title: { display: true, text: 'Aprovação por Função', font: { size: 16, weight: 'bold' }, color: tc.textColor },
           legend: { display: isLine, labels: { color: tc.textColor } }
@@ -464,18 +562,7 @@
           const exercise = labels[dataIndex];
 
           const okRecs = currentRecords.filter(r => r.status === 'ok' && r.equipe === team);
-          const names = okRecs.map(r => {
-            let val = '';
-            if (exercise.indexOf('Flexão') >= 0) val = r.flexao != null ? r.flexao : '—';
-            else if (exercise.indexOf('Abdominal') >= 0) val = r.abdominal != null ? r.abdominal : '—';
-            else if (exercise.indexOf('Barra') >= 0) val = r.barra != null ? r.barra : '—';
-            else if (exercise.indexOf('Corrida') >= 0) val = r.corrida || '—';
-            return `${r.nome} (${exercise}: ${val})`;
-          }).filter(Boolean);
-
-          if (names.length && window.SESCINC.showDetailModal) {
-            window.SESCINC.showDetailModal('Equipe ' + team + ' — ' + exercise, names);
-          }
+          showTafModal('Equipe ' + team + ' — ' + exercise, okRecs);
         },
         plugins: {
           title: { display: true, text: 'Média por Modalidade (Normalizado)', font: { size: 16 } },
@@ -544,10 +631,8 @@
           const idx = elements[0].index;
           const bucket = AGE_BUCKETS[idx];
           const okRecs = currentRecords.filter(r => r.status === 'ok');
-          const names = okRecs.filter(r => getAgeBucket(r.idade) === bucket).map(r => r.nome).filter(Boolean);
-          if (names.length && window.SESCINC.showDetailModal) {
-            window.SESCINC.showDetailModal('Faixa Etária: ' + bucket, names);
-          }
+          const matching = okRecs.filter(r => getAgeBucket(r.idade) === bucket);
+          showTafModal('Faixa Etária: ' + bucket, matching);
         },
         plugins: {
           title: { display: true, text: 'Distribuição por Faixa Etária', font: { size: 16 } },
@@ -600,7 +685,7 @@
       const sat = group.filter(r => isAcopA(r.resultado)).length;
       const total = group.length;
       const ratio = total ? sat / total : 0;
-      return { total, sat, ratio, names: group.map(r => r.nome).filter(Boolean) };
+      return { total, sat, ratio, recs: group, names: group.map(r => r.nome).filter(Boolean) };
     });
 
     const isHorizontal = activeIdadeSimplifiedType === 'horizontalBar';
@@ -629,8 +714,8 @@
           if (!elements.length) return;
           const idx = elements[0].index;
           const b = bucketData[idx];
-          if (b.names.length && window.SESCINC.showDetailModal) {
-            window.SESCINC.showDetailModal('Faixa Etária: ' + buckets[idx].label, b.names);
+          if (b && b.recs && b.recs.length) {
+            showTafModal('Faixa Etária: ' + buckets[idx].label, b.recs);
           }
         },
         plugins: {
@@ -703,8 +788,9 @@
     records = records || [];
     currentRecords = records;
 
-    // Set up switchers
+    // Set up switchers & KPI click handlers
     setupTypeSelectors();
+    setupKpiClickHandlers();
 
     const emptyEl = document.getElementById('taf-empty');
     const chartsGrid = document.querySelector('#section-taf .charts-grid');
@@ -718,11 +804,14 @@
       setText('kpi-taf-total', '0');
       setText('kpi-taf-sat', '0');
       setText('kpi-taf-insat', '0');
+      setText('kpi-taf-evol', '0');
+      setText('kpi-taf-nr', '0');
       setText('kpi-taf-pct', '0%');
       destroy();
       return;
     }
 
+    setupKpiClickHandlers();
     renderKPIs(records);
     renderDonut(records);
     renderEquipeBar(records);

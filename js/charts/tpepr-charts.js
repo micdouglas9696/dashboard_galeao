@@ -51,6 +51,11 @@
     const s = String(res).trim().toLowerCase();
     return s.indexOf('feria') >= 0 || s.indexOf('não realizado') >= 0 || s.indexOf('nao realizado') >= 0 || s.indexOf('permuta') >= 0 || s === 'nr';
   }
+  function isTpeprNaoRealizado(res, status) {
+    if (status === 'ferias') return false;
+    const s = String(res == null ? '' : res).trim().toLowerCase();
+    return status === 'nr' || s.indexOf('não realizado') >= 0 || s.indexOf('nao realizado') >= 0 || s.indexOf('permuta') >= 0 || s === 'nr';
+  }
   function formatTpeprResultado(res) {
     if (isTpeprAcopA(res)) return 'ACOP - A';
     if (isTpeprAcopB(res)) return 'ACOP - B';
@@ -84,6 +89,40 @@
     return canvas ? canvas.getContext('2d') : null;
   }
 
+  /* ── Modal de Detalhes TP-EPR ── */
+  function showTpeprModal(title, records) {
+    const detailRecords = (records || []).slice().sort((a, b) => {
+      return String(a.nome || '').localeCompare(String(b.nome || ''), 'pt-BR');
+    }).map(r => {
+      const isMuted = isTpeprMuted(r.resultado, r.status);
+      const badgeClass = isMuted ? 'badge-muted' :
+                         isTpeprAcopA(r.resultado) ? 'badge-green' :
+                         isTpeprAcopB(r.resultado) ? 'badge-amber' :
+                         isTpeprEmEvolucao(r.resultado) ? 'badge-red' : 'badge-muted';
+      let displayResultado = formatTpeprResultado(r.resultado);
+      return {
+        nome: r.nome || 'Nome não informado',
+        equipe: r.equipe || '',
+        funcao: r.funcao || '',
+        mes: r.mes || '—',
+        tempoFormatted: r.tempoFormatted || '—',
+        tempoSeconds: r.tempoSeconds,
+        resultado: r.resultado,
+        displayResultado: displayResultado,
+        badgeClass: badgeClass,
+        status: r.status,
+        motivo: r.motivo || (isMuted ? (r.motivo || 'Não Realizado') : '')
+      };
+    });
+
+    if (window.SESCINC && window.SESCINC.showDetailModal) {
+      window.SESCINC.showDetailModal(title, detailRecords, {
+        type: 'tpepr',
+        singular: 'bombeiro'
+      });
+    }
+  }
+
   /* ── KPIs ── */
 
   function renderKPIs(records) {
@@ -91,11 +130,52 @@
     const acopA = okRecords.filter(r => isTpeprAcopA(r.resultado)).length;
     const acopB = okRecords.filter(r => isTpeprAcopB(r.resultado)).length;
     const evol = okRecords.filter(r => isTpeprEmEvolucao(r.resultado)).length;
+    const nr = records.filter(r => isTpeprNaoRealizado(r.resultado, r.status)).length;
 
     setText('kpi-tpepr-total', okRecords.length);
     setText('kpi-tpepr-exc', acopA);
     setText('kpi-tpepr-bom', acopB);
     setText('kpi-tpepr-ruim', evol);
+    setText('kpi-tpepr-nr', nr);
+  }
+
+  let kpiListenersAttached = false;
+  function setupKpiClickHandlers() {
+    if (kpiListenersAttached) return;
+    const tpeprSection = document.getElementById('section-tpepr');
+    if (!tpeprSection) return;
+    kpiListenersAttached = true;
+
+    tpeprSection.addEventListener('click', function (e) {
+      const card = e.target.closest('.kpi-card--clickable');
+      if (!card || !card.closest('#section-tpepr')) return;
+
+      const filterType = card.getAttribute('data-tpepr-filter');
+      if (!filterType) return;
+
+      const okRecords = currentRecords.filter(r => !isTpeprMuted(r.resultado, r.status));
+      let matching = [];
+      let title = '';
+
+      if (filterType === 'total') {
+        matching = okRecords;
+        title = 'TP-EPR — Total Avaliados';
+      } else if (filterType === 'acop-a') {
+        matching = okRecords.filter(r => isTpeprAcopA(r.resultado));
+        title = 'TP-EPR — ACOP - A (≤ 60s)';
+      } else if (filterType === 'acop-b') {
+        matching = okRecords.filter(r => isTpeprAcopB(r.resultado));
+        title = 'TP-EPR — ACOP - B (61s-90s)';
+      } else if (filterType === 'evolucao') {
+        matching = okRecords.filter(r => isTpeprEmEvolucao(r.resultado));
+        title = 'TP-EPR — Em evolução (> 90s)';
+      } else if (filterType === 'nr') {
+        matching = currentRecords.filter(r => isTpeprNaoRealizado(r.resultado, r.status));
+        title = 'TP-EPR — Não Realizado';
+      }
+
+      showTpeprModal(title, matching);
+    });
   }
 
   let activeDonutType = 'doughnut';
@@ -170,6 +250,13 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        onClick: function (evt, elements) {
+          if (!elements.length) return;
+          const resultType = RESULTADO_ORDER[elements[0].index];
+          const okRecords = currentRecords.filter(r => !isTpeprMuted(r.resultado, r.status));
+          const matchFn = resultType === 'ACOP - A' ? isTpeprAcopA : (resultType === 'ACOP - B' ? isTpeprAcopB : isTpeprEmEvolucao);
+          showTpeprModal('TP-EPR — ' + resultType, okRecords.filter(r => matchFn(r.resultado)));
+        },
         plugins: {
           title: { display: true, text: 'Resultado TP-EPR', font: { size: 16, weight: 'bold' }, color: tc.textColor },
           legend: { position: isBar ? 'top' : 'bottom', labels: { color: tc.textColor } }
@@ -239,12 +326,9 @@
           const team = equipes[dataIndex];
           const resultType = RESULTADO_ORDER[datasetIndex];
 
-          const names = currentRecords.filter(r => r.equipe === team && formatTpeprResultado(r.resultado) === resultType)
-                                      .map(r => r.nome).filter(Boolean);
-
-          if (names.length && window.SESCINC.showDetailModal) {
-            window.SESCINC.showDetailModal('Equipe ' + team + ' — ' + resultType, names);
-          }
+          const matchFn = resultType === 'ACOP - A' ? isTpeprAcopA : (resultType === 'ACOP - B' ? isTpeprAcopB : isTpeprEmEvolucao);
+          const matching = currentRecords.filter(r => !isTpeprMuted(r.resultado, r.status) && r.equipe === team && matchFn(r.resultado));
+          showTpeprModal('Equipe ' + team + ' — ' + resultType, matching);
         },
         scales: {
           x: { title: { display: true, text: 'Equipe', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
@@ -375,10 +459,8 @@
           const bucketLabels = ['30-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90+'];
           const rangesList = [[30, 40], [40, 50], [50, 60], [60, 70], [70, 80], [80, 90], [90, Infinity]];
           const [min, max] = rangesList[idx];
-          const names = currentRecords.filter(r => !isTpeprMuted(r.resultado, r.status) && r.tempoSeconds >= min && r.tempoSeconds < max).map(r => r.nome).filter(Boolean);
-          if (names.length && window.SESCINC.showDetailModal) {
-            window.SESCINC.showDetailModal('Tempo: ' + bucketLabels[idx] + 's', names);
-          }
+          const matching = currentRecords.filter(r => !isTpeprMuted(r.resultado, r.status) && r.tempoSeconds >= min && r.tempoSeconds < max);
+          showTpeprModal('Tempo: ' + bucketLabels[idx] + 's', matching);
         },
         plugins: {
           title: { display: true, text: 'Distribuição de Tempos', font: { size: 16, weight: 'bold' }, color: tc.textColor },
@@ -464,6 +546,7 @@
       return;
     }
 
+    setupKpiClickHandlers();
     renderKPIs(records);
     renderDonut(records);
     renderEquipeBar(records);

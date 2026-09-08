@@ -331,26 +331,40 @@
         </div>
         <!-- KPIs -->
         <div class="kpi-grid">
-          <div class="kpi-card" id="kpi-taf-total">
+          <div class="kpi-card kpi-card--clickable" id="kpi-taf-total" data-taf-filter="total" title="Clique para ver a lista de todos os avaliados">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
               <span class="kpi-unit">bombeiros</span>
             </div>
             <div class="kpi-label">Total Avaliados</div>
           </div>
-          <div class="kpi-card" id="kpi-taf-sat">
+          <div class="kpi-card kpi-card--clickable" id="kpi-taf-sat" data-taf-filter="acop-a" title="Clique para ver a lista de ACOP - A (Satisfatório)">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
               <span class="kpi-unit">satisfatório</span>
             </div>
             <div class="kpi-label">ACOP - A</div>
           </div>
-          <div class="kpi-card" id="kpi-taf-insat">
+          <div class="kpi-card kpi-card--clickable" id="kpi-taf-insat" data-taf-filter="acop-b" title="Clique para ver a lista de ACOP - B (Bom)">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
               <span class="kpi-unit">bom</span>
             </div>
             <div class="kpi-label">ACOP - B</div>
+          </div>
+          <div class="kpi-card kpi-card--clickable" id="kpi-taf-evol" data-taf-filter="evolucao" title="Clique para ver a lista de Em evolução">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">em evolução</span>
+            </div>
+            <div class="kpi-label">Em evolução</div>
+          </div>
+          <div class="kpi-card kpi-card--clickable" id="kpi-taf-nr" data-taf-filter="nr" title="Clique para ver a lista de Não Realizados (Permuta, Folga, etc.)">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">não realizado</span>
+            </div>
+            <div class="kpi-label">Não Realizado</div>
           </div>
           <div class="kpi-card" id="kpi-taf-pct">
             <div class="kpi-value-container">
@@ -544,33 +558,40 @@
         </div>
         <!-- KPIs -->
         <div class="kpi-grid">
-          <div class="kpi-card" id="kpi-tpepr-total">
+          <div class="kpi-card kpi-card--clickable" id="kpi-tpepr-total" data-tpepr-filter="total" title="Clique para ver a lista de todos os avaliados">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
               <span class="kpi-unit">bombeiros</span>
             </div>
             <div class="kpi-label">Total Avaliados</div>
           </div>
-          <div class="kpi-card" id="kpi-tpepr-exc">
+          <div class="kpi-card kpi-card--clickable" id="kpi-tpepr-exc" data-tpepr-filter="acop-a" title="Clique para ver a lista de ACOP - A (≤ 60s)">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
               <span class="kpi-unit">≤ 60s (satisfatório)</span>
             </div>
             <div class="kpi-label">ACOP - A</div>
           </div>
-          <div class="kpi-card" id="kpi-tpepr-bom">
+          <div class="kpi-card kpi-card--clickable" id="kpi-tpepr-bom" data-tpepr-filter="acop-b" title="Clique para ver a lista de ACOP - B (61s-90s)">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
               <span class="kpi-unit">61s-90s</span>
             </div>
             <div class="kpi-label">ACOP - B</div>
           </div>
-          <div class="kpi-card" id="kpi-tpepr-ruim">
+          <div class="kpi-card kpi-card--clickable" id="kpi-tpepr-ruim" data-tpepr-filter="evolucao" title="Clique para ver a lista de Em evolução (> 90s)">
             <div class="kpi-value-container">
               <span class="kpi-value">0</span>
               <span class="kpi-unit">&gt; 90s (em evolução)</span>
             </div>
             <div class="kpi-label">Em evolução</div>
+          </div>
+          <div class="kpi-card kpi-card--clickable" id="kpi-tpepr-nr" data-tpepr-filter="nr" title="Clique para ver a lista de Não Realizados (Permuta, Folga, etc.)">
+            <div class="kpi-value-container">
+              <span class="kpi-value">0</span>
+              <span class="kpi-unit">não realizado</span>
+            </div>
+            <div class="kpi-label">Não Realizado</div>
           </div>
         </div>
 
@@ -1739,9 +1760,14 @@
         <button class="detail-modal-close" id="detail-modal-close" aria-label="Fechar">✕</button>
       </div>
       <div class="detail-modal-body">
-        <div class="detail-modal-count" id="detail-modal-count">0 bombeiros</div>
+        <div class="detail-modal-top-bar">
+          <div class="detail-modal-count" id="detail-modal-count">0 bombeiros</div>
+          <div class="detail-modal-search-wrap" id="detail-modal-search-wrap">
+            <input type="text" id="detail-modal-search" class="detail-modal-search-input" placeholder="🔍 Filtrar por nome, equipe ou função..." aria-label="Filtrar bombeiros">
+          </div>
+        </div>
         <ul class="detail-modal-list" id="detail-modal-list">
-          <!-- Names populated by JS -->
+          <!-- Names/Cards populated by JS -->
         </ul>
       </div>
     </div>

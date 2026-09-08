@@ -8,98 +8,162 @@
   window.SESCINC = window.SESCINC || {};
 
   /* ── Detail Modal (global function for chart click handlers) ── */
-  window.SESCINC.showDetailModal = function (title, items, options) {
+  let activeDetailRecords = [];
+  let activeDetailConfig = {};
+
+  function detailValue(value) {
+    return value === 0 || value === false ? String(value) : (value == null || value === '' ? '—' : String(value));
+  }
+
+  function normalizedSearch(value) {
+    return String(value == null ? '' : value).toLocaleLowerCase('pt-BR').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function addDetailField(parent, labelText, value) {
+    const field = document.createElement('div');
+    field.className = 'detail-record-field';
+    const label = document.createElement('span');
+    label.className = 'detail-record-label';
+    label.textContent = labelText;
+    const strong = document.createElement('strong');
+    strong.textContent = detailValue(value);
+    field.appendChild(label);
+    field.appendChild(strong);
+    parent.appendChild(field);
+  }
+
+  function appendRecordCard(listEl, record, type) {
+    const li = document.createElement('li');
+    li.className = 'detail-record-card';
+
+    const header = document.createElement('div');
+    header.className = 'detail-record-header';
+    if (type === 'tr') {
+      const cci = document.createElement('span');
+      cci.className = 'detail-record-cci';
+      cci.textContent = record.cci || 'CCI não informado';
+      header.appendChild(cci);
+      const vehicle = document.createElement('span');
+      vehicle.className = 'detail-record-vehicle';
+      vehicle.textContent = 'Viatura: ' + (record.viatura || 'não informada');
+      header.appendChild(vehicle);
+    } else {
+      const name = document.createElement('span');
+      name.className = 'detail-record-name';
+      name.textContent = detailValue(record.nome);
+      header.appendChild(name);
+
+      const identity = document.createElement('span');
+      identity.className = 'detail-record-identity';
+      identity.textContent = [record.equipe, record.funcao].filter(Boolean).join(' • ') || 'Equipe/função não informadas';
+      header.appendChild(identity);
+    }
+
+    const badge = document.createElement('span');
+    badge.className = 'badge ' + (record.badgeClass || 'badge-muted');
+    badge.textContent = detailValue(record.displayResultado || record.resultado);
+    header.appendChild(badge);
+    li.appendChild(header);
+
+    const grid = document.createElement('div');
+    grid.className = 'detail-record-grid ' + (type === 'taf' ? 'detail-record-grid--taf' : 'detail-record-grid--tpepr');
+    if (type === 'taf') {
+      addDetailField(grid, 'Mês', record.mes);
+      addDetailField(grid, 'Idade', record.idade);
+      addDetailField(grid, 'Flexão', record.flexao);
+      addDetailField(grid, 'Abdominal', record.abdominal);
+      addDetailField(grid, 'Barra', record.barra);
+      addDetailField(grid, 'Corrida', record.corrida);
+      addDetailField(grid, 'Resultado', record.displayResultado || record.resultado);
+      addDetailField(grid, 'Status', record.status === 'nr' ? 'Não Realizado' : (record.status === 'ferias' ? 'Férias' : 'Realizado'));
+      addDetailField(grid, 'Motivo', record.motivo);
+    } else if (type === 'tpepr') {
+      addDetailField(grid, 'Mês', record.mes);
+      addDetailField(grid, 'Tempo', record.tempoFormatted);
+      addDetailField(grid, 'Resultado', record.displayResultado || record.resultado);
+      addDetailField(grid, 'Status', record.status === 'nr' ? 'Não Realizado' : (record.status === 'ferias' ? 'Férias' : 'Realizado'));
+      addDetailField(grid, 'Motivo', record.motivo);
+    } else {
+      addDetailField(grid, 'Período', record.periodo);
+      addDetailField(grid, 'Equipe', record.equipe);
+      addDetailField(grid, 'Cabeceira', record.cabeceira);
+      addDetailField(grid, 'Tempo de resposta', record.tempo);
+    }
+    li.appendChild(grid);
+
+    if (type === 'tr' && (record.motivo || record.observacao)) {
+      const note = document.createElement('div');
+      note.className = 'detail-record-observation';
+      note.textContent = (record.motivo ? 'Motivo: ' + record.motivo : 'Observação: ' + record.observacao);
+      li.appendChild(note);
+    }
+    listEl.appendChild(li);
+  }
+
+  function renderDetailModalRecords(query) {
     const overlay = document.getElementById('detail-modal');
-    const titleEl = document.getElementById('detail-modal-title');
     const countEl = document.getElementById('detail-modal-count');
     const listEl = document.getElementById('detail-modal-list');
-    const modalEl = overlay ? overlay.querySelector('.detail-modal') : null;
-    if (!overlay || !titleEl || !countEl || !listEl) return;
+    if (!overlay || !countEl || !listEl) return;
 
-    const records = Array.isArray(items) ? items : [];
-    const config = options || {};
-    const isTrDetail = config.type === 'tr';
-
-    titleEl.textContent = title;
-    countEl.textContent = records.length + ' ' + (config.singular || 'bombeiro') + (records.length !== 1 ? (config.pluralSuffix || 's') : '');
-    if (modalEl) modalEl.classList.toggle('detail-modal--wide', isTrDetail);
-    listEl.classList.toggle('detail-modal-list--records', isTrDetail);
+    const config = activeDetailConfig;
+    const type = config.type || 'plain';
+    const records = activeDetailRecords.filter(function (record) {
+      if (!query) return true;
+      return normalizedSearch(type === 'plain' ? record : [record.nome, record.equipe, record.funcao].join(' ')).indexOf(query) >= 0;
+    });
+    const noun = config.singular || 'bombeiro';
+    countEl.textContent = records.length + ' ' + noun + (records.length !== 1 ? (config.pluralSuffix || 's') : '');
+    listEl.classList.toggle('detail-modal-list--records', type !== 'plain');
     listEl.innerHTML = '';
-
-    if (isTrDetail) {
-      records.forEach(function (record) {
-        const li = document.createElement('li');
-        li.className = 'detail-record-card';
-
-        const header = document.createElement('div');
-        header.className = 'detail-record-header';
-
-        const cci = document.createElement('span');
-        cci.className = 'detail-record-cci';
-        cci.textContent = record.cci || 'CCI não informado';
-
-        const vehicle = document.createElement('span');
-        vehicle.className = 'detail-record-vehicle';
-        vehicle.textContent = 'Viatura: ' + (record.viatura || 'não informada');
-
-        const status = document.createElement('span');
-        status.className = 'badge ' + (record.badgeClass || 'badge-muted');
-        status.textContent = record.status || '—';
-
-        header.appendChild(cci);
-        header.appendChild(vehicle);
-        header.appendChild(status);
-        li.appendChild(header);
-
-        const grid = document.createElement('div');
-        grid.className = 'detail-record-grid';
-        [
-          ['Período', record.periodo],
-          ['Equipe', record.equipe],
-          ['Cabeceira', record.cabeceira],
-          ['Tempo de resposta', record.tempo]
-        ].forEach(function (entry) {
-          const field = document.createElement('div');
-          field.className = 'detail-record-field';
-          const label = document.createElement('span');
-          label.className = 'detail-record-label';
-          label.textContent = entry[0];
-          const value = document.createElement('strong');
-          value.textContent = entry[1] || '—';
-          field.appendChild(label);
-          field.appendChild(value);
-          grid.appendChild(field);
-        });
-        li.appendChild(grid);
-
-        if (record.observacao) {
-          const observation = document.createElement('div');
-          observation.className = 'detail-record-observation';
-          observation.textContent = 'Observação: ' + record.observacao;
-          li.appendChild(observation);
-        }
-
-        listEl.appendChild(li);
-      });
-    } else {
-      records.slice().sort(function (a, b) {
-        return String(a).localeCompare(String(b), 'pt-BR');
-      }).forEach(function (item) {
+    if (type === 'plain') {
+      records.slice().sort(function (a, b) { return String(a).localeCompare(String(b), 'pt-BR'); }).forEach(function (item) {
         const li = document.createElement('li');
         li.textContent = String(item);
         listEl.appendChild(li);
       });
+    } else {
+      records.forEach(function (record) { appendRecordCard(listEl, record, type); });
     }
+    if (!records.length) {
+      const empty = document.createElement('li');
+      empty.className = 'detail-modal-empty';
+      empty.textContent = query ? 'Nenhum registro corresponde à busca.' : 'Nenhum registro encontrado.';
+      listEl.appendChild(empty);
+    }
+  }
+
+  window.SESCINC.showDetailModal = function (title, items, options) {
+    const overlay = document.getElementById('detail-modal');
+    const titleEl = document.getElementById('detail-modal-title');
+    const searchEl = document.getElementById('detail-modal-search');
+    const modalEl = overlay ? overlay.querySelector('.detail-modal') : null;
+    if (!overlay || !titleEl) return;
+
+    activeDetailRecords = Array.isArray(items) ? items : [];
+    activeDetailConfig = options || {};
+    titleEl.textContent = title;
+    const isRichDetail = ['tr', 'taf', 'tpepr'].indexOf(activeDetailConfig.type) >= 0;
+    if (modalEl) modalEl.classList.toggle('detail-modal--wide', isRichDetail);
+    if (searchEl) {
+      searchEl.value = '';
+      searchEl.style.display = isRichDetail || activeDetailConfig.type !== 'plain' ? '' : 'none';
+    }
+    renderDetailModalRecords('');
 
     overlay.style.display = 'flex';
+    if (searchEl && isRichDetail) searchEl.focus();
   };
 
   function setupDetailModal() {
     const overlay = document.getElementById('detail-modal');
     const closeBtn = document.getElementById('detail-modal-close');
+    const searchEl = document.getElementById('detail-modal-search');
     if (!overlay) return;
     function close() { overlay.style.display = 'none'; }
     if (closeBtn) closeBtn.addEventListener('click', close);
+    if (searchEl) searchEl.addEventListener('input', function () { renderDetailModalRecords(normalizedSearch(searchEl.value.trim())); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.style.display !== 'none') close(); });
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) close();
     });
