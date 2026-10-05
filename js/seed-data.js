@@ -1,7 +1,7 @@
 /**
  * SESCINC SBGL Dashboard — Seed Data
  * Automatically generated from Excel spreadsheets
- * Generated at: 2026-10-05T10:44:46.005188
+ * Generated at: 2026-10-05T13:09:28.555477
  */
 
 window.SESCINC = window.SESCINC || {};
@@ -10914,7 +10914,7 @@ window.SESCINC.SeedData = {
         "mes": "Setembro"
       }
     ],
-    "uploadedAt": "2026-10-05T13:44:46.004935Z"
+    "uploadedAt": "2026-10-05T16:09:28.546809Z"
   },
   "tpepr": {
     "records": [
@@ -17880,9 +17880,999 @@ window.SESCINC.SeedData = {
         "status": "nr",
         "motivo": "Folga",
         "mes": "Agosto"
+      },
+      {
+        "nome": "BRUNO DOS SANTOS LEAL BLAS",
+        "equipe": "ALFA",
+        "funcao": "BA-LR",
+        "tempoSeconds": 45,
+        "tempoFormatted": "00:45",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "RAFAEL RIBEIRO DE SIQUEIRA",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "CARLOS ALBERTO BARBOSA DA SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 47,
+        "tempoFormatted": "00:47",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ALESSANDRO CARDOSO DE OLIVEIRA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 53,
+        "tempoFormatted": "00:53",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "JAMERSON UBIRACY DE ARAÚJO",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 58,
+        "tempoFormatted": "00:58",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ALESSANDRO DA SILVA TEIXEIRA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 42,
+        "tempoFormatted": "00:42",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LUAN ALVES DOS SANTOS",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": null,
+        "tempoFormatted": "FÉRIAS",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "RODRIGO FERNANDES JUCÁ E SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 56,
+        "tempoFormatted": "00:56",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MICHELL SOARES DA CONCEIÇÃO",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "YURE MALLET FONSECA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "DOUGLAS TEIXEIRA ALVES",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 51,
+        "tempoFormatted": "00:51",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "HENRIQUE DE PINNA GOMES BRITTO",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 51,
+        "tempoFormatted": "00:51",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "RENATO CARREIRO MARTINS",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 44,
+        "tempoFormatted": "00:44",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ALAN RICARDO ALMEIDA SA SEVERO",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "PAULO ROBERTO FERNANDES",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "GESSILDO DA SILVA SOARES",
+        "equipe": "ALFA",
+        "funcao": "BA-MC",
+        "tempoSeconds": null,
+        "tempoFormatted": "FÉRIAS",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "GERSON DA SILVA FERREIRA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 53,
+        "tempoFormatted": "00:53",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MAICON DOUGLAS FELIX ROCHA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "DANIEL OSÓRIO DE LIMA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 53,
+        "tempoFormatted": "00:53",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LUCIANO FERREIRA LOPES WANDERLEY",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 39,
+        "tempoFormatted": "00:39",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "THALES DOS SANTOS SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA-CE",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LUIZ FERNANDO VIEIRA PEREIRA SILVA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 56,
+        "tempoFormatted": "00:56",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MAICON NEI DA SILVA ROCHA",
+        "equipe": "ALFA",
+        "funcao": "BA2",
+        "tempoSeconds": 58,
+        "tempoFormatted": "00:58",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ALBERT FERREIRA DA SILVA XARIFA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 36,
+        "tempoFormatted": "00:36",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ALEX CORREA SANTANA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": null,
+        "tempoFormatted": "Não Realizado",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Não Realizado",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ÁTILA DE FREITAS NETO",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ELIOMAR AGOSTINHO DA SILVA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": null,
+        "tempoFormatted": "Não Realizado",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Folga",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "FABIO JUNIOR SANTOS BARCELLOS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 48,
+        "tempoFormatted": "00:48",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "FERNANDO BATISTA DO NASCIMENTO",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "tempoSeconds": 55,
+        "tempoFormatted": "00:55",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "KASSIO VIEIRA DE SENNA ALMEIDA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 45,
+        "tempoFormatted": "00:45",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LEANDRO MENDES BARBOSA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": null,
+        "tempoFormatted": "Não Realizado",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Folga",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LEANDRO RODRIGUES DA SILVA",
+        "equipe": "BRAVO",
+        "funcao": "BA-MA",
+        "tempoSeconds": null,
+        "tempoFormatted": "FÉRIAS",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MARCELO LEANDRO DE OLIVEIRA COUTINHO",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MARCOS VINICIUS SANTOS FIDELIS",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "tempoSeconds": 39,
+        "tempoFormatted": "00:39",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MARCUS VINICIUS ANDRADE DE AVILA",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MAURÍCIO DE SOUZA OLIVEIRA",
+        "equipe": "BRAVO",
+        "funcao": "BA-RE",
+        "tempoSeconds": null,
+        "tempoFormatted": "FÉRIAS",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MURILO PEREIRA DE ASSIS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 39,
+        "tempoFormatted": "00:39",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "PAULO RICARDO RIBEIRO KHATE E BRITO",
+        "equipe": "BRAVO",
+        "funcao": "BA-MC",
+        "tempoSeconds": 51,
+        "tempoFormatted": "00:51",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "RAFAEL LUIZ DE ALMEIDA SOUZA",
+        "equipe": "BRAVO",
+        "funcao": "BA-LR",
+        "tempoSeconds": 32,
+        "tempoFormatted": "00:32",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "RAMON SIEIA MEDEIROS",
+        "equipe": "BRAVO",
+        "funcao": "BA-CE",
+        "tempoSeconds": 49,
+        "tempoFormatted": "00:49",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "SANDRO RAMOS PRADO",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 67,
+        "tempoFormatted": "01:07",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "TARICK SEIXAS",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 61,
+        "tempoFormatted": "01:01",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "THIAGO DA SILVA SOUZA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": null,
+        "tempoFormatted": "Não Realizado",
+        "resultado": "Não Realizado",
+        "status": "nr",
+        "motivo": "Folga",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "YAGO ARINO DA ROCHA",
+        "equipe": "BRAVO",
+        "funcao": "BA2",
+        "tempoSeconds": 60,
+        "tempoFormatted": "01:00",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "WENDEL DE OLIVEIRA SOARES",
+        "equipe": "CHARLIE",
+        "funcao": "BA-CE",
+        "tempoSeconds": 44,
+        "tempoFormatted": "00:44",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MARCELO BARBOSA DE SOUZA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-LR",
+        "tempoSeconds": 51,
+        "tempoFormatted": "00:51",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LEANDRO DA ROCHA SANT’ANNA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MA",
+        "tempoSeconds": 56,
+        "tempoFormatted": "00:56",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "FABIO DE SOUZA FONSECA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MC",
+        "tempoSeconds": 58,
+        "tempoFormatted": "00:58",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "RICARDO GOMES MARINHO",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 56,
+        "tempoFormatted": "00:56",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "RODRIGO ALVES DE SOUZA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "VAGNER DE OLIVEIRA REZENDE",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 55,
+        "tempoFormatted": "00:55",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "THALES DIEGO SOARES FERREIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 48,
+        "tempoFormatted": "00:48",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ROGÉRIO CERVO MOTTA",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MC",
+        "tempoSeconds": 89,
+        "tempoFormatted": "01:29",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "NIELSON DE SOUZA OLIVEIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 58,
+        "tempoFormatted": "00:58",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "FLÁVIO EMANOEL SANTOS DE OLIVEIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 45,
+        "tempoFormatted": "00:45",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LUCIANO SIQUEIRA DA SILVA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "VINÍCIUS DOS SANTOS PIRES",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 56,
+        "tempoFormatted": "00:56",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "IGOR DA SILVA DO AMARAL",
+        "equipe": "CHARLIE",
+        "funcao": "BA-MC",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "SALATIEL DOS SANTOS LUIZ GOULART",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "SAMUEL GALDINO DE BARCELOS",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MARCELO DOMINGOS CARUNCHO",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 88,
+        "tempoFormatted": "01:28",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "PAULO ROGÉRIO MARQUES MEDEIROS",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": null,
+        "tempoFormatted": "FÉRIAS",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LEANDRO RICARDO LIMA DE OLIVEIRA",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 48,
+        "tempoFormatted": "00:48",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "FRANCISCO SIMÃO DE LIMA NETO SÁ",
+        "equipe": "CHARLIE",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ADRIANO NASSAR VALENÇA",
+        "equipe": "DELTA",
+        "funcao": "BA-CE",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ANDRÉ JORGE DOS SANTOS",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "JOSÉ LUIZ MACHADO PINHEIRO",
+        "equipe": "DELTA",
+        "funcao": "BA-RE",
+        "tempoSeconds": 58,
+        "tempoFormatted": "00:58",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "BRUNO DA SILVA SANTOS",
+        "equipe": "DELTA",
+        "funcao": "BA-RE",
+        "tempoSeconds": 56,
+        "tempoFormatted": "00:56",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "EDSON COELHO DAVID",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "DEIVID LOPES",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 70,
+        "tempoFormatted": "01:10",
+        "resultado": "ACOP - B",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LEONARDO MONTEIRO DA SILVA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 43,
+        "tempoFormatted": "00:43",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LUCAS DIAS DE FARIAS",
+        "equipe": "DELTA",
+        "funcao": "BA-LR",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MARCUS PAULO DA LUZ OLIVEIRA DA SILVEIRA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 49,
+        "tempoFormatted": "00:49",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "DOUGLAS ARAÚJO DOS SANTOS",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": null,
+        "tempoFormatted": "FÉRIAS",
+        "resultado": "Férias",
+        "status": "ferias",
+        "motivo": "Não Realizado",
+        "mes": "Setembro"
+      },
+      {
+        "nome": "RODRIGO OLIVEIRA ALVES",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 54,
+        "tempoFormatted": "00:54",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ROGER PEREIRA DA SILVA BARBOSA OZÓRIO",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 52,
+        "tempoFormatted": "00:52",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "SERGIO LUIZ DOS SANTOS JUNIOR",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 56,
+        "tempoFormatted": "00:56",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LEANDRO RODRIGO SILVEIRA ROSA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "WESLEY DE CARVALHO CORREA",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 44,
+        "tempoFormatted": "00:44",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ANDRÉ MIGUEL MEIRE",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "ÉDIPO FERNANDES DA SILVA",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 57,
+        "tempoFormatted": "00:57",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "CARLOS ALBERTO DOS S. LESSA JUNIOR",
+        "equipe": "DELTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 36,
+        "tempoFormatted": "00:36",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "THIAGO CRUZ LEITE",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 47,
+        "tempoFormatted": "00:47",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "LUIZ FELIPE SOBRAL DO NASCIMENTO",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 55,
+        "tempoFormatted": "00:55",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "KLEBER SANTOS DE OLIVEIRA",
+        "equipe": "DELTA",
+        "funcao": "BA2",
+        "tempoSeconds": 53,
+        "tempoFormatted": "00:53",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "HÉLIO ISMERIM DOS SANTOS",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA-MC",
+        "tempoSeconds": 51,
+        "tempoFormatted": "00:51",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "JEAN PATRICK NASCIMENTOI LOURENÇO",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "DYLAN BAGARELLI LOUREIRO",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "tempoSeconds": 59,
+        "tempoFormatted": "00:59",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "DANIEL NATAN SIEIA ROCHA",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "tempoSeconds": 50,
+        "tempoFormatted": "00:50",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
+      },
+      {
+        "nome": "MAIKE SAETTA CORREIA DE MEDEIROS LIMA",
+        "equipe": "FOLGUISTA",
+        "funcao": "BA2",
+        "tempoSeconds": 49,
+        "tempoFormatted": "00:49",
+        "resultado": "ACOP - A",
+        "status": "ok",
+        "motivo": null,
+        "mes": "Setembro"
       }
     ],
-    "uploadedAt": "2026-10-05T13:44:46.004942Z"
+    "uploadedAt": "2026-10-05T16:09:28.546817Z"
   },
   "tr": {
     "records": [
@@ -19447,7 +20437,7 @@ window.SESCINC.SeedData = {
         "status": "ok"
       }
     ],
-    "uploadedAt": "2026-10-05T13:44:46.004944Z"
+    "uploadedAt": "2026-10-05T16:09:28.546819Z"
   },
   "teorica": {
     "records": [
@@ -49376,12 +50366,12 @@ window.SESCINC.SeedData = {
         "mes": "Setembro"
       }
     ],
-    "uploadedAt": "2026-10-05T13:44:46.004946Z"
+    "uploadedAt": "2026-10-05T16:09:28.546821Z"
   },
   "actuation": {
     "records": [
       {
-        "id": "ACT-6",
+        "id": "ACT-1S-6",
         "data": "2026-01-01",
         "mes": "Janeiro",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -49396,7 +50386,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-7",
+        "id": "ACT-1S-7",
         "data": "2026-01-03",
         "mes": "Janeiro",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTIVEL",
@@ -49409,7 +50399,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-8",
+        "id": "ACT-1S-8",
         "data": "2026-01-06",
         "mes": "Janeiro",
         "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
@@ -49424,11 +50414,11 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-9",
+        "id": "ACT-1S-9",
         "data": "2026-01-06",
         "mes": "Janeiro",
         "tipo_raw": "OUTROS",
-        "tipo": "Outros Acionamentos",
+        "tipo": "Derramamento de Óleo / Fluído",
         "equipe": "ALFA",
         "descricao": "DERRAMAMENTO DE FLUÍDO (ÓLEO HIDRÁULICO)",
         "acoes": "Comunico que às 10h06 o COE acionou o SESCINC, via rádio transceptor, no canal resposta emergência, informando que a empresa Orbital comunicou um vazamento de óleo hidráulico na posição 59. O BA-LR Wendel Soares perguntou se teria alguma aeronave próxima a posição, e o COE informou a presença da aeronave da American.\nÀs 10h07, o BA-LR informa ao COE o início do deslocamento, junto com o CCI 01.\nÀs 10h09, o BA-LR informa chegada ao local na posição 59 e início da avaliação.\nÀs 10h12, o BA-LR informa que o vazamento se trata de fluido hidráulico proveniente do equipamento loader da empresa Orbital matrícula (LD005), no quadrante EE41 com um raio de vazamento de aproximadamente 39m², pois o equipamento veio arrastando o líquido por um extenso espaço. O BA-LR informa início de mitigação por parte da equipe de manutenção da empresa Orbital, sendo responsável pela mitigação o colaborador Carlos Henrique.\nÀs 10h14, o BA-LR informa início de reboque do equipamento loader para retirá-lo do local.\nÀs 10h15 o BA-LR informa colocação de manta por toda extensão onde houve o vazamento do líquido, colocação feita pela equipe de manutenção da empresa Orbital.\n10h31, o BA-LR Wendel Soares informa término da operação de mitigação e retorno a SCI juntamente com o CCI 01.",
@@ -49439,7 +50429,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-10",
+        "id": "ACT-1S-10",
         "data": "2026-01-07",
         "mes": "Janeiro",
         "tipo_raw": "CAPTURA DE ANIMAL",
@@ -49456,7 +50446,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-11",
+        "id": "ACT-1S-11",
         "data": "2026-01-09",
         "mes": "Janeiro",
         "tipo_raw": "EMERGÊNCIA AERONÁUTICA",
@@ -49469,7 +50459,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-12",
+        "id": "ACT-1S-12",
         "data": "2026-01-09",
         "mes": "Janeiro",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -49484,7 +50474,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-13",
+        "id": "ACT-1S-13",
         "data": "2026-01-09",
         "mes": "Janeiro",
         "tipo_raw": "INCÊNDIO EM INSTALAÇÃO",
@@ -49501,7 +50491,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-14",
+        "id": "ACT-1S-14",
         "data": "2026-01-10",
         "mes": "Janeiro",
         "tipo_raw": "OUTROS",
@@ -49514,7 +50504,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-15",
+        "id": "ACT-1S-15",
         "data": "2026-01-12",
         "mes": "Janeiro",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -49529,7 +50519,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-16",
+        "id": "ACT-1S-16",
         "data": "2026-01-14",
         "mes": "Janeiro",
         "tipo_raw": "FOGO EM VEGETAÇÃO",
@@ -49544,11 +50534,11 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-17",
+        "id": "ACT-1S-17",
         "data": "2026-01-15",
         "mes": "Janeiro",
         "tipo_raw": "OUTROS",
-        "tipo": "Outros Acionamentos",
+        "tipo": "Giro de Motor (Prevenção)",
         "equipe": "BRAVO",
         "descricao": "PREVENÇÃO DE GIRO DE MOTOR NO HANGAR UNITED",
         "acoes": "Informo que às 23h38min, o BA-CE Ramon foi acionado pelo Brasa 06 para apoio a operação de giro de motor no Hangar United, com isso, o BA-CE solicitou o deslocamento do CCI 07, via  rádio transceptor, para realizar a prevenção. Às 23h40min ao chegar no local, iniciou a prevenção de giro de motor em alta potência no quadrante P-17, na aeronave Boeing 767-400, prefixo: N59053, operador UNITED e o colaborador responsável Thiago Silva, matrícula: 92976-23, empresa UNITED. Ressalto que até ao término da operação não foi necessário a intervenção da equipe SESCINC. Término às \n01h42min.",
@@ -49559,7 +50549,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-18",
+        "id": "ACT-1S-18",
         "data": "2026-01-17",
         "mes": "Janeiro",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -49574,7 +50564,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-19",
+        "id": "ACT-1S-19",
         "data": "2026-01-24",
         "mes": "Janeiro",
         "tipo_raw": "GIRO DE MOTOR",
@@ -49589,7 +50579,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-20",
+        "id": "ACT-1S-20",
         "data": "2026-01-26",
         "mes": "Janeiro",
         "tipo_raw": "CONDIÇÃO DE SOCORRO",
@@ -49597,7 +50587,7 @@ window.SESCINC.SeedData = {
         "equipe": "ALFA",
         "descricao": "ACIONAMNTO DO SESCINC PARA ATENDIMENTO A UMA AERONAVE APÓS TER DECLARADO EMERGÊNCIA EM CONDIÇÃO DE SOCORRO",
         "acoes": "Comunico que às 22h45, o SESCINC foi acionado pela TWR, via rádio transceptor, informando que a aeronave AIRBUS A330-300, prefixo CS-TUO, da companhia aérea TAP Portugal, ter declarado condição de socorro, em virtude da presença de fumaça no interior da aeronave, na PPD 15x33. No momento inicial do acionamento, ainda não havia confirmação do POB, autonomia de voo e transporte de artigos perigosos.\nÀs 22h46, o CCI 01 informou ao BA-CE Thales Silva que já se encontrava posicionado na TAXIWAY E, sendo informado também que a viatura CACE encontrava-se posicionada na TAXIWAY D.\nÀs 22h47, o BA-OC João Vitor solicitou a TWR informações adicionais sobre POB, autonomia de voo e a presença de artigos perigosos, porém tais dados ainda não estavam disponíveis.\nÀs 22h48, o CRS 01 informou ao BA-CE que se encontrava posicionado na TAXIWAY A.\nÀs 22h49, a TWR informou que a aeronave possuía POB 315, não transportava artigos perigosos e apresentava autonomia de voo de 9 horas.\nÀs 22h50, o CCI 04 informou que já se encontrava posicionado na TAXIWAY D.\nÀs 22h51, o BA-CE solicitou a TWR a confirmação da TAXIWAY de livramento da aeronave, visando eventual reposicionamento das viaturas, porém a TWR não possuía a informação.\nÀs 22h52, o BA-CE solicitou o reposicionamento do CCI 04 para TAXIWAY B, no sentido da cabeceira 15.\nÀs 22h53, após o pouso da aeronave, o BA-CE autorizou as viaturas, com exceção do CCI 01, a ingressarem na PPD 15x33 para acompanhamento.\nÀs 22h54, o BA-CE questionou o CCI 01 quanto à visualização de fumaça externa, sendo informado que não havia indícios visuais. No mesmo horário, o BA-CE questionou a TWR sobre a necessidade de evacuação da aeronave, sendo informado que o contato com o piloto estava em andamento. O BA-CE solicitou ainda o corte dos motores, sendo posteriormente informado que, segundo o piloto, a emergência encontrava-se sob controle.\nÀs 22h55, a TWR informou que a aeronave possuía condições de seguir por meios próprios até o Gate. O BA-CE solicitou o reposicionamento do CCI 01 para a TAXIWAY B, a fim de dar passagem à aeronave, mantendo o CCI 02 e o CCI 04 na retaguarda da aeronave.\nÀs 22h56, o CCI 01 informou que a TAXIWAY E encontrava-se livre, de modo que a aeronave pudesse seguir pela TAXIWAY E e LIMA 5, até o GATE.\nÀs 22h57, o CCI 02 e CCI 04 prosseguiram o acompanhamento da aeronave, pelo trecho acima descrito.\nÀs 22h59, o BA-CE informa ao CCI 01 que, após a passagem da aeronave pela L5, poderia seguir com o acompanhamento.\nÀs 23h00, o BA-CE solicita ao CRS 01 que seguisse em comboio a retaguarda do CCI próximo ao motor 02.\nÀs 23h03, o BA-CE solicitou a TWR, confirmação sobre a persistência de fumaça no interior da aeronave, sendo informado que não havia mais contato com o piloto.\nÀs 23h07, o BA-CE informou à equipe de emergência que, após confirmação com o APRON CONTROL, no canal de operações, foi confirmada a descaracterização da emergência, sendo determinado o retorno das viaturas as suas respectivas bases.\nOutrossim deixo registrado do brado e confirmação de emergência, a TWR realizou um CHECK de rádio com cada setor do SREA (SCI, PACI UNO, PACI DOIS, PAE 28 e 33, SME e COE), o que contribuiu para uma demora no repasse das informações, o que, em caso de um acidente consumado poderia comprometer uma atuação do SESCINC mais eficaz e assertiva.",
-        "localizacao": "Cabeceira 28",
+        "localizacao": "Sistema 15-30",
         "quadrante": null,
         "viaturas": [
           "CCI 01 (F01)",
@@ -49608,7 +50598,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-21",
+        "id": "ACT-1S-21",
         "data": "2026-01-27",
         "mes": "Janeiro",
         "tipo_raw": "GIRO DE MOTOR",
@@ -49623,7 +50613,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-22",
+        "id": "ACT-1S-22",
         "data": "2026-01-27",
         "mes": "Janeiro",
         "tipo_raw": "GIRO DE MOTOR",
@@ -49638,7 +50628,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-23",
+        "id": "ACT-1S-23",
         "data": "2026-01-30",
         "mes": "Janeiro",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -49659,7 +50649,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-24",
+        "id": "ACT-1S-24",
         "data": "2026-02-05",
         "mes": "Fevereiro",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -49679,7 +50669,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-25",
+        "id": "ACT-1S-25",
         "data": "2026-02-07",
         "mes": "Fevereiro",
         "tipo_raw": "EMERGÊNCIA AERONÁUTICA",
@@ -49699,7 +50689,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-26",
+        "id": "ACT-1S-26",
         "data": "2026-02-10",
         "mes": "Fevereiro",
         "tipo_raw": "BATISMO DE AERONAVE",
@@ -49712,7 +50702,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-27",
+        "id": "ACT-1S-27",
         "data": "2026-02-13",
         "mes": "Fevereiro",
         "tipo_raw": "INCÊNDIO EM EQUIPAMENTO",
@@ -49727,7 +50717,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-28",
+        "id": "ACT-1S-28",
         "data": "2026-02-14",
         "mes": "Fevereiro",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -49743,7 +50733,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-29",
+        "id": "ACT-1S-29",
         "data": "2026-02-15",
         "mes": "Fevereiro",
         "tipo_raw": "CONDIÇÃO DE SOCORRO",
@@ -49763,7 +50753,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-30",
+        "id": "ACT-1S-30",
         "data": "2026-02-18",
         "mes": "Fevereiro",
         "tipo_raw": "CAPTURA DE FAUNA",
@@ -49778,7 +50768,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-31",
+        "id": "ACT-1S-31",
         "data": "2026-02-19",
         "mes": "Fevereiro",
         "tipo_raw": "EMERGÊNCIA MÉDICA",
@@ -49791,7 +50781,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-32",
+        "id": "ACT-1S-32",
         "data": "2026-02-20",
         "mes": "Fevereiro",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -49809,7 +50799,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-33",
+        "id": "ACT-1S-33",
         "data": "2026-02-20",
         "mes": "Fevereiro",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -49828,7 +50818,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-34",
+        "id": "ACT-1S-34",
         "data": "2026-02-24",
         "mes": "Fevereiro",
         "tipo_raw": "CHEIRO DE QUEIMADO EM EQUIPAMENTO",
@@ -49845,7 +50835,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-35",
+        "id": "ACT-1S-35",
         "data": "2026-02-26",
         "mes": "Fevereiro",
         "tipo_raw": "GIRO DE MOTOR",
@@ -49858,7 +50848,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-36",
+        "id": "ACT-1S-36",
         "data": "2026-02-26",
         "mes": "Fevereiro",
         "tipo_raw": "GIRO DE MOTOR",
@@ -49873,7 +50863,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-37",
+        "id": "ACT-1S-37",
         "data": "2026-02-26",
         "mes": "Fevereiro",
         "tipo_raw": "GIRO DE MOTOR",
@@ -49888,7 +50878,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-38",
+        "id": "ACT-1S-38",
         "data": "2026-02-26",
         "mes": "Fevereiro",
         "tipo_raw": "02/03/2026 - DERRAMAMENTO DE COMBUSTÍVEL",
@@ -49903,7 +50893,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-39",
+        "id": "ACT-1S-39",
         "data": "2026-03-10",
         "mes": "Março",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -49916,7 +50906,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-40",
+        "id": "ACT-1S-40",
         "data": "2026-03-16",
         "mes": "Março",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -49931,7 +50921,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-41",
+        "id": "ACT-1S-41",
         "data": "2026-03-16",
         "mes": "Março",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -49947,7 +50937,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-42",
+        "id": "ACT-1S-42",
         "data": "2026-03-22",
         "mes": "Março",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -49960,7 +50950,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-43",
+        "id": "ACT-1S-43",
         "data": "2026-03-22",
         "mes": "Março",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -49975,7 +50965,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-44",
+        "id": "ACT-1S-44",
         "data": "2026-03-26",
         "mes": "Março",
         "tipo_raw": "SIMULADO DE EMERGÊNCIA",
@@ -49988,7 +50978,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-45",
+        "id": "ACT-1S-45",
         "data": "2026-03-26",
         "mes": "Março",
         "tipo_raw": "GIRO DE MOTOR",
@@ -50003,7 +50993,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-46",
+        "id": "ACT-1S-46",
         "data": "2026-03-26",
         "mes": "Março",
         "tipo_raw": "ALARME RADIOLÓGICO",
@@ -50018,7 +51008,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-47",
+        "id": "ACT-1S-47",
         "data": "2026-04-01",
         "mes": "Abril",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -50033,7 +51023,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-48",
+        "id": "ACT-1S-48",
         "data": "2026-04-05",
         "mes": "Abril",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -50048,7 +51038,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-49",
+        "id": "ACT-1S-49",
         "data": "2026-05-21",
         "mes": "Maio",
         "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
@@ -50063,7 +51053,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-50",
+        "id": "ACT-1S-50",
         "data": "2026-04-23",
         "mes": "Abril",
         "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
@@ -50079,7 +51069,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-51",
+        "id": "ACT-1S-51",
         "data": "2026-05-14",
         "mes": "Maio",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -50095,7 +51085,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-52",
+        "id": "ACT-1S-52",
         "data": "2026-05-14",
         "mes": "Maio",
         "tipo_raw": "CAPTURA DE FAUNA",
@@ -50111,7 +51101,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-53",
+        "id": "ACT-1S-53",
         "data": "2026-05-17",
         "mes": "Maio",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -50128,7 +51118,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-54",
+        "id": "ACT-1S-54",
         "data": "2026-05-17",
         "mes": "Maio",
         "tipo_raw": "FOGO EM VEGETAÇÃO",
@@ -50144,7 +51134,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-55",
+        "id": "ACT-1S-55",
         "data": "2026-05-17",
         "mes": "Maio",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -50161,7 +51151,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-56",
+        "id": "ACT-1S-56",
         "data": "2026-05-19",
         "mes": "Maio",
         "tipo_raw": "DERRAMAMENTO DE PRODUTO QUÍMICO",
@@ -50177,7 +51167,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-57",
+        "id": "ACT-1S-57",
         "data": "2026-05-23",
         "mes": "Maio",
         "tipo_raw": "ATENDIMENTO A AERONAVE PRESIDENCIAL",
@@ -50194,7 +51184,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-58",
+        "id": "ACT-1S-58",
         "data": "2026-06-01",
         "mes": "Junho",
         "tipo_raw": "BATISMO DE AERONAVE",
@@ -50207,7 +51197,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-59",
+        "id": "ACT-1S-59",
         "data": "2026-06-05",
         "mes": "Junho",
         "tipo_raw": "CAPTURA DE FAUNA",
@@ -50222,7 +51212,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-60",
+        "id": "ACT-1S-60",
         "data": "2026-05-06",
         "mes": "Maio",
         "tipo_raw": "RISCO BALOEIRO",
@@ -50239,7 +51229,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-61",
+        "id": "ACT-1S-61",
         "data": "2026-06-08",
         "mes": "Junho",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -50256,7 +51246,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-62",
+        "id": "ACT-1S-62",
         "data": "2026-06-09",
         "mes": "Junho",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -50271,7 +51261,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-63",
+        "id": "ACT-1S-63",
         "data": "2026-06-10",
         "mes": "Junho",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -50286,7 +51276,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-64",
+        "id": "ACT-1S-64",
         "data": "2026-06-15",
         "mes": "Junho",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -50295,13 +51285,13 @@ window.SESCINC.SeedData = {
         "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE FLUÍDO DERRAMADO",
         "acoes": "Comunico que às 16h22 o COE acionou SESCINC informando vazamento de óleo hidráulico na posição 68.\nÀs 16h26, o BA-CE Thales Silva iniciou deslocamento com a viatura CACE para a posição 68, chegando ao local às 16h27, onde realizou a averiguação da ocorrência.\nÀs 16h30, o condutor da CACE Jean Carneiro, informou ao BA-CE o quadrante da ocorrência (EE40).\nÀs 16h31, o BA-CE informou ao COE que o vazamento era proveniente de um caminhão da empresa Gate Gourmet, de identificação GGL008, sendo a área contaminada de aproximadamente 36 m². Foi informado ainda que a mitigação do produto derramado estava sendo realizada pelos próprios funcionários da empresa responsável pelo veículo.\nÀs 16h42, o BA-CE informou ao COE o término da mitigação do fluído e o retorno da equipe à base do Central Faísca.",
         "localizacao": "Posição 68",
-        "quadrante": "DA",
+        "quadrante": "EE40",
         "viaturas": [
           "CACE"
         ]
       },
       {
-        "id": "ACT-65",
+        "id": "ACT-1S-65",
         "data": "2026-06-15",
         "mes": "Junho",
         "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
@@ -50316,7 +51306,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-66",
+        "id": "ACT-1S-66",
         "data": "2026-06-17",
         "mes": "Junho",
         "tipo_raw": "SIMULADO DE EMERGÊNCIA",
@@ -50334,7 +51324,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-67",
+        "id": "ACT-1S-67",
         "data": "2026-06-20",
         "mes": "Junho",
         "tipo_raw": "RISCO BALOEIRO",
@@ -50352,7 +51342,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-68",
+        "id": "ACT-1S-68",
         "data": "2026-06-25",
         "mes": "Junho",
         "tipo_raw": "SIMULADO DE EMERGÊNCIA",
@@ -50368,7 +51358,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-69",
+        "id": "ACT-1S-69",
         "data": "2026-06-26",
         "mes": "Junho",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -50383,7 +51373,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-70",
+        "id": "ACT-1S-70",
         "data": "2026-06-29",
         "mes": "Junho",
         "tipo_raw": "DERRAMAMENTO DE ÓLEO",
@@ -50399,7 +51389,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-7",
+        "id": "ACT-JUL-7",
         "data": "2026-07-01",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
@@ -50412,7 +51402,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-2S-8",
+        "id": "ACT-JUL-8",
         "data": "2026-07-01",
         "mes": "Julho",
         "tipo_raw": "MATERIAL PERIGOSO",
@@ -50430,7 +51420,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-9",
+        "id": "ACT-JUL-9",
         "data": "2026-07-03",
         "mes": "Julho",
         "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
@@ -50446,7 +51436,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-10",
+        "id": "ACT-JUL-10",
         "data": "2026-07-07",
         "mes": "Julho",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -50462,7 +51452,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-11",
+        "id": "ACT-JUL-11",
         "data": "2026-07-09",
         "mes": "Julho",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -50481,7 +51471,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-12",
+        "id": "ACT-JUL-12",
         "data": "2026-07-09",
         "mes": "Julho",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -50502,7 +51492,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-13",
+        "id": "ACT-JUL-13",
         "data": "2026-07-11",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
@@ -50515,7 +51505,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-2S-14",
+        "id": "ACT-JUL-14",
         "data": "2026-07-12",
         "mes": "Julho",
         "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
@@ -50524,17 +51514,17 @@ window.SESCINC.SeedData = {
         "descricao": "ACIONAMENTO DO SESCINC PARA DERRAMAMENTO DE COMBUSTÍVEL",
         "acoes": "Comunico por volta das 06:48h, o SESCINC foi acionado via rádio transceptor, no canal resposta e emergência, pelo COE para um vazamento de combustível na posição de pátio 23. De imediato o BA-CE Wendel Soares se deslocou, junto com o CCI 03, até o local informado.\nÀs 06:53h, o BA-CE comunica a chegada ao local informado e inicia avaliação.\nÀs 06:58h, o BA-CE comunica que se trata de um vazamento de QAV, já controlado, proveniente de um caminhão abastecedor da empresa Air BP, matrícula BP1007, no quadrante \"Y43\", tendo próximo uma aeronave A320, prefixo PR-MHM. De imediato o BA-CE estabeleceu linha de mangueira.\nÀs 07:04h, o Supervisor de pátio Ronald Antônio, matrícula 91400-16, da empresa Riogaleão, solicita o deslocamento do caminhão abastecedor do local, para que pudesse ser iniciado o deslocamento da aeronave no pushback, o BA-CE comunica a possibilidade do deslocamento.\nApós retirada do caminhão abastecedor do local do derreamento e retirada da aeronave da posição 23, no pushback, o Operador de abastecimento Leonardo Farias, matrícula 86722-25, da empresa Air BP, deu continuidade na mitigação do combustível derramado.\nÀs 07:09, o BA-CE comunica ao COE término da mitigação, sendo utilizado 20 mantas da própria empresa.\nÀs 07:10h, o BA-CE comunica que o local já está em segurança, não apresenta mais risco de incêndio e retorno do CCI 03 ao pátio da SCI.\nÀs 07:29h, o BA-CE comunica a chega do CCI 03 a SCI.",
         "localizacao": "Pátio 1",
-        "quadrante": null,
+        "quadrante": "Y43",
         "viaturas": [
           "CCI 03 (F03)"
         ]
       },
       {
-        "id": "ACT-2S-15",
+        "id": "ACT-JUL-15",
         "data": "2026-07-17",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
-        "tipo": "Outros Acionamentos",
+        "tipo": "Derramamento de Óleo / Fluído",
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE FLUÍDO DERRAMADO",
         "acoes": "Comunico que às 15h37, o COE acionou o SESCINC, via rádio transceptor, informando que a equipe de Fiscalização reportou um vazamento de óleo hidráulico proveniente de um veículo da empresa Gate Gourmet, localizado na posição 37. Em seguida, o BA-CE Thales Silva solicitou o deslocamento do BA-LR Bruno Blas para atendimento da ocorrência.\nÀs 15h38, o BA-LR solicitou ao COE informações sobre a existência de aeronaves nas proximidades do vazamento, sendo informado que havia uma aeronave da empresa Gol estacionada próxima ao local.\nÀs 15h39, o BA-LR comunicou o início do deslocamento das viaturas CRS 01 e CCI 03 para o atendimento da ocorrência.\nÀs 15h44, a viatura CRS 01 informou que o local do vazamento correspondia à posição AA43 do mapa de grade interno.\nÀs 15h45, o BA-LR informou ao COE que estava realizando levantamento de informações referentes ao caminhão da empresa Gate Gourmet, o qual já não se encontrava no local, mantendo contato com o fiscal de pátio para obtenção de maiores detalhes sobre a ocorrência.\nÀs 15h48, o BA-LR informou ao COE que o vazamento era proveniente do sistema hidráulico do baú do caminhão da Gate Gourmet, de identificação GGL027, com área afetada de aproximadamente 2 m². Informou ainda que o operador responsável era Deivid Cunha e que o condutor do veículo era Deivid Lima, matrícula 9535819, o qual já havia solicitado à equipe da empresa o início da mitigação do vazamento.\nÀs 15h51, o BA-LR comunicou ao COE que, em entendimento com o fiscal de pátio Daniel, ficou acordado que, caso houvesse demora por parte da empresa Gate Gourmet para iniciar a mitigação, a própria equipe do SESCINC executaria o procedimento, visando preservar a segurança operacional e minimizar impactos na operação da aeronave da empresa Gol.\nÀs 15h52, o BA-LR informou ao PACI 01 que a aeronave estacionada nas proximidades do vazamento possuía o prefixo PR-GGE.\nÀs 15h55, o BA-LR informou ao COE que a equipe da Gate Gourmet havia iniciado a mitigação do fluido derramado.\nÀs 15h58, o BA-LR comunicou ao COE o término da mitigação, informando que não havia mais fluido derramado sobre o pavimento nem riscos remanescentes no local. Na sequência, as viaturas CRS 01 e CCI 03 retornaram ao pátio do Central Faísca, sendo encerrado o atendimento da ocorrência.",
@@ -50547,7 +51537,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-16",
+        "id": "ACT-JUL-16",
         "data": "2026-07-17",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
@@ -50562,11 +51552,11 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-17",
+        "id": "ACT-JUL-17",
         "data": "2026-07-21",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
-        "tipo": "Outros Acionamentos",
+        "tipo": "Derramamento de Óleo / Fluído",
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE FLUÍDO DERRAMADO",
         "acoes": "Comunico que às 10h25, o COE acionou o SESCINC, via rádio transceptor, informando a existência de um vazamento de óleo na posição 30, proveniente de um caminhão da empresa de comissaria. O BA-CE Thales Silva questionou se havia aeronave nas proximidades do local, sendo informado pelo COE que havia uma aeronave da empresa LATAM estacionada próxima à ocorrência. Em seguida, o BA-CE solicitou que o BA-LR Bruno Blas se deslocasse até a posição 30 para averiguação do fluido derramado.\nÀs 10h27, o BA-LR informou ao COE o início do deslocamento das viaturas CACE 025 e CCI 02 para atendimento da ocorrência.\nÀs 10h32, o BA-LR comunicou a chegada das viaturas ao local do vazamento e informou o início da prevenção operacional com o CCI 02, visando garantir a segurança da operação nas proximidades da aeronave.\nÀs 10h33, o BA-LR informou ao COE que estava realizando as averiguações necessárias para identificação da origem do vazamento.\nÀs 10h35, o CCI 02 informou ao OC João Vitor que a ocorrência se localizava na posição Z43 do mapa de grade interno.\nÀs 10h36, o BA-LR informou ao COE que o vazamento de óleo hidráulico era proveniente de um caminhão da empresa Sky Chefs, identificado pelo prefixo SKY27, com área afetada de aproximadamente 1 m². Informou ainda que o condutor do veículo era André dos Santos, matrícula 8559325, e que a própria empresa já havia sido acionada para realizar a mitigação do fluido derramado.\nÀs 10h49, o BA-LR comunicou ao COE que a equipe da Sky Chefs havia iniciado a mitigação do fluído derramado.\nAinda às 10h49, o Supervisor de Emergência solicitou ao BA-LR a realização de registro fotográfico da área após a conclusão da mitigação, para encaminhamento ao setor de Sustentabilidade. O BA-LR informou não possuir telefone celular no momento, esclarecendo que o aparelho operacional se encontrava em posse do BA-CE, em razão da realização do PTR-BA programado para a presente data. Diante disso, o Supervisor orientou que fosse solicitado ao fiscal de pátio responsável pela ocorrência a realização do registro fotográfico.\nÀs 10h52, o BA-LR informou ao COE o término da mitigação do fluido derramado, comunicando o retorno das viaturas envolvidas ao pátio do Central Faísca. Informou ainda ao Supervisor de Emergência que a solicitação do registro fotográfico havia sido repassada ao fiscal de pátio Jeferson.",
@@ -50578,11 +51568,11 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-18",
+        "id": "ACT-JUL-18",
         "data": "2026-07-21",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
-        "tipo": "Outros Acionamentos",
+        "tipo": "Giro de Motor (Prevenção)",
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCIN PARA PREVENÇÃO DE GIRO DE MOTOR A REAÇÃO",
         "acoes": "Comunico que às 14h09, o Supervisor de Emergência Marcos solicitou, via telefone, o apoio do SESCINC para acompanhamento da operação de giro de motor de uma aeronave no Pátio Militar.\nÀs 14h10, o BA-CE Thales silva iniciou o deslocamento da viatura CCI 02 para o local da operação.\nÀs 14h13, o BA-CE informou ao COE a chegada da viatura CCI 02 ao Pátio Militar.\nÀs 14h14, o BA-CE comunicou que a operação estava sob a responsabilidade do 2º Sargento Humberto Luan, da Força Aérea Brasileira (FAB), sendo realizada a prevenção ao giro de motor da aeronave C-105A, prefixo 2809, operada pela Força Aérea Brasileira.\nÀs 14h18, o BA-CE informou ao COE que a operação se encontrava na posição II39 do mapa de grade interno.\nÀs 14h49, o BA-CE comunicou o término da prevenção ao giro de motor e informou o retorno da viatura CCI 02 ao pátio do Central Faísca.\nÀs 14h51, o CCI 02 informou sua chegada ao pátio do Central Faísca, sendo encerrado o atendimento.",
@@ -50593,11 +51583,11 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-19",
+        "id": "ACT-JUL-19",
         "data": "2026-07-21",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
-        "tipo": "Outros Acionamentos",
+        "tipo": "Derramamento de Óleo / Fluído",
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE FLUÍDO DERRAMADO",
         "acoes": "Comunico que às 20h40, o COE acionou o SESCINC, informando a existência de um vazamento de óleo hidráulico na posição 23. Imediatamente o BA-CE Thales Silva questionou se havia aeronave nas proximidades da ocorrência, sendo informado pelo COE que havia uma aeronave estacionada próxima ao local. Em seguida, solicitou o deslocamento das viaturas CACE 025, CRS 01 e CCI 03 para atendimento da ocorrência.\nÀs 20h45, o BA-CE informou ao COE que a equipe já se encontrava na posição 23, iniciando a averiguação da ocorrência.\nÀs 20h46, a equipe da CRS 01 informou ao OC João Vitor do PACI 01 que o vazamento se encontrava na posição Y43 do mapa de grade interno. Foi identificado que o fluido hidráulico era proveniente de uma aeronave da empresa Gol, modelo Boeing 737-800, prefixo PR-GXU. Na sequência, o BA-CE comunicou ao COE que o vazamento se encontrava contido, sem risco de incêndio. Informou ainda que o mecânico responsável pela aeronave era Marcelo Amorim, matrícula 9025126. O BA-LR Bruno Blas comunicou ao BA-CE que havia sido estabelecido o perímetro de segurança, com o isolamento da área realizado pela equipe da CRS 01.\nÀs 20h49, o BA-CE informou ao COE que a equipe de Fiscalização já se encontrava no local e que a área contaminada era de aproximadamente 3 m². Informou também que não havia risco de atingir nenhuma canaleta de drenagem pluvial e que a equipe de manutenção da empresa Gol já havia iniciado os procedimentos de mitigação do fluído derramado.\nÀs 20h55, o BA-CE solicitou o retorno da viatura CACE 025 ao Central Faísca, permanecendo em prontidão operacional.\nÀs 21h15, o BA-CE comunicou ao COE o término da mitigação do fluido derramado, informando que não havia mais riscos no local. Na sequência, as viaturas CCI 03 e CRS 01 iniciaram o retorno ao Central Faísca.\nÀs 21h26, o BA-CE informou ao COE a chegada das viaturas ao pátio do Central Faísca, sendo encerrado o atendimento da ocorrência.",
@@ -50610,11 +51600,11 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-20",
+        "id": "ACT-JUL-20",
         "data": "2026-07-22",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
-        "tipo": "Outros Acionamentos",
+        "tipo": "Derramamento de Óleo / Fluído",
         "equipe": "BRAVO",
         "descricao": "O COE informou ao Faísca Líder, via rádio transceptor, sobre uma ocorrência de vazamento de óleo hidráulico.",
         "acoes": "Ao chegar no local, o vazamento de óleo hidráulico oriundo de um trator de Pushback da empresa Swissport (modelo Rucker, prefixo ATC1111602), localizado na Posição 28. Diante disso, foram imediatamente deslocados a viatura CCI 03 e o veículo CACE. As equipes chegaram ao local às 13h08, onde foi constatado um derramamento de combustível em uma área de aproximadamente 4 m². Após avaliação técnica da cena, verificou-se que o equipamento já se encontrava em área segura e sem riscos adicionais de vazamento ou de incêndio. A ocorrência foi finalizada com sucesso às 13h18.",
@@ -50627,7 +51617,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-21",
+        "id": "ACT-JUL-21",
         "data": "2026-07-22",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
@@ -50644,7 +51634,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-22",
+        "id": "ACT-JUL-22",
         "data": "2026-07-27",
         "mes": "Julho",
         "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
@@ -50653,14 +51643,14 @@ window.SESCINC.SeedData = {
         "descricao": "ACIONAMENTO DO SESCINC PARA INCÊNDIO EM VEGETAÇÃO",
         "acoes": "Comunico que por volta das 13:46 COE aciona PACI 2, via rádio transceptor, para avaliação de fumaça que foi avistada pelas câmeras próximo ao PACI 2. De imediato o BA-CE Wendel Soares solicita ao PACI 2 que realize avaliação no entorno do PACI 2.\nÀs 13:52h, o CCI 05 inicia deslocamento e direção ao PACI 2 antigo para averiguar a fumaça avistada, quando identifica fora das cercanias do aeródromo, 2 focos de incêndio nos quadrantes H18 e H19, sem a possibilidade e alcançalos com  jato de canhão. \nÀs 13:54h, o BA-CE inicia o deslocamento para o local informado pelo CCI 05, e solícita ao COE apoio de recurso externo, devido a distância a cercanias do aeródromo e não ser possível o combate com  canhão do CCI 05.\nˋAs 13:56h, solicitado pelo BA-CE, CCI 05 inicia o resfriamento da vegetação próximo a cercanias do aeródromo, de forma preventiva, para evitar que o foco de incêndio se aproxime.\nÀs 14:08h, o BA-CE chega ao local, quadrante H18 e H19, e identifica que com a utilização do CCI 02 é possível alcançar os focos de incêdio e assim foi feito, logrando exito no combate.\nˋAs 14:09h, por eterminação do BA-CE o CCI 02 iniciou deslocamento para o quadrante H25, para combate em um novo foco de incêndio, porém esse estando mais distante, não foi possível alcançar com o jato de canhão do CCI 02. \nˋAs 14:11h, o COE solicita o deslocamento dos Bombeiros Estrutural, com a viatura OPS 024, pela área externa, para poder realizar combate ao foco de incendio no quadrante H25. \nÀs 14:36h, OPS 024 chega próximo ao quadrante H18  H19, porém não é possivel deslocamento com a viatura, chegando apenas ao quadrante H18 e H19, não sendo possível acessar o quadrante H25, devido a altura da vegetação.\nÀs 14:40h, o BA-CE identifica que o foco de incêndio no quadrante H25, se extinguiu por meios própios  imediatamente comunica ao COE.\nÀs 14:45h, após os focos e incêdios serem debelados, o BA-CE comunica ao COE que o local não presenta mais risco e o retorno das viaturas do SESCINC a base.\nÀs 14:48, o BA-CE comunica ao COE que todos os recursos já se encontram nas bases.",
         "localizacao": "Sistema 10-28",
-        "quadrante": "S",
+        "quadrante": "H18",
         "viaturas": [
           "CCI 02 (F02)",
           "CCI 05 (F05)"
         ]
       },
       {
-        "id": "ACT-2S-23",
+        "id": "ACT-JUL-23",
         "data": "2026-07-27",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
@@ -50675,7 +51665,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-24",
+        "id": "ACT-JUL-24",
         "data": "2026-07-29",
         "mes": "Julho",
         "tipo_raw": "DEINTERDIÇÃO DE PISTA",
@@ -50694,7 +51684,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-25",
+        "id": "ACT-JUL-25",
         "data": "2026-07-30",
         "mes": "Julho",
         "tipo_raw": "OUTROS",
@@ -50709,7 +51699,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-7",
+        "id": "ACT-AGO-7",
         "data": "2026-08-07",
         "mes": "Agosto",
         "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
@@ -50725,7 +51715,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-8",
+        "id": "ACT-AGO-8",
         "data": "2026-08-10",
         "mes": "Agosto",
         "tipo_raw": "OUTROS",
@@ -50740,7 +51730,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-9",
+        "id": "ACT-AGO-9",
         "data": "2026-08-12",
         "mes": "Agosto",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -50753,7 +51743,7 @@ window.SESCINC.SeedData = {
         "viaturas": []
       },
       {
-        "id": "ACT-2S-10",
+        "id": "ACT-AGO-10",
         "data": "2026-08-12",
         "mes": "Agosto",
         "tipo_raw": "OUTROS",
@@ -50771,7 +51761,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-11",
+        "id": "ACT-AGO-11",
         "data": "2026-08-14",
         "mes": "Agosto",
         "tipo_raw": "OUTROS",
@@ -50786,7 +51776,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-12",
+        "id": "ACT-AGO-12",
         "data": "2026-08-14",
         "mes": "Agosto",
         "tipo_raw": "OUTROS",
@@ -50803,7 +51793,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-13",
+        "id": "ACT-AGO-13",
         "data": "2026-08-16",
         "mes": "Agosto",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -50811,7 +51801,7 @@ window.SESCINC.SeedData = {
         "equipe": "CHARLIE",
         "descricao": "ACIONAMENTO DO SESCINC PARA ATENDIMENTO A CONDIÇÃO DE URGÊNCIA",
         "acoes": "Comunico que às 14h54 a TWR acionou o SESCINC, via rádio transceptor, informando que a aeronave GOL (Boeing 737-800 MAX), prefixo PSGPA, havia declarado condição de urgência em razão de colisão com pássaros na decolagem na pista 15x33, resultando em pane de perda de velocidade da aeronave. Foi informado que a aeronave transportava 191 passageiros a bordo, possuía autonomia de 6100 kg de combustível, não transportava carga perigosa, não era aeronave militar e nem municionada, e realizaria o pouso pela cabeceira 28 da pista 10x28, com estimativa de chegada em 10 minutos após o acionamento via rádio.\nNeste momento foi iniciado check de rádio da TWR Galeão, quando acionado Central Faísca, o BA-CE Wendel Soares comunicou o início de deslocamento das viaturas do SESCINC até os posicionamentos para intervenção pré estabelecidos.\nÀs 14h55, as viaturas CCI 02 e CCI 05 informaram que já se encontravam posicionadas em frente ao PACI 02.\nÀs 14h57, as viaturas CCI 04 e CCI 358 informaram posicionamento na taxiway BB, e a viatura CRS informou posicionamento na taxiway P.\nÀs 14h58, a viatura CACE informou posicionamento na taxiway BB.\nÀs 15h04, a aeronave realizou o toque em solo na Cabeceira 28. A aeronave deslocou-se para a posição 32 no pátio com o acompanhamento das viaturas CACE, CCI04, CCI358 e CRS.\nÀs 15h08, o piloto descaracterizou a emergência em solo, informação repassada via rádio pela TWR Galeão, neste momento o BA-CE solicitou o retorno dos CCI’s 02 e 05, comunicou a continuidade o acompanhamento da aeronave de forma preventiva pelas viaturas CCI’s 04 e 358, viatura CRS e seguindo também o acompanhamento a viatura CACE.\nÀs 15h15, as viaturas CCI 02 e CCI 05 comunicaram as chegadas em suas bases no PACI 02.\nÀs 15h20, após a chegada da aeronave na posição 32, o BA-CE estabeleceu contato com o mecânico da companhia aérea GOL, srº Marcos, matrícula ANAC 746537, onde foi comunicado pelo mecânico que a aeronave não apresentava nenhum risco de incêndio.\nÀs 15h21, o BA-CE comunicou o retorno das viaturas do SESCINC as suas bases e retorno ao canal de rádio Resposta Emergência.\nÀs 15h26, as viaturas CCI 04 e CCI 358 comunicaram a chegada à base no PACI 01.\nÀs 15h40, as viaturas CACE e CRS chegaram à Central Faísca, encerrando o atendimento da ocorrência.",
-        "localizacao": "Cabeceira 28",
+        "localizacao": "Sistema 15-30",
         "quadrante": null,
         "viaturas": [
           "CCI 02 (F02)",
@@ -50824,7 +51814,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-14",
+        "id": "ACT-AGO-14",
         "data": "2026-08-17",
         "mes": "Agosto",
         "tipo_raw": "PREVENÇÃO A GIRO DE MOTOR",
@@ -50839,7 +51829,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-15",
+        "id": "ACT-AGO-15",
         "data": "2026-08-18",
         "mes": "Agosto",
         "tipo_raw": "INCÊNDIO EM VEGETAÇÃO",
@@ -50854,7 +51844,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-16",
+        "id": "ACT-AGO-16",
         "data": "2026-08-21",
         "mes": "Agosto",
         "tipo_raw": "DERRAMAMENTO DE FLUÍDO HIDRÁULICO",
@@ -50869,7 +51859,7 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-17",
+        "id": "ACT-AGO-17",
         "data": "2026-08-25",
         "mes": "Agosto",
         "tipo_raw": "CONDIÇÃO DE URGÊNCIA",
@@ -50885,11 +51875,11 @@ window.SESCINC.SeedData = {
         ]
       },
       {
-        "id": "ACT-2S-18",
+        "id": "ACT-AGO-18",
         "data": "2026-08-26",
         "mes": "Agosto",
         "tipo_raw": "OUTROS",
-        "tipo": "Outros Acionamentos",
+        "tipo": "Derramamento de Óleo / Fluído",
         "equipe": "ALFA",
         "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE FLUÍDO DERRAMADO",
         "acoes": "Comunico que, às 20h26, o COE acionou o SESCINC, via rádio transceptor, informando sobre um vazamento de óleo hidráulico proveniente de um caminhão da empresa Gate Gourmet, localizado na posição 78, havendo uma aeronave da empresa GOL nas proximidades da ocorrência.\nÀs 20h27, o BA-CE Thales Silva informou ao COE o início do deslocamento das viaturas CACE 025, CCI 03 e CRS 01 para atendimento da ocorrência.\nÀs 20h30, o BA-CE informou ao COE a chegada da equipe do SESCINC à posição 78 e o início da averiguação.\nÀs 20h31, o BA-CE informou ao COE a presença do Supervisor de Emergência no local da ocorrência.\nÀs 20h32, o BA-LR Bruno Blas informou ao BA-CE que a equipe do CRS 01 estava realizando a ampliação do perímetro de isolamento da área afetada pelo vazamento.\nÀs 20h33, o BA-CE informou ao COE que o vazamento era proveniente de um caminhão de comissaria da empresa Gate Gourmet, de identificação GGL 032. Segundo informações do colaborador da empresa Gate Gourmet presente no local, o fluido derramado tratava-se de óleo hidráulico, sendo informado ainda que o vazamento já se encontrava contido e que a equipe de manutenção havia sido acionada.\nAinda às 20h33, o CCI 03 informou ao PACI Uno a localização da ocorrência, posicionada na EE37, conforme mapa de grade interno. Informou também que a aeronave presente nas proximidades era um A330 da empresa GOL, prefixo ECNBN.\nÀs 20h34, o BA-CE informou ao COE a identificação do responsável da empresa Gate Gourmet presente no local, Douglas, matrícula 9638415.\nÀs 20h35, o BA-CE informou ao COE que a área contaminada pelo fluido derramado era de aproximadamente 40 m², não havendo, naquele momento, risco de o produto atingir a canaleta de águas pluviais.\nÀs 20h36, o BA-CE informou ao COE que a área já se encontrava isolada pela equipe do CRS 01 e que a Fiscalização de Pátio também estava presente no local, acompanhando a ocorrência.\nÀs 20h50, o CCI 03 informou ao BA-CE a necessidade de reposicionamento da viatura, em razão da impossibilidade de obter visualização adequada do fluido derramado a partir da posição em que se encontrava.\nÀs 20h51, o BA-CE informou ao COE que outro caminhão da empresa Gate Gourmet, identificação GGL 001, encontrava-se no local para realizar o transbordo do material presente no veículo que havia ocasionado o vazamento. Informou ainda que a equipe de manutenção já se encontrava na área para as tratativas necessárias.\nÀs 20h53, o BA-CE informou ao COE o início do procedimento de mitigação do fluido derramado pela equipe da empresa Gate Gourmet.\nÀs 21h02, o CCI 03 informou ao BA-CE que realizaria novo reposicionamento da viatura.\nÀs 21h17, o BA-CE informou ao COE que o fluido derramado na posição 78 já havia sido mitigado, não havendo mais risco de incêndio no local. Diante da conclusão das tratativas e da normalização da situação, a equipe do SESCINC iniciou o retorno dos recursos empregados para a base.\nÀs 21h20, o BA-CE informou ao COE que todos os recursos do SESCINC já se encontravam posicionados na base, encerrando a ocorrência.",
@@ -50900,8 +51890,113 @@ window.SESCINC.SeedData = {
           "CRS",
           "CACE"
         ]
+      },
+      {
+        "id": "ACT-SET-7",
+        "data": "2026-09-01",
+        "mes": "Setembro",
+        "tipo_raw": "OUTROS",
+        "tipo": "Captura de Fauna / Animal",
+        "equipe": "BRAVO",
+        "descricao": "Às 00h40, a equipe do SESCINC foi acionada pelo Centro de Operações de Emergência (COE), via rádio móvel, para atendimento a uma ocorrência de captura de fauna silvestre (serpente) identificada na Taxiway Bravo Bravo (TWY BB)",
+        "acoes": "Às 00h44, a guarnição da viatura CRS — composta pelos bombeiros BA-LR Rafael Souza, BA-MA Alan de Sá Severo, BA-2 Murilo de Assis e BA-2 Kassio Senna — iniciou o deslocamento, interceptando o local às 00h58. Aplicando os procedimentos padrões de manejo e resgate, o animal foi capturado com sucesso às 01h10. Como tratativa subsequente, após alinhamento operacional junto à supervisão e constatada a indisponibilidade de recursos para armazenamento temporário, procedeu-se à soltura orientada da serpente no quadrante L-05. A viatura CRS efetuou o deslocamento e concluiu a devolução segura do espécime ao seu habitat às 01h43, restabelecendo a plena segurança operacional da área de movimento.",
+        "localizacao": "Sistema 10-28",
+        "quadrante": "L-05",
+        "viaturas": [
+          "CRS"
+        ]
+      },
+      {
+        "id": "ACT-SET-8",
+        "data": "2026-09-08",
+        "mes": "Setembro",
+        "tipo_raw": "OUTROS",
+        "tipo": "Derramamento de Óleo / Fluído",
+        "equipe": "BRAVO",
+        "descricao": "Às 20h08, a equipe do SESCINC foi acionada pelo Centro de Operações de Emergência (COE) para atendimento e contenção de vazamento de fluído hidráulico/óleo na posição remota 53 do pátio de aeronaves, oriundo do equipamento loader de prefixo LM01729, operado pela empresa WFS BRASIL",
+        "acoes": "Às 20h09, iniciou-se o pronto deslocamento da viatura CACE para a cena, tendo o Supervisor de Emergência chegado ao ponto às 20h12, seguido pela referida viatura de apoio às 20h13. Na avaliação do cenário, o Líder de Resgate constatou tratar-se de derramamento de pequenas proporções e que a contenção e mitigação já haviam sido prontamente iniciadas pela equipe de suporte da própria operadora sob a coordenação do colaborador Lucas Araújo (Matrícula 9321824), Supervisor Operacional da WFS. O evento transcorreu sem impactos à segurança da operação aeroportuária. Com as medidas mitigadoras finalizadas e o local devidamente descontaminado, o SESCINC declarou a ocorrência encerrada às 20h25.",
+        "localizacao": "Pátio 3",
+        "quadrante": null,
+        "viaturas": [
+          "CACE"
+        ]
+      },
+      {
+        "id": "ACT-SET-9",
+        "data": "2026-09-09",
+        "mes": "Setembro",
+        "tipo_raw": "OUTROS",
+        "tipo": "Outros Acionamentos",
+        "equipe": "CHARLIE",
+        "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO EM DESTANQUEMENTO",
+        "acoes": "Comunico que por volta das 10:57h, o COE aciona o SESCINC, via rádio transceptor, para realizar prevenção na \noperação de destanqueamento de combustível QAV no cemitério de aeronaves, de aeronaves inoperantes. \nNeste momento, o BA-CE Wendel Soares aciona o CCI 02 para iniciar deslocamento até o local informado. \nPor volta das 10:59h, o BA-CE e CCI 02 iniciam o deslocamento para o local. \nPor volta das 11:05h, CCI 02 comunica chegada ao local. \nPor volta das 11:07h, o CCI 02 comunica a quadrícula correspondente ao local de atendimento (N14), tendo como \nexecutante do destanqueamento a empresa Ambipar, colaborador reponsável Flávio Luiz, matrícula 1023989. \nPor volta das 11:15h, o BA-CE comunica chegada ao local. \nPor volta das 11:38h, após o BA-CE realizar posicionamento estratégico do CCI 02, estabelecido uma linha de \nmangueira para pronta resposta a eventuais emergências, teve início o procedimento de destanqueamento na 1ª \naeronave sendo um A727, da empresa TAF, não sendo possível identificar o prefixo, devido ao desgaste na \nfuselagem da aeronave. \nPor volta das 12:39h o BA-CE comunica que foram retirados aproximadamente 2000L da asa esquerda da 1ª \naeronave, registrando a permanência de resíduos de QAV no tanque, que não foi possível ser removido, conforme \ncomunicado pela equipe da Ambipar. \nPor volta das 12:40h, o BA-CE estabeleceu contato com a supervisora de Sustentabilidade, srª Vanessa, que se \nencontrava no local, comunicando que não foi possível realizar a retirada integral do combustível do lado esquerdo. \nPor volta das 12:41h, o BA-CE comunica que o tanque da asa direita, da aeronave anteriormente citada, encontrava\nse totalmente vazio, conforme comunicado pela equipe Ambipar. \nPor volta das 12:55h, conforme solicitado pelo BA-CE, ocorreu a rendição operacional do CCI 02 pelo CCI 05. \nPor volta das 12:59h, o BA-CE comunica o início do procedimento de destanquemento na 2ª aeronave (Boeing 727, \nPrefixo PR-TML – empresa TAF). \nPor volta das 13:05h, o CCI 02 comunica a chegada ao PACI 02, após a rendição. \nPor volta das 13:18h, o BA-CE comunica o término do destanqueamento da 2ª aeronave, tendo sido comunicado pela \nequipe Ambipar a retirada de aproximadamente 1000L de QAV da asa direita; a asa esquerda não continha \ncombustível, restando apenas resíduos, conforme comunicado pela equipe Ambipar. \nPor volta das 13:24h, o BA-CE desloca-se para a 3ª aeronave (Boeing 727, Prefixo PP-VQV - Varig Log). \nPor volta das 13:26h, após verificação e informação passada pela equipe Ambipar, o não foi identificado QAV nos \ntanques da aeronave, informação repassada ao COE e Supervisão de Emergência. \nPor volta das 13:27h, o BA-CE comunica o início de destanqueamento na 4ª aeronave (Boeing 727, Prefixo PP-VQU - \nVarig Log). \nPor volta das 13:50h, após ter sido comunicado pela equipe Ambipar o término do destanqueamento da 4ª e última \naeronave e que foram retirados aproximadamente 1000L de QAV da asa direita, restando apenas resíduos e que a \nasa esquerda não continha QAV, o BA-CE repassou as informações ao COE e Supervisão de Emergência. \nPor volta das 13:52h, o BA-CE comunica o término da operação de destanqueamento das 4 aeronaves, totalizando \naproximadamente 4.000L de QAV drenados na operação, conforme comunicado pelo responsável pela atividade, o \ncolaborador Fábio Luiz, da empresa Ambipar. \nPor volta das 13:55h, o BA-CE comunica ao COE o encerramento da prevenção e autoriza o retorno da equipe \nSESCINC às bases. \nPor volta das 14:04h, o CCI 05 comunica a chegada ao PACI 02.",
+        "localizacao": "Sistema 10-28",
+        "quadrante": "N-13",
+        "viaturas": [
+          "CCI 02 (F02)",
+          "CCI 05 (F05)"
+        ]
+      },
+      {
+        "id": "ACT-SET-10",
+        "data": "2026-09-15",
+        "mes": "Setembro",
+        "tipo_raw": "DERRAMAMENTO DE COMBUSTÍVEL",
+        "tipo": "Derramamento de Combustível",
+        "equipe": "ALFA",
+        "descricao": "ACIONAMENTO DO SESCINC PARA PREVENÇÃO DE COMBUTÍVEL DERRAMADO",
+        "acoes": "Comunico que, às 16h41, o COE acionou o SESCINC e o Supervisor de Emergência Marcos, via rádio transceptor, informando sobre um vazamento de combustível na posição 33. Na ocasião, o Supervisor de emergência solicitou ao COE informações quanto à proporção do vazamento. O BA-CE Thales Silva, preventivamente, solicitou que os CCI do PACI UNO permanecessem em suas respectivas bases, mantendo os recursos disponíveis para eventual necessidade operacional.\nÀs 16h42, o COE informou ao BA-CE sobre a presença de uma aeronave da empresa GOL nas proximidades do vazamento. Diante da informação, o BA-CE iniciou o deslocamento das viaturas OPS 024, CCI 03 e CRS 01 para o local da ocorrência.\nÀs 16h44, o COE informou ao BA-CE que, visualmente, o vazamento aparentava ser de pequena proporção e que, a princípio, poderia ser proveniente do sistema de ar-condicionado.\nÀs 16h46, o BA-CE informou ao COE a chegada ao local e, após averiguação, constatou que o derramamento era de QAV, ocorrido durante o abastecimento da aeronave Boeing 737-800 da companhia aérea GOL, prefixo PR-GXI. Informou ainda que o derramamento já havia sido contido e que o combustível derramado já havia sido mitigado, não sendo identificado risco de incêndio no local. Não foi possível mensurar a quantidade total de combustível derramado, sendo estimada uma área contaminada de aproximadamente 2 m².\nÀs 16h47, a equipe da OPS 024 informou ao COE que o quadrante correspondente à ocorrência, conforme o mapa de grade, era AA43.\nÀs 16h48, o BA-CE informou ao COE que a equipe do SESCINC retornaria à base, em virtude de não haver risco de incêndio no local. Questionado pelo COE quanto à presença da Fiscalização de Pátio, o BA-CE informou que a equipe de fiscalização já se encontrava na posição no momento da chegada do SESCINC.\nÀs 17h00, o BA-CE informou ao COE que todas as viaturas empregadas na ocorrência, OPS 024, CRS 01 e CCI 03, já se encontravam na base, sendo encerrada a ocorrência.",
+        "localizacao": "Pátio 1",
+        "quadrante": "AA43",
+        "viaturas": [
+          "CCI 03 (F03)",
+          "CRS"
+        ]
+      },
+      {
+        "id": "ACT-SET-11",
+        "data": "2026-09-19",
+        "mes": "Setembro",
+        "tipo_raw": "OUTROS",
+        "tipo": "Giro de Motor (Prevenção)",
+        "equipe": "ALFA",
+        "descricao": "ACIONAMENTO DO SESCINC PRA PREVENÇÃO DE GIRO DE MOTOR A REAÇÃO",
+        "acoes": "Comunico que, às 07h49, o Supervisor de Emergência Marcos, acionou o BA-CE Thales Silva, via ligação telefônica, solicitando apoio do SESCINC para acompanhamento da realização de giro de motor de uma aeronave da Força Aérea Brasileira (FAB), modelo P3, prefixo 7205 no Pátio Militar, no quadrante II39, que ocorreria às 08h30.\nÀs 08h30, o BA-CE iniciou o deslocamento com o CCI 03 em direção ao Pátio Militar para atendimento à solicitação.\nÀs 08h37, o CCI 03 chega ao Pátio Militar, e constata que a aeronave já se encontrava com os 04 (quatro) motores acionados. Imediatamente a informação foi multiplicada com o COE e com o supervisor Marcos via rádio transceptor. \nÀs 08h40, após contato realizado com o oficial de operações da FAB, o supervisor Marcos solicitou o retorno da equipe a SCI.\nÀs 08h44, o BA-CE informou a chegada à base, sendo registrado o encerramento do atendimento.",
+        "localizacao": "Pátio Militar",
+        "quadrante": "II39",
+        "viaturas": [
+          "CCI 03 (F03)"
+        ]
+      },
+      {
+        "id": "ACT-SET-12",
+        "data": "2026-09-23",
+        "mes": "Setembro",
+        "tipo_raw": "ATENDIMENTO À AERONAVE PRESIDENCIAL",
+        "tipo": "Apoio / Batismo / Presidencial",
+        "equipe": "ALFA",
+        "descricao": "ACIONAMENTO DO SESCINC PRA ATENDIMENTO À AERONAVE PRESIDENCIAL",
+        "acoes": "Comunico que, às 18h19, o Supervisor de Emergência Marcos acionou o SESCINC, via telefone, solicitando o apoio para a missão presidencial, prevista para ocorrer às 19h00.\nÀs 19h00, o BA-CE Thales Silva informou o início do deslocamento das viaturas OPS 024 e CCI 03 em direção ao Pátio Militar, para apoio à missão presidencial envolvendo a aeronave Força Aérea 01.\nÀs 19h12, o BA-CE informou ao COE que as viaturas OPS 024 e CCI 03 encontravam-se posicionadas no quadrante OO37, conforme mapa de grade, permanecendo em apoio à missão presidencial.\nÀs 19h22, o BA-CE informou ao COE que havia sido comunicado pelo 3º Sargento da Força Aérea, Adão, de que a aeronave Força Aérea 01 havia pousado no Aeroporto Santos Dumont. Em decorrência disso, foi informado o retorno das viaturas do SESCINC à base.\nÀs 19h28, o BA-CE informou a chegada das viaturas OPS 024 e CCI 03 à base, sendo encerrado o atendimento.",
+        "localizacao": "Pátio Militar",
+        "quadrante": "OO37",
+        "viaturas": [
+          "CCI 03 (F03)"
+        ]
+      },
+      {
+        "id": "ACT-SET-13",
+        "data": "2026-09-26",
+        "mes": "Setembro",
+        "tipo_raw": "EMERGÊNCIA AERONÁUTICA",
+        "tipo": "Emergência Aeronáutica",
+        "equipe": "DELTA",
+        "descricao": "ACIONAMENTO DO SESCINC PARA POSICIONAMENTO PARA INTERVENÇÃO",
+        "acoes": "Às 17h35 informo que bradou uma emergência aeronáutica envolvendo a aeronave da Militar Onça 07- C295 de Prefixo 2808, em condição de urgência(Pan Pan), devido a pane no motor (não foi informado qual motor). \n\nAs 17h35 equipe sescinc se deslocou com os recursos para o posicionamento para intervenção\n\nAs 17h39 todos os recursos  já  estavam posicionados.\n\nÀs 17h40, a aeronave realizou pouso com segurança, sem qualquer anormalidade.\n\nApós o pouso da aeronave a equipe realizou o acompanhamento da aeronave. Quando aeronave  chegou na taxiway B a TWR informou as 17h47 que o piloto descaracterizou a ocorrência.\nA equipe sescinc retornou a base, sem incidentes adicionais.",
+        "localizacao": "Sistema 15-30",
+        "quadrante": null,
+        "viaturas": []
       }
     ],
-    "uploadedAt": "2026-10-05T13:44:46.004947Z"
+    "uploadedAt": "2026-10-05T16:09:28.546822Z"
   }
 };

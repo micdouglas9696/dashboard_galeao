@@ -758,7 +758,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PLANILHAS_DIR = os.path.join(BASE_DIR, 'js', 'planilhas')
 
 
-def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
+def parse_actuation_file(filepath, sheet_name, is_second_sem=False, prefix='ACT'):
     if not os.path.exists(filepath):
         print(f"Warning: File {filepath} not found.")
         return []
@@ -797,12 +797,13 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
         equipe = str(val_equipe).strip().upper() if val_equipe else 'N/I'
         desc = str(val_desc).strip() if val_desc else ''
         acoes = str(val_acoes).strip() if val_acoes else ''
-        full_txt = f'{desc} {acoes}'.upper()
+        full_txt = f'{desc} {acoes} {val_local or ""}'.upper()
 
         # Standardize types
         if any(k in tipo_raw.upper() for k in ['DERRAMAMENTO DE COMBUSTÍVEL', 'DERRAMAMENTO DE COMBUSTIVEL']):
             tipo_std = 'Derramamento de Combustível'
-        elif any(k in tipo_raw.upper() for k in ['DERRAMAMENTO DE ÓLEO', 'DERRAMAMENTO DE OLEO', 'DERRAMAMENTO DE FLUÍDO', 'DERRAMAMENTO DE FLUIDO']):
+        elif any(k in tipo_raw.upper() for k in ['DERRAMAMENTO DE ÓLEO', 'DERRAMAMENTO DE OLEO', 'DERRAMAMENTO DE FLUÍDO', 'DERRAMAMENTO DE FLUIDO']) or \
+             (tipo_raw.upper() == 'OUTROS' and any(k in full_txt for k in ['VAZAMENTO DE FLUÍDO', 'VAZAMENTO DE FLUIDO', 'FLUÍDO HIDRÁULICO', 'FLUIDO HIDRAULICO', 'VAZAMENTO DE ÓLEO', 'VAZAMENTO DE OLEO'])):
             tipo_std = 'Derramamento de Óleo / Fluído'
         elif 'PRODUTO QUÍMICO' in tipo_raw.upper() or 'PRODUTO QUIMICO' in tipo_raw.upper() or 'MATERIAL PERIGOSO' in tipo_raw.upper():
             tipo_std = 'Derramamento de Prod. Químico'
@@ -812,7 +813,8 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
             tipo_std = 'Incêndio em Instalação'
         elif 'EQUIPAMENTO' in tipo_raw.upper():
             tipo_std = 'Incêndio / Pane em Equipamento'
-        elif any(k in tipo_raw.upper() for k in ['CAPTURA DE ANIMAL', 'CAPTURA DE FAUNA']):
+        elif any(k in tipo_raw.upper() for k in ['CAPTURA DE ANIMAL', 'CAPTURA DE FAUNA']) or \
+             (tipo_raw.upper() == 'OUTROS' and any(k in full_txt for k in ['CAPTURA DE FAUNA', 'CAPTURA DE ANIMAL', 'FAUNA SILVESTRE'])):
             tipo_std = 'Captura de Fauna / Animal'
         elif 'EMERGÊNCIA AERONÁUTICA' in tipo_raw.upper() or 'EMERGENCIA AERONAUTICA' in tipo_raw.upper():
             tipo_std = 'Emergência Aeronáutica'
@@ -820,7 +822,7 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
             tipo_std = 'Condição de Socorro'
         elif 'CONDIÇÃO DE URGÊNCIA' in tipo_raw.upper() or 'CONDICAO DE URGENCIA' in tipo_raw.upper() or 'DEINTERDIÇÃO DE PISTA' in tipo_raw.upper():
             tipo_std = 'Condição de Urgência'
-        elif 'GIRO DE MOTOR' in tipo_raw.upper():
+        elif 'GIRO DE MOTOR' in tipo_raw.upper() or 'GIRO DE MOTOR' in desc.upper():
             tipo_std = 'Giro de Motor (Prevenção)'
         elif any(k in tipo_raw.upper() for k in ['BATISMO', 'PRESIDENCIAL']):
             tipo_std = 'Apoio / Batismo / Presidencial'
@@ -834,9 +836,13 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
             tipo_std = 'Outros Acionamentos'
 
         quadrante = None
-        m_q = re.search(r'QUADRANTE\s*([A-Z0-9\-]+)', full_txt)
+        m_q = re.search(r'QUADRANTE[^\.\;\n]{0,80}?\b([A-Z]{1,2}\-?[0-9]{1,2})\b', full_txt)
+        if not m_q:
+            m_q = re.search(r'QUADRANTE\s*([A-Z0-9\-]+)', full_txt)
         if m_q:
-            quadrante = m_q.group(1).upper()
+            q_candidate = m_q.group(1).upper()
+            if q_candidate not in ['DA', 'DO', 'DE', 'CORRESPONDENTE', 'CONFORME']:
+                quadrante = q_candidate
 
         # Extract location: prioritize Column G (val_local) if present
         location = None
@@ -844,7 +850,7 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
             loc_str = str(val_local).strip().upper()
             if '10-28' in loc_str or '10/28' in loc_str:
                 location = 'Sistema 10-28'
-            elif '15-30' in loc_str or '15/30' in loc_str or '15-33' in loc_str or '15/33' in loc_str:
+            elif '15-30' in loc_str or '15/30' in loc_str or '15-33' in loc_str or '15/33' in loc_str or '15X33' in loc_str or '15X30' in loc_str:
                 location = 'Sistema 15-30'
             elif 'CAB.10' in loc_str or 'CAB 10' in loc_str or 'CABECEIRA 10' in loc_str:
                 location = 'Cabeceira 10'
@@ -873,11 +879,13 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
                     location = 'TECA Exportação'
                 else:
                     location = 'Área de Cargas TECA'
+            elif 'CEMITÉRIO' in loc_str or 'CEMITERIO' in loc_str or 'N-13' in loc_str or 'N13' in loc_str:
+                location = 'Sistema 10-28'
 
         if not location:
             if 'SISTEMA 10-28' in full_txt or 'SISTEMA 10/28' in full_txt:
                 location = 'Sistema 10-28'
-            elif 'SISTEMA 15-30' in full_txt or 'SISTEMA 15/30' in full_txt or 'SISTEMA 15-33' in full_txt:
+            elif 'SISTEMA 15-30' in full_txt or 'SISTEMA 15/30' in full_txt or 'SISTEMA 15-33' in full_txt or '15X33' in full_txt:
                 location = 'Sistema 15-30'
             elif 'CABECEIRA 28' in full_txt or ('28' in full_txt and 'CABECEIRA' in full_txt):
                 location = 'Cabeceira 28'
@@ -928,7 +936,6 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False):
             if any(a in full_txt for a in aliases):
                 vehicles.append(v_name)
 
-        prefix = 'ACT-2S' if is_second_sem else 'ACT'
         records.append({
             'id': f'{prefix}-{r}',
             'data': date_str,
@@ -954,15 +961,21 @@ def parse_actuation():
     f2_old = os.path.join(BASE_DIR, 'julho dados', 'ATUAÇÃO SESCINC 2° SEMESTRE 2026.xlsx')
     agosto_dir = os.path.join(BASE_DIR, 'agosto')
     f2_agosto = next((os.path.join(agosto_dir, f) for f in os.listdir(agosto_dir)
-                      if 'ATUA' in f.upper() and 'AGOSTO' in f.upper() and f.endswith('.xlsx')), None)
-    
+                      if 'ATUA' in unicodedata.normalize('NFC', f).upper() and 'AGOSTO' in unicodedata.normalize('NFC', f).upper() and f.endswith('.xlsx')), None)
+    setembro_dir = os.path.join(BASE_DIR, 'setembro')
+    f2_setembro = None
+    if os.path.exists(setembro_dir):
+        f2_setembro = next((os.path.join(setembro_dir, f) for f in os.listdir(setembro_dir)
+                            if 'ATUA' in unicodedata.normalize('NFC', f).upper() and f.endswith('.xlsx') and not f.startswith('~')), None)
+
     f2 = f2_novo if os.path.exists(f2_novo) else f2_old
-    
-    recs1 = parse_actuation_file(f1, '1° SEMESTRE 2026', is_second_sem=False)
-    recs2 = parse_actuation_file(f2, '2° SEMESTRE 2026', is_second_sem=True)
-    recs3 = parse_actuation_file(f2_agosto, '2° SEMESTRE 2026', is_second_sem=True) if f2_agosto else []
-    
-    return recs1 + recs2 + recs3
+
+    recs1 = parse_actuation_file(f1, '1° SEMESTRE 2026', is_second_sem=False, prefix='ACT-1S')
+    recs2 = parse_actuation_file(f2, '2° SEMESTRE 2026', is_second_sem=True, prefix='ACT-JUL')
+    recs3 = parse_actuation_file(f2_agosto, '2° SEMESTRE 2026', is_second_sem=True, prefix='ACT-AGO') if f2_agosto else []
+    recs4 = parse_actuation_file(f2_setembro, '2° SEMESTRE 2026', is_second_sem=True, prefix='ACT-SET') if f2_setembro else []
+
+    return recs1 + recs2 + recs3 + recs4
 
 
 def main():
@@ -1056,7 +1069,7 @@ def main():
     # ── 4d. Parse TP-EPR file from setembro (if present) ──
     if os.path.exists(setembro_dir):
         setembro_tpepr = next((os.path.join(setembro_dir, f) for f in os.listdir(setembro_dir)
-                               if 'TP-EPR' in f.upper() and f.endswith('.xlsx') and not f.startswith('~')), None)
+                               if 'TP-EPR' in unicodedata.normalize('NFC', f).upper() and f.endswith('.xlsx') and not f.startswith('~')), None)
         if setembro_tpepr:
             print('\n=== Parsing TP-EPR Setembro (setembro) ===')
             records = parse_tpepr_file(setembro_tpepr, 'Setembro')

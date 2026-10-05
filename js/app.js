@@ -233,12 +233,12 @@
   /* ── Data loading ── */
 
   function loadData() {
-    // Check storage version to force re-seed after adding September 2026 data (v14)
+    // Check storage version to force re-seed after adding September 2026 data (v15)
     const dbVersion = localStorage.getItem('sescinc_db_version');
-    if (dbVersion !== '14') {
-      console.log('[App] Local storage outdated. Forcing re-seed to version 14 (official September 2026 data).');
+    if (dbVersion !== '15') {
+      console.log('[App] Local storage outdated. Forcing re-seed to version 15 (official September 2026 data).');
       localStorage.clear();
-      localStorage.setItem('sescinc_db_version', '14');
+      localStorage.setItem('sescinc_db_version', '15');
     }
 
     let tafData = loadStorage(STORAGE_KEYS.TAF);
