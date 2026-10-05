@@ -115,8 +115,8 @@
     if (!ctx) return;
 
     const tc = getThemeColors();
-    const buckets = ['75-80', '80-85', '85-90', '90-95', '95-100'];
-    const ranges = [[75, 80], [80, 85], [85, 90], [90, 95], [95, 100.01]];
+    const buckets = ['75-80', '80-85', '85-90', '90-95', '95-100+'];
+    const ranges = [[75, 80], [80, 85], [85, 90], [90, 95], [95, 105.01]];
 
     const counts = ranges.map(([min, max]) =>
       records.filter(r => r.nota >= min && r.nota < max).length
@@ -147,8 +147,8 @@
         onClick: function(evt, elements) {
           if (!elements.length) return;
           const idx = elements[0].index;
-          const bucketLabels = ['75-80', '80-85', '85-90', '90-95', '95-100'];
-          const rangesList = [[75, 80], [80, 85], [85, 90], [90, 95], [95, 100.01]];
+          const bucketLabels = ['75-80', '80-85', '85-90', '90-95', '95-100+'];
+          const rangesList = [[75, 80], [80, 85], [85, 90], [90, 95], [95, 105.01]];
           const [min, max] = rangesList[idx];
           const names = currentRecords.filter(r => r.nota >= min && r.nota < max).map(r => r.nome).filter(Boolean);
           if (names.length && window.SESCINC.showDetailModal) {
@@ -223,15 +223,17 @@
       }
     };
 
+    const maxFuncaoVal = Math.max(100, Math.ceil(Math.max(...data, 100)));
+
     if (isHorizontal) {
       config.options.indexAxis = 'y';
       config.options.scales = {
-        x: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        x: { beginAtZero: false, min: 60, max: maxFuncaoVal, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
         y: { title: { display: true, text: 'Função', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     } else {
       config.options.scales = {
-        y: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        y: { beginAtZero: false, min: 60, max: maxFuncaoVal, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
         x: { title: { display: true, text: 'Função', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     }
@@ -331,16 +333,18 @@
       plugins: [minLinePlugin]
     };
 
+    const maxEquipeVal = Math.max(100, Math.ceil(Math.max(...data, 100)));
+
     if (isHorizontal) {
       config.options.indexAxis = 'y';
       config.options.scales = {
-        x: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
+        x: { beginAtZero: false, min: 60, max: maxEquipeVal, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
         y: { title: { display: true, text: 'Equipe', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     } else {
       config.options.scales = {
         x: { title: { display: true, text: 'Equipe', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } },
-        y: { beginAtZero: false, min: 60, max: 100, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
+        y: { beginAtZero: false, min: 60, max: maxEquipeVal, title: { display: true, text: 'Nota Média', color: tc.textColor }, ticks: { color: tc.textColor }, grid: { color: tc.gridColor } }
       };
     }
 

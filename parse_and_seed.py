@@ -171,53 +171,81 @@ def parse_taf_file(filepath, month_name):
     if ws is None:
         wb.close()
         return records
-    
-    # Row 5 headers: NOME, EQUIPE, FUNÇÃO, IDADE, Flexão Solo, Abdominal, Barra Fixa, Corrida, Resultado
+
+    # Auto-detect column headers from Row 5
+    headers = [str(ws.cell(row=5, column=c).value or '').strip() for c in range(1, ws.max_column + 1)]
+    col_map = {}
+    for idx, h in enumerate(headers):
+        hu = h.upper()
+        if 'NOME' in hu and 'col_nome' not in col_map: col_map['col_nome'] = idx
+        elif 'EQUIPE' in hu and 'col_equipe' not in col_map: col_map['col_equipe'] = idx
+        elif 'FUN' in hu and 'col_funcao' not in col_map: col_map['col_funcao'] = idx
+        elif 'IDADE' in hu and 'col_idade' not in col_map: col_map['col_idade'] = idx
+        elif 'FLEX' in hu and 'col_flexao' not in col_map: col_map['col_flexao'] = idx
+        elif 'ABDOM' in hu and 'col_abdominal' not in col_map: col_map['col_abdominal'] = idx
+        elif 'BARRA' in hu: col_map['col_barra'] = idx
+        elif 'POLICHINELO' in hu and 'col_barra' not in col_map: col_map['col_barra'] = idx
+        elif 'CORRIDA' in hu: col_map['col_corrida'] = idx
+        elif 'TEMPO' in hu and 'col_corrida' not in col_map: col_map['col_corrida'] = idx
+        elif 'RESULT' in hu and 'col_resultado' not in col_map: col_map['col_resultado'] = idx
+
+    if 'col_barra' not in col_map:
+        for idx, h in enumerate(headers):
+            if 'POLICHINELO' in h.upper():
+                col_map['col_barra'] = idx
+                break
+
+    c_nome = col_map.get('col_nome', 0)
+    c_eq = col_map.get('col_equipe', 1)
+    c_fun = col_map.get('col_funcao', 2)
+    c_idade = col_map.get('col_idade', 3)
+    c_flex = col_map.get('col_flexao', 4)
+    c_abd = col_map.get('col_abdominal', 5)
+    c_bar = col_map.get('col_barra', 6)
+    c_corr = col_map.get('col_corrida', 7)
+    c_res = col_map.get('col_resultado', 8)
+
     for row in ws.iter_rows(min_row=6, max_row=ws.max_row, values_only=True):
-        nome = row[0]
-        if not nome or str(nome).strip() == '':
+        if not row or len(row) <= c_nome or not row[c_nome]:
             continue
-        nome_str = str(nome).strip()
+        nome_str = str(row[c_nome]).strip()
+        if not nome_str:
+            continue
 
         # Skip summary/total rows
         nome_upper = nome_str.upper()
         if any(kw in nome_upper for kw in ['TOTAL', 'CONTAGEM', 'SATISFAT', 'INSATISF']):
             continue
         
-        equipe = str(row[1]).strip().upper() if row[1] else ''
+        equipe = str(row[c_eq]).strip().upper() if len(row) > c_eq and row[c_eq] else ''
         if not equipe or equipe == 'NONE':
             continue
 
-        funcao = normalize_funcao(row[2])
-        
-        # Handle idade - might have non-breaking spaces
-        idade = clean_numeric(row[3])
+        funcao = normalize_funcao(row[c_fun] if len(row) > c_fun else None)
+        idade = clean_numeric(row[c_idade] if len(row) > c_idade else None)
         
         row_txt = ' '.join(str(c) for c in row if c is not None).upper()
-        resultado_raw = str(row[8]).strip() if len(row) > 8 and row[8] else ''
-        is_permuta = 'PERMUTA' in row_txt
+        resultado_raw = str(row[c_res]).strip() if len(row) > c_res and row[c_res] else ''
+
         is_ferias = 'FERIAS' in row_txt or 'FÉRIAS' in row_txt
-        is_not_realizado = any(marker in row_txt for marker in [
-            'NÃO REALIZADO', 'NAO REALIZADO', 'NÃO REALIZADIO',
-            'NAO REALIZADIO', 'FOLGA', 'ATESTADO'
-        ])
+        is_permuta = 'PERMUTA' in row_txt
+        is_not_realizado = any(marker in row_txt for marker in ['NÃO REALIZADO', 'NAO REALIZADO', 'NÃO REALIZADIO', 'NAO REALIZADIO'])
+        has_folga = 'FOLGA' in row_txt
+        has_atestado = 'ATESTADO' in row_txt
+
+        res_upper = resultado_raw.upper()
+        is_explicit_approved = any(k in res_upper for k in ['ACOP A', 'ACOP - A', 'ACOP-A', 'SATISFATÓRIO', 'SATISFATORIO', 'APTO'])
+        is_explicit_b = any(k in res_upper for k in ['ACOP B', 'ACOP - B', 'ACOP-B', 'BOM'])
+
         motivo = (
+            'Férias' if is_ferias else
             'Permuta' if is_permuta else
-            'Folga' if 'FOLGA' in row_txt else
-            'Atestado' if 'ATESTADO' in row_txt else
-            'Não Realizado' if is_not_realizado else
-            'Férias' if is_ferias else ''
+            'Folga' if has_folga else
+            'Atestado' if has_atestado else
+            'Não Realizado' if is_not_realizado else ''
         )
         
-        if is_permuta or (is_not_realizado and not is_ferias):
-            status = 'nr'
-            flexao = None
-            abdominal = None
-            barra = None
-            corrida = 'Não Realizado'
-            corrida_seconds = None
-            resultado = 'Não Realizado'
-        elif is_ferias:
+        if is_ferias:
             status = 'ferias'
             flexao = None
             abdominal = None
@@ -225,12 +253,20 @@ def parse_taf_file(filepath, month_name):
             corrida = 'FÉRIAS'
             corrida_seconds = None
             resultado = 'Férias'
+        elif (is_permuta or is_not_realizado or has_folga or has_atestado) and not (is_explicit_approved or is_explicit_b):
+            status = 'nr'
+            flexao = None
+            abdominal = None
+            barra = None
+            corrida = 'Não Realizado'
+            corrida_seconds = None
+            resultado = 'Não Realizado'
         else:
-            flexao = clean_numeric(row[4])
-            abdominal = clean_numeric(row[5])
-            barra = clean_numeric(row[6])
+            flexao = clean_numeric(row[c_flex] if len(row) > c_flex else None)
+            abdominal = clean_numeric(row[c_abd] if len(row) > c_abd else None)
+            barra = clean_numeric(row[c_bar] if len(row) > c_bar else None)
             
-            corrida_raw = row[7]
+            corrida_raw = row[c_corr] if len(row) > c_corr else None
             corrida, corrida_seconds = clean_corrida(corrida_raw)
             
             status = 'ok'
@@ -590,29 +626,72 @@ def parse_tr(f):
     return records
 
 
-# ────────── Teórica Parser (unchanged from original) ──────────
+# ────────── Teórica Parser ──────────
 
-def parse_teorica(colaborador_map):
-    f = os.path.join(BASE_DIR, '_Aplicação de Avaliação Teórica PTR-BA 2º Trimestre - 2026. (1-87).xlsx')
-    print(f'Parsing Teórica: {os.path.basename(f)}')
-    wb = openpyxl.load_workbook(f, data_only=True)
-    ws = wb['Sheet1']
+def parse_teorica_file(filepath, month_name, colaborador_map, id_offset=0):
+    """Parse a single theoretical evaluation XLSX file (supports Forms export and consolidated formats)."""
+    print(f'  Parsing Teórica: {os.path.basename(filepath)} -> {month_name}')
+    wb = openpyxl.load_workbook(filepath, data_only=True)
+    ws = wb['Sheet1'] if 'Sheet1' in wb.sheetnames else wb[wb.sheetnames[0]]
+    
+    headers = [str(ws.cell(row=1, column=c).value or '').strip() for c in range(1, ws.max_column + 1)]
+    
+    col_nota = None
+    col_nome = None
+    col_funcao = None
+    col_aeroporto = None
+    
+    for idx, h in enumerate(headers):
+        hu = h.upper()
+        if 'TOTAL' in hu and 'PONTO' in hu and col_nota is None:
+            col_nota = idx
+        elif 'NOME' in hu and col_nome is None:
+            if 'COMPLETO' in hu or idx > 4:
+                col_nome = idx
+        elif 'FUN' in hu and col_funcao is None:
+            col_funcao = idx
+        elif 'AERO' in hu and col_aeroporto is None:
+            col_aeroporto = idx
+            
+    # Fallbacks if headers weren't named exactly
+    if col_nota is None:
+        col_nota = 0
+    if col_nome is None:
+        col_nome = 1
+    if col_funcao is None:
+        col_funcao = 2
+    if col_aeroporto is None:
+        col_aeroporto = 3
+        
+    basic_indices = [x for x in [col_nota, col_nome, col_funcao, col_aeroporto] if x is not None]
+    basic_max_idx = max(basic_indices) if basic_indices else 3
+    q_point_cols = []
+    for idx in range(basic_max_idx + 1, len(headers)):
+        hu = headers[idx].upper()
+        if 'PONTO' in hu:
+            q_point_cols.append(idx)
+            
     records = []
-    
     import difflib
-    
+    row_num = 0
     for row in ws.iter_rows(min_row=2, max_row=ws.max_row, values_only=True):
-        if not row[0]:
+        if not row or col_nome is None or len(row) <= col_nome or not row[col_nome]:
             continue
             
-        nome_original = str(row[8]).strip() if row[8] else ''
-        nome_norm = normalize_name(nome_original)
-        
-        funcao_orig = str(row[11]).strip() if row[11] else ''
+        row_num += 1
+        nome_orig = str(row[col_nome]).strip()
+        if not nome_orig or any(k in nome_orig.upper() for k in ['TOTAL', 'MÉDIA', 'MEDIA', 'CONTAGEM']):
+            continue
+            
+        nome_norm = normalize_name(nome_orig)
+        funcao_orig = str(row[col_funcao]).strip() if col_funcao is not None and len(row) > col_funcao and row[col_funcao] else ''
         funcao = normalize_funcao(funcao_orig)
         
-        nota = float(row[5]) if row[5] is not None else 0.0
-        
+        try:
+            nota = float(row[col_nota]) if col_nota is not None and len(row) > col_nota and row[col_nota] is not None else 0.0
+        except:
+            nota = 0.0
+            
         equipe = 'Não identificada'
         if nome_norm in colaborador_map:
             equipe = colaborador_map[nome_norm]['equipe']
@@ -622,32 +701,54 @@ def parse_teorica(colaborador_map):
                 equipe = colaborador_map[matches[0]]['equipe']
                 
         questoes = []
-        q_idx = 1
-        for col_idx in range(17, len(row), 3):
-            if col_idx + 1 < len(row):
-                pontos = row[col_idx + 1]
-                if pontos is not None:
+        for q_idx, c_idx in enumerate(q_point_cols, start=1):
+            if c_idx < len(row):
+                val = row[c_idx]
+                if val is not None:
                     try:
-                        questoes.append({
-                            'num': q_idx,
-                            'pontos': float(pontos)
-                        })
+                        questoes.append({'num': q_idx, 'pontos': float(val)})
                     except:
                         pass
-                q_idx += 1
-                
+                        
         records.append({
-            'id': int(row[0]),
-                'nome': nome_original,
+            'id': id_offset + row_num,
+            'nome': nome_orig,
             'funcao': funcao,
             'funcaoOriginal': funcao_orig,
             'aeroporto': 'SBGL',
             'nota': nota,
             'equipe': equipe,
-            'questoes': questoes
+            'questoes': questoes,
+            'mes': month_name
         })
         
     wb.close()
+    return records
+
+
+def parse_teorica(colaborador_map):
+    """Parse all theoretical assessments (Junho 2º Trimestre, Setembro 3º Trimestre)."""
+    records = []
+    
+    # 1. 2º Trimestre / Junho
+    f_junho = os.path.join(BASE_DIR, '_Aplicação de Avaliação Teórica PTR-BA 2º Trimestre - 2026. (1-87).xlsx')
+    if os.path.exists(f_junho):
+        recs_junho = parse_teorica_file(f_junho, 'Junho', colaborador_map, id_offset=0)
+        records.extend(recs_junho)
+        print(f'    -> {len(recs_junho)} records for Junho')
+        
+    # 2. 3º Trimestre / Setembro
+    setembro_dir = os.path.join(BASE_DIR, 'setembro')
+    f_setembro = None
+    if os.path.exists(setembro_dir):
+        f_setembro = next((os.path.join(setembro_dir, f) for f in os.listdir(setembro_dir)
+                           if ('TEÓR' in unicodedata.normalize('NFC', f).upper() or 'TEOR' in unicodedata.normalize('NFC', f).upper())
+                           and f.endswith('.xlsx') and not f.startswith('~')), None)
+    if f_setembro and os.path.exists(f_setembro):
+        recs_setembro = parse_teorica_file(f_setembro, 'Setembro', colaborador_map, id_offset=len(records))
+        records.extend(recs_setembro)
+        print(f'    -> {len(recs_setembro)} records for Setembro')
+        
     return records
 
 
@@ -904,6 +1005,17 @@ def main():
         records = parse_taf_file(agosto_taf, 'Agosto')
         all_taf_records.extend(records)
         print(f'    -> {len(records)} records for Agosto')
+
+    # ── 2d. Parse TAF file from setembro ──
+    print('\n=== Parsing TAF Setembro (setembro) ===')
+    setembro_dir = os.path.join(BASE_DIR, 'setembro')
+    if os.path.exists(setembro_dir):
+        setembro_taf = next((os.path.join(setembro_dir, f) for f in os.listdir(setembro_dir)
+                             if 'TAF' in f.upper() and f.endswith('.xlsx') and not f.startswith('~')), None)
+        if setembro_taf:
+            records = parse_taf_file(setembro_taf, 'Setembro')
+            all_taf_records.extend(records)
+            print(f'    -> {len(records)} records for Setembro')
     
     # ── 3. Parse TP-EPR files from planilhas folder (Janeiro-Maio) ──
     print('\n=== Parsing TP-EPR files (planilhas folder) ===')
@@ -940,6 +1052,16 @@ def main():
         records = parse_tpepr_file(agosto_tpepr, 'Agosto')
         all_tpepr_records.extend(records)
         print(f'    -> {len(records)} records for Agosto')
+
+    # ── 4d. Parse TP-EPR file from setembro (if present) ──
+    if os.path.exists(setembro_dir):
+        setembro_tpepr = next((os.path.join(setembro_dir, f) for f in os.listdir(setembro_dir)
+                               if 'TP-EPR' in f.upper() and f.endswith('.xlsx') and not f.startswith('~')), None)
+        if setembro_tpepr:
+            print('\n=== Parsing TP-EPR Setembro (setembro) ===')
+            records = parse_tpepr_file(setembro_tpepr, 'Setembro')
+            all_tpepr_records.extend(records)
+            print(f'    -> {len(records)} records for Setembro')
     
     # ── 5. Deduplication check ──
     print('\n=== Deduplication Check ===')

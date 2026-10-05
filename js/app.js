@@ -233,12 +233,12 @@
   /* ── Data loading ── */
 
   function loadData() {
-    // Check storage version to force re-seed after prioritizing the official TAF result (v13)
+    // Check storage version to force re-seed after adding September 2026 data (v14)
     const dbVersion = localStorage.getItem('sescinc_db_version');
-    if (dbVersion !== '13') {
-      console.log('[App] Local storage outdated. Forcing re-seed to version 13 (official TAF result and August 2026 data).');
+    if (dbVersion !== '14') {
+      console.log('[App] Local storage outdated. Forcing re-seed to version 14 (official September 2026 data).');
       localStorage.clear();
-      localStorage.setItem('sescinc_db_version', '13');
+      localStorage.setItem('sescinc_db_version', '14');
     }
 
     let tafData = loadStorage(STORAGE_KEYS.TAF);

@@ -131,21 +131,36 @@ window.SESCINC.Parsers.Teorica = {
     var headers = data[0] || [];
     console.log('[SESCINC Teórica] ' + headers.length + ' colunas detectadas');
 
-    // Determina índices de coluna (valores padrão do Forms export)
+    // Determina índices de coluna dinamicamente
     var COL_ID = 0;
-    var COL_NOTA = 5;         // F: Total de pontos
-    var COL_NOME = 8;         // I: Nome completo
-    var COL_FUNCAO = 11;      // L: Função
-    var COL_AEROPORTO = 14;   // O: Aeroporto
-    var COL_QUESTOES_START = 17; // R em diante: questões
+    var COL_NOTA = null;
+    var COL_NOME = null;
+    var COL_FUNCAO = null;
+    var COL_AEROPORTO = null;
 
-    // Tenta localizar colunas pelo nome do header (fallback dinâmico)
     for (var h = 0; h < headers.length; h++) {
       var hText = String(headers[h] || '').toUpperCase();
-      if (hText.indexOf('TOTAL') >= 0 && hText.indexOf('PONTOS') >= 0) COL_NOTA = h;
-      if (hText.indexOf('NOME') >= 0 && hText.indexOf('COMPLETO') >= 0) COL_NOME = h;
-      if (hText.indexOf('FUN') >= 0 && h > 8) COL_FUNCAO = h;
-      if (hText.indexOf('AEROPORTO') >= 0) COL_AEROPORTO = h;
+      if (hText.indexOf('TOTAL') >= 0 && hText.indexOf('PONTO') >= 0 && COL_NOTA === null) COL_NOTA = h;
+      else if (hText.indexOf('NOME') >= 0 && COL_NOME === null) {
+        if (hText.indexOf('COMPLETO') >= 0 || h > 4) COL_NOME = h;
+      }
+      else if (hText.indexOf('FUN') >= 0 && COL_FUNCAO === null) COL_FUNCAO = h;
+      else if (hText.indexOf('AERO') >= 0 && COL_AEROPORTO === null) COL_AEROPORTO = h;
+    }
+
+    if (COL_NOTA === null) COL_NOTA = 0;
+    if (COL_NOME === null) COL_NOME = 1;
+    if (COL_FUNCAO === null) COL_FUNCAO = 2;
+    if (COL_AEROPORTO === null) COL_AEROPORTO = 3;
+
+    // Detecta colunas de pontos das questões
+    var basicMax = Math.max(COL_NOTA, COL_NOME, COL_FUNCAO, COL_AEROPORTO);
+    var qPointCols = [];
+    for (var q = basicMax + 1; q < headers.length; q++) {
+      var qText = String(headers[q] || '').toUpperCase();
+      if (qText.indexOf('PONTO') >= 0) {
+        qPointCols.push(q);
+      }
     }
 
     var records = [];
@@ -157,7 +172,8 @@ window.SESCINC.Parsers.Teorica = {
 
       // Nome
       var nome = row[COL_NOME] != null ? String(row[COL_NOME]).trim() : '';
-      if (!nome) continue;
+      if (!nome || this._isSummaryRow ? this._isSummaryRow(nome) : false) continue;
+      if (nome.toUpperCase().indexOf('TOTAL') >= 0 || nome.toUpperCase().indexOf('MÉDIA') >= 0) continue;
 
       // ID
       var id = row[COL_ID] != null ? parseInt(row[COL_ID], 10) : i;
@@ -180,7 +196,20 @@ window.SESCINC.Parsers.Teorica = {
       var aeroporto = this._normalizeAeroporto(row[COL_AEROPORTO]);
 
       // Questões individuais
-      var questoes = this._extractQuestoes(row, COL_QUESTOES_START);
+      var questoes = [];
+      if (qPointCols.length > 0) {
+        for (var qn = 0; qn < qPointCols.length; qn++) {
+          var pVal = row[qPointCols[qn]];
+          var pts = 0;
+          if (pVal !== null && pVal !== undefined && pVal !== '') {
+            pts = parseFloat(pVal);
+            if (isNaN(pts)) pts = 0;
+          }
+          questoes.push({ num: qn + 1, pontos: pts });
+        }
+      } else {
+        questoes = this._extractQuestoes(row, 17);
+      }
 
       records.push({
         id: id,

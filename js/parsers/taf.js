@@ -168,14 +168,49 @@ window.SESCINC.Parsers.TAF = {
 
     var records = [];
 
+    // Detecta colunas dinamicamente a partir da linha 5 (index 4)
+    var headers = (data[4] || []).map(function (c) { return String(c || '').trim(); });
+    var colMap = {};
+    for (var h = 0; h < headers.length; h++) {
+      var hu = headers[h].toUpperCase();
+      if (hu.indexOf('NOME') >= 0 && colMap.colNome === undefined) colMap.colNome = h;
+      else if (hu.indexOf('EQUIPE') >= 0 && colMap.colEquipe === undefined) colMap.colEquipe = h;
+      else if (hu.indexOf('FUN') >= 0 && colMap.colFuncao === undefined) colMap.colFuncao = h;
+      else if (hu.indexOf('IDADE') >= 0 && colMap.colIdade === undefined) colMap.colIdade = h;
+      else if (hu.indexOf('FLEX') >= 0 && colMap.colFlexao === undefined) colMap.colFlexao = h;
+      else if (hu.indexOf('ABDOM') >= 0 && colMap.colAbdominal === undefined) colMap.colAbdominal = h;
+      else if (hu.indexOf('BARRA') >= 0) colMap.colBarra = h;
+      else if (hu.indexOf('POLICHINELO') >= 0 && colMap.colBarra === undefined) colMap.colBarra = h;
+      else if (hu.indexOf('CORRIDA') >= 0) colMap.colCorrida = h;
+      else if (hu.indexOf('TEMPO') >= 0 && colMap.colCorrida === undefined) colMap.colCorrida = h;
+      else if (hu.indexOf('RESULT') >= 0 && colMap.colResultado === undefined) colMap.colResultado = h;
+    }
+
+    if (colMap.colBarra === undefined) {
+      for (var b = 0; b < headers.length; b++) {
+        if (headers[b].toUpperCase().indexOf('POLICHINELO') >= 0) {
+          colMap.colBarra = b;
+          break;
+        }
+      }
+    }
+
+    var cNome = colMap.colNome !== undefined ? colMap.colNome : 0;
+    var cEquipe = colMap.colEquipe !== undefined ? colMap.colEquipe : 1;
+    var cFuncao = colMap.colFuncao !== undefined ? colMap.colFuncao : 2;
+    var cIdade = colMap.colIdade !== undefined ? colMap.colIdade : 3;
+    var cFlexao = colMap.colFlexao !== undefined ? colMap.colFlexao : 4;
+    var cAbdominal = colMap.colAbdominal !== undefined ? colMap.colAbdominal : 5;
+    var cBarra = colMap.colBarra !== undefined ? colMap.colBarra : 6;
+    var cCorrida = colMap.colCorrida !== undefined ? colMap.colCorrida : 7;
+    var cResultado = colMap.colResultado !== undefined ? colMap.colResultado : 8;
+
     // Dados começam na linha 6 (index 5)
     for (var i = 5; i < data.length; i++) {
       var row = data[i];
       if (!row || row.length === 0) continue;
 
-      // Colunas: A=Nome(0), B=Equipe(1), C=Função(2), D=Idade(3),
-      //          E=Flexão(4), F=Abdominal(5), G=Barra(6), H=Corrida(7), I=Resultado(8)
-      var nome = row[0] != null ? String(row[0]).trim() : '';
+      var nome = row[cNome] != null ? String(row[cNome]).trim() : '';
 
       // Pula linhas vazias, de cabeçalho ou resumo
       if (!nome || this._isSummaryRow(nome)) continue;
@@ -190,54 +225,54 @@ window.SESCINC.Parsers.TAF = {
       var isNaoRealizado = rowText.indexOf('NÃO REALIZADO') >= 0 ||
                            rowText.indexOf('NAO REALIZADO') >= 0 ||
                            rowText.indexOf('NÃO REALIZADIO') >= 0 ||
-                           rowText.indexOf('NAO REALIZADIO') >= 0 ||
-                           rowText.indexOf('FOLGA') >= 0 ||
-                           rowText.indexOf('ATESTADO') >= 0;
-      var motivo = isPermuta ? 'Permuta' :
-                   (rowText.indexOf('FOLGA') >= 0 ? 'Folga' :
-                   (rowText.indexOf('ATESTADO') >= 0 ? 'Atestado' :
-                   (isNaoRealizado ? 'Não Realizado' : (isFerias ? 'Férias' : ''))));
+                           rowText.indexOf('NAO REALIZADIO') >= 0;
+      var hasFolga = rowText.indexOf('FOLGA') >= 0;
+      var hasAtestado = rowText.indexOf('ATESTADO') >= 0;
 
-      if (isPermuta || (isNaoRealizado && !isFerias)) {
-        status = 'nr';
-      } else if (isFerias) {
+      var resultadoRaw = row[cResultado] != null ? String(row[cResultado]).trim() : '';
+      var resUpper = resultadoRaw.toUpperCase();
+      var isExplicitApproved = resUpper.indexOf('ACOP A') >= 0 || resUpper.indexOf('ACOP - A') >= 0 || resUpper.indexOf('ACOP-A') >= 0 || resUpper.indexOf('SATISFAT') >= 0 || resUpper.indexOf('APTO') >= 0;
+      var isExplicitB = resUpper.indexOf('ACOP B') >= 0 || resUpper.indexOf('ACOP - B') >= 0 || resUpper.indexOf('ACOP-B') >= 0 || resUpper === 'BOM' || resUpper === 'B';
+
+      var motivo = isFerias ? 'Férias' :
+                   (isPermuta ? 'Permuta' :
+                   (hasFolga ? 'Folga' :
+                   (hasAtestado ? 'Atestado' :
+                   (isNaoRealizado ? 'Não Realizado' : ''))));
+
+      if (isFerias) {
         status = 'ferias';
-      }
-
-      var corridaRaw = row[7] != null ? String(row[7]).trim() : '';
-      if (corridaRaw.toUpperCase() === 'NR' || rowText.indexOf(' NR ') >= 0 || rowText.indexOf(' NR') >= 0) {
-        if (status === 'ok') {
-          status = 'nr';
-          motivo = motivo || 'Não Realizado';
-        }
+      } else if ((isPermuta || isNaoRealizado || hasFolga || hasAtestado) && !isExplicitApproved && !isExplicitB) {
+        status = 'nr';
       }
 
       // Normaliza equipe
-      var equipe = row[1] != null ? String(row[1]).trim().toUpperCase() : '';
+      var equipe = row[cEquipe] != null ? String(row[cEquipe]).trim().toUpperCase() : '';
 
       // Normaliza função
       var funcao = '';
       if (window.SESCINC && window.SESCINC.Names) {
-        funcao = window.SESCINC.Names.normalizeFuncao(row[2] != null ? String(row[2]) : '');
+        funcao = window.SESCINC.Names.normalizeFuncao(row[cFuncao] != null ? String(row[cFuncao]) : '');
       } else {
-        funcao = row[2] != null ? String(row[2]).trim().toUpperCase() : '';
+        funcao = row[cFuncao] != null ? String(row[cFuncao]).trim().toUpperCase() : '';
       }
 
       // Parse valores numéricos
-      var idade = row[3] != null ? parseInt(row[3], 10) : null;
+      var idade = row[cIdade] != null ? parseInt(row[cIdade], 10) : null;
       if (isNaN(idade)) idade = null;
 
-      var flexao = row[4] != null ? parseFloat(row[4]) : null;
+      var flexao = row[cFlexao] != null ? parseFloat(row[cFlexao]) : null;
       if (isNaN(flexao)) flexao = null;
 
-      var abdominal = row[5] != null ? parseFloat(row[5]) : null;
+      var abdominal = row[cAbdominal] != null ? parseFloat(row[cAbdominal]) : null;
       if (isNaN(abdominal)) abdominal = null;
 
-      var barra = row[6] != null ? parseFloat(row[6]) : null;
+      var barra = row[cBarra] != null ? parseFloat(row[cBarra]) : null;
       if (isNaN(barra)) barra = null;
 
-      var corrida = row[7] != null ? String(row[7]).trim() : '';
-      var corridaSeconds = this._parseCorridaTime(row[7]);
+      var corridaRawVal = row[cCorrida] != null ? String(row[cCorrida]).trim() : '';
+      var corrida = corridaRawVal;
+      var corridaSeconds = this._parseCorridaTime(corridaRawVal);
 
       if (status === 'nr' || status === 'ferias') {
         flexao = null;
@@ -247,18 +282,15 @@ window.SESCINC.Parsers.TAF = {
         corridaSeconds = null;
       }
 
-      var resultadoRaw = row[8] != null ? String(row[8]).trim() : '';
       var resultado = 'ACOP - A';
 
-      if (isPermuta || (isNaoRealizado && !isFerias)) {
-        resultado = 'Não Realizado';
-      } else if (isFerias) {
+      if (isFerias) {
         resultado = 'Férias';
       } else if (status === 'nr') {
         resultado = 'Não Realizado';
       } else if (resultadoRaw) {
         var lowerRes = resultadoRaw.toLowerCase();
-        if (lowerRes.indexOf('permuta') >= 0 || lowerRes === 'nr' || lowerRes.indexOf('não realizado') >= 0) {
+        if (lowerRes.indexOf('permuta') >= 0 || lowerRes === 'nr' || lowerRes.indexOf('não realizado') >= 0 || lowerRes.indexOf('nao realizado') >= 0) {
           resultado = 'Não Realizado';
           status = 'nr';
         } else if (lowerRes.indexOf('insatisf') >= 0 || lowerRes === 'b' || lowerRes === 'bom' || lowerRes.indexOf('inapto') >= 0 || ['ACOP - B', 'ACOP B', 'ACOP-B'].indexOf(resultadoRaw.toUpperCase()) >= 0) {
