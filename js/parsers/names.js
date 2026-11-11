@@ -48,6 +48,9 @@ window.SESCINC.Names = {
     // Remove hífens cercados por espaços
     f = f.replace(/\s*-\s*/g, '-');
 
+    // ─── BA-OC ───
+    if (/^BA-?OC$/.test(f) || f === 'BA OC' || f === 'BAOC') return 'BA-OC';
+
     // ─── OC ───
     if (f === 'OC') return 'OC';
 
@@ -269,24 +272,38 @@ window.SESCINC.Names = {
       searchTargets.push(fileName.toUpperCase());
     }
 
-    // 2. Procurar no nome da aba
+    // 2. Priorizar título no cabeçalho superior da aba (linhas 1–3, colunas A–E) antes do nome da aba,
+    // pois abas clonadas frequentemente mantêm nomes antigos (ex: aba 'SETEMBRO' com título 'OUTUBRO').
+    var sheet = (workbook && sheetName) ? workbook.Sheets[sheetName] : null;
+    if (sheet) {
+      try {
+        for (var rTop = 1; rTop <= 3; rTop++) {
+          for (var cTop = 65; cTop <= 69; cTop++) { // A to E
+            var topRef = String.fromCharCode(cTop) + rTop;
+            var topCell = sheet[topRef];
+            var topVal = topCell ? String(topCell.v || topCell.w || '').toUpperCase().trim() : '';
+            if (topVal) searchTargets.push(topVal);
+          }
+        }
+      } catch (e) {
+        console.warn('[SESCINC Names] Erro ao escanear título da planilha para detectar mês:', e);
+      }
+    }
+
+    // 3. Procurar no nome da aba
     if (sheetName) {
       searchTargets.push(sheetName.toUpperCase());
     }
 
-    // 3. Procurar no conteúdo das primeiras células da planilha
-    if (workbook && sheetName) {
+    // 4. Demais células do cabeçalho (linhas 4–15, colunas A–E)
+    if (sheet) {
       try {
-        var sheet = workbook.Sheets[sheetName];
-        if (sheet) {
-          // Lê as primeiras 15 linhas e 4 colunas para procurar referências de meses
-          for (var r = 1; r <= 15; r++) {
-            for (var colCode = 65; colCode <= 68; colCode++) { // A to D
-              var cellRef = String.fromCharCode(colCode) + r;
-              var cell = sheet[cellRef];
-              var val = cell ? String(cell.v || cell.w || '').toUpperCase().trim() : '';
-              if (val) searchTargets.push(val);
-            }
+        for (var r = 4; r <= 15; r++) {
+          for (var colCode = 65; colCode <= 69; colCode++) { // A to E
+            var cellRef = String.fromCharCode(colCode) + r;
+            var cell = sheet[cellRef];
+            var val = cell ? String(cell.v || cell.w || '').toUpperCase().trim() : '';
+            if (val) searchTargets.push(val);
           }
         }
       } catch (e) {

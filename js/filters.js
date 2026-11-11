@@ -8,7 +8,7 @@
   window.SESCINC = window.SESCINC || {};
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
-  const FUNCOES = ['BA', 'BA2', 'BA-MC', 'BA-LR', 'BA-RE', 'BA-CE', 'BA-MA', 'OC'];
+  const FUNCOES = ['BA', 'BA2', 'BA-MC', 'BA-LR', 'BA-RE', 'BA-CE', 'BA-MA', 'BA-OC', 'OC'];
 
   const SECTION_FILTERS = {
     overview:  ['equipe'],

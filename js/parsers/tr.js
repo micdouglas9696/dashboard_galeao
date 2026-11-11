@@ -175,6 +175,12 @@ window.SESCINC.Parsers.TR = {
     if (raw === 'F05' || raw === 'F-05' || raw === 'F5' || raw === '5°CCI' || raw === '5CCI' || raw === '5ºCCI') {
       return { cci: '5°CCI', viaturaCodigo: 'F05' };
     }
+    if (raw === 'F06' || raw === 'F-06' || raw === 'F6' || raw === '6°CCI' || raw === '6CCI' || raw === '6ºCCI') {
+      return { cci: '6°CCI', viaturaCodigo: 'F06' };
+    }
+    if (raw === 'F07' || raw === 'F-07' || raw === 'F7' || raw === '7°CCI' || raw === '7CCI' || raw === '7ºCCI') {
+      return { cci: '7°CCI', viaturaCodigo: 'F07' };
+    }
     if (raw === 'F358' || raw === 'F-358' || raw === '358' || raw.indexOf('358') >= 0) {
       return { cci: 'CCI 358', viaturaCodigo: 'F358' };
     }
@@ -232,33 +238,98 @@ window.SESCINC.Parsers.TR = {
   },
 
   /**
-   * Determina status, valor de tempo e observação de uma célula.
+   * Extrai observações mensais do rodapé ('Observações <Mês>:'), ignorando linhas de 'EXEMPLO'.
+   * @param {Array[]} data
+   * @returns {Object<string, string>}
+   */
+  _extractMonthObservations: function (data) {
+    var monthObs = {};
+    var monthKeys = Object.keys(this._MONTHS);
+    for (var r = 13; r < Math.min(data.length, 45); r++) {
+      var row = data[r];
+      if (!row || !row.length || row[0] == null) continue;
+      var labelStr = String(row[0]).trim().toUpperCase();
+      if (labelStr.indexOf('OBSERVA') < 0) continue;
+
+      var matchedMonth = null;
+      for (var mk = 0; mk < monthKeys.length; mk++) {
+        if (labelStr.indexOf(monthKeys[mk]) >= 0) {
+          matchedMonth = this._MONTHS[monthKeys[mk]].name;
+          break;
+        }
+      }
+      if (!matchedMonth) continue;
+
+      var parts = [];
+      for (var c = 1; c < Math.min(row.length, 20); c++) {
+        if (row[c] != null) {
+          var txt = String(row[c]).trim();
+          if (txt && txt.toUpperCase().indexOf('EXEMPLO') < 0) {
+            parts.push(txt);
+          }
+        }
+      }
+      if (parts.length) {
+        monthObs[matchedMonth] = parts.join(' ');
+      }
+    }
+    return monthObs;
+  },
+
+  _obsMentionsVehicle: function (obsUpper, cci, viaturaCodigo) {
+    var checks = [];
+    if (cci) {
+      var num = String(cci).match(/(\d+)/);
+      if (num) {
+        var n = num[1];
+        var pad = String(parseInt(n, 10)).padStart(2, '0');
+        checks.push(n + '°CCI', n + 'ºCCI', n + ' CCI', 'CCI ' + pad, 'CCI ' + n, 'CCI-' + pad);
+      }
+    }
+    if (viaturaCodigo) {
+      var v = String(viaturaCodigo).toUpperCase();
+      checks.push(v);
+      var mv = v.match(/^F0?(\d+)$/);
+      if (mv) {
+        var vn = mv[1];
+        checks.push('F-' + vn, 'F-0' + vn, 'CCI 0' + vn, 'CCI ' + vn);
+      }
+    }
+    return checks.some(function (chk) { return obsUpper.indexOf(chk) >= 0; });
+  },
+
+  /**
+   * Determina status, valor de tempo, data e observação de uma célula.
    * @param {*} cellValue
-   * @returns {{ tempoSeconds: number|null, tempoFormatted: string|null, status: string, observacao: string }}
+   * @returns {{ tempoSeconds: number|null, tempoFormatted: string|null, status: string, observacao: string, execDate: string|null }}
    */
   _parseCellValue: function (cellValue) {
     if (cellValue === null || cellValue === undefined || cellValue === '') {
-      return { tempoSeconds: null, tempoFormatted: null, status: 'empty', observacao: '' };
+      return { tempoSeconds: null, tempoFormatted: null, status: 'empty', observacao: '', execDate: null };
     }
 
     var str = String(cellValue).trim().toUpperCase();
 
     // Permuta detectada
     if (str.indexOf('PERMUTA') >= 0) {
-      return { tempoSeconds: null, tempoFormatted: 'Não Realizado', status: 'nr', observacao: 'Permuta' };
+      return { tempoSeconds: null, tempoFormatted: 'Não Realizado', status: 'nr', observacao: 'Permuta', execDate: null };
     }
 
     if (str === 'NR' || str.indexOf('NÃO REALIZADO') >= 0 || str.indexOf('NAO REALIZADO') >= 0) {
-      return { tempoSeconds: null, tempoFormatted: 'Não Realizado', status: 'nr', observacao: 'Não Realizado' };
+      return { tempoSeconds: null, tempoFormatted: 'Não Realizado', status: 'nr', observacao: 'Não Realizado', execDate: null };
     }
 
     if (str === 'X') {
-      return { tempoSeconds: null, tempoFormatted: null, status: 'na', observacao: '' };
+      return { tempoSeconds: null, tempoFormatted: null, status: 'na', observacao: '', execDate: null };
     }
 
     var timeValue = cellValue;
+    var execDate = null;
     if (typeof cellValue === 'string') {
+      var dateMatch = cellValue.match(/(\d{2}\/\d{2}\/\d{4})/);
+      if (dateMatch) execDate = dateMatch[1];
       timeValue = cellValue
+        .replace(/\s*\/\s*\d{2}\/\d{2}\/\d{4}\.?/g, '')
         .replace(/\s*[-–—]\s*F-?(?:358|0?[1-9])\s*$/i, '')
         .trim();
     }
@@ -269,12 +340,13 @@ window.SESCINC.Parsers.TR = {
         tempoSeconds: seconds,
         tempoFormatted: this._formatTime(seconds),
         status: 'ok',
-        observacao: ''
+        observacao: '',
+        execDate: execDate
       };
     }
 
     // Se tiver texto explicativo ou observação
-    return { tempoSeconds: null, tempoFormatted: null, status: 'empty', observacao: String(cellValue).trim() };
+    return { tempoSeconds: null, tempoFormatted: null, status: 'empty', observacao: String(cellValue).trim(), execDate: execDate };
   },
 
   /**
@@ -314,6 +386,7 @@ window.SESCINC.Parsers.TR = {
       return [];
     }
 
+    var monthObsMap = this._extractMonthObservations(data);
     var records = [];
     var mappedCols = {};
     for (var mapIdx = 0; mapIdx < columnMap.length; mapIdx++) {
@@ -373,13 +446,35 @@ window.SESCINC.Parsers.TR = {
           }
         }
 
+        // Incorporar observação mensal do rodapé seguindo as mesmas regras do seed:
+        //  - Se NR genérico/sem obs detalhada, anexa se mencionar a equipe OU se a nota não mencionar nenhuma equipe específica.
+        //  - Se OK sem obs, só anexa se mencionar explicitamente AMBOS a equipe E a viatura/CCI e não for nota de "não realizou".
+        var monthName = mapping.monthInfo.name;
+        var mObs = monthObsMap[monthName];
+        if (mObs) {
+          var mObsUpper = mObs.toUpperCase();
+          var teamsInObs = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA'].filter(function (eq) { return mObsUpper.indexOf(eq) >= 0; });
+          var mentionsVeh = this._obsMentionsVehicle(mObsUpper, mapping.cci, viaturaCod);
+          var hasNegacao = mObsUpper.indexOf('NÃO REALIZ') >= 0 || mObsUpper.indexOf('NAO REALIZ') >= 0;
+          if (parsed.status === 'nr' && (!obsText || obsText === 'Não Realizado')) {
+            if (teamsInObs.length === 0 || teamsInObs.indexOf(equipe) >= 0) {
+              obsText = mObs;
+            }
+          } else if (parsed.status === 'ok' && !obsText) {
+            if (teamsInObs.indexOf(equipe) >= 0 && mentionsVeh && !hasNegacao) {
+              obsText = mObs;
+            }
+          }
+        }
+
         records.push({
           cabeceira: cabeceira,
           equipe: equipe,
-          mes: mapping.monthInfo.name,
+          mes: monthName,
           mesIndex: mapping.monthInfo.index,
           cci: mapping.cci,
           viaturaCodigo: viaturaCod,
+          data: parsed.execDate || null,
           observacao: obsText || '',
           tempoFormatted: parsed.tempoFormatted,
           tempoSeconds: parsed.tempoSeconds,

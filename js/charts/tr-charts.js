@@ -36,8 +36,15 @@
   let heatmapLocalCcis = ['todos'];
 
   function getMetaForRecord(r) {
-    if (r.cci === '2°CCI' || r.viaturaCodigo === 'F02') return 180;
-    if (r.cci === '3°CCI' || r.cci === '4°CCI' || r.cci === '5°CCI' || r.cci === 'CCI 358' || r.viaturaCodigo === 'F03' || r.viaturaCodigo === 'F04' || r.viaturaCodigo === 'F05' || r.viaturaCodigo === 'F358') return 240;
+    const cci = String(r.cci || '').toUpperCase();
+    if (cci === '1°CCI' || cci === '1ºCCI') return 120;
+    if (cci === '2°CCI' || cci === '2ºCCI') return 180;
+    if (cci === '3°CCI' || cci === '3ºCCI' || cci === '4°CCI' || cci === '4ºCCI' ||
+        cci === '5°CCI' || cci === '5ºCCI' || cci === '6°CCI' || cci === '6ºCCI' ||
+        cci === '7°CCI' || cci === '7ºCCI' || cci === 'CCI 358') return 240;
+    const v = String(r.viaturaCodigo || '').toUpperCase();
+    if (v === 'F02') return 180;
+    if (v === 'F03' || v === 'F04' || v === 'F05' || v === 'F06' || v === 'F07' || v === 'F358') return 240;
     return 120; // 1°CCI / F01 / default
   }
 
@@ -45,19 +52,9 @@
     if (r.status === 'nr') return 'Não Realizado';
     const t = r.tempoSeconds;
     if (t == null || isNaN(t)) return 'na';
-    if (r.cci === '2°CCI' || r.viaturaCodigo === 'F02') {
-      if (t <= 180) return 'Excelente';
-      if (t <= 240) return 'Satisfatório';
-      return 'Insatisfatório';
-    }
-    if (r.cci === '3°CCI' || r.cci === '4°CCI' || r.cci === '5°CCI' || r.cci === 'CCI 358' || r.viaturaCodigo === 'F03' || r.viaturaCodigo === 'F04' || r.viaturaCodigo === 'F05' || r.viaturaCodigo === 'F358') {
-      if (t <= 240) return 'Excelente';
-      if (t <= 300) return 'Satisfatório';
-      return 'Insatisfatório';
-    }
-    // 1°CCI / F01 / default
-    if (t <= 120) return 'Excelente';
-    if (t <= 180) return 'Satisfatório';
+    const meta = getMetaForRecord(r);
+    if (t <= meta) return 'Excelente';
+    if (t <= meta + 60) return 'Satisfatório';
     return 'Insatisfatório';
   }
 
@@ -443,7 +440,7 @@
       if (activeCci === '2°CCI') {
         currentMetaLimit = 180;
         metaLabel = 'Meta (03:00)';
-      } else if (activeCci === '3°CCI' || activeCci === '4°CCI' || activeCci === '5°CCI' || activeCci === 'CCI 358') {
+      } else if (activeCci === '3°CCI' || activeCci === '4°CCI' || activeCci === '5°CCI' || activeCci === '6°CCI' || activeCci === '7°CCI' || activeCci === 'CCI 358') {
         currentMetaLimit = 240;
         metaLabel = 'Meta (04:00)';
       }
@@ -452,15 +449,43 @@
     }
 
     datasets.push({
+      type: isRadar ? undefined : 'line',
       label: metaLabel,
       data: usedMonthIndices.map(() => currentMetaLimit),
       borderColor: COLORS.red,
+      backgroundColor: 'transparent',
       borderDash: [8, 4],
       borderWidth: 2,
       pointRadius: 0,
       fill: false,
       tension: 0
     });
+
+    const trMetaLinePlugin = {
+      id: 'trMetaLine',
+      afterDatasetsDraw(chart) {
+        if (chart.config.type === 'radar') return;
+        const xLabels = chart.data.labels || [];
+        if (xLabels.length !== 1) return;
+        const metaIdx = chart.data.datasets.findIndex(d => d.label && d.label.includes('Meta'));
+        if (metaIdx === -1 || !chart.isDatasetVisible(metaIdx)) return;
+        const yScale = chart.scales.y;
+        const area = chart.chartArea;
+        if (!yScale || !area) return;
+        const yPixel = yScale.getPixelForValue(currentMetaLimit);
+        if (yPixel < area.top || yPixel > area.bottom) return;
+        const { ctx } = chart;
+        ctx.save();
+        ctx.beginPath();
+        ctx.setLineDash([8, 4]);
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = COLORS.red;
+        ctx.moveTo(area.left, yPixel);
+        ctx.lineTo(area.right, yPixel);
+        ctx.stroke();
+        ctx.restore();
+      }
+    };
 
     const config = {
       type: isRadar ? 'radar' : (isLine ? 'line' : 'bar'),
@@ -518,7 +543,7 @@
           }
         }
       },
-      plugins: [trTimeDatalabelsPlugin]
+      plugins: [trTimeDatalabelsPlugin, trMetaLinePlugin]
     };
 
     const themeColors = getThemeColors();
@@ -887,7 +912,7 @@
                     excelLabel = 'Excelente (≤ 3min)';
                     satisLabel = 'Satisfatório (3-4min)';
                     ruimLabel = 'Insatisfatório (> 4min)';
-                  } else if (cciVal === '3°CCI' || cciVal === '4°CCI') {
+                  } else if (cciVal === '3°CCI' || cciVal === '4°CCI' || cciVal === '5°CCI' || cciVal === '6°CCI' || cciVal === '7°CCI' || cciVal === 'CCI 358') {
                     excelLabel = 'Excelente (≤ 4min)';
                     satisLabel = 'Satisfatório (4-5min)';
                     ruimLabel = 'Insatisfatório (> 5min)';
@@ -998,7 +1023,7 @@
       tr.innerHTML = `
         <td>${r.cabeceira || '—'}</td>
         <td>${r.equipe || '—'}</td>
-        <td>${r.mes || '—'}</td>
+        <td>${r.data ? `${r.mes} (${r.data})` : (r.mes || '—')}</td>
         <td>${cciDisplay}</td>
         <td>${tempoBadge}</td>
         <td>${obsDisplay}</td>

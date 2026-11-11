@@ -20,7 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 
   <!-- Dashboard Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=15.0">
+  <link rel="stylesheet" href="css/styles.css?v=16.0">
 </head>
 <body data-section="overview">
 
@@ -772,7 +772,7 @@
         <div class="charts-grid">
           <div class="chart-card full-width">
             <div class="chart-card-title">Evolução Mensal por CCI</div>
-            <div class="chart-card-desc">Evolução do tempo de resposta por CCI de janeiro a dezembro de 2026. Clique em um ponto ou barra para consultar período, equipe, cabeceira, tempo e a viatura utilizada (F01, F02, F03, F04, F05 ou F358). A linha tracejada mostra a meta do CCI selecionado.</div>
+            <div class="chart-card-desc">Evolução do tempo de resposta por CCI de janeiro a dezembro de 2026. Clique em um ponto ou barra para consultar período, equipe, cabeceira, tempo e a viatura utilizada (F01, F02, F03, F04, F05, F07 ou F358). A linha tracejada mostra a meta do CCI selecionado.</div>
             
             <!-- Local Chart Filters for Timeline -->
             <div class="local-chart-filters">
@@ -780,6 +780,7 @@
                 <span class="local-filter-label">Cabeceira:</span>
                 <div class="local-tabs timeline-cab-tabs">
                   <button class="local-tab active" data-val="all">Todas</button>
+                  <button class="local-tab" data-val="10">10</button>
                   <button class="local-tab" data-val="28">28</button>
                   <button class="local-tab" data-val="33">33</button>
                   <button class="local-tab" data-val="15">15</button>
@@ -837,6 +838,7 @@
                 <span class="local-filter-label">Cabeceira:</span>
                 <div class="local-tabs cci-cab-tabs">
                   <button class="local-tab active" data-val="all">Todas</button>
+                  <button class="local-tab" data-val="10">10</button>
                   <button class="local-tab" data-val="28">28</button>
                   <button class="local-tab" data-val="33">33</button>
                   <button class="local-tab" data-val="15">15</button>
@@ -894,6 +896,7 @@
                 <span class="local-filter-label">Cabeceira:</span>
                 <div class="local-tabs heatmap-cab-tabs">
                   <button class="local-tab active" data-val="all">Todas</button>
+                  <button class="local-tab" data-val="10">10</button>
                   <button class="local-tab" data-val="28">28</button>
                   <button class="local-tab" data-val="33">33</button>
                   <button class="local-tab" data-val="15">15</button>
@@ -1208,6 +1211,7 @@
                       <option value="BA-RE">BA-RE</option>
                       <option value="BA-CE">BA-CE</option>
                       <option value="BA-MA">BA-MA</option>
+                      <option value="BA-OC">BA-OC</option>
                       <option value="OC">OC</option>
                     </select>
                   </div>
@@ -1278,6 +1282,7 @@
                       <option value="BA-RE">BA-RE</option>
                       <option value="BA-CE">BA-CE</option>
                       <option value="BA-MA">BA-MA</option>
+                      <option value="BA-OC">BA-OC</option>
                       <option value="OC">OC</option>
                     </select>
                   </div>
@@ -1306,6 +1311,7 @@
                     <label class="form-label" for="manual-tr-cabeceira">Cabeceira</label>
                     <select id="manual-tr-cabeceira">
                       <option value="">Selecione...</option>
+                      <option value="10">10</option>
                       <option value="28">28</option>
                       <option value="33">33</option>
                       <option value="15">15</option>
@@ -1332,6 +1338,12 @@
                       <option value="Abril">Abril</option>
                       <option value="Maio">Maio</option>
                       <option value="Junho">Junho</option>
+                      <option value="Julho">Julho</option>
+                      <option value="Agosto">Agosto</option>
+                      <option value="Setembro">Setembro</option>
+                      <option value="Outubro">Outubro</option>
+                      <option value="Novembro">Novembro</option>
+                      <option value="Dezembro">Dezembro</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1342,6 +1354,8 @@
                       <option value="2°CCI">2°CCI</option>
                       <option value="3°CCI">3°CCI</option>
                       <option value="4°CCI">4°CCI</option>
+                      <option value="5°CCI">5°CCI</option>
+                      <option value="CCI 358">CCI 358</option>
                     </select>
                   </div>
                   <div class="form-group">
@@ -1382,6 +1396,7 @@
                       <option value="BA-RE">BA-RE</option>
                       <option value="BA-CE">BA-CE</option>
                       <option value="BA-MA">BA-MA</option>
+                      <option value="BA-OC">BA-OC</option>
                       <option value="OC">OC</option>
                     </select>
                   </div>
@@ -1677,6 +1692,9 @@
           <input type="checkbox" value="BA-MA" checked> BA-MA
         </label>
         <label class="checkbox-item">
+          <input type="checkbox" value="BA-OC" checked> BA-OC
+        </label>
+        <label class="checkbox-item">
           <input type="checkbox" value="OC" checked> OC
         </label>
       </div>
@@ -1695,6 +1713,7 @@
       <label class="filter-group-label" for="filter-cabeceira">Cabeceira</label>
       <select id="filter-cabeceira">
         <option value="">Todas</option>
+        <option value="10">10</option>
         <option value="28">28</option>
         <option value="33">33</option>
         <option value="15">15</option>
@@ -1716,6 +1735,8 @@
         <option value="2°CCI">2°CCI</option>
         <option value="3°CCI">3°CCI</option>
         <option value="4°CCI">4°CCI</option>
+        <option value="5°CCI">5°CCI</option>
+        <option value="CCI 358">CCI 358</option>
       </select>
     </div>
 
@@ -1791,23 +1812,23 @@
   <!-- ============================================================
        JS MODULES
        ============================================================ -->
-  <script src="js/storage.js?v=15.0"></script>
-  <script src="js/parsers/names.js?v=15.0"></script>
-  <script src="js/parsers/taf.js?v=15.0"></script>
-  <script src="js/parsers/tpepr.js?v=15.0"></script>
-  <script src="js/parsers/tr.js?v=15.0"></script>
-  <script src="js/parsers/teorica.js?v=15.0"></script>
-  <script src="js/filters.js?v=15.0"></script>
-  <script src="js/charts/overview-charts.js?v=15.0"></script>
-  <script src="js/charts/taf-charts.js?v=15.0"></script>
-  <script src="js/charts/tpepr-charts.js?v=15.0"></script>
-  <script src="js/charts/tr-charts.js?v=15.0"></script>
-  <script src="js/charts/teorica-charts.js?v=15.0"></script>
-  <script src="js/charts/actuation-charts.js?v=15.0"></script>
-  <script src="js/export.js?v=15.0"></script>
-  <script src="js/manual-entry.js?v=15.0"></script>
-  <script src="js/seed-data.js?v=15.0"></script>
-  <script src="js/app.js?v=15.0"></script>
+  <script src="js/storage.js?v=16.0"></script>
+  <script src="js/parsers/names.js?v=16.0"></script>
+  <script src="js/parsers/taf.js?v=16.0"></script>
+  <script src="js/parsers/tpepr.js?v=16.0"></script>
+  <script src="js/parsers/tr.js?v=16.0"></script>
+  <script src="js/parsers/teorica.js?v=16.0"></script>
+  <script src="js/filters.js?v=16.0"></script>
+  <script src="js/charts/overview-charts.js?v=16.0"></script>
+  <script src="js/charts/taf-charts.js?v=16.0"></script>
+  <script src="js/charts/tpepr-charts.js?v=16.0"></script>
+  <script src="js/charts/tr-charts.js?v=16.0"></script>
+  <script src="js/charts/teorica-charts.js?v=16.0"></script>
+  <script src="js/charts/actuation-charts.js?v=16.0"></script>
+  <script src="js/export.js?v=16.0"></script>
+  <script src="js/manual-entry.js?v=16.0"></script>
+  <script src="js/seed-data.js?v=16.0"></script>
+  <script src="js/app.js?v=16.0"></script>
 
 </body>
 </html>

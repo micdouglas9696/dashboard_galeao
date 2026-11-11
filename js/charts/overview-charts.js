@@ -83,9 +83,16 @@
   }
 
   function getMetaForRecord(r) {
-    if (r.cci === '2°CCI') return 180;
-    if (r.cci === '3°CCI' || r.cci === '4°CCI') return 240;
-    return 120; // 1°CCI / default
+    const cci = String(r.cci || '').toUpperCase();
+    if (cci === '1°CCI' || cci === '1ºCCI') return 120;
+    if (cci === '2°CCI' || cci === '2ºCCI') return 180;
+    if (cci === '3°CCI' || cci === '3ºCCI' || cci === '4°CCI' || cci === '4ºCCI' ||
+        cci === '5°CCI' || cci === '5ºCCI' || cci === '6°CCI' || cci === '6ºCCI' ||
+        cci === '7°CCI' || cci === '7ºCCI' || cci === 'CCI 358') return 240;
+    const v = String(r.viaturaCodigo || '').toUpperCase();
+    if (v === 'F02') return 180;
+    if (v === 'F03' || v === 'F04' || v === 'F05' || v === 'F06' || v === 'F07' || v === 'F358') return 240;
+    return 120; // 1°CCI / F01 / default
   }
 
   function calcTRMeta(records) {

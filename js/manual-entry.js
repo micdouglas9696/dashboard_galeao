@@ -8,7 +8,7 @@
   window.SESCINC = window.SESCINC || {};
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
-  const FUNCOES = ['BA', 'BA2', 'BA-MC', 'BA-LR', 'BA-RE', 'BA-CE', 'BA-MA', 'OC'];
+  const FUNCOES = ['BA', 'BA2', 'BA-MC', 'BA-LR', 'BA-RE', 'BA-CE', 'BA-MA', 'BA-OC', 'OC'];
   const MESES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
                  'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
   const CCIS = ['1°CCI', '2°CCI', '3°CCI', '4°CCI', '5°CCI', 'CCI 358'];

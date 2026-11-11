@@ -1,17 +1,24 @@
 # -*- coding: utf-8 -*-
 """
 SESCINC SBGL Dashboard — Complete Seed Data Generator
-Parses ALL Excel spreadsheets (Janeiro-Agosto) and generates updated seed-data.js
+Parses ALL Excel spreadsheets (Janeiro-Outubro) and generates updated seed-data.js
 with proper 'mes' field on ALL records to avoid duplication.
 """
 import openpyxl
 import datetime
+import io
 import json
 import re
 import os
 import unicodedata
 
 # ────────── Helpers ──────────
+
+def load_workbook_safe(filepath, data_only=True):
+    """Load an XLSX workbook from bytes so non-.xlsx filenames (e.g. .jpg exports) also open safely."""
+    with open(filepath, 'rb') as f:
+        return openpyxl.load_workbook(io.BytesIO(f.read()), data_only=data_only)
+
 
 def normalize_funcao(fun):
     if not fun:
@@ -34,6 +41,8 @@ def normalize_funcao(fun):
         return 'BA-CE'
     if fun in ['BA-MA', 'BA MA']:
         return 'BA-MA'
+    if fun in ['BA-OC', 'BA OC', 'BAOC', 'BA- OC']:
+        return 'BA-OC'
     if fun in ['OC']:
         return 'OC'
     
@@ -42,6 +51,7 @@ def normalize_funcao(fun):
     if re.search(r'BA.*RE', fun): return 'BA-RE'
     if re.search(r'BA.*CE', fun): return 'BA-CE'
     if re.search(r'BA.*MA', fun): return 'BA-MA'
+    if re.search(r'BA.*OC', fun): return 'BA-OC'
     if '2' in fun or 'II' in fun: return 'BA2'
     return 'BA'
 
@@ -157,7 +167,7 @@ def detect_month_from_sheet(sheet_name):
 def parse_taf_file(filepath, month_name):
     """Parse a single TAF XLSX file and return records with 'mes' field."""
     print(f'  Parsing TAF: {os.path.basename(filepath)} -> {month_name}')
-    wb = openpyxl.load_workbook(filepath, data_only=True)
+    wb = load_workbook_safe(filepath, data_only=True)
     records = []
     
     # Try to find the right sheet
@@ -320,7 +330,7 @@ def parse_taf_file(filepath, month_name):
 def parse_tpepr_file(filepath, month_name):
     """Parse a single TP-EPR XLSX file and return records with 'mes' field."""
     print(f'  Parsing TP-EPR: {os.path.basename(filepath)} -> {month_name}')
-    wb = openpyxl.load_workbook(filepath, data_only=True)
+    wb = load_workbook_safe(filepath, data_only=True)
     records = []
     
     # Try to find the right sheet
@@ -380,16 +390,18 @@ def parse_tpepr_file(filepath, month_name):
         row_txt = ' '.join(str(c) for c in row if c is not None).upper()
         is_permuta = 'PERMUTA' in row_txt
         is_ferias = 'FERIAS' in row_txt or 'FÉRIAS' in row_txt
+        is_funcao_oc = 'FUNÇÃO DE OC' in row_txt or 'FUNCAO DE OC' in row_txt
         is_not_realizado = any(marker in row_txt for marker in [
             'NÃO REALIZADO', 'NAO REALIZADO', 'NÃO REALIZADIO',
             'NAO REALIZADIO', 'FOLGA', 'ATESTADO'
-        ])
+        ]) or is_funcao_oc
         motivo = (
+            'Férias' if is_ferias else
             'Permuta' if is_permuta else
             'Folga' if 'FOLGA' in row_txt else
             'Atestado' if 'ATESTADO' in row_txt else
-            'Não Realizado' if is_not_realizado else
-            'Férias' if is_ferias else ''
+            'Função de OC' if is_funcao_oc else
+            'Não Realizado' if is_not_realizado else ''
         )
         
         tempo_seconds = None
@@ -500,6 +512,10 @@ def normalize_tr_cci(cci_raw):
         return '4°CCI', 'F04'
     if s in ['F05', 'F-05', 'F5', '5°CCI', '5CCI', '5ºCCI']:
         return '5°CCI', 'F05'
+    if s in ['F06', 'F-06', 'F6', '6°CCI', '6CCI', '6ºCCI']:
+        return '6°CCI', 'F06'
+    if s in ['F07', 'F-07', 'F7', '7°CCI', '7CCI', '7ºCCI']:
+        return '7°CCI', 'F07'
     if '358' in s or s in ['F358', 'F-358']:
         return 'CCI 358', 'F358'
 
@@ -510,19 +526,72 @@ def normalize_tr_cci(cci_raw):
     return s, ''
 
 
+def extract_tr_month_observations(ws):
+    """Extract monthly footer observations ('Observações <Mês>:'), ignoring template examples."""
+    month_obs = {}
+    for r in range(14, min(ws.max_row + 1, 45)):
+        label_val = ws.cell(row=r, column=1).value
+        if not label_val:
+            continue
+        label_str = str(label_val).strip().upper()
+        if 'OBSERVA' not in label_str:
+            continue
+        matched_month = None
+        for m_key, m_norm in MONTH_MAP.items():
+            if m_key in label_str:
+                matched_month = m_norm
+                break
+        if not matched_month:
+            continue
+
+        obs_parts = []
+        for c in range(2, min(ws.max_column + 1, 20)):
+            cell_val = ws.cell(row=r, column=c).value
+            if cell_val is not None:
+                txt = str(cell_val).strip()
+                if txt and 'EXEMPLO' not in txt.upper():
+                    obs_parts.append(txt)
+        if obs_parts:
+            month_obs[matched_month] = ' '.join(obs_parts)
+    return month_obs
+
+
+def _obs_mentions_vehicle(obs_upper, cci, viatura_codigo):
+    """Return True if an observation explicitly references a specific record's CCI/viatura."""
+    checks = []
+    if cci:
+        num = re.search(r'(\d+)', cci)
+        if num:
+            n = num.group(1)
+            checks.extend([f'{n}°CCI', f'{n}ºCCI', f'{n} CCI', f'CCI {int(n):02d}', f'CCI {n}', f'CCI-{int(n):02d}'])
+    if viatura_codigo:
+        v = viatura_codigo.upper()
+        checks.append(v)
+        m_v = re.match(r'^F0?(\d+)$', v)
+        if m_v:
+            vn = m_v.group(1)
+            checks.extend([f'F-{vn}', f'F-0{vn}', f'CCI 0{vn}', f'CCI {vn}'])
+    return any(chk in obs_upper for chk in checks)
+
+
 def parse_tr(f):
     if not os.path.exists(f):
         print(f'Warning: File {f} not found.')
         return []
     print(f'Parsing TR: {os.path.basename(f)}')
-    wb = openpyxl.load_workbook(f, data_only=True)
+    wb = load_workbook_safe(f, data_only=True)
     records = []
     
     month_indices = MONTH_INDEX
+    cabeceira_sheets = [
+        sn for sn in wb.sheetnames
+        if 'CABECEIRA' in sn.upper() and 'GRAF' not in sn.upper() and 'TESTE' not in sn.upper()
+    ]
     
-    for sn in ['CABECEIRA 28', 'CABECEIRA 33', 'CABECEIRA 15']:
+    for sn in cabeceira_sheets:
         ws = wb[sn]
         cabeceira = sn.split()[-1]
+        month_obs_map = extract_tr_month_observations(ws)
         
         col_mappings = []
         current_month = None
@@ -561,6 +630,7 @@ def parse_tr(f):
                 tempo_seconds = None
                 tempo_formatted = None
                 observacao = ''
+                exec_date = None
                 viatura_codigo = mapping['viaturaCodigo']
                 
                 val_str = str(val).strip().upper() if val is not None else ''
@@ -588,6 +658,10 @@ def parse_tr(f):
                         if vehicle_match:
                             _, viatura_codigo = normalize_tr_cci(vehicle_match.group(0))
 
+                        date_match = re.search(r'(\d{2}/\d{2}/\d{4})', val_str)
+                        if date_match:
+                            exec_date = date_match.group(1)
+
                         time_match = re.search(r'(?<!\d)(\d{1,2}):([0-5]\d)(?!\d)', val_str)
                         if time_match:
                             minutes = int(time_match.group(1))
@@ -609,6 +683,19 @@ def parse_tr(f):
                         elif not any(k in next_val.upper() for k in ['CCI', 'ALFA', 'BRAVO', 'CHARLIE', 'DELTA']):
                             observacao = next_val.strip()
 
+                # Attach monthly sheet observation when applicable
+                month_obs = month_obs_map.get(mapping['month'], '')
+                if not observacao and month_obs:
+                    obs_upper = month_obs.upper()
+                    mentioned_teams = [eq for eq in ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA'] if eq in obs_upper]
+                    if status == 'nr':
+                        if not mentioned_teams or equipe in mentioned_teams:
+                            observacao = month_obs
+                    elif status == 'ok':
+                        if equipe in mentioned_teams and 'NÃO REALIZ' not in obs_upper and 'NAO REALIZ' not in obs_upper:
+                            if _obs_mentions_vehicle(obs_upper, mapping['cci'], viatura_codigo):
+                                observacao = month_obs
+
                 if status != 'na' and status != 'empty':
                     records.append({
                         'cabeceira': cabeceira,
@@ -617,6 +704,7 @@ def parse_tr(f):
                         'mesIndex': month_indices.get(mapping['month'], 0),
                         'cci': mapping['cci'],
                         'viaturaCodigo': viatura_codigo,
+                        'data': exec_date,
                         'observacao': observacao,
                         'tempoFormatted': tempo_formatted,
                         'tempoSeconds': tempo_seconds,
@@ -631,7 +719,7 @@ def parse_tr(f):
 def parse_teorica_file(filepath, month_name, colaborador_map, id_offset=0):
     """Parse a single theoretical evaluation XLSX file (supports Forms export and consolidated formats)."""
     print(f'  Parsing Teórica: {os.path.basename(filepath)} -> {month_name}')
-    wb = openpyxl.load_workbook(filepath, data_only=True)
+    wb = load_workbook_safe(filepath, data_only=True)
     ws = wb['Sheet1'] if 'Sheet1' in wb.sheetnames else wb[wb.sheetnames[0]]
     
     headers = [str(ws.cell(row=1, column=c).value or '').strip() for c in range(1, ws.max_column + 1)]
@@ -763,7 +851,7 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False, prefix='ACT'
         print(f"Warning: File {filepath} not found.")
         return []
     
-    wb = openpyxl.load_workbook(filepath, data_only=True)
+    wb = load_workbook_safe(filepath, data_only=True)
     if sheet_name not in wb.sheetnames:
         print(f"Warning: Sheet '{sheet_name}' not found.")
         return []
@@ -795,6 +883,8 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False, prefix='ACT'
 
         tipo_raw = str(val_tipo).strip() if val_tipo else 'OUTROS'
         equipe = str(val_equipe).strip().upper() if val_equipe else 'N/I'
+        if equipe == 'CHARLE':
+            equipe = 'CHARLIE'
         desc = str(val_desc).strip() if val_desc else ''
         acoes = str(val_acoes).strip() if val_acoes else ''
         full_txt = f'{desc} {acoes} {val_local or ""}'.upper()
@@ -802,8 +892,8 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False, prefix='ACT'
         # Standardize types
         if any(k in tipo_raw.upper() for k in ['DERRAMAMENTO DE COMBUSTÍVEL', 'DERRAMAMENTO DE COMBUSTIVEL']):
             tipo_std = 'Derramamento de Combustível'
-        elif any(k in tipo_raw.upper() for k in ['DERRAMAMENTO DE ÓLEO', 'DERRAMAMENTO DE OLEO', 'DERRAMAMENTO DE FLUÍDO', 'DERRAMAMENTO DE FLUIDO']) or \
-             (tipo_raw.upper() == 'OUTROS' and any(k in full_txt for k in ['VAZAMENTO DE FLUÍDO', 'VAZAMENTO DE FLUIDO', 'FLUÍDO HIDRÁULICO', 'FLUIDO HIDRAULICO', 'VAZAMENTO DE ÓLEO', 'VAZAMENTO DE OLEO'])):
+        elif any(k in tipo_raw.upper() for k in ['DERRAMAMENTO DE ÓLEO', 'DERRAMAMENTO DE OLEO', 'VAZAMENTO DE ÓLEO', 'VAZAMENTO DE OLEO', 'DERRAMAMENTO DE FLUÍDO', 'DERRAMAMENTO DE FLUIDO']) or \
+             (tipo_raw.upper() == 'OUTROS' and any(k in full_txt for k in ['DERRAMAMENTO DE FLUÍDO', 'DERRAMAMENTO DE FLUIDO', 'VAZAMENTO DE FLUÍDO', 'VAZAMENTO DE FLUIDO', 'FLUÍDO HIDRÁULICO', 'FLUIDO HIDRAULICO', 'VAZAMENTO DE ÓLEO', 'VAZAMENTO DE OLEO'])):
             tipo_std = 'Derramamento de Óleo / Fluído'
         elif 'PRODUTO QUÍMICO' in tipo_raw.upper() or 'PRODUTO QUIMICO' in tipo_raw.upper() or 'MATERIAL PERIGOSO' in tipo_raw.upper():
             tipo_std = 'Derramamento de Prod. Químico'
@@ -811,7 +901,8 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False, prefix='ACT'
             tipo_std = 'Incêndio em Vegetação'
         elif 'INSTALAÇÃO' in tipo_raw.upper() or 'INSTALACAO' in tipo_raw.upper():
             tipo_std = 'Incêndio em Instalação'
-        elif 'EQUIPAMENTO' in tipo_raw.upper():
+        elif 'EQUIPAMENTO' in tipo_raw.upper() or \
+             (tipo_raw.upper() == 'OUTROS' and 'FUMA' in full_txt and any(k in full_txt for k in ['PUSHBACK', 'EQUIPAMENTO'])):
             tipo_std = 'Incêndio / Pane em Equipamento'
         elif any(k in tipo_raw.upper() for k in ['CAPTURA DE ANIMAL', 'CAPTURA DE FAUNA']) or \
              (tipo_raw.upper() == 'OUTROS' and any(k in full_txt for k in ['CAPTURA DE FAUNA', 'CAPTURA DE ANIMAL', 'FAUNA SILVESTRE'])):
@@ -843,22 +934,40 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False, prefix='ACT'
             q_candidate = m_q.group(1).upper()
             if q_candidate not in ['DA', 'DO', 'DE', 'CORRESPONDENTE', 'CONFORME']:
                 quadrante = q_candidate
+        if not quadrante:
+            nato_letters = {
+                'ALFA': 'A', 'ALPHA': 'A', 'BRAVO': 'B', 'CHARLIE': 'C', 'DELTA': 'D',
+                'ECHO': 'E', 'FOXTROT': 'F', 'GOLF': 'G', 'HOTEL': 'H', 'INDIA': 'I',
+                'JULIET': 'J', 'JULIETT': 'J', 'KILO': 'K', 'LIMA': 'L', 'MIKE': 'M',
+                'NOVEMBER': 'N', 'OSCAR': 'O', 'PAPA': 'P', 'QUEBEC': 'Q', 'ROMEO': 'R',
+                'SIERRA': 'S', 'TANGO': 'T', 'UNIFORM': 'U', 'VICTOR': 'V', 'WHISKEY': 'W',
+                'XRAY': 'X', 'X-RAY': 'X', 'YANKEE': 'Y', 'ZULU': 'Z'
+            }
+            nato_words_re = '|'.join(nato_letters.keys())
+            m_nato = re.search(
+                rf'(?:QUADRANTE|MAPA\s+DE\s+GRADE)[^\.\;\n]{{0,80}}?\b({nato_words_re})(?:[\s\-]+({nato_words_re}))?[\s\-]*([0-9]{{1,2}})\b',
+                full_txt
+            )
+            if m_nato:
+                l1 = nato_letters[m_nato.group(1)]
+                l2 = nato_letters[m_nato.group(2)] if m_nato.group(2) else ''
+                quadrante = f'{l1}{l2}{m_nato.group(3)}'
 
         # Extract location: prioritize Column G (val_local) if present
         location = None
         if val_local and str(val_local).strip():
             loc_str = str(val_local).strip().upper()
-            if '10-28' in loc_str or '10/28' in loc_str:
+            if '10-28' in loc_str or '10/28' in loc_str or '10X28' in loc_str:
                 location = 'Sistema 10-28'
             elif '15-30' in loc_str or '15/30' in loc_str or '15-33' in loc_str or '15/33' in loc_str or '15X33' in loc_str or '15X30' in loc_str:
                 location = 'Sistema 15-30'
-            elif 'CAB.10' in loc_str or 'CAB 10' in loc_str or 'CABECEIRA 10' in loc_str:
+            elif 'CAB.10' in loc_str or 'CAB 10' in loc_str or 'CAB-10' in loc_str or 'CABECEIRA 10' in loc_str:
                 location = 'Cabeceira 10'
-            elif 'CAB.15' in loc_str or 'CAB 15' in loc_str or 'CABECEIRA 15' in loc_str:
+            elif 'CAB.15' in loc_str or 'CAB 15' in loc_str or 'CAB-15' in loc_str or 'CABECEIRA 15' in loc_str:
                 location = 'Cabeceira 15'
-            elif 'CAB.28' in loc_str or 'CAB 28' in loc_str or 'CABECEIRA 28' in loc_str:
+            elif 'CAB.28' in loc_str or 'CAB 28' in loc_str or 'CAB-28' in loc_str or 'CABECEIRA 28' in loc_str:
                 location = 'Cabeceira 28'
-            elif 'CAB.33' in loc_str or 'CAB 33' in loc_str or 'CABECEIRA 33' in loc_str:
+            elif 'CAB.33' in loc_str or 'CAB 33' in loc_str or 'CAB-33' in loc_str or 'CABECEIRA 33' in loc_str:
                 location = 'Cabeceira 33'
             elif 'PÁTIO 01' in loc_str or 'PATIO 01' in loc_str or 'PÁTIO 1' in loc_str or 'PATIO 1' in loc_str:
                 location = 'Pátio 1'
@@ -883,7 +992,7 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False, prefix='ACT'
                 location = 'Sistema 10-28'
 
         if not location:
-            if 'SISTEMA 10-28' in full_txt or 'SISTEMA 10/28' in full_txt:
+            if 'SISTEMA 10-28' in full_txt or 'SISTEMA 10/28' in full_txt or 'SISTEMA 10X28' in full_txt:
                 location = 'Sistema 10-28'
             elif 'SISTEMA 15-30' in full_txt or 'SISTEMA 15/30' in full_txt or 'SISTEMA 15-33' in full_txt or '15X33' in full_txt:
                 location = 'Sistema 15-30'
@@ -924,9 +1033,11 @@ def parse_actuation_file(filepath, sheet_name, is_second_sem=False, prefix='ACT'
             ('CCI 04 (F04)', ['CCI 04', 'CCI 4', 'CCI-04', 'CCI-4', 'F04', 'F-04', 'FAÍSCA 04', 'FAISCA 04']),
             ('CCI 05 (F05)', ['CCI 05', 'CCI 5', 'CCI-05', 'CCI-5', 'F05', 'F-05', 'FAÍSCA 05', 'FAISCA 05']),
             ('CCI 358 (F358)', ['CCI 358', 'CCI-358', 'F358', 'F-358', '358']),
-            ('CCI 07', ['CCI 07', 'CCI 7', 'CCI-07']),
+            ('CCI 07', ['CCI 07', 'CCI 7', 'CCI-07', 'F07', 'F-07']),
             ('CRS', ['CRS', 'CRS 01', 'CRS 1']),
             ('CACE', ['CACE', 'CACE 025']),
+            ('OPS 024', ['OPS 024', 'OPS 0024']),
+            ('OPS 023', ['OPS 023']),
             ('BRASA UNO', ['BRASA UNO', 'BRASA 1', 'BRASA 01']),
             ('BRASA DOS', ['BRASA DOS', 'BRASA 2', 'BRASA 02']),
             ('BRASA 3', ['BRASA 3', 'BRASA 03', 'BRASA TRES']),
@@ -967,6 +1078,11 @@ def parse_actuation():
     if os.path.exists(setembro_dir):
         f2_setembro = next((os.path.join(setembro_dir, f) for f in os.listdir(setembro_dir)
                             if 'ATUA' in unicodedata.normalize('NFC', f).upper() and f.endswith('.xlsx') and not f.startswith('~')), None)
+    novembr_dir = os.path.join(agosto_dir, 'novembr')
+    f2_outubro = None
+    if os.path.exists(novembr_dir):
+        f2_outubro = next((os.path.join(novembr_dir, f) for f in os.listdir(novembr_dir)
+                           if 'ATUA' in unicodedata.normalize('NFC', f).upper() and f.endswith('.xlsx') and not f.startswith('~')), None)
 
     f2 = f2_novo if os.path.exists(f2_novo) else f2_old
 
@@ -974,8 +1090,9 @@ def parse_actuation():
     recs2 = parse_actuation_file(f2, '2° SEMESTRE 2026', is_second_sem=True, prefix='ACT-JUL')
     recs3 = parse_actuation_file(f2_agosto, '2° SEMESTRE 2026', is_second_sem=True, prefix='ACT-AGO') if f2_agosto else []
     recs4 = parse_actuation_file(f2_setembro, '2° SEMESTRE 2026', is_second_sem=True, prefix='ACT-SET') if f2_setembro else []
+    recs5 = parse_actuation_file(f2_outubro, '2° SEMESTRE 2026', is_second_sem=True, prefix='ACT-OUT') if f2_outubro else []
 
-    return recs1 + recs2 + recs3 + recs4
+    return recs1 + recs2 + recs3 + recs4 + recs5
 
 
 def main():
@@ -1029,6 +1146,39 @@ def main():
             records = parse_taf_file(setembro_taf, 'Setembro')
             all_taf_records.extend(records)
             print(f'    -> {len(records)} records for Setembro')
+
+    # ── 2e. Parse TAF file from agosto/novembr (Outubro 2026) ──
+    novembr_dir = os.path.join(agosto_dir, 'novembr')
+    if os.path.exists(novembr_dir):
+        outubro_taf = next((os.path.join(novembr_dir, f) for f in os.listdir(novembr_dir)
+                            if 'TAF' in unicodedata.normalize('NFC', f).upper() and f.endswith('.xlsx') and not f.startswith('~')), None)
+        if not outubro_taf:
+            # Handle misnamed XLSX exports (e.g., airport_3d_map.jpg containing TAF OUTUBRO workbook)
+            for f in sorted(os.listdir(novembr_dir)):
+                if f.startswith('.') or f.startswith('~'):
+                    continue
+                cand = os.path.join(novembr_dir, f)
+                if not os.path.isfile(cand):
+                    continue
+                try:
+                    wb_probe = load_workbook_safe(cand, data_only=True)
+                    for sn in wb_probe.sheetnames:
+                        if 'graf' in sn.lower() or 'gráf' in sn.lower():
+                            continue
+                        r1_txt = ' '.join(str(wb_probe[sn].cell(1, c).value or '') for c in range(1, 5)).upper()
+                        if 'TAF' in r1_txt and 'OUTUBRO' in r1_txt:
+                            outubro_taf = cand
+                            break
+                    wb_probe.close()
+                    if outubro_taf:
+                        break
+                except Exception:
+                    pass
+        if outubro_taf:
+            print('\n=== Parsing TAF Outubro (agosto/novembr) ===')
+            records = parse_taf_file(outubro_taf, 'Outubro')
+            all_taf_records.extend(records)
+            print(f'    -> {len(records)} records for Outubro')
     
     # ── 3. Parse TP-EPR files from planilhas folder (Janeiro-Maio) ──
     print('\n=== Parsing TP-EPR files (planilhas folder) ===')
@@ -1075,6 +1225,16 @@ def main():
             records = parse_tpepr_file(setembro_tpepr, 'Setembro')
             all_tpepr_records.extend(records)
             print(f'    -> {len(records)} records for Setembro')
+
+    # ── 4e. Parse TP-EPR file from agosto/novembr (Outubro 2026) ──
+    if os.path.exists(novembr_dir):
+        outubro_tpepr = next((os.path.join(novembr_dir, f) for f in os.listdir(novembr_dir)
+                              if 'TP-EPR' in unicodedata.normalize('NFC', f).upper() and f.endswith('.xlsx') and not f.startswith('~')), None)
+        if outubro_tpepr:
+            print('\n=== Parsing TP-EPR Outubro (agosto/novembr) ===')
+            records = parse_tpepr_file(outubro_tpepr, 'Outubro')
+            all_tpepr_records.extend(records)
+            print(f'    -> {len(records)} records for Outubro')
     
     # ── 5. Deduplication check ──
     print('\n=== Deduplication Check ===')
@@ -1113,9 +1273,11 @@ def main():
     # ── 6. Parse TR ──
     print('\n=== Parsing TR ===')
     tr_records = []
+    tr_2s_novembr = os.path.join(novembr_dir, 'DESEMPENHO DA EXECUÇÃO TR 2º SEMESTRE.xlsx')
+    tr_2s_agosto = os.path.join(agosto_dir, 'DESEMPENHO DA EXECUÇÃO TR 2º SEMESTRE.xlsx')
     tr_sources = [
         os.path.join(BASE_DIR, 'DESEMPENHO DA EXECUÇÃO TR.xlsx'),
-        os.path.join(agosto_dir, 'DESEMPENHO DA EXECUÇÃO TR 2º SEMESTRE.xlsx')
+        tr_2s_novembr if os.path.exists(tr_2s_novembr) else tr_2s_agosto
     ]
     for tr_source in tr_sources:
         if os.path.exists(tr_source):

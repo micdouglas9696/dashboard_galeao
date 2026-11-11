@@ -172,19 +172,23 @@ window.SESCINC.Parsers.TPEPR = {
 
       var rowText = row.map(function (c) { return String(c || '').toUpperCase(); }).join(' ');
 
-      // Detecta status especial: Permuta ou Férias
+      // Detecta status especial: Permuta, Férias ou Não Realizado (Folga/Atestado/Função de OC)
       var isPermuta = rowText.indexOf('PERMUTA') >= 0;
       var isFerias = rowText.indexOf('FERIAS') >= 0 || rowText.indexOf('FÉRIAS') >= 0;
+      var isFuncaoOc = rowText.indexOf('FUNÇÃO DE OC') >= 0 || rowText.indexOf('FUNCAO DE OC') >= 0;
       var isNaoRealizado = rowText.indexOf('NÃO REALIZADO') >= 0 ||
                            rowText.indexOf('NAO REALIZADO') >= 0 ||
                            rowText.indexOf('NÃO REALIZADIO') >= 0 ||
                            rowText.indexOf('NAO REALIZADIO') >= 0 ||
                            rowText.indexOf('FOLGA') >= 0 ||
-                           rowText.indexOf('ATESTADO') >= 0;
-      var motivo = isPermuta ? 'Permuta' :
+                           rowText.indexOf('ATESTADO') >= 0 ||
+                           isFuncaoOc;
+      var motivo = isFerias ? 'Férias' :
+                   (isPermuta ? 'Permuta' :
+                   (isFuncaoOc ? 'Função de OC' :
                    (rowText.indexOf('FOLGA') >= 0 ? 'Folga' :
                    (rowText.indexOf('ATESTADO') >= 0 ? 'Atestado' :
-                   (isNaoRealizado ? 'Não Realizado' : (isFerias ? 'Férias' : ''))));
+                   (isNaoRealizado ? 'Não Realizado' : '')))));
 
       // Equipe
       var equipe = row[colOffset + 1] != null ? String(row[colOffset + 1]).trim().toUpperCase() : '';

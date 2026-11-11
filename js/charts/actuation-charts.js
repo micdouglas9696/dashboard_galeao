@@ -19,8 +19,8 @@ window.SESCINC.ActuationCharts = (function () {
 
   // Coordenadas geográficas otimizadas para visibilidade total em telas de 14 polegadas (com recuo de bordas)
   const HOTSPOTS = [
-    { id: 'h-sistema-10-28', name: 'Sistema 10-28', top: 17.0, left: 54.0, align: 'pin-align-center', keywords: ['SISTEMA 10-28', 'SISTEMA 10/28', '10-28', '10/28', 'PISTA 10X28'] },
-    { id: 'h-sistema-15-30', name: 'Sistema 15-30', top: 62.0, left: 20.5, align: 'pin-align-center', keywords: ['SISTEMA 15-30', 'SISTEMA 15/30', 'SISTEMA 15-33', 'SISTEMA 15/33', '15-30', '15/30', '15-33', '15/33', 'PISTA 15X33'] },
+    { id: 'h-sistema-10-28', name: 'Sistema 10-28', top: 17.0, left: 54.0, align: 'pin-align-center', keywords: ['SISTEMA 10-28', 'SISTEMA 10/28', 'SISTEMA 10X28', '10-28', '10/28', '10X28', 'PISTA 10X28'] },
+    { id: 'h-sistema-15-30', name: 'Sistema 15-30', top: 62.0, left: 20.5, align: 'pin-align-center', keywords: ['SISTEMA 15-30', 'SISTEMA 15/30', 'SISTEMA 15-33', 'SISTEMA 15/33', 'SISTEMA 15X33', '15-30', '15/30', '15-33', '15/33', '15X33', 'PISTA 15X33'] },
     { id: 'h-cab-28', name: 'Cabeceira 28 (CAB 28)', top: 10.0, left: 86.0, align: 'pin-align-left-down', keywords: ['CABECEIRA 28', 'CAB.28', 'CAB 28', 'CAB-28', 'CAB. 28'] },
     { id: 'h-cab-10', name: 'Cabeceira 10 (CAB 10)', top: 25.0, left: 22.0, align: 'pin-align-right', keywords: ['CABECEIRA 10', 'CAB.10', 'CAB 10', 'CAB-10'] },
     { id: 'h-cab-15', name: 'Cabeceira 15 (CAB 15)', top: 44.0, left: 12.0, align: 'pin-align-right', keywords: ['CABECEIRA 15', 'CAB.15', 'CAB 15', 'CAB-15'] },
@@ -328,7 +328,7 @@ window.SESCINC.ActuationCharts = (function () {
             <div class="actuation-item-header">
               <span class="actuation-item-date">${r.data} (${r.mes})</span>
               <span class="actuation-item-tipo">${r.tipo}</span>
-              <span class="badge badge-primary">Equipe ${r.equipe}</span>
+              <span class="badge badge-primary">${r.equipe === 'N/I' ? 'Equipe N/I' : 'Equipe ' + r.equipe}</span>
             </div>
             <div class="actuation-item-location"><strong>Local:</strong> ${r.localizacao} ${r.quadrante ? '(Quadrante ' + r.quadrante + ')' : ''}</div>
             <div class="actuation-item-desc"><strong>Descrição:</strong> ${r.descricao}</div>
@@ -403,7 +403,8 @@ window.SESCINC.ActuationCharts = (function () {
       'ALFA': isDark ? '#38bdf8' : '#0284c7',
       'BRAVO': isDark ? '#6ee7b7' : '#34d399', // Pastel green
       'CHARLIE': isDark ? '#fbbf24' : '#d97706',
-      'DELTA': isDark ? '#ef4444' : '#c62828'
+      'DELTA': isDark ? '#ef4444' : '#c62828',
+      'N/I': isDark ? '#94a3b8' : '#64748b'
     };
 
     // Chart 1: Ocorrências por Tipo
@@ -533,7 +534,10 @@ window.SESCINC.ActuationCharts = (function () {
     if (ctxTeams) {
       if (chartTeamsInstance) chartTeamsInstance.destroy();
       const teams = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA'];
-      const counts = [0, 0, 0, 0];
+      if (data.some(d => d.equipe === 'N/I')) {
+        teams.push('N/I');
+      }
+      const counts = teams.map(() => 0);
       data.forEach(d => {
         const idx = teams.indexOf(d.equipe);
         if (idx !== -1) counts[idx]++;
@@ -546,7 +550,7 @@ window.SESCINC.ActuationCharts = (function () {
       const config = {
         type: chartType,
         data: {
-          labels: teams.map(t => 'Equipe ' + t),
+          labels: teams.map(t => (t === 'N/I' ? 'Não informada' : 'Equipe ' + t)),
           datasets: [{
             label: 'Ocorrências Atendidas',
             data: counts,

@@ -61,7 +61,7 @@
 
     const badge = document.createElement('span');
     badge.className = 'badge ' + (record.badgeClass || 'badge-muted');
-    badge.textContent = detailValue(record.displayResultado || record.resultado);
+    badge.textContent = detailValue(record.displayResultado || record.resultado || record.status);
     header.appendChild(badge);
     li.appendChild(header);
 
@@ -110,7 +110,7 @@
     const type = config.type || 'plain';
     const records = activeDetailRecords.filter(function (record) {
       if (!query) return true;
-      return normalizedSearch(type === 'plain' ? record : [record.nome, record.equipe, record.funcao].join(' ')).indexOf(query) >= 0;
+      return normalizedSearch(type === 'plain' ? record : [record.nome, record.equipe, record.funcao, record.cci, record.viatura, record.cabeceira, record.periodo].join(' ')).indexOf(query) >= 0;
     });
     const noun = config.singular || 'bombeiro';
     countEl.textContent = records.length + ' ' + noun + (records.length !== 1 ? (config.pluralSuffix || 's') : '');
@@ -233,12 +233,12 @@
   /* ── Data loading ── */
 
   function loadData() {
-    // Check storage version to force re-seed after adding September 2026 data (v15)
+    // Check storage version to force re-seed after adding October 2026 & updated TR 2º Semestre data (v16)
     const dbVersion = localStorage.getItem('sescinc_db_version');
-    if (dbVersion !== '15') {
-      console.log('[App] Local storage outdated. Forcing re-seed to version 15 (official September 2026 data).');
+    if (dbVersion !== '16') {
+      console.log('[App] Local storage outdated. Forcing re-seed to version 16 (official October 2026 data).');
       localStorage.clear();
-      localStorage.setItem('sescinc_db_version', '15');
+      localStorage.setItem('sescinc_db_version', '16');
     }
 
     let tafData = loadStorage(STORAGE_KEYS.TAF);
@@ -446,7 +446,7 @@
           Charts.Overview.render(filtered);
         }
         // Animate KPIs
-        animateKPIs();
+        animateKPIs('overview');
         break;
 
       case 'taf':
@@ -454,7 +454,7 @@
           Charts.TAF.destroy();
           Charts.TAF.render(filtered);
         }
-        animateKPIs();
+        animateKPIs('taf');
         break;
 
       case 'tpepr':
@@ -462,7 +462,7 @@
           Charts.TPEPR.destroy();
           Charts.TPEPR.render(filtered);
         }
-        animateKPIs();
+        animateKPIs('tpepr');
         break;
 
       case 'tr':
@@ -470,7 +470,7 @@
           Charts.TR.destroy();
           Charts.TR.render(filtered, currentCabeceira);
         }
-        animateKPIs();
+        animateKPIs('tr');
         break;
 
       case 'teorica':
@@ -478,7 +478,7 @@
           Charts.Teorica.destroy();
           Charts.Teorica.render(filtered);
         }
-        animateKPIs();
+        animateKPIs('teorica');
         break;
 
       case 'actuation':
@@ -501,6 +501,10 @@
 
   function animateValue(element, start, end, duration, suffix) {
     if (!element) return;
+    if (element._animRafId) {
+      cancelAnimationFrame(element._animRafId);
+      element._animRafId = null;
+    }
     suffix = suffix || '';
     const range = end - start;
     if (range === 0) {
@@ -524,16 +528,33 @@
       }
 
       if (progress < 1) {
-        requestAnimationFrame(step);
+        element._animRafId = requestAnimationFrame(step);
+      } else {
+        element._animRafId = null;
       }
     }
 
-    requestAnimationFrame(step);
+    element._animRafId = requestAnimationFrame(step);
   }
 
-  function animateKPIs() {
-    document.querySelectorAll('.kpi-value').forEach(el => {
+  function animateKPIs(section) {
+    const scope = section ? (document.getElementById('section-' + section) || document) : document;
+    const kpiValues = scope.querySelectorAll('.kpi-value');
+
+    // Cancel any in-flight animations first so values like 0 or mm:ss are never overwritten
+    kpiValues.forEach(el => {
+      if (el._animRafId) {
+        cancelAnimationFrame(el._animRafId);
+        el._animRafId = null;
+      }
+    });
+
+    // Update progress bars using the final target values before starting count-up
+    updateKPIProgressBars(scope);
+
+    kpiValues.forEach(el => {
       const text = el.textContent.trim();
+      if (text.includes(':')) return; // Preserve formatted durations such as "02:02"
       const suffix = text.includes('%') ? '%' : '';
       const numStr = text.replace('%', '').replace(',', '.');
       const num = parseFloat(numStr);
@@ -541,8 +562,6 @@
         animateValue(el, 0, num, 800, suffix);
       }
     });
-    // Wait for the numbers to start animating then trigger the progress bars transition
-    setTimeout(updateKPIProgressBars, 50);
   }
 
   function injectKPIProgressBars() {
@@ -558,14 +577,14 @@
     });
   }
 
-  function updateKPIProgressBars() {
-    document.querySelectorAll('.kpi-card').forEach(card => {
+  function updateKPIProgressBars(scope) {
+    (scope || document).querySelectorAll('.kpi-card').forEach(card => {
       const valEl = card.querySelector('.kpi-value');
       const bar = card.querySelector('.kpi-progress-bar');
       if (!valEl || !bar) return;
       
       const text = valEl.textContent.trim();
-      if (text === '—' || text === '0' || text === '0%') {
+      if (text === '—' || text === '0' || text === '0%' || text.includes(':')) {
         bar.style.width = '0%';
         return;
       }
