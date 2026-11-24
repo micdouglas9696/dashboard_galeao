@@ -10,14 +10,15 @@
 
   const COLORS = {
     blue: '#00d2ff', cyan: '#00f0ff', green: '#00ff87',
-    amber: '#ffd32a', red: '#ff0055', purple: '#b026ff',
+    amber: '#ffd32a', red: '#fb7185', purple: '#b026ff',
     pink: '#ff007f', indigo: '#6366f1', teal: '#14b8a6',
-    equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#ff0055', 'FOLGUISTA': '#b026ff' },
-    resultadosTAF: { 'ACOP - A': '#00ff87', 'Em evolução': '#ffd32a', 'ACOP - B': '#ff0055' },
-    resultadosTPEPR: { 'ACOP - A': '#00ff87', 'Em evolução': '#ffd32a', 'ACOP - B': '#ff0055' }
+    equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#fb7185', 'FOLGUISTA': '#b026ff' },
+    resultadosTAF: { 'ACOP - A': '#00ff87', 'Em evolução': '#ffd32a', 'ACOP - B': '#fb7185' },
+    resultadosTPEPR: { 'ACOP - A': '#00ff87', 'Em evolução': '#ffd32a', 'ACOP - B': '#fb7185' }
   };
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
+  const EQUIPES_GRAFICO = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA'];
   const chartInstances = {};
 
   function destroyChart(key) {
@@ -171,15 +172,15 @@
         'ALFA': isDark ? '#38bdf8' : '#0284c7',
         'BRAVO': isDark ? '#6ee7b7' : '#34d399', // Verde pastel
         'CHARLIE': isDark ? '#fbbf24' : '#d97706',
-        'DELTA': isDark ? '#ef4444' : '#c62828',
+        'DELTA': isDark ? '#fb7185' : '#e05260', // Tom coral pastel suave
         'FOLGUISTA': isDark ? '#c084fc' : '#7c3aed'
       },
-      // 4 Indicadores com cores bem distintas: Azul, Verde Pastel, Amarelo, Vermelho
+      // 4 Indicadores com cores bem distintas: Azul, Verde Pastel, Amarelo, Verde Aena
       metricColors: [
         isDark ? '#38bdf8' : '#0284c7', // TAF Aprovação - Azul
         isDark ? '#6ee7b7' : '#34d399', // TP-EPR Excelência - Verde Pastel
         isDark ? '#fbbf24' : '#d97706', // Teórica Média - Amarelo
-        isDark ? '#ef4444' : '#c62828'  // TR Meta - Vermelho
+        '#00853F'                       // TR Meta - Verde Aena institucional
       ]
     };
   }
@@ -191,7 +192,7 @@
 
     const themeColors = getThemeColors();
     const labels = ['TAF (%)', 'TP-EPR (%)', 'Teórica (%)', 'TR Meta (%)'];
-    const datasets = EQUIPES.map(equipe => {
+    const datasets = EQUIPES_GRAFICO.map(equipe => {
       const m = calcEquipeMetrics(allData, equipe);
       const color = themeColors.equipes[equipe];
       
@@ -282,7 +283,7 @@
     if (!ctx) return;
 
     const themeColors = getThemeColors();
-    const metrics = EQUIPES.map(e => calcEquipeMetrics(allData, e));
+    const metrics = EQUIPES_GRAFICO.map(e => calcEquipeMetrics(allData, e));
     const metricLabels = ['TAF Aprovação (%)', 'TPEPR Excelência (%)', 'Teórica Média', 'TR Meta (%)'];
     const metricColors = themeColors.metricColors;
 
@@ -312,7 +313,7 @@
 
     const config = {
       type: chartType,
-      data: { labels: EQUIPES, datasets },
+      data: { labels: EQUIPES_GRAFICO, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -320,7 +321,7 @@
           if (!elements.length) return;
           const activeElement = elements[0];
           const dataIndex = activeElement.index;
-          const team = EQUIPES[dataIndex];
+          const team = EQUIPES_GRAFICO[dataIndex];
 
           const NamesMap = {};
           if (currentData.taf) {

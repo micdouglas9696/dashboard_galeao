@@ -8,11 +8,13 @@
   window.SESCINC = window.SESCINC || {};
   window.SESCINC.Charts = window.SESCINC.Charts || {};
 
+  const AENA_GREEN = '#00853F'; // Verde institucional da Aena
+
   const COLORS = {
     blue: '#00d2ff', cyan: '#00f0ff', green: '#00ff87',
-    amber: '#ffd32a', red: '#ff0055', purple: '#b026ff',
+    amber: '#ffd32a', red: '#ff0055', aenaGreen: AENA_GREEN, purple: '#b026ff',
     pink: '#ff007f', indigo: '#6366f1', teal: '#14b8a6',
-    equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#ff0055', 'FOLGUISTA': '#b026ff' }
+    equipes: { 'ALFA': '#00d2ff', 'BRAVO': '#00ff87', 'CHARLIE': '#ffd32a', 'DELTA': '#fb7185', 'FOLGUISTA': '#b026ff' }
   };
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
@@ -100,7 +102,7 @@
         'ALFA': isDark ? '#38bdf8' : '#0284c7',
         'BRAVO': isDark ? '#6ee7b7' : '#34d399',
         'CHARLIE': isDark ? '#fbbf24' : '#d97706',
-        'DELTA': isDark ? '#ef4444' : '#c62828',
+        'DELTA': isDark ? '#fb7185' : '#e05260', // Tom coral pastel suave
         'FOLGUISTA': isDark ? '#c084fc' : '#7c3aed'
       }
     };
@@ -452,7 +454,7 @@
       type: isRadar ? undefined : 'line',
       label: metaLabel,
       data: usedMonthIndices.map(() => currentMetaLimit),
-      borderColor: COLORS.red,
+      borderColor: AENA_GREEN,
       backgroundColor: 'transparent',
       borderDash: [8, 4],
       borderWidth: 2,
@@ -479,7 +481,7 @@
         ctx.beginPath();
         ctx.setLineDash([8, 4]);
         ctx.lineWidth = 2;
-        ctx.strokeStyle = COLORS.red;
+        ctx.strokeStyle = AENA_GREEN;
         ctx.moveTo(area.left, yPixel);
         ctx.lineTo(area.right, yPixel);
         ctx.stroke();

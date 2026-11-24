@@ -10,10 +10,10 @@
 
   const COLORS = {
     blue: '#38bdf8', cyan: '#22d3ee', green: '#34d399',
-    amber: '#fbbf24', red: '#ef4444', purple: '#c084fc',
+    amber: '#fbbf24', red: '#fb7185', purple: '#c084fc',
     pink: '#f472b6', indigo: '#818cf8', teal: '#2dd4bf',
-    equipes: { 'ALFA': '#38bdf8', 'BRAVO': '#34d399', 'CHARLIE': '#fbbf24', 'DELTA': '#ef4444', 'FOLGUISTA': '#c084fc' },
-    resultadosTAF: { 'ACOP - A': '#34d399', 'ACOP - B': '#fbbf24', 'Em evolução': '#ef4444' }
+    equipes: { 'ALFA': '#38bdf8', 'BRAVO': '#34d399', 'CHARLIE': '#fbbf24', 'DELTA': '#fb7185', 'FOLGUISTA': '#c084fc' },
+    resultadosTAF: { 'ACOP - A': '#34d399', 'ACOP - B': '#fbbf24', 'Em evolução': '#fb7185' }
   };
 
   function isAcopA(res) {
@@ -52,6 +52,7 @@
   }
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
+  const EQUIPES_GRAFICO = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA'];
   const AGE_BUCKETS = ['18-25', '26-30', '31-35', '36-40', '41-45', '46-50', '51+'];
   const chartInstances = {};
 
@@ -227,14 +228,14 @@
       gridColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.12)',
       green: isDark ? '#6ee7b7' : '#34d399', // Verde Pastel
       amber: isDark ? '#fbbf24' : '#d97706',
-      red: isDark ? '#ef4444' : '#c62828',
+      red: isDark ? '#fb7185' : '#e05260', // Tom coral pastel suave em vez de vermelho vivo
       blue: isDark ? '#38bdf8' : '#0284c7',
       cyan: isDark ? '#22d3ee' : '#0891b2',
       equipes: {
         'ALFA': isDark ? '#38bdf8' : '#0284c7',
         'BRAVO': isDark ? '#6ee7b7' : '#34d399',
         'CHARLIE': isDark ? '#fbbf24' : '#d97706',
-        'DELTA': isDark ? '#ef4444' : '#c62828',
+        'DELTA': isDark ? '#fb7185' : '#e05260', // Tom coral pastel suave
         'FOLGUISTA': isDark ? '#c084fc' : '#7c3aed'
       }
     };
@@ -356,7 +357,7 @@
 
     const tc = getThemeColors();
     const ok = records.filter(r => r.status === 'ok');
-    const equipes = EQUIPES.filter(e => ok.some(r => r.equipe === e));
+    const equipes = EQUIPES_GRAFICO.filter(e => ok.some(r => r.equipe === e));
 
     const satData = equipes.map(e => ok.filter(r => r.equipe === e && isAcopA(r.resultado)).length);
     const evolData = equipes.map(e => ok.filter(r => r.equipe === e && isEmEvolucao(r.resultado)).length);
@@ -492,7 +493,7 @@
 
     const ok = records.filter(r => r.status === 'ok');
     const labels = ['Flexão', 'Abdominal', 'Barra', 'Corrida'];
-    const equipes = EQUIPES.filter(e => ok.some(r => r.equipe === e));
+    const equipes = EQUIPES_GRAFICO.filter(e => ok.some(r => r.equipe === e));
 
     const maxFlexao = Math.max(...ok.map(r => r.flexao || 0), 1);
     const maxAbdominal = Math.max(...ok.map(r => r.abdominal || 0), 1);

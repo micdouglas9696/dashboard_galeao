@@ -16,19 +16,20 @@
       gridColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.12)',
       green: isDark ? '#6ee7b7' : '#34d399', // Pastel green
       amber: isDark ? '#fbbf24' : '#d97706',
-      red: isDark ? '#ef4444' : '#c62828',
+      red: isDark ? '#fb7185' : '#e05260', // Tom coral pastel suave em vez de vermelho vivo
       blue: isDark ? '#38bdf8' : '#0284c7',
       equipes: {
         'ALFA': isDark ? '#38bdf8' : '#0284c7',
         'BRAVO': isDark ? '#6ee7b7' : '#34d399',
         'CHARLIE': isDark ? '#fbbf24' : '#d97706',
-        'DELTA': isDark ? '#ef4444' : '#c62828',
+        'DELTA': isDark ? '#fb7185' : '#e05260', // Tom coral pastel suave
         'FOLGUISTA': isDark ? '#c084fc' : '#7c3aed'
       }
     };
   }
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
+  const EQUIPES_GRAFICO = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA'];
   const chartInstances = {};
 
   function destroyChart(key) {
@@ -247,7 +248,7 @@
     if (!ctx) return;
 
     const tc = getThemeColors();
-    const equipes = EQUIPES.filter(e => records.some(r => r.equipe === e));
+    const equipes = EQUIPES_GRAFICO.filter(e => records.some(r => r.equipe === e));
 
     const data = equipes.map(e => {
       const group = records.filter(r => r.equipe === e);

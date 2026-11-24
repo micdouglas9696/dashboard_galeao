@@ -16,17 +16,18 @@
       gridColor: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.12)',
       green: isDark ? '#6ee7b7' : '#34d399', // Pastel green
       amber: isDark ? '#fbbf24' : '#d97706',
-      red: isDark ? '#ef4444' : '#c62828',
+      red: isDark ? '#fb7185' : '#e05260', // Tom coral pastel suave em vez de vermelho vivo
       blue: isDark ? '#38bdf8' : '#0284c7',
       resultadosTPEPR: {
         'ACOP - A': isDark ? '#6ee7b7' : '#34d399',
         'ACOP - B': isDark ? '#fbbf24' : '#d97706',
-        'Em evolução': isDark ? '#ef4444' : '#c62828'
+        'Em evolução': isDark ? '#fb7185' : '#e05260' // Tom coral pastel suave
       }
     };
   }
 
   const EQUIPES = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA', 'FOLGUISTA'];
+  const EQUIPES_GRAFICO = ['ALFA', 'BRAVO', 'CHARLIE', 'DELTA'];
   const RESULTADO_ORDER = ['ACOP - A', 'ACOP - B', 'Em evolução'];
   const chartInstances = {};
 
@@ -284,7 +285,7 @@
 
     const tc = getThemeColors();
     const okRecords = records.filter(r => !isTpeprMuted(r.resultado, r.status));
-    const equipes = EQUIPES.filter(e => okRecords.some(r => r.equipe === e));
+    const equipes = EQUIPES_GRAFICO.filter(e => okRecords.some(r => r.equipe === e));
 
     const isStacked = activeEquipeType === 'bar';
     const isLine = activeEquipeType === 'line';
